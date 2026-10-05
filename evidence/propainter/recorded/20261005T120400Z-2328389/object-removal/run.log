@@ -1,0 +1,8 @@
+Pretrained flow completion model has loaded...
+Pretrained ProPainter has loaded...
+Network [InpaintGenerator] was created. Total number of parameters: 39.4 million. To see the architecture, do print(network).
+
+Processing: bmx-trees [80 frames]...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:00<00:03,  4.89it/s] 12%|█▎        | 2/16 [00:00<00:02,  4.89it/s] 19%|█▉        | 3/16 [00:00<00:02,  4.74it/s] 25%|██▌       | 4/16 [00:00<00:02,  4.92it/s] 31%|███▏      | 5/16 [00:01<00:02,  4.98it/s] 38%|███▊      | 6/16 [00:01<00:01,  5.04it/s] 44%|████▍     | 7/16 [00:01<00:01,  5.06it/s] 50%|█████     | 8/16 [00:01<00:01,  5.09it/s] 56%|█████▋    | 9/16 [00:01<00:01,  5.07it/s] 62%|██████▎   | 10/16 [00:01<00:01,  5.15it/s] 69%|██████▉   | 11/16 [00:02<00:00,  5.16it/s] 75%|███████▌  | 12/16 [00:02<00:00,  5.23it/s] 81%|████████▏ | 13/16 [00:02<00:00,  5.21it/s] 88%|████████▊ | 14/16 [00:02<00:00,  5.26it/s] 94%|█████████▍| 15/16 [00:02<00:00,  5.29it/s]100%|██████████| 16/16 [00:03<00:00,  5.41it/s]100%|██████████| 16/16 [00:03<00:00,  5.15it/s]
+
+All results are saved in /home/smayan/research/paper-reproductions/evidence/propainter/recorded/20261005T120400Z-2328389/object-removal/videos/bmx-trees

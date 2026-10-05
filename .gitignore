@@ -1,0 +1,18 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+/data/
+/scratch/
+/outputs/
+papers/**/source/results/
+papers/**/source/results_eval/
+**/frames/
+
+# Selected demonstration MP4s, PNG comparisons and genuine logs are tracked.
+# Put full datasets in data/ or outside this repository.

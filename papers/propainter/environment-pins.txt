@@ -1,0 +1,8 @@
+# Tested direct pins from this setup, not a complete pip-freeze snapshot.
+# Python on the server: 3.12.3
+# Install torch and torchvision first from https://download.pytorch.org/whl/cu121
+torch==2.5.1
+torchvision==0.20.1
+numpy==1.26.4
+av==13.1.0
+opencv-python==4.11.0.86

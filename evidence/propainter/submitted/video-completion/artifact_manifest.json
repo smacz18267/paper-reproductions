@@ -1,0 +1,46 @@
+{
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 870,
+      "sha256": "9fbd140c57c3887f9271f782e645a2f09b0daf2eb061ddf9a8939547f1fe19c2"
+    },
+    {
+      "path": "comparison.png",
+      "bytes": 1255133,
+      "sha256": "187b65bec08317706f34a2260306e3b1c837750bf585c57d233daa89aef34c1d"
+    },
+    {
+      "path": "inpaint_out.mp4",
+      "bytes": 1353006,
+      "sha256": "f726a0ea8732b3b1eb9952c6def35c568a59bd2f80491200a21629153ad4103b",
+      "video": {
+        "width": 432,
+        "height": 240,
+        "r_frame_rate": "25/1",
+        "duration": "11.680000",
+        "nb_frames": "292"
+      }
+    },
+    {
+      "path": "masked_in.mp4",
+      "bytes": 1533066,
+      "sha256": "b5e9586d0227e7fcdceb19fdfe88ddea309566087562a9862fe4e79776829668",
+      "video": {
+        "width": 432,
+        "height": 240,
+        "r_frame_rate": "25/1",
+        "duration": "11.680000",
+        "nb_frames": "292"
+      }
+    },
+    {
+      "path": "run-console.png",
+      "bytes": 98745,
+      "sha256": "4e773467a8023d37c1bdea900303e305539e6a921aa5ec3ada9303d4e47bcb90"
+    }
+  ],
+  "inputs": [],
+  "weights": [],
+  "benchmark_scores": null
+}

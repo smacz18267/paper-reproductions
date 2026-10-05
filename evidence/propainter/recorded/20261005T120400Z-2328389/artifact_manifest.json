@@ -1,0 +1,982 @@
+{
+  "artifacts": [
+    {
+      "path": "environment.freeze.txt",
+      "bytes": 1267,
+      "sha256": "0da3b4752a7aa73f13f3926652c52b4f871729a16112bff258f0f17f5022b149"
+    },
+    {
+      "path": "finished_at.txt",
+      "bytes": 21,
+      "sha256": "3541e5ce1c77c65476aa03f231bdb39e623b97750db279996c950c665302e675"
+    },
+    {
+      "path": "gpu.csv",
+      "bytes": 260,
+      "sha256": "c9e8927d28d0417c6612b6289363024f72550dd0153cc8fa8fc4fcc3f7d43f53"
+    },
+    {
+      "path": "object-removal/command.sh",
+      "bytes": 380,
+      "sha256": "2ea3c7c5ce2e343c5ffa8c88dc2d17afda15207092d940369618e3a6558017f3"
+    },
+    {
+      "path": "object-removal/exit_code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "object-removal/finished_at.txt",
+      "bytes": 21,
+      "sha256": "3541e5ce1c77c65476aa03f231bdb39e623b97750db279996c950c665302e675"
+    },
+    {
+      "path": "object-removal/run.log",
+      "bytes": 1452,
+      "sha256": "62956e6dcb967de4987d62766b494778db84b0d840fde761b12c0753af81289a"
+    },
+    {
+      "path": "object-removal/started_at.txt",
+      "bytes": 21,
+      "sha256": "a14725bf7a827508954f32d0eab0b00be1f2ec5549bf318c000d6fe5510e50f0"
+    },
+    {
+      "path": "object-removal/videos/bmx-trees/inpaint_out.mp4",
+      "bytes": 980246,
+      "sha256": "b33a0b65d258aec03a9a50c1c853d84319704056b24ed65813542bb94b2638cc",
+      "video": {
+        "width": 432,
+        "height": 240,
+        "fps": 24.0,
+        "nb_frames": 80,
+        "duration": 3.3333333333333335
+      }
+    },
+    {
+      "path": "object-removal/videos/bmx-trees/masked_in.mp4",
+      "bytes": 1055745,
+      "sha256": "4ebf5665a89db49fa56417718b5fca1c0c66e0bb9b9dee74f786572839f31fa9",
+      "video": {
+        "width": 432,
+        "height": 240,
+        "fps": 24.0,
+        "nb_frames": 80,
+        "duration": 3.3333333333333335
+      }
+    },
+    {
+      "path": "python_version.txt",
+      "bytes": 14,
+      "sha256": "5b3e43dc38ca01e3f5a7854ba50d4330864b0c1e0f646650b2c78cf072acc366"
+    },
+    {
+      "path": "selected_gpu.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "source_changes.patch",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source_commit.txt",
+      "bytes": 41,
+      "sha256": "3df28bb450e8c90f76e2e27ff3c36a782aed6bfce61dbfbc0c0accacb6584614"
+    },
+    {
+      "path": "source_status.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "started_at.txt",
+      "bytes": 21,
+      "sha256": "2093904c8bc875fff4a0de55b4d215ac75207381087a816148b8a348e0150aeb"
+    },
+    {
+      "path": "torch_runtime.txt",
+      "bytes": 90,
+      "sha256": "98d90ffbb814128f79ce7cbef8ab29842024a01eef6589f72ecaf756db487971"
+    },
+    {
+      "path": "video-completion/command.sh",
+      "bytes": 393,
+      "sha256": "fefb0f9ddf7217413c22bcd7064968d5f4f3e170a73a7cf0ed5a3487d3439e4a"
+    },
+    {
+      "path": "video-completion/exit_code.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "video-completion/finished_at.txt",
+      "bytes": 21,
+      "sha256": "a14725bf7a827508954f32d0eab0b00be1f2ec5549bf318c000d6fe5510e50f0"
+    },
+    {
+      "path": "video-completion/run.log",
+      "bytes": 3983,
+      "sha256": "1e3d476c57d3dd6d45a34c6cc929ebbb455dd08860f125969cb6a0d6368c8c36"
+    },
+    {
+      "path": "video-completion/started_at.txt",
+      "bytes": 21,
+      "sha256": "2093904c8bc875fff4a0de55b4d215ac75207381087a816148b8a348e0150aeb"
+    },
+    {
+      "path": "video-completion/videos/running_car/inpaint_out.mp4",
+      "bytes": 1353006,
+      "sha256": "f726a0ea8732b3b1eb9952c6def35c568a59bd2f80491200a21629153ad4103b",
+      "video": {
+        "width": 432,
+        "height": 240,
+        "fps": 25.0,
+        "nb_frames": 292,
+        "duration": 11.68
+      }
+    },
+    {
+      "path": "video-completion/videos/running_car/masked_in.mp4",
+      "bytes": 1533066,
+      "sha256": "b5e9586d0227e7fcdceb19fdfe88ddea309566087562a9862fe4e79776829668",
+      "video": {
+        "width": 432,
+        "height": 240,
+        "fps": 25.0,
+        "nb_frames": 292,
+        "duration": 11.68
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "path": "inputs/video_completion/running_car.mp4",
+      "sha256": "198cac9e8e4d045b1cea6d23e0816e668238d3507f4dea373e48319e57e387f4",
+      "bytes": 2296450
+    },
+    {
+      "path": "inputs/video_completion/mask_square.png",
+      "sha256": "fc8da6bccfe485c0c3e37c7e6adc1d3dd99914c674cebe3b776763fe97bc9d01",
+      "bytes": 1503
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00000.jpg",
+      "sha256": "f95b8f1a271ecf1697c5c8952e162d5fb0884a627fbda8f72fbbd05c8c3a9227",
+      "bytes": 43646
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00001.jpg",
+      "sha256": "6253c16082c5620f8d1ec2d73787b623fdc7a74ccd2d82ee5933597bf10861b2",
+      "bytes": 43990
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00002.jpg",
+      "sha256": "57adf4b980145e1256a42dd6de3f955e525a17126c535f05a7bdc1d105c5a23c",
+      "bytes": 44034
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00003.jpg",
+      "sha256": "60c9489f1438cb52862236d9abbbc0655d39c97047974b76ab8b8627ff1a946f",
+      "bytes": 44838
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00004.jpg",
+      "sha256": "df67ba3e5f6308d7c28412b65033358ec538983af899050cfb7aeb1959f24382",
+      "bytes": 45342
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00005.jpg",
+      "sha256": "fae9561c868e27f27ba9aad7dddb6c1143882611c18b5f6aa7680d7953c59a93",
+      "bytes": 45454
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00006.jpg",
+      "sha256": "5cee5b6e8a2286f183f3f9e657f31364dded3108fd8c3614adfaa93853ebf0de",
+      "bytes": 45012
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00007.jpg",
+      "sha256": "d2f6f852cf5a4213825c69bda6d50e162f4136506f27fd7a236fd286efa1caf1",
+      "bytes": 45176
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00008.jpg",
+      "sha256": "fffc8150c15c34870b0884b62b226c29b4cf93aa801159f1b55936e3aab62e76",
+      "bytes": 45294
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00009.jpg",
+      "sha256": "1a7d780e9550e55b5d05d7b16d92b192f9f5d0ce088a9fbdfc4f5a2ca54957b0",
+      "bytes": 41253
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00010.jpg",
+      "sha256": "6a9aff26abde3e2cb0047e8f79450fc8f7acdeb6986f366985c0270aedde8e94",
+      "bytes": 42657
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00011.jpg",
+      "sha256": "6953fe1bcae69c20c14f7f0ba1f3eaae8e41f762b212abd13f07a6f5ac50d337",
+      "bytes": 40954
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00012.jpg",
+      "sha256": "cfd69d6d95ee6f6f9fd96e679db72a706403a7788b29cc3664a96af1073c7b80",
+      "bytes": 41127
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00013.jpg",
+      "sha256": "f2dfc897b4d0d3526791ef718e5c30392e11d5eff8705890b830beb4f7d4b855",
+      "bytes": 42546
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00014.jpg",
+      "sha256": "791466b3f156b5dcbb88c19f8b870acf60de5f0b5ea3ccc4cfa6dd9f83ceb664",
+      "bytes": 42019
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00015.jpg",
+      "sha256": "d0ccef2a0b904b08a4e302a05c76895b07811416452586da43c01c17f25fc162",
+      "bytes": 42322
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00016.jpg",
+      "sha256": "9ae729e5aaef2b064f45a215b9d1946ef38cf32b0b0848957e16f534441eb146",
+      "bytes": 42222
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00017.jpg",
+      "sha256": "c9f004eb292f0c971622244ee9f9e995c5b53789cfd32a64fa845b473290555a",
+      "bytes": 40816
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00018.jpg",
+      "sha256": "328a2db3af42cf96a1048dcb09a9e1ddf759cfe0eb3859ce2ce3e4f59dc3ce35",
+      "bytes": 39627
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00019.jpg",
+      "sha256": "839eaa5d081b33c4dad003800997f6b86b05954eabeb4886831d239ece2cd831",
+      "bytes": 39490
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00020.jpg",
+      "sha256": "73903dec1bfbefeb171ff891429e610d1cacdadc706e79327e8c99d8fd013718",
+      "bytes": 40035
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00021.jpg",
+      "sha256": "09b253bfe9fad952c8b682dfabfef9963a021b86d95b75f95c4d7bac0e13340b",
+      "bytes": 42001
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00022.jpg",
+      "sha256": "1ac85ab1162ba967ba7cec8e47fa591e150607f195821cc92894b676635ba9a7",
+      "bytes": 43875
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00023.jpg",
+      "sha256": "12789e853becaf8385047d38aac29c6f86ebed64d79b5313d106969afdcc62b5",
+      "bytes": 43975
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00024.jpg",
+      "sha256": "b552d54b759176ab643cf4c4bbdeb518d621b3de506c7444f47bbcb4def09fda",
+      "bytes": 44381
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00025.jpg",
+      "sha256": "b3de924a70b1ddf9594e8da54496b0d6f9df5b67a27169d783614487270e5e7c",
+      "bytes": 45139
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00026.jpg",
+      "sha256": "a8ea59ecf68929d7b8f67ed35a2665c617da19fd9cd22c12a9e86ec58834401e",
+      "bytes": 45916
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00027.jpg",
+      "sha256": "0a5e8e6cf436d81f78246f6528735a8e4f4c5832f897263ea0a9c4b4327d9119",
+      "bytes": 47146
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00028.jpg",
+      "sha256": "9b7511603d280ff5e12dbd7674909682f200ae41146b0f2cf928052fbd33fe46",
+      "bytes": 48869
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00029.jpg",
+      "sha256": "cd0cbcd7b55b6dc520737b0602b18e3707f258e4911bea1831374b9bb21d8d10",
+      "bytes": 49110
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00030.jpg",
+      "sha256": "a0732ec929ec87b37085ceb3de74818ea600c924e2ca89b0171ece6b0dcfc139",
+      "bytes": 47544
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00031.jpg",
+      "sha256": "3a386dcd5a40e565e77d0c9420bf9944230f10cc848a298d77b361148a580717",
+      "bytes": 45325
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00032.jpg",
+      "sha256": "fe7ead8e92d75dd53c36c571f02cd1a5d47c0be883d3530dfd25b7f213a9ad57",
+      "bytes": 45689
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00033.jpg",
+      "sha256": "d572e94eefe21eb606c90981df4a191535093d0b66eaf7545434a47d1c0b370a",
+      "bytes": 49386
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00034.jpg",
+      "sha256": "56587720bd031a2d20a34069a16fbee15f716594fb032f2cbf0629c319fc50ad",
+      "bytes": 60325
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00035.jpg",
+      "sha256": "887980706c1e3a87b08f62991a73f3fcecc6b370d89ea6507d9f55c91a0a0062",
+      "bytes": 58495
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00036.jpg",
+      "sha256": "7c84b370353e3e7bfed709b3391185d9c537bd531bd19dd2c79e332794435773",
+      "bytes": 53860
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00037.jpg",
+      "sha256": "62badf396c666bcf02c4fc7094de1c956c6f146993d0e8a1df08be09aa38dc07",
+      "bytes": 51998
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00038.jpg",
+      "sha256": "5feea6b0988f0bf18a8a9f25613dff7f9f531d09cf94e35d26b504a627effa73",
+      "bytes": 53687
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00039.jpg",
+      "sha256": "fd3930bdc617e1104f66a08ddd9003f4034009828f460ff696d699e72e12f898",
+      "bytes": 55089
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00040.jpg",
+      "sha256": "6941e9a896b15ed986663d9beceef357c07506413c24bf14c31a85ab1bb6432b",
+      "bytes": 55466
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00041.jpg",
+      "sha256": "5f0397c3b53ccc82310a5d13b6b6d1c44d590eeb81628006850192b1effa25ed",
+      "bytes": 55011
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00042.jpg",
+      "sha256": "4790cdedc61033b503961cee5ce07278fd1aa794efcb8d1917e6afbb5a32e328",
+      "bytes": 53180
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00043.jpg",
+      "sha256": "d45ced359b6d79f0dbea1fb5907576c5f6aade1eff855935f6099eb67195080a",
+      "bytes": 53363
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00044.jpg",
+      "sha256": "16e1ea678f83574d669200ed5358fc615c5033ca4d8149920ac80e912a1bbab7",
+      "bytes": 53644
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00045.jpg",
+      "sha256": "08c0db305c3aaa7eca6723b9f24b923e5d7d5d456715649421bfc4e414aadf9c",
+      "bytes": 54314
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00046.jpg",
+      "sha256": "beb3b3c87ea8a84675e884f126e4e05c390b1c3ec6c2dacc4a406f2069317041",
+      "bytes": 55273
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00047.jpg",
+      "sha256": "9a908a63556d0801693a0ca943b8c89a22b4dd7760055e5ec4fe15642f22d8a6",
+      "bytes": 54242
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00048.jpg",
+      "sha256": "d778dce4364fa1a4c81909522de38481dc16ca393bb005ee626a9f8792e4a4e1",
+      "bytes": 52485
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00049.jpg",
+      "sha256": "2d84a45d5449ea4a162b200a792b1c76c51ecc45a42556c4c5ca088807c808a5",
+      "bytes": 53325
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00050.jpg",
+      "sha256": "34b46fd85d9b72acdc9894542563a378fb896f2026d7ac4c61c0163d8a4db8e8",
+      "bytes": 54379
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00051.jpg",
+      "sha256": "c774cecfeafced55e9902e815bb0d04dfdb6e50f841ca3a6a158b63e7723ed32",
+      "bytes": 59565
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00052.jpg",
+      "sha256": "a16ab025fc95bb909d563240ccc0c0af4c0ee6fc48dd5cc81d8daa8fe479d5c3",
+      "bytes": 59622
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00053.jpg",
+      "sha256": "32f878ad132a605e94d60e28428fe0f3dfa8e09ee905afbcead4db9114b4eaf0",
+      "bytes": 56140
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00054.jpg",
+      "sha256": "c5a9c93286b7cf121c15c3aae212c9851736f530a62ab3859de1962318cabfc0",
+      "bytes": 52372
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00055.jpg",
+      "sha256": "18c8549a248070948a2d0963a0b1ea14d675ba786e7eb3ebe5094abcfa340fee",
+      "bytes": 50854
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00056.jpg",
+      "sha256": "6845bd0b895309924bc56e1639c41353d6e7d897b345f207ef323d70138e55e2",
+      "bytes": 52773
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00057.jpg",
+      "sha256": "c0149dae8674bf117f97fa67075c067a40f3f2a5f83f83b487656a2cc4758ed7",
+      "bytes": 60511
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00058.jpg",
+      "sha256": "a7884a10888a05e704ec0a0e2784b2a2db3d23090d841d3c2fbe65a3dc607837",
+      "bytes": 62262
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00059.jpg",
+      "sha256": "37d12efe824223de9ff39f30ce497becb6b83f36af014bcebe278ff1909696fc",
+      "bytes": 60394
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00060.jpg",
+      "sha256": "06b4c791c9ddef99d8af5b85cbd1dd6ace5ee859539e7f4a3355eefd390db728",
+      "bytes": 53379
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00061.jpg",
+      "sha256": "1150858a84002432eb554b91e79a83c5e96ea9c72639483511042a6e6e96428b",
+      "bytes": 51979
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00062.jpg",
+      "sha256": "cd2e6588d7330bbfd67f23bb670c58dbe6d9909e84875642efdfa658895441de",
+      "bytes": 52520
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00063.jpg",
+      "sha256": "665b37b1b15edc75464f39aaba2e7a0701a3872bc441a3823fc7ffc4bff5356d",
+      "bytes": 61499
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00064.jpg",
+      "sha256": "1c21a01ef39f6b3af24d7b0784ab3bcc11a0ab8830d6459e4b4ff0b53b7caf1f",
+      "bytes": 61257
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00065.jpg",
+      "sha256": "a0f83b94e533e7b24ba36a7fde60f26354933564437e64b2d6088ec143fdf4d4",
+      "bytes": 61011
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00066.jpg",
+      "sha256": "5c78943a655701b690801c7654ff56d7e8a4148dbf8fb11485fc543e815d5656",
+      "bytes": 60765
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00067.jpg",
+      "sha256": "1a85f021815e7ff8d2a53ed28801a8a386d3b827663b730c28f7e0f2453db07d",
+      "bytes": 60792
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00068.jpg",
+      "sha256": "d80fa08006b049ce60310f3d6d5403786aa4f60d80145dc7f81e63ddcf6e922d",
+      "bytes": 62100
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00069.jpg",
+      "sha256": "7ebfe2111a1f27c3f2c842231f0edc7565495ca1f96ceff615d55ff076e8e76f",
+      "bytes": 62529
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00070.jpg",
+      "sha256": "6604eb1905bae214b52d2b1bd05c964b3b25e9fbcb608b9cea759c6bc404bc3f",
+      "bytes": 62788
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00071.jpg",
+      "sha256": "1d74df60dd9784baf405ce9f6abf40a57dba8ffea873b885d9ae22544ff3218e",
+      "bytes": 62736
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00072.jpg",
+      "sha256": "b67358d097f3ecb268110465589cbefed62b8e86073c5a984eae5b97244f7dd9",
+      "bytes": 62615
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00073.jpg",
+      "sha256": "6d79f2b9223637ca7631e3b6ce112272908d0d5b95982055544e324ec52d8140",
+      "bytes": 63068
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00074.jpg",
+      "sha256": "1756f1f4cc4f156d499d367871de2aa8975a097e0b3402db43ff4c6988858fab",
+      "bytes": 62583
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00075.jpg",
+      "sha256": "64bff65e3ae61ef1757a9f4e2fda05b14a5da83e6e848235eb84fb7837be1423",
+      "bytes": 62012
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00076.jpg",
+      "sha256": "58e4b01e571950598207f18e46d785a64d3663b1a1e9a1952468f857ac334cb6",
+      "bytes": 61701
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00077.jpg",
+      "sha256": "f419f4f36e099be0c38ae7694926cc4f0e314fe7bbf8c35f73a4921eaadb37d6",
+      "bytes": 61838
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00078.jpg",
+      "sha256": "dfb40c4ed31cb29d279a75612607307f3a421b5d85409733f37cd6243bb31fb1",
+      "bytes": 62136
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees/00079.jpg",
+      "sha256": "d55fbab0d95f912a3b92262937e9943a255c479ef491286c61d4bf28538a96c4",
+      "bytes": 62374
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00000.png",
+      "sha256": "7a797672b68f2d9c1366175e561da5aaf788df1f7f897753f53550b6f87afda1",
+      "bytes": 1607
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00001.png",
+      "sha256": "d23db8ef7da66e75244f829e2bdabb9bd8d61c8bfb5075f9bc6a0796a4dbaafb",
+      "bytes": 1607
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00002.png",
+      "sha256": "90767a325232eede5b8cdf73886a4e0b32b70f8078134533d88f6f8aa4a05c3e",
+      "bytes": 1542
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00003.png",
+      "sha256": "afad65a1db64774afac544141804c5ad51eaa500574efa26f374926cccf22534",
+      "bytes": 1512
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00004.png",
+      "sha256": "61f34bedb17a3936bc04b62034f578741656a77335a60dc8db5eaceb3d4db71d",
+      "bytes": 1515
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00005.png",
+      "sha256": "341bd1566775884f3380ed4c5ac4f0b84d7e1edb0f432c8c9eeb4e76dcdcea8b",
+      "bytes": 1534
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00006.png",
+      "sha256": "7ce4ec2287b51f0472beebef1829517e3a8f62c49c23274378b903b1f62789d9",
+      "bytes": 1564
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00007.png",
+      "sha256": "89bd6c1a9130cd02717109521fe90738d800923b78b29c69566f8cc079bca9d5",
+      "bytes": 1600
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00008.png",
+      "sha256": "8d2b047bf7e9189aad9d898fe40fbd5dcf88079a351d57d6cdf2cbeb556e287e",
+      "bytes": 1581
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00009.png",
+      "sha256": "408c8b0c4cccbb578bb580c644f5b32a4ce43d0b44cae020c94ec4f049e8bd73",
+      "bytes": 1595
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00010.png",
+      "sha256": "31f2326695391c091255275911dd0006e1f9ca6908af51900cca0f93a23b1843",
+      "bytes": 1601
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00011.png",
+      "sha256": "863cd43263ff37ac999cc2292e6aed1ec986058a32f32e46c9468a3f05160c58",
+      "bytes": 1551
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00012.png",
+      "sha256": "4d05faa6e92a731e6046be0d2a8f8baafe8755016bdb333ff8f03903a42ea988",
+      "bytes": 1524
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00013.png",
+      "sha256": "b6121cf7730be7670e755891ebdc2df27f73228ffacb0f5a2009bb6ac0c89d85",
+      "bytes": 1441
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00014.png",
+      "sha256": "15357699a6ee1fc97f250cac5069097372ac0ffcf6b38c677acdc767d51fe5a9",
+      "bytes": 1404
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00015.png",
+      "sha256": "86791c7fb87581ba433ffbbbf8ebadeeec62ce34de918ba967f8b118ad3ceb2d",
+      "bytes": 1335
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00016.png",
+      "sha256": "556dfca3488d3800db3f11381f46ab4b2d4f54deb95e1dfa4497652875b31e29",
+      "bytes": 1429
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00017.png",
+      "sha256": "67f5195119cdeb17c61642429945058f44da382b21571bf32f4609f8d24f07fb",
+      "bytes": 1319
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00018.png",
+      "sha256": "748bc98198825bba26751661432923fdecca14986a487de60c1601f1d81c0517",
+      "bytes": 1407
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00019.png",
+      "sha256": "45b1e89be35052d20f0b525c80faeb75d0d6c448b8b56be5b65b20342cf102f7",
+      "bytes": 1334
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00020.png",
+      "sha256": "077a5eb1e34c8fa9e0b26b370e05c3b2c4351f9582aa4a039c6cf45f7cce0088",
+      "bytes": 1247
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00021.png",
+      "sha256": "183706bcd56898e97680b385d08fdce061c3c575604865fcf55e8b12077d86ee",
+      "bytes": 1376
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00022.png",
+      "sha256": "be9d62598234e3ef5ea83a9aade9507de98721e9bc457a70444f1c52dedf8bd8",
+      "bytes": 1491
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00023.png",
+      "sha256": "a2bbb40dfb0b030f1b4c381925d88506a5e472af0778eacaf54f57a9e2f0ce33",
+      "bytes": 1375
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00024.png",
+      "sha256": "fe4bd108c95ccc8567bf9319c1e54bb5ff73527e77243ebb3b021433e7d4b544",
+      "bytes": 1345
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00025.png",
+      "sha256": "59d4dced44ef7d5d271add253e2051d1fac9a82921cc09722e31ccbaef0d8275",
+      "bytes": 1288
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00026.png",
+      "sha256": "d5aaf99e1edab3addb3a9e3b0d8034621adfdeed7884de3026945eb977f14289",
+      "bytes": 1330
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00027.png",
+      "sha256": "b80fd870c325de0929a6520cd12927f8f89dc50fb72a39bcf9e2a83c0b9018e2",
+      "bytes": 1353
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00028.png",
+      "sha256": "af1956b823b727e90bd16cbbd521eb4dd5d933677e8755d55c7486f178fde5d7",
+      "bytes": 1380
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00029.png",
+      "sha256": "63638ec2225061ecebfdb338d3f2e62dd2e425b3a540ca9262d9e9649d5a1e1e",
+      "bytes": 1406
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00030.png",
+      "sha256": "c6fdec34a3e265e92d882c20749fed93af2decdf60f201f029ae5f6c551b0086",
+      "bytes": 1385
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00031.png",
+      "sha256": "69916b143aa233af9e7e5488100ae4607e2db560a2d71618cf99de803d925cbd",
+      "bytes": 1400
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00032.png",
+      "sha256": "8859a97b676c2f4ea8f00d3acc7ea02a313feb3b7530383e9a833c14ef6e62ad",
+      "bytes": 1365
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00033.png",
+      "sha256": "5d480753856410b38a25e354009d0008e23976c03153e79275d5f53bb3dde827",
+      "bytes": 1365
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00034.png",
+      "sha256": "c274b9af3bab125162427019d9b733a62e2788d41b81cb82b69ac363ced2af35",
+      "bytes": 1372
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00035.png",
+      "sha256": "be4546fbe82879aac68f787a4e4157972541b20f26f5df7a199bbe1d24ad9edf",
+      "bytes": 1401
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00036.png",
+      "sha256": "fd18a2bfb65cbb632d60b3020fdc80f0642168c065d6ea9d5cbbc049153c5ac9",
+      "bytes": 1416
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00037.png",
+      "sha256": "e5a8c005d30d320a2d58c2ee80896ea962d5cc07d689c2ea55c1fc949bc10e2e",
+      "bytes": 1380
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00038.png",
+      "sha256": "e249cf15a3f02c5fb43bd0b3d49de562381cb5555446da3641331f1428a3abed",
+      "bytes": 1321
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00039.png",
+      "sha256": "a69381fea4f6b6568529b77377923e26b719243c59c799989bc9ab1d51c07617",
+      "bytes": 1293
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00040.png",
+      "sha256": "40322ffb483ad5d9c125e12281fae6e00ba0c7d3f520a805ea8332ff595741cd",
+      "bytes": 1158
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00041.png",
+      "sha256": "4ef313ad4381b965838d7ec08ca8f9ab756cb099d71b4ad0170d399b1343ab6c",
+      "bytes": 1209
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00042.png",
+      "sha256": "ab00ffb7dc0d5b8134785a053d100c1d7cade053486fb7b5931e5e893e6027fe",
+      "bytes": 1180
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00043.png",
+      "sha256": "9cdc56ea1b4f60586666bcd01e8aab8d6e6c351c9c8760f3179f016a44a350d2",
+      "bytes": 1188
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00044.png",
+      "sha256": "34cb564eafdbde54f060658d7978a50c4682177254119241a85d9da457b2b89a",
+      "bytes": 1245
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00045.png",
+      "sha256": "93dced3ff1c4a09578da3191f64e7aacc9427e27875f615f09968e499a3f4a17",
+      "bytes": 1240
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00046.png",
+      "sha256": "78d6d2a4d1b9b3fd6c8da1ca0e6829d1d03c87a11504434cee30de6d0c0f4eba",
+      "bytes": 1226
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00047.png",
+      "sha256": "90bfb12bd3991e645d699e65c3d728c3060e2dc21110611cda4142979e41c6ad",
+      "bytes": 1240
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00048.png",
+      "sha256": "c73c46d917c8319107084b8b6882415eef312f7d0674f114b0d25654d1722f47",
+      "bytes": 1261
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00049.png",
+      "sha256": "9b192729d8a0f0885e6cd86bb7e4c0a93a69b34b2352d83813bdb9809d83df90",
+      "bytes": 1212
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00050.png",
+      "sha256": "27327e064f05549e9d5444d06e3f7d272888231ca39b2356bfaaaf221726d70c",
+      "bytes": 1187
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00051.png",
+      "sha256": "305bd5598464b0f7eee8b5153fb093b6d092af099b1de92c6472c0115e9989a5",
+      "bytes": 1186
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00052.png",
+      "sha256": "569cd5f7ae9d60c7852e5cbfe475a316708a833ae8d2edeec4d9930857665d96",
+      "bytes": 1190
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00053.png",
+      "sha256": "3007e0fb1cda2bb4c84c8ec60ed2108e597fdd493cea908926b27eda6890bbd1",
+      "bytes": 1146
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00054.png",
+      "sha256": "0eef73edc1f70aa777612e6efabce9009bcd51e228ce3e2f88e94fcc4b4f7b77",
+      "bytes": 1144
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00055.png",
+      "sha256": "c750c74f2d4f86c06f304656c5f2f25582b46945b12a34338a915564c2edebb8",
+      "bytes": 1156
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00056.png",
+      "sha256": "a06a84cf97602dd9b0d4abe29333dd10ea93aadd318fe15cf565f09b5e2c1dbc",
+      "bytes": 1098
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00057.png",
+      "sha256": "126f81508808906741fc4a7f73b54ee9e9bed3281dea4abcf693b81939d5120b",
+      "bytes": 1100
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00058.png",
+      "sha256": "e811dbec43f81e721a6b98adbd1ccf29a6b4d65a192334d1c31e791e5b71f493",
+      "bytes": 1041
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00059.png",
+      "sha256": "358eb068f75b87229d72833f84b0991b6af718299f6465bb1b492a1ebda750c2",
+      "bytes": 1047
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00060.png",
+      "sha256": "aa1169465f5d22edd7879fabad98afbe7fdafc5c72df382487c0925a07b9a1be",
+      "bytes": 1042
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00061.png",
+      "sha256": "2cba6b923a770e50494f9152fd6eed331788f6f801f74a1b4bf46c48654c3ad6",
+      "bytes": 978
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00062.png",
+      "sha256": "fa3ee6ec17e8fe17abea89900cc32ebe50a1a7cfc00c13f94304f052499a65d1",
+      "bytes": 955
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00063.png",
+      "sha256": "fbaa17e938c0f9fe38c27f9982e44dac6909e286fd8b88e286dd61b1483c0ed7",
+      "bytes": 999
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00064.png",
+      "sha256": "68e68562068f01c27efa55000855ce56abef41e33f1bfaf09121c39eecd308a4",
+      "bytes": 971
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00065.png",
+      "sha256": "99af5cbd81ef3611e97fc963e8760cdf993385ba8e6037cb78e15576149f4587",
+      "bytes": 927
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00066.png",
+      "sha256": "2c1b331a54265a647033ffc11dfe681db088feb47c04b9cbf653619cd5f90658",
+      "bytes": 903
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00067.png",
+      "sha256": "133c732460c917b76e9e8837711813b3c907b48bf60ab1854351e82b580cd8e8",
+      "bytes": 915
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00068.png",
+      "sha256": "fa574fc9d6609d06ac63b18e08a09415bb010614dc4bc5e19546704ed34fed85",
+      "bytes": 891
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00069.png",
+      "sha256": "7e5fa746d374157c6810559cd50302e1800e76a816f60d3ddcc8800691062a59",
+      "bytes": 956
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00070.png",
+      "sha256": "4cdbc8b82c86661e14a87a2a38332d6b6900c6979c4aba47bb1a3324d9eafbc3",
+      "bytes": 966
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00071.png",
+      "sha256": "bfb654319250d05e77d44b24ccea54d4e07a8b20bf38b2cd478f6d9677794ea2",
+      "bytes": 1013
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00072.png",
+      "sha256": "fd32bb6e8ef363fc3be71ed258c1358b377fb1936d68152445664edf314d0827",
+      "bytes": 1015
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00073.png",
+      "sha256": "4d64ff030f4d58001cdd47fd00c498f3900de8e66f113e86e10e99c4c7edda2d",
+      "bytes": 1030
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00074.png",
+      "sha256": "cdce4df7d64925c9ae708f2ba448a653d10fb4c8c6f30b00b2dced975749057a",
+      "bytes": 1007
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00075.png",
+      "sha256": "48896a4aa2154c9edf7d393a35ee2ea5a75f3e42e8b3c62a4fd4c24f176b4d90",
+      "bytes": 982
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00076.png",
+      "sha256": "f5eba498c2619c9cb75b683ba1e08d5098bbdb6f66196c70ef04522ec708ebeb",
+      "bytes": 956
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00077.png",
+      "sha256": "61ef0fbfd0e9edcdfa034250a69efcaccaf2f06b255a5c61ea3ef470cfb085ef",
+      "bytes": 974
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00078.png",
+      "sha256": "7611afd751e40f0a63c29fbae3398164848df1c74a674a542d8800217f97b434",
+      "bytes": 981
+    },
+    {
+      "path": "inputs/object_removal/bmx-trees_mask/00079.png",
+      "sha256": "fdef3b4d39e051916936071e6874a145177ad07a43d8730d1f5c995f25cc75dd",
+      "bytes": 950
+    }
+  ],
+  "weights": [
+    {
+      "path": "weights/raft-things.pth",
+      "sha256": "fcfa4125d6418f4de95d84aec20a3c5f4e205101715a79f193243c186ac9a7e1",
+      "bytes": 21108000
+    },
+    {
+      "path": "weights/recurrent_flow_completion.pth",
+      "sha256": "22939a1a7900da878dbe1ccd011d646b1bfb30b8290039d8ff0e0c2fefbfd283",
+      "bytes": 20348681
+    },
+    {
+      "path": "weights/ProPainter.pth",
+      "sha256": "12c070c4b48f374c91d8a2a17851140b85c159621080989f9e191bbc18bd6591",
+      "bytes": 157780510
+    }
+  ],
+  "benchmark_scores": null
+}
