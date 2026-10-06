@@ -1,0 +1,10 @@
+{
+  "base_model": {
+    "repo_id": "alibaba-pai/Wan2.1-Fun-1.3B-InP",
+    "revision": "9bcbbcf673c0e6a996df6f3f25bee596ffa36d47"
+  },
+  "effecterase": {
+    "repo_id": "FudanCVL/EffectErase",
+    "revision": "95c9d455300c265c57159767ba3e3e1eebb347b0"
+  }
+}

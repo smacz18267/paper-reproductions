@@ -1,0 +1,62 @@
+{
+  "pip_check_exit_code": 1,
+  "pip_check_output": "decord 0.6.0 is not supported on this platform\n",
+  "known_decord_metadata_issue_accepted": true,
+  "status": "passed_with_verified_metadata_exception",
+  "decord_wheel_metadata": "Wheel-Version: 1.0\nGenerator: bdist_wheel (0.36.2)\nRoot-Is-Purelib: false\nTag: cp36-cp36m-manylinux2010_x86_64\n\n",
+  "upstream_issue": "https://github.com/dmlc/decord/issues/356",
+  "decord_decode_checks": [
+    {
+      "video": "/home/smayan/research/EffectErase/demo/FG_BG/WILD_ENV006_00042.mp4",
+      "frames": 100,
+      "sample_indices": [
+        0,
+        40,
+        80
+      ],
+      "sample_shapes": [
+        [
+          1080,
+          1920,
+          3
+        ],
+        [
+          1080,
+          1920,
+          3
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ]
+    },
+    {
+      "video": "/home/smayan/research/EffectErase/demo/MASK/WILD_ENV006_00042.mp4",
+      "frames": 100,
+      "sample_indices": [
+        0,
+        40,
+        80
+      ],
+      "sample_shapes": [
+        [
+          1080,
+          1920,
+          3
+        ],
+        [
+          1080,
+          1920,
+          3
+        ],
+        [
+          1080,
+          1920,
+          3
+        ]
+      ]
+    }
+  ]
+}

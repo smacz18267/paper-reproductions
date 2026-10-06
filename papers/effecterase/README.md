@@ -42,9 +42,7 @@ are saved in `setup_dependency_checks.json` and copied into each run's evidence.
 
 <!-- effecterase-results:start -->
 
-The setup and capture scripts are prepared. No EffectErase inference run has yet
-been recorded in this repository. The authors' supplied result is not counted as
-a personal reproduction.
+The latest recorded inference produced 81 frames at 832 × 480 and 30 FPS. [Video, comparison and execution evidence](../../evidence/effecterase/recorded/20261006T094029Z-3256661/README.md).
 
 <!-- effecterase-results:end -->
 
