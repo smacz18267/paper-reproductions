@@ -104,16 +104,19 @@ def main():
     original, mask_meta = video_info(video), video_info(mask)
     if original["fps"] != mask_meta["fps"]:
         raise RuntimeError("Input video and mask frame rates differ; upstream requires an exact match")
-    if original["decoded_frames"] != mask_meta["decoded_frames"]:
-        raise RuntimeError("Input video and mask have different decoded frame counts")
-    if (original["width"], original["height"]) != (mask_meta["width"], mask_meta["height"]):
-        raise RuntimeError("Input video and mask dimensions differ")
-    frames = min(original["decoded_frames"], int(SECONDS * original["fps"]))
+    # Both upstream stages use the common leading sequence. The bundled input
+    # and mask may have different tails; compare only frames present in both,
+    # bounded by the requested maximum duration. Do not pad or resample masks.
+    frames = min(original["decoded_frames"], mask_meta["decoded_frames"],
+                 int(SECONDS * original["fps"]))
     if frames < 22:
         raise RuntimeError("DiffuEraser needs at least 22 aligned frames")
     size = expected_size(original["width"], original["height"])
     inputs = {"video": original, "mask": mask_meta, "expected_output_frames": frames,
-              "expected_output_size": list(size)}
+              "expected_output_size": list(size), "selection": "common leading frames, up to 10 seconds",
+              "mask_resampling": "nearest neighbour to processed video dimensions, as in upstream",
+              "excluded_video_tail_frames": original["decoded_frames"] - frames,
+              "excluded_mask_tail_frames": mask_meta["decoded_frames"] - frames}
     (run / "input_metadata.json").write_text(json.dumps(inputs, indent=2) + "\n")
     samples = sorted({0, frames // 2, frames - 1})
     masks = sampled_frames(mask, samples)
@@ -128,6 +131,11 @@ def main():
         if not path.is_file() or path.stat().st_size == 0:
             raise RuntimeError(f"Missing model component: {path}")
     if args.preflight:
+        print(f"Decoded input lengths: video={original['decoded_frames']}, mask={mask_meta['decoded_frames']}.")
+        if original["decoded_frames"] != mask_meta["decoded_frames"]:
+            print(f"Using the first {frames} frames present in both inputs, matching upstream inference.")
+        if (original["width"], original["height"]) != (mask_meta["width"], mask_meta["height"]):
+            print(f"Upstream will resize the mask to {size[0]}x{size[1]} with nearest-neighbour sampling.")
         print(f"Inputs passed: {frames} aligned frames, output size {size[0]}x{size[1]}.")
         return
 

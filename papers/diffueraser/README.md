@@ -40,9 +40,14 @@ and subvideo length 50. A small wrapper seeds Python, NumPy, and PyTorch with
 The upstream inference code and model computation are otherwise unchanged.
 The seed does not guarantee identical output across hardware or library versions.
 
-The input and mask must be aligned MP4 videos with matching FPS, dimensions,
-and decoded frame counts, containing at least 22 frames. The supplied example
-already includes a mask. The upstream memory estimate for a 960 × 540, 250-frame
+The input and mask must be aligned MP4 videos with matching FPS.
+The supplied example already includes a mask, but the two files can have
+different total frame counts. As in the upstream code, capture processes the
+common leading sequence up to 10 seconds, with at least 22 frames required.
+Original frame counts and excluded tails are recorded in the input metadata.
+Masks are resized to the processed video dimensions with nearest-neighbour
+sampling by the unchanged upstream code.
+The upstream memory estimate for a 960 × 540, 250-frame
 video is around 20 GB; setup prints current GPU usage before selecting GPU 1.
 
 ## Execution evidence
