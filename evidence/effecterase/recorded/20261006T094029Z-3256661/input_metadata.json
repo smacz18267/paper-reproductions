@@ -1,0 +1,22 @@
+{
+  "video": {
+    "filename": "WILD_ENV006_00042.mp4",
+    "bytes": 2001650,
+    "sha256": "52f1e03fa5d9dc86ab152847b749e1d02a7b8bc9d9ea9ee767b7a6dce6c23e67",
+    "decoded_frames": 81,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "decoded_prefix_only": true
+  },
+  "mask": {
+    "filename": "WILD_ENV006_00042.mp4",
+    "bytes": 1208853,
+    "sha256": "07b6ff097468aa4db048c436f801e573eb2c2f50545eb5941008db4ddd6c4232",
+    "decoded_frames": 81,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "decoded_prefix_only": true
+  }
+}

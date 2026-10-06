@@ -1,0 +1,80 @@
+{
+  "task": "object and effect removal",
+  "inputs": {
+    "video": {
+      "filename": "WILD_ENV006_00042.mp4",
+      "bytes": 2001650,
+      "sha256": "52f1e03fa5d9dc86ab152847b749e1d02a7b8bc9d9ea9ee767b7a6dce6c23e67",
+      "decoded_frames": 81,
+      "fps": 30.0,
+      "width": 1920,
+      "height": 1080,
+      "decoded_prefix_only": true
+    },
+    "mask": {
+      "filename": "WILD_ENV006_00042.mp4",
+      "bytes": 1208853,
+      "sha256": "07b6ff097468aa4db048c436f801e573eb2c2f50545eb5941008db4ddd6c4232",
+      "decoded_frames": 81,
+      "fps": 30.0,
+      "width": 1920,
+      "height": 1080,
+      "decoded_prefix_only": true
+    }
+  },
+  "settings": {
+    "num_frames": 81,
+    "height": 480,
+    "width": 832,
+    "num_inference_steps": 50,
+    "seed": 2025,
+    "cfg": 1.0,
+    "lora_alpha": 1.0,
+    "dtype": "bfloat16",
+    "frame_interval": 1,
+    "teacache": false,
+    "tiled": false
+  },
+  "output": {
+    "filename": "removed.mp4",
+    "bytes": 2600360,
+    "sha256": "a2daf8f82f8085dab0099c0237150897c84774ce1a71dd048f0bbace4a14a735",
+    "decoded_frames": 81,
+    "fps": 30.0,
+    "width": 832,
+    "height": 480,
+    "decoded_prefix_only": false
+  },
+  "comparison": {
+    "filename": "comparison.png",
+    "bytes": 798813,
+    "sha256": "31351708fbd07afae7a9ac48f8ea55924cde15d198777d5b56f346be5852404f"
+  },
+  "models": [
+    {
+      "filename": "diffusion_pytorch_model.safetensors",
+      "bytes": 3128957992,
+      "sha256": "8495d2b1673ffb18abb548a64ff3b0e4bd367734f653096f7a8a3ad46954d511"
+    },
+    {
+      "filename": "Wan2.1_VAE.pth",
+      "bytes": 507609880,
+      "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+    },
+    {
+      "filename": "models_t5_umt5-xxl-enc-bf16.pth",
+      "bytes": 11361920418,
+      "sha256": "7cace0da2b446bbbbc57d031ab6cf163a3d59b366da94e5afe36745b746fd81d"
+    },
+    {
+      "filename": "models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth",
+      "bytes": 4772359047,
+      "sha256": "628c9998b613391f193eb67ff68da9667d75f492911e4eb3decf23460a158c38"
+    },
+    {
+      "filename": "EffectErase.ckpt",
+      "bytes": 1438679011,
+      "sha256": "4e9ace4607a348a0d820328f827f7f4f751a0e44d4cf60665c03e9740dfa024d"
+    }
+  ]
+}
