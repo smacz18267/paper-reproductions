@@ -26,8 +26,8 @@ torchvision 0.18.1, Diffusers 0.29.2, and NumPy 1.26.4. The authors recommend
 Python 3.9.19; this setup also permits the server's Python 3.12 and checks actual
 upstream imports and a CUDA deformable convolution before downloading models.
 Additional dependency pins are in [environment-constraints.txt](environment-constraints.txt).
-The server completed setup, CUDA checks and inference; final artifact validation
-and publication of the execution evidence are pending.
+The server completed setup, CUDA checks, inference and artifact validation.
+The recorded output, comparison and execution evidence are included below.
 
 Setup archives the pinned upstream implementation and examples to
 `papers/diffueraser/source`, retaining the upstream Apache 2.0 license and the
