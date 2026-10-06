@@ -89,8 +89,11 @@ def validate_output(metadata, frames, fps, size, label):
 def expected_prior_size(width, height):
     # Upstream ProPainter uses resize_ratio=0.6 and writes back to the
     # requested pre-rounding dimensions, while DiffuEraser upsamples the prior.
+    # OpenCV's FFmpeg MP4 writer drops the last row/column for odd dimensions.
+    # In example3, floating-point truncation requests 576x323, encoded as 576x322.
     ratio = 0.6 * min(1.0, MAX_SIZE / max(width, height))
-    return int(ratio * width), int(ratio * height)
+    requested_width, requested_height = int(ratio * width), int(ratio * height)
+    return requested_width - requested_width % 2, requested_height - requested_height % 2
 
 
 def main():
@@ -150,7 +153,8 @@ def main():
         raise RuntimeError("ProPainter prior frame rate differs from input")
     prior_size = expected_prior_size(original["width"], original["height"])
     if (prior["width"], prior["height"]) != prior_size:
-        raise RuntimeError("ProPainter prior has an unexpected output size")
+        raise RuntimeError(f"ProPainter prior: expected {prior_size[0]}x{prior_size[1]}, "
+                           f"decoded {prior['width']}x{prior['height']}")
     before = sampled_frames(video, samples)
     after, priors = sampled_frames(output_path, samples), sampled_frames(prior_path, samples)
     tile_w, tile_h, label_h = 320, max(1, round(320 * size[1] / size[0])), 30

@@ -26,7 +26,8 @@ torchvision 0.18.1, Diffusers 0.29.2, and NumPy 1.26.4. The authors recommend
 Python 3.9.19; this setup also permits the server's Python 3.12 and checks actual
 upstream imports and a CUDA deformable convolution before downloading models.
 Additional dependency pins are in [environment-constraints.txt](environment-constraints.txt).
-GPU inference has not yet validated this environment.
+The server completed setup, CUDA checks and inference; final artifact validation
+and publication of the execution evidence are pending.
 
 Setup archives the pinned upstream implementation and examples to
 `papers/diffueraser/source`, retaining the upstream Apache 2.0 license and the
@@ -39,6 +40,20 @@ and subvideo length 50. A small wrapper seeds Python, NumPy, and PyTorch with
 2025 and copies the intermediate ProPainter video before upstream deletes it.
 The upstream inference code and model computation are otherwise unchanged.
 The seed does not guarantee identical output across hardware or library versions.
+
+The ProPainter prior is encoded at its smaller upstream resolution. Validation
+accounts for MP4 encoding cropping an odd final row or column; the final
+DiffuEraser output is still checked against its exact expected dimensions.
+An existing run with inference exit code 0 can be validated without rerunning
+the models:
+
+```bash
+bash scripts/finalize_diffueraser.sh "$HOME/research/DiffuEraser" /path/to/existing/run
+```
+
+Finalization preserves previous validation logs and exit status under
+`validation_attempts`, records the validator used, and writes `SUCCESS.txt`
+only after the existing videos pass validation.
 
 The input and mask must be aligned MP4 videos with matching FPS.
 The supplied example already includes a mask, but the two files can have
@@ -54,8 +69,10 @@ video is around 20 GB; setup prints current GPU usage before selecting GPU 1.
 
 <!-- diffueraser-results:start -->
 
-GPU inference is pending. The scripts are prepared, but no successful run or
-output is claimed until capture completes on the research server.
+Inference completed on the research server in 211.49 seconds. The final output
+passed its frame count, FPS and resolution checks. The intermediate ProPainter
+size check required a correction for MP4 encoding of odd dimensions; artifact
+finalization and publication of the recorded result are pending.
 
 <!-- diffueraser-results:end -->
 
