@@ -1,0 +1,29 @@
+{
+  "video": {
+    "filename": "input_video.mp4",
+    "bytes": 5657081,
+    "sha256": "b21c936a305f80ed6707bad621712b24bd1e7a69f82ec7cdd949b18fd1a7fd56",
+    "decoded_frames": 703,
+    "fps": 25.0,
+    "width": 1280,
+    "height": 720
+  },
+  "mask": {
+    "filename": "input_mask.mp4",
+    "bytes": 142390,
+    "sha256": "b7f1d586d56e0f4ae5eb2b05f5a1e3d67ddd0a95486124dcaa8dedbc89b93b68",
+    "decoded_frames": 250,
+    "fps": 25.0,
+    "width": 1280,
+    "height": 720
+  },
+  "expected_output_frames": 250,
+  "expected_output_size": [
+    960,
+    536
+  ],
+  "selection": "common leading frames, up to 10 seconds",
+  "mask_resampling": "nearest neighbour to processed video dimensions, as in upstream",
+  "excluded_video_tail_frames": 453,
+  "excluded_mask_tail_frames": 0
+}
