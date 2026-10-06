@@ -1,16 +1,13 @@
-# BMX object removal
+# ProPainter: BMX object removal
 
-These files were supplied from Smayan Gupta's completed ProPainter server run on 5 October 2026.
+Pretrained inference run by Smayan Gupta on 5 October 2026.
 
-- [Completed video](inpaint_out.mp4)
-- [Masked-input visualization](masked_in.mp4)
-- [File metadata and hashes](artifact_manifest.json)
+[Output video](inpaint_out.mp4) · [Masked input](masked_in.mp4) · [Metadata and SHA-256 hashes](artifact_manifest.json)
 
-![Sampled input/output comparison](comparison.png)
+![Masked input on the left; completed output on the right](comparison.png)
 
-Both videos have 80 frames at 24 saved FPS and a resolution of 432 x 240.
-Both were fully decoded without errors, and the comparison uses corresponding sampled frames.
-The left column is the masked-input visualization; the right is the completed output.
-The green visualization overlay is not the ground-truth background.
-No quantitative benchmark quality score was calculated. The original complete runtime log
-and exact source commit were not recorded; the separate capture script records future runs.
+80 frames, 432 × 240, 24 saved FPS, 3.33 seconds. Both videos were fully decoded
+without errors. The comparison shows corresponding sampled frames.
+The cyclist and bike are removed from the reconstructed scene.
+No quantitative benchmark score was measured. A complete runtime log and exact
+source commit were not retained for this original run.

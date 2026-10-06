@@ -1,80 +1,51 @@
 # ProPainter
 
-Paper: **ProPainter: Improving Propagation and Transformer for Video Inpainting**, ICCV 2023.
-Authors: Shangchen Zhou, Chongyi Li, Kelvin C. K. Chan and Chen Change Loy.
-Official source: https://github.com/sczhou/ProPainter
-Paper: https://arxiv.org/abs/2309.03897
+**ProPainter: Improving Propagation and Transformer for Video Inpainting**, ICCV 2023.
 
-## Current result
+Shangchen Zhou, Chongyi Li, Kelvin C. K. Chan, and Chen Change Loy.
 
-The official pretrained inference pipeline was run on the supplied video-completion
-and object-removal examples. The submitted artifacts are stored under
-`evidence/propainter/submitted/`. This is demonstration inference, not a
-from-scratch implementation, newly trained model, or reproduction of benchmark scores.
+[Paper](https://arxiv.org/abs/2309.03897) · [Official repository](https://github.com/sczhou/ProPainter) · [Implementation](source)
 
-| Case | Frames | Saved FPS | Resolution | Duration |
-| --- | ---: | ---: | --- | ---: |
-| Running car with square masks | 292 | 25 | 432 x 240 | 11.68 seconds |
-| BMX cyclist removal | 80 | 24 | 432 x 240 | 3.333333 seconds |
+## Implementation
 
-The BMX demo uses image frames as input, so 24 FPS is the inference script's
-saved-video default; it is not a measured original camera frame rate.
-Both output/input visualization pairs were fully decoded without errors.
-Sampled frames show reconstructed masked regions and removal of the cyclist/bike.
-No PSNR, SSIM, VFID, inference runtime or peak GPU memory was measured for these
-submitted runs. Benchmark scores are left unset.
+This directory contains the authors' ProPainter implementation. The pretrained
+inference pipeline was run for video completion and object removal on an NVIDIA
+RTX A6000, with FP16 inference and a processing resolution of 432 × 240.
 
-## Save the exact source used
+The Python environment used Python 3.12.3, PyTorch 2.5.1, torchvision 0.20.1,
+and CUDA 12.1 wheels. Dependency versions are recorded in
+[environment-pins.txt](environment-pins.txt); the recorded run includes the
+[complete package environment](../../evidence/propainter/recorded/20261005T120400Z-2328389/environment.freeze.txt).
 
-From the repository root on the server:
+## Results
 
-```bash
-bash scripts/import_propainter.sh "$HOME/research/ProPainter"
-```
+| Example | Frames | Saved FPS | Resolution | Duration | Output |
+| --- | ---: | ---: | --- | ---: | --- |
+| Running car, square masks | 292 | 25 | 432 × 240 | 11.68 s | [Video completion](../../evidence/propainter/submitted/video-completion/README.md) |
+| BMX cyclist removal | 80 | 24 | 432 × 240 | 3.33 s | [Object removal](../../evidence/propainter/submitted/object-removal/README.md) |
 
-This imports the existing checkout's committed files, including its LICENSE,
-records its commit, and exports the installed environment if available. It does
-not copy the virtual environment, downloaded weights, results or Git metadata.
-It stops if tracked source files have uncommitted changes or a snapshot already exists.
+The result folders include the completed videos, masked-input visualizations,
+sampled comparisons, and artifact hashes. The BMX example uses frame images;
+24 FPS is the output-video setting. Both video pairs were fully decoded without
+errors. These runs demonstrate pretrained inference. No training or quantitative
+benchmark evaluation was performed for these submitted results.
 
-## Record real execution evidence
+## Execution evidence
 
-Choose an available GPU according to the server's allocation instructions. Then:
+The recorded rerun completed both examples successfully on 5 October 2026.
+Its [source commit](../../evidence/propainter/recorded/20261005T120400Z-2328389/source_commit.txt),
+[GPU and runtime details](../../evidence/propainter/recorded/20261005T120400Z-2328389/torch_runtime.txt),
+[artifact hashes](../../evidence/propainter/recorded/20261005T120400Z-2328389/artifact_manifest.json),
+and original command/log files are included:
 
-```bash
-bash scripts/capture_propainter.sh "$HOME/research/ProPainter" 1
-```
+| Example | Command | Execution log | Output |
+| --- | --- | --- | --- |
+| Video completion | [Command](../../evidence/propainter/recorded/20261005T120400Z-2328389/video-completion/command.sh) | [Log](../../evidence/propainter/recorded/20261005T120400Z-2328389/video-completion/run.log) | [Video](../../evidence/propainter/recorded/20261005T120400Z-2328389/video-completion/videos/running_car/inpaint_out.mp4) |
+| Object removal | [Command](../../evidence/propainter/recorded/20261005T120400Z-2328389/object-removal/command.sh) | [Log](../../evidence/propainter/recorded/20261005T120400Z-2328389/object-removal/run.log) | [Video](../../evidence/propainter/recorded/20261005T120400Z-2328389/object-removal/videos/bmx-trees/inpaint_out.mp4) |
 
-This reruns both supplied examples in the existing working environment and
-creates a timestamped evidence directory. It saves source commit/diff, package
-versions, GPU information, exact commands, genuine process output, timestamps,
-input/weight/output hashes and both saved videos. `SUCCESS.txt` appears only
-after both commands and artifact recording succeed. A failed command stops the
-script and leaves any collected logs for diagnosis.
+## Citation and license
 
-## Recreate the environment for an imported source snapshot
-
-From the repository root, with Python 3.12 available:
-
-```bash
-cd papers/propainter/source
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
-python -m pip install -r requirements.txt -r ../environment-pins.txt imageio tqdm
-```
-
-If `environment.freeze.txt` has been exported, retain it as the exact package
-record of the existing installation. The CUDA wheel index also matters when
-recreating that environment.
-
-## Attribution and license
-
-The source snapshot remains the authors' implementation. Keep its upstream
-README and LICENSE intact and describe custom changes separately. ProPainter's
-S-Lab License permits non-commercial use and redistribution under its conditions;
-do not apply a blanket MIT license to all third-party code in this collection.
+The implementation retains the authors' [S-Lab License](source/LICENSE).
 
 ```bibtex
 @inproceedings{zhou2023propainter,
