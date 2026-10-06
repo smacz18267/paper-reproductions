@@ -69,10 +69,7 @@ video is around 20 GB; setup prints current GPU usage before selecting GPU 1.
 
 <!-- diffueraser-results:start -->
 
-Inference completed on the research server in 211.49 seconds. The final output
-passed its frame count, FPS and resolution checks. The intermediate ProPainter
-size check required a correction for MP4 encoding of odd dimensions; artifact
-finalization and publication of the recorded result are pending.
+Recorded inference: 250 frames at 960 × 536, 25 FPS. [Outputs and execution evidence](../../evidence/diffueraser/recorded/20261006T110108Z-3306048/README.md).
 
 <!-- diffueraser-results:end -->
 

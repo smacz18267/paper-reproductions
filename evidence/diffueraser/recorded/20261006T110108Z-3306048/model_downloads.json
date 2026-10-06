@@ -1,0 +1,62 @@
+{
+  "diffueraser": {
+    "repo_id": "lixiaowen/diffuEraser",
+    "revision": "ad510dca07fa8e155d4bd8d002085bb8ec8f60e5",
+    "destination": "weights/diffuEraser",
+    "files": [
+      "brushnet/config.json",
+      "brushnet/diffusion_pytorch_model.safetensors",
+      "unet_main/config.json",
+      "unet_main/diffusion_pytorch_model.safetensors"
+    ]
+  },
+  "sd15": {
+    "repo_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+    "revision": "451f4fe16113bff5a5d2269ed5ad43b0592e9a14",
+    "destination": "weights/stable-diffusion-v1-5",
+    "files": [
+      "feature_extractor/preprocessor_config.json",
+      "model_index.json",
+      "safety_checker/config.json",
+      "safety_checker/model.safetensors",
+      "scheduler/scheduler_config.json",
+      "text_encoder/config.json",
+      "text_encoder/model.safetensors",
+      "tokenizer/merges.txt",
+      "tokenizer/special_tokens_map.json",
+      "tokenizer/tokenizer_config.json",
+      "tokenizer/vocab.json"
+    ]
+  },
+  "vae": {
+    "repo_id": "stabilityai/sd-vae-ft-mse",
+    "revision": "31f26fdeee1355a5c34592e401dd41e45d25a493",
+    "destination": "weights/sd-vae-ft-mse",
+    "files": [
+      "config.json",
+      "diffusion_pytorch_model.safetensors"
+    ]
+  },
+  "pcm": {
+    "repo_id": "wangfuyun/PCM_Weights",
+    "revision": "39560fead4ce00f94db3cb8e93dd8fba90ec0be6",
+    "destination": "weights/PCM_Weights",
+    "files": [
+      "sd15/pcm_sd15_smallcfg_2step_converted.safetensors"
+    ]
+  },
+  "propainter": {
+    "ProPainter.pth": {
+      "copied_from": "/home/smayan/research/ProPainter/weights/ProPainter.pth",
+      "upstream_url": "https://github.com/sczhou/ProPainter/releases/download/v0.1.0/ProPainter.pth"
+    },
+    "raft-things.pth": {
+      "copied_from": "/home/smayan/research/ProPainter/weights/raft-things.pth",
+      "upstream_url": "https://github.com/sczhou/ProPainter/releases/download/v0.1.0/raft-things.pth"
+    },
+    "recurrent_flow_completion.pth": {
+      "copied_from": "/home/smayan/research/ProPainter/weights/recurrent_flow_completion.pth",
+      "upstream_url": "https://github.com/sczhou/ProPainter/releases/download/v0.1.0/recurrent_flow_completion.pth"
+    }
+  }
+}

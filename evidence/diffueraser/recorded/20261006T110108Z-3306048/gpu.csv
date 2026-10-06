@@ -1,0 +1,3 @@
+index, name, uuid, driver_version, memory.total [MiB], memory.used [MiB]
+0, NVIDIA RTX A6000, GPU-40dcd381-65cf-c9d2-ab38-8c2a57e296a4, 595.58.03, 49140 MiB, 35 MiB
+1, NVIDIA RTX A6000, GPU-112029ba-70eb-e2d4-b34a-089b5b97b119, 595.58.03, 49140 MiB, 50 MiB

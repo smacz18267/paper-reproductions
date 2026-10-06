@@ -1,0 +1,4 @@
+torch 2.3.1+cu121 torchvision 0.18.1+cu121
+diffusers 0.29.2 transformers 4.41.1
+CUDA runtime 12.1
+Visible GPU NVIDIA RTX A6000
