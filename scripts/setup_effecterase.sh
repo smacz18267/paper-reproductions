@@ -41,7 +41,7 @@ PYTHON="$SOURCE/.venv/bin/python"
 "$PYTHON" -m pip install --upgrade pip setuptools wheel
 "$PYTHON" -m pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
 "$PYTHON" -m pip install -c "$CONSTRAINTS" -e . 'huggingface-hub>=0.34,<1'
-"$PYTHON" -m pip check
+"$PYTHON" "$ROOT/scripts/check_effecterase_environment.py" --source "$SOURCE"
 CUDA_VISIBLE_DEVICES="$GPU" "$PYTHON" - <<'PY'
 import torch, torchvision
 from diffsynth import ModelManager, WanRemovePipeline

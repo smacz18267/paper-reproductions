@@ -72,6 +72,9 @@ PY
 if [ -f "$SOURCE/model_downloads.json" ]; then
   cp "$SOURCE/model_downloads.json" "$RUN/model_downloads.json"
 fi
+if [ -f "$SOURCE/setup_dependency_checks.json" ]; then
+  cp "$SOURCE/setup_dependency_checks.json" "$RUN/setup_dependency_checks.json"
+fi
 "$PYTHON" "$ROOT/scripts/effecterase_artifacts.py" "$RUN" --source "$SOURCE" --preflight 2>&1 | tee "$RUN/input_checks.log"
 CUDA_VISIBLE_DEVICES="$GPU" "${command[@]}" 2>&1 | tee "$RUN/run.log"
 printf '0\n' > "$RUN/inference_exit_code.txt"

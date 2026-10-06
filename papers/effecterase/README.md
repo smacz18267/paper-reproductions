@@ -31,6 +31,13 @@ The selected dependency constraints are in [environment-constraints.txt](environ
 they have not yet been validated by a GPU inference run. Setup and each run save
 the complete installed environment.
 
+Decord 0.6.0 has a [known Linux wheel metadata error](https://github.com/dmlc/decord/issues/356):
+its internal Python 3.6 tag contradicts the wheel's Python 3 filename. Setup accepts
+only this isolated error on Linux x86_64, after the installed native decoder reads
+frames 0, 40 and 80 from both supplied videos. Other dependency errors and decoding
+failures still stop setup. The original check output, metadata and decoding checks
+are saved in `setup_dependency_checks.json` and copied into each run's evidence.
+
 ## Execution evidence
 
 <!-- effecterase-results:start -->
