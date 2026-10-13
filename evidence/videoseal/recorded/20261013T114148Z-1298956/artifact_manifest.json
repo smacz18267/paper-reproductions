@@ -1,0 +1,45 @@
+{
+  "video": {
+    "frames": 256,
+    "width": 1904,
+    "height": 1080,
+    "fps": 24.0
+  },
+  "metrics": {
+    "model": "videoseal_1.0",
+    "seed": 2025,
+    "message_bits": 256,
+    "bit_accuracy": 1.0,
+    "input_frames": 256,
+    "output_frames": 256,
+    "width": 1904,
+    "height": 1080,
+    "fps": 24.0
+  },
+  "files": {
+    "input.mp4": {
+      "bytes": 3424569,
+      "sha256": "7e770665ac2a63cc264b27f91b9128f66b74eb5b33167fa4c2e104d8f550974a"
+    },
+    "watermarked.mp4": {
+      "bytes": 10362916,
+      "sha256": "7c718b757200c4538094f483940350b2bd03b70495c81437fd97ec9a508d5528"
+    },
+    "metrics.json": {
+      "bytes": 190,
+      "sha256": "dcccbb2d2f116af99d21ffc22aa59e79f765d915d81cb2c1e819bf2da61a277d"
+    },
+    "message.txt": {
+      "bytes": 257,
+      "sha256": "cccdcbbcb7a7ec8c140f0bd250c5a945e202e09281fe0b2093ba5eb4748bd0bd"
+    },
+    "comparison.png": {
+      "bytes": 1040637,
+      "sha256": "5104622e22e23726bc175b1c12cdb321728b0b1907eaa6f57cbd79560ae52283"
+    },
+    "run.log": {
+      "bytes": 463,
+      "sha256": "0e492ab536acfd770eaa8b1d16975857fbb3a33ec7958517a760a9ae22970b94"
+    }
+  }
+}

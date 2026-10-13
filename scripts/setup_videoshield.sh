@@ -64,12 +64,29 @@ snapshot_download(
     repo_id=manifest["repo_id"],
     revision=manifest["revision"],
     local_dir="models/modelscope",
+    allow_patterns=[
+        "model_index.json",
+        "scheduler/*",
+        "tokenizer/*",
+        "text_encoder/config.json",
+        "text_encoder/model.safetensors",
+        "unet/config.json",
+        "unet/diffusion_pytorch_model.safetensors",
+        "vae/config.json",
+        "vae/diffusion_pytorch_model.safetensors",
+    ],
 )
 PY
-if [ ! -s "$SOURCE/models/modelscope/model_index.json" ]; then
-  echo "Incomplete ModelScope download." >&2
-  exit 1
-fi
+for file in \
+  "$SOURCE/models/modelscope/model_index.json" \
+  "$SOURCE/models/modelscope/text_encoder/model.safetensors" \
+  "$SOURCE/models/modelscope/unet/diffusion_pytorch_model.safetensors" \
+  "$SOURCE/models/modelscope/vae/diffusion_pytorch_model.safetensors"; do
+  if [ ! -s "$file" ]; then
+    echo "Incomplete ModelScope download: $file" >&2
+    exit 1
+  fi
+done
 "$PYTHON" -m pip freeze > "$ROOT/papers/videoshield/environment.freeze.txt"
 df -h "$SOURCE"
 echo "Setup complete. Run: bash $ROOT/scripts/capture_videoshield.sh $SOURCE $GPU"
