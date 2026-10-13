@@ -1,0 +1,6 @@
+[WARN]: `ffmpeg-python` not available, `SimpleVideoDataset` class will not be usable. Install it by `pip install ffmpeg-python`.
+File /home/smayan/research/VideoSeal/ckpts/videoseal_y_256b_img.pth exists, skipping download
+Model loaded successfully from /home/smayan/research/VideoSeal/ckpts/videoseal_y_256b_img.pth with message: <All keys matched successfully>
+VideoSeal frames: 256 input, 256 output
+VideoSeal message bits: 256
+VideoSeal bit accuracy: 100.00%

@@ -1,0 +1,17 @@
+>>> Model checkpoint loading
+>>> Finish!
+AE working on z of shape (1, 4, 64, 64) = 16384 dimensions.
+@CoLVDM Inference: 2026-10-13-23-48-40
+Seed set to 123
+AE working on z of shape (1, 4, 64, 64) = 16384 dimensions.
+>>> model checkpoint loaded.
+[rank:0] 1/1 samples loaded.
+[rank:0] batch-1 (1)x1 ...
+DDIM scale True
+ddim device cuda:0
+/home/smayan/research/Safe-Sora/.venv/lib/python3.11/site-packages/torch/utils/checkpoint.py:429: UserWarning: torch.utils.checkpoint: please pass in use_reentrant=True or use_reentrant=False explicitly. The default value of use_reentrant will be updated to be False in the future. To maintain current behavior, pass use_reentrant=True. It is recommended that you use use_reentrant=False. Refer to docs for more details on the differences between the two variants.
+  warnings.warn(
+/home/smayan/research/Safe-Sora/.venv/lib/python3.11/site-packages/torch/utils/checkpoint.py:61: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+[✓] Image saved to: results/secret_combined.png
+[✓] Video saved to: results/cover_combined.mp4

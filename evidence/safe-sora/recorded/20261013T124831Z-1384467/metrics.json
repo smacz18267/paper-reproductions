@@ -1,0 +1,22 @@
+{
+  "video_fidelity": {
+    "mse": 5.347832361857097,
+    "psnr_db": 40.84902575864632,
+    "mean_absolute_error": 1.5928775787353515
+  },
+  "watermark_fidelity": {
+    "mse": 6.992289225260417,
+    "psnr_db": 39.68460976948546,
+    "mean_absolute_error": 1.3171590169270833
+  },
+  "video": {
+    "frames": 16,
+    "panel_width": 512,
+    "height": 320,
+    "fps": 10.0
+  },
+  "watermark": {
+    "width": 256,
+    "height": 256
+  }
+}

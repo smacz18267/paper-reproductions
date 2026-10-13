@@ -1,0 +1,515 @@
+{
+  "dataset": "MOSEv1",
+  "split": "train",
+  "selection_seed": 42,
+  "object_rule": "Largest total annotated pixel area; ties use the smallest label ID",
+  "mask_values": {
+    "keep": 0,
+    "remove": 255
+  },
+  "mask_dilation_pixels": 0,
+  "clips": [
+    {
+      "video_id": "02b72b8d",
+      "object_id": 1,
+      "frame_count": 67,
+      "visible_frames": 67,
+      "width": 960,
+      "height": 479,
+      "mean_mask_fraction": 0.01683,
+      "preview_frame": "00066.jpg"
+    },
+    {
+      "video_id": "0ab75563",
+      "object_id": 1,
+      "frame_count": 104,
+      "visible_frames": 17,
+      "width": 2340,
+      "height": 1080,
+      "mean_mask_fraction": 0.009024,
+      "preview_frame": "00014.jpg"
+    },
+    {
+      "video_id": "0b02886a",
+      "object_id": 1,
+      "frame_count": 30,
+      "visible_frames": 30,
+      "width": 1100,
+      "height": 720,
+      "mean_mask_fraction": 0.078581,
+      "preview_frame": "00029.jpg"
+    },
+    {
+      "video_id": "0b787263",
+      "object_id": 3,
+      "frame_count": 70,
+      "visible_frames": 68,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.149414,
+      "preview_frame": "00039.jpg"
+    },
+    {
+      "video_id": "0f96e2d7",
+      "object_id": 1,
+      "frame_count": 63,
+      "visible_frames": 63,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.012145,
+      "preview_frame": "00049.jpg"
+    },
+    {
+      "video_id": "1e44f47e",
+      "object_id": 1,
+      "frame_count": 90,
+      "visible_frames": 8,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.000699,
+      "preview_frame": "00004.jpg"
+    },
+    {
+      "video_id": "1fc5e086",
+      "object_id": 1,
+      "frame_count": 54,
+      "visible_frames": 54,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.030167,
+      "preview_frame": "00018.jpg"
+    },
+    {
+      "video_id": "230c2edf",
+      "object_id": 3,
+      "frame_count": 25,
+      "visible_frames": 25,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.110002,
+      "preview_frame": "00005.jpg"
+    },
+    {
+      "video_id": "26048547",
+      "object_id": 1,
+      "frame_count": 67,
+      "visible_frames": 13,
+      "width": 640,
+      "height": 368,
+      "mean_mask_fraction": 0.000363,
+      "preview_frame": "00009.jpg"
+    },
+    {
+      "video_id": "2d8d7d35",
+      "object_id": 1,
+      "frame_count": 27,
+      "visible_frames": 4,
+      "width": 1080,
+      "height": 1920,
+      "mean_mask_fraction": 0.000366,
+      "preview_frame": "00001.jpg"
+    },
+    {
+      "video_id": "2f5fb2a3",
+      "object_id": 1,
+      "frame_count": 26,
+      "visible_frames": 26,
+      "width": 544,
+      "height": 976,
+      "mean_mask_fraction": 0.089909,
+      "preview_frame": "00021.jpg"
+    },
+    {
+      "video_id": "337dfa1e",
+      "object_id": 1,
+      "frame_count": 127,
+      "visible_frames": 80,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.001592,
+      "preview_frame": "00001.jpg"
+    },
+    {
+      "video_id": "34ccea00",
+      "object_id": 1,
+      "frame_count": 84,
+      "visible_frames": 58,
+      "width": 640,
+      "height": 640,
+      "mean_mask_fraction": 0.199573,
+      "preview_frame": "00039.jpg"
+    },
+    {
+      "video_id": "395224b3",
+      "object_id": 2,
+      "frame_count": 22,
+      "visible_frames": 22,
+      "width": 1920,
+      "height": 896,
+      "mean_mask_fraction": 0.036623,
+      "preview_frame": "00018.jpg"
+    },
+    {
+      "video_id": "44476e77",
+      "object_id": 1,
+      "frame_count": 118,
+      "visible_frames": 118,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.1936,
+      "preview_frame": "00015.jpg"
+    },
+    {
+      "video_id": "4c42c747",
+      "object_id": 1,
+      "frame_count": 58,
+      "visible_frames": 58,
+      "width": 640,
+      "height": 362,
+      "mean_mask_fraction": 0.295889,
+      "preview_frame": "00009.jpg"
+    },
+    {
+      "video_id": "4ce088c6",
+      "object_id": 1,
+      "frame_count": 197,
+      "visible_frames": 189,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.001554,
+      "preview_frame": "00065.jpg"
+    },
+    {
+      "video_id": "4d979d99",
+      "object_id": 1,
+      "frame_count": 22,
+      "visible_frames": 5,
+      "width": 1920,
+      "height": 945,
+      "mean_mask_fraction": 0.000424,
+      "preview_frame": "00002.jpg"
+    },
+    {
+      "video_id": "4e6aa1e8",
+      "object_id": 1,
+      "frame_count": 50,
+      "visible_frames": 49,
+      "width": 1080,
+      "height": 1920,
+      "mean_mask_fraction": 0.035925,
+      "preview_frame": "00006.jpg"
+    },
+    {
+      "video_id": "52a04667",
+      "object_id": 1,
+      "frame_count": 26,
+      "visible_frames": 26,
+      "width": 1280,
+      "height": 520,
+      "mean_mask_fraction": 0.000708,
+      "preview_frame": "00025.jpg"
+    },
+    {
+      "video_id": "561f6380",
+      "object_id": 1,
+      "frame_count": 30,
+      "visible_frames": 30,
+      "width": 720,
+      "height": 1280,
+      "mean_mask_fraction": 0.011052,
+      "preview_frame": "00009.jpg"
+    },
+    {
+      "video_id": "5ba84e3f",
+      "object_id": 4,
+      "frame_count": 77,
+      "visible_frames": 77,
+      "width": 1920,
+      "height": 920,
+      "mean_mask_fraction": 0.439152,
+      "preview_frame": "00076.jpg"
+    },
+    {
+      "video_id": "5ff72128",
+      "object_id": 1,
+      "frame_count": 38,
+      "visible_frames": 36,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.008823,
+      "preview_frame": "00037.jpg"
+    },
+    {
+      "video_id": "6042d64a",
+      "object_id": 2,
+      "frame_count": 97,
+      "visible_frames": 35,
+      "width": 1680,
+      "height": 1080,
+      "mean_mask_fraction": 0.00383,
+      "preview_frame": "00071.jpg"
+    },
+    {
+      "video_id": "60ab04c5",
+      "object_id": 1,
+      "frame_count": 101,
+      "visible_frames": 100,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.001081,
+      "preview_frame": "00052.jpg"
+    },
+    {
+      "video_id": "6763a576",
+      "object_id": 1,
+      "frame_count": 70,
+      "visible_frames": 70,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.144858,
+      "preview_frame": "00040.jpg"
+    },
+    {
+      "video_id": "7593caea",
+      "object_id": 1,
+      "frame_count": 63,
+      "visible_frames": 63,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.056316,
+      "preview_frame": "00051.jpg"
+    },
+    {
+      "video_id": "76b18413",
+      "object_id": 1,
+      "frame_count": 30,
+      "visible_frames": 30,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.530853,
+      "preview_frame": "00029.jpg"
+    },
+    {
+      "video_id": "780a25de",
+      "object_id": 1,
+      "frame_count": 46,
+      "visible_frames": 9,
+      "width": 1920,
+      "height": 872,
+      "mean_mask_fraction": 0.000576,
+      "preview_frame": "00007.jpg"
+    },
+    {
+      "video_id": "782551f7",
+      "object_id": 1,
+      "frame_count": 69,
+      "visible_frames": 69,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.053974,
+      "preview_frame": "00014.jpg"
+    },
+    {
+      "video_id": "7ce2c865",
+      "object_id": 1,
+      "frame_count": 58,
+      "visible_frames": 47,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.001533,
+      "preview_frame": "00008.jpg"
+    },
+    {
+      "video_id": "843d3bf7",
+      "object_id": 8,
+      "frame_count": 35,
+      "visible_frames": 35,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.146692,
+      "preview_frame": "00007.jpg"
+    },
+    {
+      "video_id": "915f0d9a",
+      "object_id": 1,
+      "frame_count": 37,
+      "visible_frames": 24,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.001318,
+      "preview_frame": "00006.jpg"
+    },
+    {
+      "video_id": "91b2f707",
+      "object_id": 2,
+      "frame_count": 40,
+      "visible_frames": 40,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.03963,
+      "preview_frame": "00000.jpg"
+    },
+    {
+      "video_id": "9cff25e3",
+      "object_id": 1,
+      "frame_count": 71,
+      "visible_frames": 68,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.007963,
+      "preview_frame": "00070.jpg"
+    },
+    {
+      "video_id": "9fc933f6",
+      "object_id": 2,
+      "frame_count": 72,
+      "visible_frames": 72,
+      "width": 640,
+      "height": 368,
+      "mean_mask_fraction": 0.177996,
+      "preview_frame": "00027.jpg"
+    },
+    {
+      "video_id": "ac32a655",
+      "object_id": 4,
+      "frame_count": 124,
+      "visible_frames": 124,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.015149,
+      "preview_frame": "00083.jpg"
+    },
+    {
+      "video_id": "b7fb59c9",
+      "object_id": 2,
+      "frame_count": 50,
+      "visible_frames": 50,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.013553,
+      "preview_frame": "00006.jpg"
+    },
+    {
+      "video_id": "ba538072",
+      "object_id": 9,
+      "frame_count": 35,
+      "visible_frames": 28,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.082027,
+      "preview_frame": "00023.jpg"
+    },
+    {
+      "video_id": "c062f4d7",
+      "object_id": 1,
+      "frame_count": 190,
+      "visible_frames": 190,
+      "width": 1239,
+      "height": 1080,
+      "mean_mask_fraction": 0.055411,
+      "preview_frame": "00182.jpg"
+    },
+    {
+      "video_id": "c9f7f69d",
+      "object_id": 1,
+      "frame_count": 115,
+      "visible_frames": 26,
+      "width": 2340,
+      "height": 1080,
+      "mean_mask_fraction": 0.013143,
+      "preview_frame": "00023.jpg"
+    },
+    {
+      "video_id": "ca74a924",
+      "object_id": 1,
+      "frame_count": 66,
+      "visible_frames": 66,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.120566,
+      "preview_frame": "00054.jpg"
+    },
+    {
+      "video_id": "ceaa6c65",
+      "object_id": 2,
+      "frame_count": 61,
+      "visible_frames": 60,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.007978,
+      "preview_frame": "00000.jpg"
+    },
+    {
+      "video_id": "cfc68a82",
+      "object_id": 2,
+      "frame_count": 82,
+      "visible_frames": 82,
+      "width": 720,
+      "height": 1280,
+      "mean_mask_fraction": 0.068026,
+      "preview_frame": "00035.jpg"
+    },
+    {
+      "video_id": "dd5a4739",
+      "object_id": 1,
+      "frame_count": 48,
+      "visible_frames": 48,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.035297,
+      "preview_frame": "00028.jpg"
+    },
+    {
+      "video_id": "e1d9fb32",
+      "object_id": 1,
+      "frame_count": 30,
+      "visible_frames": 30,
+      "width": 720,
+      "height": 960,
+      "mean_mask_fraction": 0.122694,
+      "preview_frame": "00017.jpg"
+    },
+    {
+      "video_id": "eaff3301",
+      "object_id": 1,
+      "frame_count": 180,
+      "visible_frames": 168,
+      "width": 1920,
+      "height": 1080,
+      "mean_mask_fraction": 0.003389,
+      "preview_frame": "00144.jpg"
+    },
+    {
+      "video_id": "f415f9ad",
+      "object_id": 1,
+      "frame_count": 46,
+      "visible_frames": 46,
+      "width": 1080,
+      "height": 1042,
+      "mean_mask_fraction": 0.023871,
+      "preview_frame": "00029.jpg"
+    },
+    {
+      "video_id": "f89b54d0",
+      "object_id": 1,
+      "frame_count": 30,
+      "visible_frames": 30,
+      "width": 1280,
+      "height": 720,
+      "mean_mask_fraction": 0.090186,
+      "preview_frame": "00000.jpg"
+    },
+    {
+      "video_id": "fe2dc281",
+      "object_id": 1,
+      "frame_count": 33,
+      "visible_frames": 33,
+      "width": 2160,
+      "height": 1080,
+      "mean_mask_fraction": 0.005781,
+      "preview_frame": "00002.jpg"
+    }
+  ],
+  "minimum_frames": 22,
+  "replacement_seed": 42
+}

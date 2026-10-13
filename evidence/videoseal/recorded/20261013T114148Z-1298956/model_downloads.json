@@ -1,0 +1,7 @@
+{
+  "model": "videoseal_1.0",
+  "url": "https://dl.fbaipublicfiles.com/videoseal/y_256b_img.pth",
+  "file": "/home/smayan/research/VideoSeal/ckpts/videoseal_y_256b_img.pth",
+  "bytes": 228351471,
+  "sha256": "3d2ff2523d2a89e3532c6dfdcf693098799326e9b3e74c185e815e9baa8340a3"
+}

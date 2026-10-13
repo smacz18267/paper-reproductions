@@ -1,0 +1,81 @@
+{
+  "videos": {
+    "watermarked": {
+      "frames": 16,
+      "width": 256,
+      "height": 256,
+      "fps": 10.0
+    },
+    "tampered": {
+      "frames": 16,
+      "width": 256,
+      "height": 256,
+      "fps": 10.0
+    },
+    "mask_ground_truth": {
+      "frames": 16,
+      "width": 256,
+      "height": 256,
+      "fps": 10.0
+    },
+    "mask_predicted": {
+      "frames": 16,
+      "width": 256,
+      "height": 256,
+      "fps": 10.0
+    }
+  },
+  "metrics": {
+    "watermark_extraction_accuracy": 1.0,
+    "temporal_localization_accuracy": {
+      "frame_swap": 1.0,
+      "frame_insert": 1.0,
+      "frame_drop": 1.0
+    },
+    "spatial_localization": {
+      "f1": 0.963,
+      "precision": 0.934,
+      "recall": 0.993,
+      "iou": 0.928,
+      "auc": 0.892
+    }
+  },
+  "files": {
+    "results/modelscope/a_red_panda_eating_leaves/wm.mp4": {
+      "bytes": 70129,
+      "sha256": "4622dfbf58f7b99bd2475d7790eb31ced7638e5dbff8ccd10345df3240a2c484"
+    },
+    "results/modelscope/a_red_panda_eating_leaves/wm_spatial_tampered/wm_tampered.mp4": {
+      "bytes": 71752,
+      "sha256": "a985de0d18585ec4524a2f7dd8900d1e7714f1e6300131a2f908b2661eec61f9"
+    },
+    "results/modelscope/a_red_panda_eating_leaves/wm_spatial_tampered/mask_gt.mp4": {
+      "bytes": 2747,
+      "sha256": "211e4c4990dcbb75f5a3904d1957655741616891be98c0aef542a987596297bd"
+    },
+    "results/modelscope/a_red_panda_eating_leaves/wm_spatial_tampered/mask_pred.mp4": {
+      "bytes": 38557,
+      "sha256": "d16ca6222670d76ab0146bede24c7827a671632e46c3798a375fee40a8ea7d46"
+    },
+    "embed.log": {
+      "bytes": 5010,
+      "sha256": "5047a24efaebb6b5918d9e631854a259dc572445d6eed3dba975d98c62873650"
+    },
+    "temporal.log": {
+      "bytes": 5981,
+      "sha256": "553a97e0278cce161575988542322f3cedca84965d1bc792f6e507e2d979e522"
+    },
+    "spatial.log": {
+      "bytes": 4109,
+      "sha256": "80485330f101ff2327fa8f444af9b1db584e86af8a98ad37c481d2c2857ec605"
+    },
+    "results/modelscope/a_red_panda_eating_leaves/wm_info.bin": {
+      "bytes": 71256,
+      "sha256": "ef08d4a8a650145a909c77c81e5caab1539a836f98e110db6a698a4220e67dad"
+    },
+    "metrics.json": {
+      "bytes": 286,
+      "sha256": "385fd91a15909cff3c197ddbccdb3541f07cb25730fe09b1cc9c433fca28b647"
+    }
+  }
+}

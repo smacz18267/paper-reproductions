@@ -1,0 +1,11 @@
+{
+  "model": "videoseal_1.0",
+  "seed": 2025,
+  "message_bits": 256,
+  "bit_accuracy": 1.0,
+  "input_frames": 256,
+  "output_frames": 256,
+  "width": 1904,
+  "height": 1080,
+  "fps": 24.0
+}
