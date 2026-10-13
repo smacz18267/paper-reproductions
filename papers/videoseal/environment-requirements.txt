@@ -1,5 +1,6 @@
 av==13.1.0
 calflops==0.3.2
+decord==0.6.0
 einops==0.8.0
 huggingface-hub==0.24.7
 lpips==0.1.4
