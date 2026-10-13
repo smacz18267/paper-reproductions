@@ -40,7 +40,7 @@ if not (3, 9) <= sys.version_info[:2] <= (3, 11):
     raise RuntimeError("Safe-Sora's PyTorch 2.1 environment requires Python 3.9–3.11. Set PYTHON_BOOTSTRAP to a compatible interpreter.")
 print("Python:", sys.version)
 PY
-"$PYTHON" -m pip install --upgrade pip setuptools wheel
+"$PYTHON" -m pip install "pip==24.0" "setuptools==75.6.0" "wheel==0.45.1"
 "$PYTHON" -m pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
 "$PYTHON" -m pip install packaging==23.2 ninja==1.11.1.1 gdown==5.2.0
 "$PYTHON" -m pip install -r "$REQUIREMENTS"

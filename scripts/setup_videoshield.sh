@@ -34,7 +34,7 @@ if not (3, 9) <= sys.version_info[:2] <= (3, 12):
     raise RuntimeError("This VideoShield environment requires Python 3.9–3.12")
 print("Python:", sys.version)
 PY
-"$PYTHON" -m pip install --upgrade pip setuptools wheel
+"$PYTHON" -m pip install "pip==24.0" "setuptools==75.6.0" "wheel==0.45.1"
 "$PYTHON" -m pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
 "$PYTHON" -m pip install -r "$REQUIREMENTS"
 "$PYTHON" -m pip check
