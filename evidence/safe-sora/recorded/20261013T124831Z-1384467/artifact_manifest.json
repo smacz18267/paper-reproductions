@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "video_fidelity": {
+      "mse": 5.347832361857097,
+      "psnr_db": 40.84902575864632,
+      "mean_absolute_error": 1.5928775787353515
+    },
+    "watermark_fidelity": {
+      "mse": 6.992289225260417,
+      "psnr_db": 39.68460976948546,
+      "mean_absolute_error": 1.3171590169270833
+    },
+    "video": {
+      "frames": 16,
+      "panel_width": 512,
+      "height": 320,
+      "fps": 10.0
+    },
+    "watermark": {
+      "width": 256,
+      "height": 256
+    }
+  },
+  "files": {
+    "work/results/cover_combined.mp4": {
+      "bytes": 2658148,
+      "sha256": "a0cc0d0454acc6be786ebad8b9f708e1f2f0493d95fb356b9cbc9b730856ca8f"
+    },
+    "work/results/secret_combined.png": {
+      "bytes": 188049,
+      "sha256": "4e828e955c57065f14248b3d849eb7b50f12d108b521b67632e2817f05ccb994"
+    },
+    "run.log": {
+      "bytes": 1111,
+      "sha256": "06cd65cfdb65b241cff5ab115995fd23966095a625c5ff7cc38fd5430bd595a8"
+    },
+    "metrics.json": {
+      "bytes": 434,
+      "sha256": "8b39157f1807112636d93254f78f01fe435b7032d1d4281f9ac3b68d7c4a839c"
+    }
+  }
+}

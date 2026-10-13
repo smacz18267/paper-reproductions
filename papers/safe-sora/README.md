@@ -38,6 +38,15 @@ official 16-frame, 320 × 512 VideoCrafter2 evaluation path and records the orig
 watermarked and amplified-difference video alongside the original, recovered and
 difference watermark image.
 
+The setup selects CUDA 12.2 with PyTorch CUDA 12.1 when available, otherwise CUDA
+11.8 with the matching PyTorch build, and compiles the authors' modified Mamba
+sources locally. On other layouts, set `SAFE_SORA_CUDA_HOME`, `SAFE_SORA_CC`, and
+`SAFE_SORA_CXX` to compatible toolkit and compiler paths.
+
+The [recorded run](../../evidence/safe-sora/recorded/20261013T124831Z-1384467/README.md)
+validated all 16 frames. The watermarked video retained **40.85 dB PSNR**, while
+the recovered graphical watermark reached **39.68 dB PSNR** against the original.
+
 The official repository does not include an explicit software license at the
 pinned commit. For that reason its source is cloned for local execution but is not
 redistributed inside this repository. Checkpoints and auxiliary CUDA sources also

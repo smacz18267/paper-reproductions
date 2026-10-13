@@ -11,6 +11,8 @@ from pathlib import Path
 
 import av
 
+NUMBER = r"([0-9]+(?:\.[0-9]+)?)"
+
 
 def inspect_video(path: Path) -> dict:
     container = av.open(str(path))
@@ -58,12 +60,16 @@ def main() -> None:
     embed_text = logs["embed"].read_text(errors="replace")
     temporal_text = logs["temporal"].read_text(errors="replace")
     spatial_text = logs["spatial"].read_text(errors="replace")
-    extraction = one(r"Watermark extraction accuracy:\s*([0-9.]+)", embed_text, "extraction accuracy")
-    temporal = [float(value) for value in re.findall(r"Localization accuracy:\s*([0-9.]+)", temporal_text)]
+    extraction = one(r"Watermark extraction accuracy:\s*" + NUMBER, embed_text, "extraction accuracy")
+    temporal = [float(value) for value in re.findall(r"Localization accuracy:\s*" + NUMBER, temporal_text)]
     if len(temporal) != 3:
         raise RuntimeError(f"Expected three temporal localization metrics, found {len(temporal)}")
     spatial_match = re.search(
-        r"Localization performance:\s*f1=([0-9.]+),\s*precision=([0-9.]+),\s*recall=([0-9.]+),\s*iou=([0-9.]+),\s*auc=([0-9.]+)",
+        r"Localization performance:\s*f1=" + NUMBER
+        + r",\s*precision=" + NUMBER
+        + r",\s*recall=" + NUMBER
+        + r",\s*iou=" + NUMBER
+        + r",\s*auc=" + NUMBER,
         spatial_text,
     )
     if not spatial_match:

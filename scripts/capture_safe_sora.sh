@@ -48,11 +48,11 @@ ln -s "$SOURCE/ckpt" "$WORK/ckpt"
 command=("$PYTHON" -u "$SOURCE/scripts/evaluation/inference.py"
   --seed 123 --mode base --ckpt_path "$SOURCE/ckpt/model.ckpt"
   --config "$SOURCE/configs/inference_t2v_512_v2.0.yaml"
-  --savedir "$WORK/results" --n_samples 1 --bs 1 --height 320 --width 512
+  --savedir "$SOURCE/results" --n_samples 1 --bs 1 --height 320 --width 512
   --unconditional_guidance_scale 12.0 --ddim_steps 50 --ddim_eta 1.0
   --prompt_file "$WORK/prompt.txt" --fps 28 --watermark_path "$WORK/watermark.png")
 {
-  printf 'cd %q\n' "$WORK"
+  printf 'cd %q\n' "$SOURCE"
   printf 'CUDA_VISIBLE_DEVICES=%q ' "$GPU"
   printf '%q ' "${command[@]}"
   printf '\n'
@@ -75,8 +75,19 @@ print("torch", torch.__version__, "torchvision", torchvision.__version__)
 print("CUDA runtime", torch.version.cuda, "GPU", torch.cuda.get_device_name(0))
 PY
 
-cd "$WORK"
+cd "$SOURCE"
+touch "$RUN/inference_started.marker"
 CUDA_VISIBLE_DEVICES="$GPU" "${command[@]}" 2>&1 | tee "$RUN/run.log"
+for artifact in cover_combined.mp4 secret_combined.png; do
+  path="$SOURCE/results/$artifact"
+  if [ ! -s "$path" ] || [ ! "$path" -nt "$RUN/inference_started.marker" ]; then
+    echo "Safe-Sora did not produce a fresh $path" >&2
+    exit 1
+  fi
+done
+mkdir -p "$WORK/results"
+cp -p "$SOURCE/results/cover_combined.mp4" "$WORK/results/cover_combined.mp4"
+cp -p "$SOURCE/results/secret_combined.png" "$WORK/results/secret_combined.png"
 printf '0\n' > "$RUN/inference_exit_code.txt"
 cleanup
 "$PYTHON" "$ROOT/scripts/safe_sora_artifacts.py" "$RUN" 2>&1 | tee "$RUN/artifact_checks.log"
