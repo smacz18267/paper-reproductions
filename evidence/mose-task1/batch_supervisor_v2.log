@@ -1,0 +1,503 @@
+nohup: ignoring input
+[2026-10-12T11:06:49+00:00] Preparing aligned MP4 inputs for 50 clips
+[2026-10-12T11:06:49+00:00] Encoding input video for 02b72b8d at 960x480
+[2026-10-12T11:06:50+00:00] Encoding mask video for 02b72b8d at 960x480
+[2026-10-12T11:06:51+00:00] Prepared 1/50: 02b72b8d
+[2026-10-12T11:06:51+00:00] Encoding input video for 0ab75563 at 960x448
+[2026-10-12T11:06:55+00:00] Encoding mask video for 0ab75563 at 960x448
+[2026-10-12T11:06:56+00:00] Prepared 2/50: 0ab75563
+[2026-10-12T11:06:56+00:00] Encoding input video for 0b02886a at 960x640
+[2026-10-12T11:06:57+00:00] Encoding mask video for 0b02886a at 960x640
+[2026-10-12T11:06:57+00:00] Prepared 3/50: 0b02886a
+[2026-10-12T11:06:57+00:00] Encoding input video for 0b787263 at 960x544
+[2026-10-12T11:06:59+00:00] Encoding mask video for 0b787263 at 960x544
+[2026-10-12T11:07:00+00:00] Prepared 4/50: 0b787263
+[2026-10-12T11:07:00+00:00] Encoding input video for 0f96e2d7 at 960x544
+[2026-10-12T11:07:01+00:00] Encoding mask video for 0f96e2d7 at 960x544
+[2026-10-12T11:07:02+00:00] Prepared 5/50: 0f96e2d7
+[2026-10-12T11:07:02+00:00] Encoding input video for 1e44f47e at 960x544
+[2026-10-12T11:07:05+00:00] Encoding mask video for 1e44f47e at 960x544
+[2026-10-12T11:07:06+00:00] Prepared 6/50: 1e44f47e
+[2026-10-12T11:07:06+00:00] Encoding input video for 1fc5e086 at 960x544
+[2026-10-12T11:07:07+00:00] Encoding mask video for 1fc5e086 at 960x544
+[2026-10-12T11:07:08+00:00] Prepared 7/50: 1fc5e086
+[2026-10-12T11:07:08+00:00] Encoding input video for 230c2edf at 960x544
+[2026-10-12T11:07:09+00:00] Encoding mask video for 230c2edf at 960x544
+[2026-10-12T11:07:09+00:00] Prepared 8/50: 230c2edf
+[2026-10-12T11:07:09+00:00] Prepared 9/50: 26048547
+[2026-10-12T11:07:09+00:00] Encoding input video for 2d8d7d35 at 544x960
+[2026-10-12T11:07:10+00:00] Encoding mask video for 2d8d7d35 at 544x960
+[2026-10-12T11:07:10+00:00] Prepared 10/50: 2d8d7d35
+[2026-10-12T11:07:10+00:00] Encoding input video for 2f5fb2a3 at 544x960
+[2026-10-12T11:07:11+00:00] Encoding mask video for 2f5fb2a3 at 544x960
+[2026-10-12T11:07:11+00:00] Prepared 11/50: 2f5fb2a3
+[2026-10-12T11:07:11+00:00] Encoding input video for 337dfa1e at 960x544
+[2026-10-12T11:07:14+00:00] Encoding mask video for 337dfa1e at 960x544
+[2026-10-12T11:07:15+00:00] Prepared 12/50: 337dfa1e
+[2026-10-12T11:07:15+00:00] Prepared 13/50: 34ccea00
+[2026-10-12T11:07:16+00:00] Prepared 14/50: 395224b3
+[2026-10-12T11:07:16+00:00] Encoding input video for 44476e77 at 960x544
+[2026-10-12T11:07:20+00:00] Encoding mask video for 44476e77 at 960x544
+[2026-10-12T11:07:21+00:00] Prepared 15/50: 44476e77
+[2026-10-12T11:07:21+00:00] Encoding input video for 4c42c747 at 640x368
+[2026-10-12T11:07:22+00:00] Encoding mask video for 4c42c747 at 640x368
+[2026-10-12T11:07:22+00:00] Prepared 16/50: 4c42c747
+[2026-10-12T11:07:23+00:00] Encoding input video for 4ce088c6 at 960x544
+[2026-10-12T11:07:30+00:00] Encoding mask video for 4ce088c6 at 960x544
+[2026-10-12T11:07:32+00:00] Prepared 17/50: 4ce088c6
+[2026-10-12T11:07:32+00:00] Encoding input video for 4d979d99 at 960x480
+[2026-10-12T11:07:33+00:00] Encoding mask video for 4d979d99 at 960x480
+[2026-10-12T11:07:33+00:00] Prepared 18/50: 4d979d99
+[2026-10-12T11:07:33+00:00] Encoding input video for 4e6aa1e8 at 544x960
+[2026-10-12T11:07:35+00:00] Encoding mask video for 4e6aa1e8 at 544x960
+[2026-10-12T11:07:35+00:00] Prepared 19/50: 4e6aa1e8
+[2026-10-12T11:07:35+00:00] Encoding input video for 52a04667 at 960x400
+[2026-10-12T11:07:36+00:00] Encoding mask video for 52a04667 at 960x400
+[2026-10-12T11:07:36+00:00] Prepared 20/50: 52a04667
+[2026-10-12T11:07:36+00:00] Encoding input video for 561f6380 at 544x960
+[2026-10-12T11:07:37+00:00] Encoding mask video for 561f6380 at 544x960
+[2026-10-12T11:07:37+00:00] Prepared 21/50: 561f6380
+[2026-10-12T11:07:37+00:00] Encoding input video for 5ba84e3f at 960x464
+[2026-10-12T11:07:40+00:00] Encoding mask video for 5ba84e3f at 960x464
+[2026-10-12T11:07:41+00:00] Prepared 22/50: 5ba84e3f
+[2026-10-12T11:07:41+00:00] Encoding input video for 5ff72128 at 960x544
+[2026-10-12T11:07:42+00:00] Encoding mask video for 5ff72128 at 960x544
+[2026-10-12T11:07:42+00:00] Prepared 23/50: 5ff72128
+[2026-10-12T11:07:42+00:00] Encoding input video for 6042d64a at 960x624
+[2026-10-12T11:07:46+00:00] Encoding mask video for 6042d64a at 960x624
+[2026-10-12T11:07:47+00:00] Prepared 24/50: 6042d64a
+[2026-10-12T11:07:47+00:00] Encoding input video for 60ab04c5 at 960x544
+[2026-10-12T11:07:49+00:00] Encoding mask video for 60ab04c5 at 960x544
+[2026-10-12T11:07:50+00:00] Prepared 25/50: 60ab04c5
+[2026-10-12T11:07:50+00:00] Encoding input video for 6763a576 at 960x544
+[2026-10-12T11:07:51+00:00] Encoding mask video for 6763a576 at 960x544
+[2026-10-12T11:07:52+00:00] Prepared 26/50: 6763a576
+[2026-10-12T11:07:52+00:00] Encoding input video for 7593caea at 960x544
+[2026-10-12T11:07:54+00:00] Encoding mask video for 7593caea at 960x544
+[2026-10-12T11:07:55+00:00] Prepared 27/50: 7593caea
+[2026-10-12T11:07:55+00:00] Encoding input video for 76b18413 at 960x544
+[2026-10-12T11:07:56+00:00] Encoding mask video for 76b18413 at 960x544
+[2026-10-12T11:07:56+00:00] Prepared 28/50: 76b18413
+[2026-10-12T11:07:56+00:00] Encoding input video for 780a25de at 960x448
+[2026-10-12T11:07:58+00:00] Encoding mask video for 780a25de at 960x448
+[2026-10-12T11:07:58+00:00] Prepared 29/50: 780a25de
+[2026-10-12T11:07:58+00:00] Encoding input video for 782551f7 at 960x544
+[2026-10-12T11:08:01+00:00] Encoding mask video for 782551f7 at 960x544
+[2026-10-12T11:08:01+00:00] Prepared 30/50: 782551f7
+[2026-10-12T11:08:01+00:00] Encoding input video for 7ce2c865 at 960x544
+[2026-10-12T11:08:04+00:00] Encoding mask video for 7ce2c865 at 960x544
+[2026-10-12T11:08:04+00:00] Prepared 31/50: 7ce2c865
+[2026-10-12T11:08:04+00:00] Encoding input video for 843d3bf7 at 960x544
+[2026-10-12T11:08:06+00:00] Encoding mask video for 843d3bf7 at 960x544
+[2026-10-12T11:08:06+00:00] Prepared 32/50: 843d3bf7
+[2026-10-12T11:08:06+00:00] Encoding input video for 915f0d9a at 960x544
+[2026-10-12T11:08:07+00:00] Encoding mask video for 915f0d9a at 960x544
+[2026-10-12T11:08:08+00:00] Prepared 33/50: 915f0d9a
+[2026-10-12T11:08:08+00:00] Encoding input video for 91b2f707 at 960x544
+[2026-10-12T11:08:09+00:00] Encoding mask video for 91b2f707 at 960x544
+[2026-10-12T11:08:09+00:00] Prepared 34/50: 91b2f707
+[2026-10-12T11:08:09+00:00] Encoding input video for 9cff25e3 at 960x544
+[2026-10-12T11:08:11+00:00] Encoding mask video for 9cff25e3 at 960x544
+[2026-10-12T11:08:11+00:00] Prepared 35/50: 9cff25e3
+[2026-10-12T11:08:11+00:00] Prepared 36/50: 9fc933f6
+[2026-10-12T11:08:12+00:00] Encoding input video for ac32a655 at 960x544
+[2026-10-12T11:08:16+00:00] Encoding mask video for ac32a655 at 960x544
+[2026-10-12T11:08:18+00:00] Prepared 37/50: ac32a655
+[2026-10-12T11:08:18+00:00] Encoding input video for b7fb59c9 at 960x544
+[2026-10-12T11:08:19+00:00] Encoding mask video for b7fb59c9 at 960x544
+[2026-10-12T11:08:19+00:00] Prepared 38/50: b7fb59c9
+[2026-10-12T11:08:19+00:00] Encoding input video for ba538072 at 960x544
+[2026-10-12T11:08:21+00:00] Encoding mask video for ba538072 at 960x544
+[2026-10-12T11:08:21+00:00] Prepared 39/50: ba538072
+[2026-10-12T11:08:21+00:00] Encoding input video for c062f4d7 at 960x848
+[2026-10-12T11:08:28+00:00] Encoding mask video for c062f4d7 at 960x848
+[2026-10-12T11:08:30+00:00] Prepared 40/50: c062f4d7
+[2026-10-12T11:08:30+00:00] Encoding input video for c9f7f69d at 960x448
+[2026-10-12T11:08:34+00:00] Encoding mask video for c9f7f69d at 960x448
+[2026-10-12T11:08:36+00:00] Prepared 41/50: c9f7f69d
+[2026-10-12T11:08:36+00:00] Encoding input video for ca74a924 at 960x544
+[2026-10-12T11:08:38+00:00] Encoding mask video for ca74a924 at 960x544
+[2026-10-12T11:08:38+00:00] Prepared 42/50: ca74a924
+[2026-10-12T11:08:38+00:00] Encoding input video for ceaa6c65 at 960x544
+[2026-10-12T11:08:40+00:00] Encoding mask video for ceaa6c65 at 960x544
+[2026-10-12T11:08:40+00:00] Prepared 43/50: ceaa6c65
+[2026-10-12T11:08:40+00:00] Encoding input video for cfc68a82 at 544x960
+[2026-10-12T11:08:42+00:00] Encoding mask video for cfc68a82 at 544x960
+[2026-10-12T11:08:43+00:00] Prepared 44/50: cfc68a82
+[2026-10-12T11:08:43+00:00] Encoding input video for dd5a4739 at 960x544
+[2026-10-12T11:08:45+00:00] Encoding mask video for dd5a4739 at 960x544
+[2026-10-12T11:08:45+00:00] Prepared 45/50: dd5a4739
+[2026-10-12T11:08:45+00:00] Prepared 46/50: e1d9fb32
+[2026-10-12T11:08:46+00:00] Encoding input video for eaff3301 at 960x544
+[2026-10-12T11:08:54+00:00] Encoding mask video for eaff3301 at 960x544
+[2026-10-12T11:08:56+00:00] Prepared 47/50: eaff3301
+[2026-10-12T11:08:56+00:00] Encoding input video for f415f9ad at 960x928
+[2026-10-12T11:08:57+00:00] Encoding mask video for f415f9ad at 960x928
+[2026-10-12T11:08:58+00:00] Prepared 48/50: f415f9ad
+[2026-10-12T11:08:58+00:00] Encoding input video for f89b54d0 at 960x544
+[2026-10-12T11:08:59+00:00] Encoding mask video for f89b54d0 at 960x544
+[2026-10-12T11:08:59+00:00] Prepared 49/50: f89b54d0
+[2026-10-12T11:08:59+00:00] Prepared 50/50: fe2dc281
+[2026-10-12T11:08:59+00:00] Seeded completed test result: /home/smayan/research/datasets/MOSEv1/results50/diffueraser/02b72b8d/diffueraser_result.mp4
+[2026-10-12T11:08:59+00:00] Clip 1/50: 02b72b8d (67 frames, 960x480)
+[2026-10-12T11:09:00+00:00] ProPainter already complete: 02b72b8d
+[2026-10-12T11:09:00+00:00] DiffuEraser already complete: 02b72b8d
+[2026-10-12T11:09:00+00:00] Clip 2/50: 0ab75563 (104 frames, 960x448)
+[2026-10-12T11:09:00+00:00] Waiting for GPU 1: 35914 MiB free, 92% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:10:00+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T11:11:20+00:00] ProPainter complete: 0ab75563 in 79.8s
+[2026-10-12T11:11:20+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:12:20+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:13:20+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:14:20+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T11:17:10+00:00] DiffuEraser complete: 0ab75563 in 169.5s
+[2026-10-12T11:17:10+00:00] Clip 3/50: 0b02886a (30 frames, 960x640)
+[2026-10-12T11:17:10+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T11:17:45+00:00] ProPainter complete: 0b02886a in 34.4s
+[2026-10-12T11:17:45+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:18:45+00:00] Waiting for GPU 1: 35914 MiB free, 93% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:19:45+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:20:45+00:00] Waiting for GPU 1: 35914 MiB free, 96% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:21:45+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:22:45+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:23:45+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:24:45+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:25:45+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:26:45+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:27:45+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:28:45+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T11:29:58+00:00] DiffuEraser complete: 0b02886a in 72.5s
+[2026-10-12T11:29:58+00:00] Clip 4/50: 0b787263 (70 frames, 960x544)
+[2026-10-12T11:29:58+00:00] Waiting for GPU 1: 35914 MiB free, 96% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:30:58+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:31:58+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T11:33:05+00:00] ProPainter complete: 0b787263 in 66.7s
+[2026-10-12T11:33:05+00:00] Waiting for GPU 1: 35914 MiB free, 98% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:34:05+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:35:05+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:36:05+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:37:05+00:00] Waiting for GPU 1: 35914 MiB free, 98% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:38:05+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:39:05+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:40:05+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:41:05+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:42:05+00:00] Waiting for GPU 1: 35914 MiB free, 98% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:43:05+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:44:06+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T11:46:37+00:00] DiffuEraser complete: 0b787263 in 150.9s
+[2026-10-12T11:46:37+00:00] Clip 5/50: 0f96e2d7 (63 frames, 960x544)
+[2026-10-12T11:46:37+00:00] Waiting for GPU 1: 35914 MiB free, 96% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:47:37+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:48:37+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T11:49:37+00:00] ProPainter complete: 0f96e2d7 in 59.5s
+[2026-10-12T11:49:37+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:50:37+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:51:37+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:52:37+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:53:37+00:00] Waiting for GPU 1: 35914 MiB free, 98% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:54:37+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:55:37+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:56:37+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:57:37+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:58:37+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T11:59:37+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T12:01:54+00:00] DiffuEraser complete: 0f96e2d7 in 136.8s
+[2026-10-12T12:01:54+00:00] Clip 6/50: 1e44f47e (90 frames, 960x544)
+[2026-10-12T12:01:54+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:02:54+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T12:04:16+00:00] ProPainter complete: 1e44f47e in 81.9s
+[2026-10-12T12:04:16+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:05:17+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:06:17+00:00] Waiting for GPU 1: 35914 MiB free, 98% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:07:17+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T12:10:13+00:00] DiffuEraser complete: 1e44f47e in 176.0s
+[2026-10-12T12:10:13+00:00] Clip 7/50: 1fc5e086 (54 frames, 960x544)
+[2026-10-12T12:10:13+00:00] Waiting for GPU 1: 35914 MiB free, 93% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:11:13+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:12:13+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:13:13+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:14:13+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:15:13+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:16:13+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:17:13+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:18:13+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:19:13+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:20:13+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:21:13+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T12:22:06+00:00] ProPainter complete: 1fc5e086 in 52.2s
+[2026-10-12T12:22:06+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:23:06+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:24:06+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:25:06+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:26:06+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:27:06+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:28:06+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:29:06+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:30:06+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:31:06+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:32:06+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:33:06+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:34:06+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:35:07+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:36:07+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:37:07+00:00] Waiting for GPU 1: 35914 MiB free, 96% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:38:07+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:39:07+00:00] Waiting for GPU 1: 35914 MiB free, 93% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:40:07+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:41:07+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:42:07+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:43:07+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:44:07+00:00] Waiting for GPU 1: 35914 MiB free, 98% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:45:07+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:46:07+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T12:48:13+00:00] DiffuEraser complete: 1fc5e086 in 126.1s
+[2026-10-12T12:48:13+00:00] Clip 8/50: 230c2edf (25 frames, 960x544)
+[2026-10-12T12:48:13+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:49:13+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:50:13+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:51:13+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:52:13+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T12:52:42+00:00] ProPainter complete: 230c2edf in 28.7s
+[2026-10-12T12:52:43+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:53:43+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:54:43+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:55:43+00:00] Waiting for GPU 1: 35914 MiB free, 96% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:56:43+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:57:43+00:00] GPU 1 ready: 35914 MiB free, 0% utilization
+[2026-10-12T12:58:44+00:00] DiffuEraser complete: 230c2edf in 61.3s
+[2026-10-12T12:58:44+00:00] Clip 9/50: 26048547 (67 frames, 640x368)
+[2026-10-12T12:58:44+00:00] Waiting for GPU 1: 35914 MiB free, 96% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T12:59:44+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:00:44+00:00] Waiting for GPU 1: 35914 MiB free, 98% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:01:44+00:00] Waiting for GPU 1: 35914 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:02:44+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:03:44+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:04:44+00:00] Waiting for GPU 1: 35914 MiB free, 28% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:05:44+00:00] Waiting for GPU 1: 35914 MiB free, 99% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:06:44+00:00] Waiting for GPU 1: 35914 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:07:45+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:08:04+00:00] ProPainter complete: 26048547 in 19.6s
+[2026-10-12T13:08:05+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:09:00+00:00] DiffuEraser complete: 26048547 in 55.4s
+[2026-10-12T13:09:00+00:00] Clip 10/50: 2d8d7d35 (27 frames, 544x960)
+[2026-10-12T13:09:00+00:00] Waiting for GPU 1: 48489 MiB free, 54% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:10:00+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:10:19+00:00] ProPainter complete: 2d8d7d35 in 18.2s
+[2026-10-12T13:10:19+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:11:02+00:00] DiffuEraser complete: 2d8d7d35 in 43.0s
+[2026-10-12T13:11:02+00:00] Clip 11/50: 2f5fb2a3 (26 frames, 544x960)
+[2026-10-12T13:11:02+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:11:19+00:00] ProPainter complete: 2f5fb2a3 in 17.2s
+[2026-10-12T13:11:19+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:12:02+00:00] DiffuEraser complete: 2f5fb2a3 in 42.7s
+[2026-10-12T13:12:02+00:00] Clip 12/50: 337dfa1e (127 frames, 960x544)
+[2026-10-12T13:12:02+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:13:09+00:00] ProPainter complete: 337dfa1e in 64.8s
+[2026-10-12T13:13:09+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:15:24+00:00] DiffuEraser complete: 337dfa1e in 135.0s
+[2026-10-12T13:15:24+00:00] Clip 13/50: 34ccea00 (84 frames, 640x640)
+[2026-10-12T13:15:24+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:16:00+00:00] ProPainter complete: 34ccea00 in 35.2s
+[2026-10-12T13:16:00+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:17:24+00:00] DiffuEraser complete: 34ccea00 in 84.6s
+[2026-10-12T13:17:24+00:00] Clip 14/50: 395224b3 (22 frames, 960x448)
+[2026-10-12T13:17:24+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:17:39+00:00] ProPainter complete: 395224b3 in 14.3s
+[2026-10-12T13:17:39+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:18:13+00:00] DiffuEraser complete: 395224b3 in 33.5s
+[2026-10-12T13:18:13+00:00] Clip 15/50: 44476e77 (118 frames, 960x544)
+[2026-10-12T13:18:13+00:00] GPU 1 ready: 48489 MiB free, 1% utilization
+[2026-10-12T13:19:21+00:00] ProPainter complete: 44476e77 in 67.4s
+[2026-10-12T13:19:21+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:21:28+00:00] DiffuEraser complete: 44476e77 in 126.7s
+[2026-10-12T13:21:28+00:00] Clip 16/50: 4c42c747 (58 frames, 640x368)
+[2026-10-12T13:21:28+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:21:47+00:00] ProPainter complete: 4c42c747 in 18.3s
+[2026-10-12T13:21:47+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:22:39+00:00] DiffuEraser complete: 4c42c747 in 52.3s
+[2026-10-12T13:22:39+00:00] Clip 17/50: 4ce088c6 (197 frames, 960x544)
+[2026-10-12T13:22:39+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:24:22+00:00] ProPainter complete: 4ce088c6 in 101.5s
+[2026-10-12T13:24:22+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:27:33+00:00] DiffuEraser complete: 4ce088c6 in 190.4s
+[2026-10-12T13:27:33+00:00] Clip 18/50: 4d979d99 (22 frames, 960x480)
+[2026-10-12T13:27:33+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:27:48+00:00] ProPainter complete: 4d979d99 in 14.8s
+[2026-10-12T13:27:48+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:28:23+00:00] DiffuEraser complete: 4d979d99 in 35.0s
+[2026-10-12T13:28:23+00:00] Clip 19/50: 4e6aa1e8 (50 frames, 544x960)
+[2026-10-12T13:28:23+00:00] Waiting for GPU 1: 48489 MiB free, 47% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:29:23+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:29:53+00:00] ProPainter complete: 4e6aa1e8 in 29.1s
+[2026-10-12T13:29:53+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:31:04+00:00] DiffuEraser complete: 4e6aa1e8 in 70.7s
+[2026-10-12T13:31:04+00:00] Clip 20/50: 52a04667 (26 frames, 960x400)
+[2026-10-12T13:31:04+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:31:18+00:00] ProPainter complete: 52a04667 in 14.4s
+[2026-10-12T13:31:18+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:31:55+00:00] DiffuEraser complete: 52a04667 in 37.2s
+[2026-10-12T13:31:55+00:00] Clip 21/50: 561f6380 (30 frames, 544x960)
+[2026-10-12T13:31:56+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:32:15+00:00] ProPainter complete: 561f6380 in 18.9s
+[2026-10-12T13:32:15+00:00] Waiting for GPU 1: 48489 MiB free, 86% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:33:15+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:33:59+00:00] DiffuEraser complete: 561f6380 in 44.2s
+[2026-10-12T13:33:59+00:00] Clip 22/50: 5ba84e3f (77 frames, 960x464)
+[2026-10-12T13:33:59+00:00] Waiting for GPU 1: 48489 MiB free, 37% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:34:59+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:35:41+00:00] ProPainter complete: 5ba84e3f in 41.1s
+[2026-10-12T13:35:41+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:37:08+00:00] DiffuEraser complete: 5ba84e3f in 86.9s
+[2026-10-12T13:37:08+00:00] Clip 23/50: 5ff72128 (38 frames, 960x544)
+[2026-10-12T13:37:08+00:00] Waiting for GPU 1: 48489 MiB free, 44% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:38:08+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:38:32+00:00] ProPainter complete: 5ff72128 in 23.6s
+[2026-10-12T13:38:32+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:39:24+00:00] DiffuEraser complete: 5ff72128 in 51.3s
+[2026-10-12T13:39:24+00:00] Clip 24/50: 6042d64a (97 frames, 960x624)
+[2026-10-12T13:39:24+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:40:22+00:00] ProPainter complete: 6042d64a in 57.9s
+[2026-10-12T13:40:22+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:42:25+00:00] DiffuEraser complete: 6042d64a in 122.7s
+[2026-10-12T13:42:25+00:00] Clip 25/50: 60ab04c5 (101 frames, 960x544)
+[2026-10-12T13:42:25+00:00] Waiting for GPU 1: 48489 MiB free, 29% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:43:25+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:44:21+00:00] ProPainter complete: 60ab04c5 in 54.9s
+[2026-10-12T13:44:21+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:46:16+00:00] DiffuEraser complete: 60ab04c5 in 115.0s
+[2026-10-12T13:46:16+00:00] Clip 26/50: 6763a576 (70 frames, 960x544)
+[2026-10-12T13:46:16+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:46:57+00:00] ProPainter complete: 6763a576 in 39.9s
+[2026-10-12T13:46:57+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:48:28+00:00] DiffuEraser complete: 6763a576 in 90.7s
+[2026-10-12T13:48:28+00:00] Clip 27/50: 7593caea (63 frames, 960x544)
+[2026-10-12T13:48:28+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:49:05+00:00] ProPainter complete: 7593caea in 36.5s
+[2026-10-12T13:49:05+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:50:29+00:00] DiffuEraser complete: 7593caea in 84.5s
+[2026-10-12T13:50:29+00:00] Clip 28/50: 76b18413 (30 frames, 960x544)
+[2026-10-12T13:50:29+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:50:50+00:00] ProPainter complete: 76b18413 in 20.0s
+[2026-10-12T13:50:50+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:51:36+00:00] DiffuEraser complete: 76b18413 in 46.6s
+[2026-10-12T13:51:36+00:00] Clip 29/50: 780a25de (46 frames, 960x448)
+[2026-10-12T13:51:36+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:52:00+00:00] ProPainter complete: 780a25de in 23.4s
+[2026-10-12T13:52:00+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:53:02+00:00] DiffuEraser complete: 780a25de in 61.9s
+[2026-10-12T13:53:02+00:00] Clip 30/50: 782551f7 (69 frames, 960x544)
+[2026-10-12T13:53:02+00:00] GPU 1 ready: 48489 MiB free, 5% utilization
+[2026-10-12T13:53:43+00:00] ProPainter complete: 782551f7 in 39.8s
+[2026-10-12T13:53:43+00:00] Waiting for GPU 1: 48489 MiB free, 55% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:54:43+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:56:13+00:00] DiffuEraser complete: 782551f7 in 90.2s
+[2026-10-12T13:56:13+00:00] Clip 31/50: 7ce2c865 (58 frames, 960x544)
+[2026-10-12T13:56:13+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:56:48+00:00] ProPainter complete: 7ce2c865 in 34.5s
+[2026-10-12T13:56:48+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:58:10+00:00] DiffuEraser complete: 7ce2c865 in 81.9s
+[2026-10-12T13:58:10+00:00] Clip 32/50: 843d3bf7 (35 frames, 960x544)
+[2026-10-12T13:58:10+00:00] Waiting for GPU 1: 48489 MiB free, 69% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T13:59:10+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T13:59:33+00:00] ProPainter complete: 843d3bf7 in 22.4s
+[2026-10-12T13:59:33+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:00:23+00:00] DiffuEraser complete: 843d3bf7 in 49.5s
+[2026-10-12T14:00:23+00:00] Clip 33/50: 915f0d9a (37 frames, 960x544)
+[2026-10-12T14:00:23+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:00:46+00:00] ProPainter complete: 915f0d9a in 22.2s
+[2026-10-12T14:00:46+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:01:36+00:00] DiffuEraser complete: 915f0d9a in 50.5s
+[2026-10-12T14:01:36+00:00] Clip 34/50: 91b2f707 (40 frames, 960x544)
+[2026-10-12T14:01:36+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:02:03+00:00] ProPainter complete: 91b2f707 in 26.4s
+[2026-10-12T14:02:03+00:00] Waiting for GPU 1: 48489 MiB free, 63% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T14:03:03+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:04:19+00:00] DiffuEraser complete: 91b2f707 in 76.2s
+[2026-10-12T14:04:19+00:00] Clip 35/50: 9cff25e3 (71 frames, 960x544)
+[2026-10-12T14:04:19+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:05:04+00:00] ProPainter complete: 9cff25e3 in 43.5s
+[2026-10-12T14:05:04+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:06:46+00:00] DiffuEraser complete: 9cff25e3 in 101.5s
+[2026-10-12T14:06:46+00:00] Clip 36/50: 9fc933f6 (72 frames, 640x368)
+[2026-10-12T14:06:46+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:07:08+00:00] ProPainter complete: 9fc933f6 in 21.5s
+[2026-10-12T14:07:08+00:00] Waiting for GPU 1: 48489 MiB free, 38% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T14:08:08+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:09:06+00:00] DiffuEraser complete: 9fc933f6 in 58.1s
+[2026-10-12T14:09:06+00:00] Clip 37/50: ac32a655 (124 frames, 960x544)
+[2026-10-12T14:09:06+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:10:13+00:00] ProPainter complete: ac32a655 in 65.2s
+[2026-10-12T14:10:13+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:12:26+00:00] DiffuEraser complete: ac32a655 in 132.5s
+[2026-10-12T14:12:26+00:00] Clip 38/50: b7fb59c9 (50 frames, 960x544)
+[2026-10-12T14:12:26+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:12:55+00:00] ProPainter complete: b7fb59c9 in 28.7s
+[2026-10-12T14:12:55+00:00] GPU 1 ready: 48489 MiB free, 9% utilization
+[2026-10-12T14:14:06+00:00] DiffuEraser complete: b7fb59c9 in 71.4s
+[2026-10-12T14:14:06+00:00] Clip 39/50: ba538072 (35 frames, 960x544)
+[2026-10-12T14:14:06+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:14:29+00:00] ProPainter complete: ba538072 in 22.3s
+[2026-10-12T14:14:29+00:00] Waiting for GPU 1: 48489 MiB free, 60% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T14:15:29+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:16:18+00:00] DiffuEraser complete: ba538072 in 49.2s
+[2026-10-12T14:16:18+00:00] Clip 40/50: c062f4d7 (190 frames, 960x848)
+[2026-10-12T14:16:18+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:18:46+00:00] ProPainter complete: c062f4d7 in 145.2s
+[2026-10-12T14:18:46+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:23:25+00:00] DiffuEraser complete: c062f4d7 in 277.9s
+[2026-10-12T14:23:25+00:00] Clip 41/50: c9f7f69d (115 frames, 960x448)
+[2026-10-12T14:23:25+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:24:17+00:00] ProPainter complete: c9f7f69d in 51.6s
+[2026-10-12T14:24:17+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:26:05+00:00] DiffuEraser complete: c9f7f69d in 107.8s
+[2026-10-12T14:26:05+00:00] Clip 42/50: ca74a924 (66 frames, 960x544)
+[2026-10-12T14:26:05+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:26:45+00:00] ProPainter complete: ca74a924 in 39.6s
+[2026-10-12T14:26:45+00:00] Waiting for GPU 1: 48489 MiB free, 78% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T14:27:45+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:29:12+00:00] DiffuEraser complete: ca74a924 in 86.6s
+[2026-10-12T14:29:12+00:00] Clip 43/50: ceaa6c65 (61 frames, 960x544)
+[2026-10-12T14:29:12+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:29:47+00:00] ProPainter complete: ceaa6c65 in 34.5s
+[2026-10-12T14:29:47+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:31:11+00:00] DiffuEraser complete: ceaa6c65 in 83.7s
+[2026-10-12T14:31:11+00:00] Clip 44/50: cfc68a82 (82 frames, 544x960)
+[2026-10-12T14:31:11+00:00] Waiting for GPU 1: 48489 MiB free, 100% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T14:32:11+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:32:57+00:00] ProPainter complete: cfc68a82 in 44.3s
+[2026-10-12T14:32:57+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:34:35+00:00] DiffuEraser complete: cfc68a82 in 98.2s
+[2026-10-12T14:34:35+00:00] Clip 45/50: dd5a4739 (48 frames, 960x544)
+[2026-10-12T14:34:35+00:00] Waiting for GPU 1: 48489 MiB free, 97% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T14:35:35+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:36:04+00:00] ProPainter complete: dd5a4739 in 28.3s
+[2026-10-12T14:36:04+00:00] Waiting for GPU 1: 48489 MiB free, 58% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T14:37:04+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:38:14+00:00] DiffuEraser complete: dd5a4739 in 69.6s
+[2026-10-12T14:38:14+00:00] Clip 46/50: e1d9fb32 (30 frames, 720x960)
+[2026-10-12T14:38:14+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:38:36+00:00] ProPainter complete: e1d9fb32 in 22.2s
+[2026-10-12T14:38:36+00:00] Waiting for GPU 1: 48489 MiB free, 71% utilization (need >= 24576 MiB and <= 20%)
+[2026-10-12T14:39:36+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:40:28+00:00] DiffuEraser complete: e1d9fb32 in 51.7s
+[2026-10-12T14:40:28+00:00] Clip 47/50: eaff3301 (180 frames, 960x544)
+[2026-10-12T14:40:28+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:42:06+00:00] ProPainter complete: eaff3301 in 94.5s
+[2026-10-12T14:42:06+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:45:03+00:00] DiffuEraser complete: eaff3301 in 176.2s
+[2026-10-12T14:45:03+00:00] Clip 48/50: f415f9ad (46 frames, 960x928)
+[2026-10-12T14:45:03+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:45:45+00:00] ProPainter complete: f415f9ad in 40.6s
+[2026-10-12T14:45:45+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:47:27+00:00] DiffuEraser complete: f415f9ad in 101.8s
+[2026-10-12T14:47:27+00:00] Clip 49/50: f89b54d0 (30 frames, 960x544)
+[2026-10-12T14:47:27+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:47:46+00:00] ProPainter complete: f89b54d0 in 19.2s
+[2026-10-12T14:47:46+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:48:31+00:00] DiffuEraser complete: f89b54d0 in 44.3s
+[2026-10-12T14:48:31+00:00] Clip 50/50: fe2dc281 (33 frames, 960x480)
+[2026-10-12T14:48:31+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:48:51+00:00] ProPainter complete: fe2dc281 in 19.6s
+[2026-10-12T14:48:51+00:00] GPU 1 ready: 48489 MiB free, 0% utilization
+[2026-10-12T14:49:34+00:00] DiffuEraser complete: fe2dc281 in 43.4s
+[2026-10-12T14:49:55+00:00] Batch summary: ProPainter 50/50, DiffuEraser 50/50, failures this run=0

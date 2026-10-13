@@ -8,4 +8,6 @@ Paper implementations and execution results by Smayan Gupta.
 | EffectErase (CVPR 2026) | [Implementation and setup](papers/effecterase/README.md) | [Recorded inference](evidence/effecterase/recorded/20261006T094029Z-3256661/README.md) |
 | DiffuEraser (2025) | [Implementation and setup](papers/diffueraser/README.md) | [Recorded inference](evidence/diffueraser/recorded/20261006T110108Z-3306048/README.md) |
 
+[MOSEv1 batch comparison](evidence/mose-task1/README.md): the same 50 clips processed with ProPainter and DiffuEraser, with 100 validated outputs.
+
 [Recorded ProPainter execution](papers/propainter/README.md#execution-evidence)

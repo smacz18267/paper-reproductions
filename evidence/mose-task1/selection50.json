@@ -1,0 +1,235 @@
+{
+  "dataset": "MOSEv1",
+  "split": "train",
+  "seed": 42,
+  "clips": [
+    {
+      "video_id": "02b72b8d",
+      "frame_count": 67
+    },
+    {
+      "video_id": "0ab75563",
+      "frame_count": 104
+    },
+    {
+      "video_id": "0b02886a",
+      "frame_count": 30
+    },
+    {
+      "video_id": "0b787263",
+      "frame_count": 70
+    },
+    {
+      "video_id": "0f96e2d7",
+      "frame_count": 63
+    },
+    {
+      "video_id": "1e44f47e",
+      "frame_count": 90
+    },
+    {
+      "video_id": "1fc5e086",
+      "frame_count": 54
+    },
+    {
+      "video_id": "230c2edf",
+      "frame_count": 25
+    },
+    {
+      "video_id": "26048547",
+      "frame_count": 67
+    },
+    {
+      "video_id": "2d8d7d35",
+      "frame_count": 27
+    },
+    {
+      "video_id": "2f5fb2a3",
+      "frame_count": 26
+    },
+    {
+      "video_id": "337dfa1e",
+      "frame_count": 127
+    },
+    {
+      "video_id": "34ccea00",
+      "frame_count": 84
+    },
+    {
+      "video_id": "395224b3",
+      "frame_count": 22
+    },
+    {
+      "video_id": "44476e77",
+      "frame_count": 118
+    },
+    {
+      "video_id": "4c42c747",
+      "frame_count": 58
+    },
+    {
+      "video_id": "4ce088c6",
+      "frame_count": 197
+    },
+    {
+      "video_id": "4d979d99",
+      "frame_count": 22
+    },
+    {
+      "video_id": "4e6aa1e8",
+      "frame_count": 50
+    },
+    {
+      "video_id": "52a04667",
+      "frame_count": 26
+    },
+    {
+      "video_id": "561f6380",
+      "frame_count": 30
+    },
+    {
+      "video_id": "5ba84e3f",
+      "frame_count": 77
+    },
+    {
+      "video_id": "5ff72128",
+      "frame_count": 38
+    },
+    {
+      "video_id": "6042d64a",
+      "frame_count": 97
+    },
+    {
+      "video_id": "60ab04c5",
+      "frame_count": 101
+    },
+    {
+      "video_id": "6763a576",
+      "frame_count": 70
+    },
+    {
+      "video_id": "7593caea",
+      "frame_count": 63
+    },
+    {
+      "video_id": "76b18413",
+      "frame_count": 30
+    },
+    {
+      "video_id": "780a25de",
+      "frame_count": 46
+    },
+    {
+      "video_id": "782551f7",
+      "frame_count": 69
+    },
+    {
+      "video_id": "7ce2c865",
+      "frame_count": 58
+    },
+    {
+      "video_id": "843d3bf7",
+      "frame_count": 35
+    },
+    {
+      "video_id": "915f0d9a",
+      "frame_count": 37
+    },
+    {
+      "video_id": "91b2f707",
+      "frame_count": 40
+    },
+    {
+      "video_id": "9cff25e3",
+      "frame_count": 71
+    },
+    {
+      "video_id": "9fc933f6",
+      "frame_count": 72
+    },
+    {
+      "video_id": "ac32a655",
+      "frame_count": 124
+    },
+    {
+      "video_id": "b7fb59c9",
+      "frame_count": 50
+    },
+    {
+      "video_id": "ba538072",
+      "frame_count": 35
+    },
+    {
+      "video_id": "c062f4d7",
+      "frame_count": 190
+    },
+    {
+      "video_id": "c9f7f69d",
+      "frame_count": 115
+    },
+    {
+      "video_id": "ca74a924",
+      "frame_count": 66
+    },
+    {
+      "video_id": "ceaa6c65",
+      "frame_count": 61
+    },
+    {
+      "video_id": "cfc68a82",
+      "frame_count": 82
+    },
+    {
+      "video_id": "dd5a4739",
+      "frame_count": 48
+    },
+    {
+      "video_id": "e1d9fb32",
+      "frame_count": 30
+    },
+    {
+      "video_id": "eaff3301",
+      "frame_count": 180
+    },
+    {
+      "video_id": "f415f9ad",
+      "frame_count": 46
+    },
+    {
+      "video_id": "f89b54d0",
+      "frame_count": 30
+    },
+    {
+      "video_id": "fe2dc281",
+      "frame_count": 33
+    }
+  ],
+  "minimum_frames": 22,
+  "replacement_seed": 42,
+  "excluded_short_clips": [
+    {
+      "video_id": "093d3d93",
+      "frame_count": 20
+    },
+    {
+      "video_id": "0a7a3629",
+      "frame_count": 15
+    },
+    {
+      "video_id": "2009a00f",
+      "frame_count": 12
+    },
+    {
+      "video_id": "21c89360",
+      "frame_count": 12
+    },
+    {
+      "video_id": "90fe55b9",
+      "frame_count": 18
+    },
+    {
+      "video_id": "f36b13ef",
+      "frame_count": 4
+    }
+  ]
+}

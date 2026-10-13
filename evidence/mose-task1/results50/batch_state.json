@@ -1,0 +1,1514 @@
+{
+  "clips": {
+    "02b72b8d": {
+      "diffueraser": {
+        "action": "skipped_valid",
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/02b72b8d/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T11:09:00+00:00",
+        "video_info": {
+          "bytes": 1299261,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 480,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "skipped_valid",
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/02b72b8d/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T11:09:00+00:00",
+        "video_info": {
+          "bytes": 1583925,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 480,
+          "width": 960
+        }
+      }
+    },
+    "0ab75563": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 169.453,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/0ab75563/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T11:17:10+00:00",
+        "video_info": {
+          "bytes": 1801356,
+          "fps": 25.0,
+          "frames": 104,
+          "height": 448,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 79.788,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/0ab75563/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T11:11:20+00:00",
+        "video_info": {
+          "bytes": 2128587,
+          "fps": 25.0,
+          "frames": 104,
+          "height": 448,
+          "width": 960
+        }
+      }
+    },
+    "0b02886a": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 72.484,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/0b02886a/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T11:29:58+00:00",
+        "video_info": {
+          "bytes": 339571,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 640,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 34.407,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/0b02886a/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T11:17:45+00:00",
+        "video_info": {
+          "bytes": 567188,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 640,
+          "width": 960
+        }
+      }
+    },
+    "0b787263": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 150.932,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/0b787263/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T11:46:37+00:00",
+        "video_info": {
+          "bytes": 1568467,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 66.682,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/0b787263/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T11:33:05+00:00",
+        "video_info": {
+          "bytes": 2154428,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "0f96e2d7": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 136.776,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/0f96e2d7/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T12:01:54+00:00",
+        "video_info": {
+          "bytes": 938197,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 59.454,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/0f96e2d7/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T11:49:37+00:00",
+        "video_info": {
+          "bytes": 1380123,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "1e44f47e": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 176.006,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/1e44f47e/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T12:10:13+00:00",
+        "video_info": {
+          "bytes": 2057004,
+          "fps": 25.0,
+          "frames": 90,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 81.898,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/1e44f47e/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T12:04:16+00:00",
+        "video_info": {
+          "bytes": 2157527,
+          "fps": 25.0,
+          "frames": 90,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "1fc5e086": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 126.134,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/1fc5e086/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T12:48:13+00:00",
+        "video_info": {
+          "bytes": 2188116,
+          "fps": 25.0,
+          "frames": 54,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 52.182,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/1fc5e086/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T12:22:06+00:00",
+        "video_info": {
+          "bytes": 2592768,
+          "fps": 25.0,
+          "frames": 54,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "230c2edf": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 61.344,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/230c2edf/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T12:58:44+00:00",
+        "video_info": {
+          "bytes": 2317294,
+          "fps": 25.0,
+          "frames": 25,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 28.694,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/230c2edf/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T12:52:42+00:00",
+        "video_info": {
+          "bytes": 1964268,
+          "fps": 25.0,
+          "frames": 25,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "26048547": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 55.39,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/26048547/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:09:00+00:00",
+        "video_info": {
+          "bytes": 1790137,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 368,
+          "width": 640
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 19.587,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/26048547/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:08:04+00:00",
+        "video_info": {
+          "bytes": 1690776,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 368,
+          "width": 640
+        }
+      }
+    },
+    "2d8d7d35": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 43.026,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/2d8d7d35/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:11:02+00:00",
+        "video_info": {
+          "bytes": 2754084,
+          "fps": 25.0,
+          "frames": 27,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 18.211,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/2d8d7d35/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:10:19+00:00",
+        "video_info": {
+          "bytes": 2156323,
+          "fps": 25.0,
+          "frames": 27,
+          "height": 960,
+          "width": 544
+        }
+      }
+    },
+    "2f5fb2a3": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 42.696,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/2f5fb2a3/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:12:02+00:00",
+        "video_info": {
+          "bytes": 918901,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 17.185,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/2f5fb2a3/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:11:19+00:00",
+        "video_info": {
+          "bytes": 871087,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 960,
+          "width": 544
+        }
+      }
+    },
+    "337dfa1e": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 134.952,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/337dfa1e/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:15:24+00:00",
+        "video_info": {
+          "bytes": 7702061,
+          "fps": 25.0,
+          "frames": 127,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 64.836,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/337dfa1e/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:13:09+00:00",
+        "video_info": {
+          "bytes": 7502969,
+          "fps": 25.0,
+          "frames": 127,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "34ccea00": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 84.634,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/34ccea00/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:17:24+00:00",
+        "video_info": {
+          "bytes": 2196150,
+          "fps": 25.0,
+          "frames": 84,
+          "height": 640,
+          "width": 640
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 35.15,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/34ccea00/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:16:00+00:00",
+        "video_info": {
+          "bytes": 2444453,
+          "fps": 25.0,
+          "frames": 84,
+          "height": 640,
+          "width": 640
+        }
+      }
+    },
+    "395224b3": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 33.491,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/395224b3/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:18:13+00:00",
+        "video_info": {
+          "bytes": 1503764,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 448,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 14.276,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/395224b3/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:17:39+00:00",
+        "video_info": {
+          "bytes": 1348212,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 448,
+          "width": 960
+        }
+      }
+    },
+    "44476e77": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 126.742,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/44476e77/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:21:28+00:00",
+        "video_info": {
+          "bytes": 3516502,
+          "fps": 25.0,
+          "frames": 118,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 67.366,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/44476e77/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:19:21+00:00",
+        "video_info": {
+          "bytes": 4837150,
+          "fps": 25.0,
+          "frames": 118,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "4c42c747": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 52.289,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/4c42c747/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:22:39+00:00",
+        "video_info": {
+          "bytes": 1091128,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 368,
+          "width": 640
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 18.262,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/4c42c747/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:21:47+00:00",
+        "video_info": {
+          "bytes": 1273379,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 368,
+          "width": 640
+        }
+      }
+    },
+    "4ce088c6": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 190.371,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/4ce088c6/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:27:33+00:00",
+        "video_info": {
+          "bytes": 8160595,
+          "fps": 25.0,
+          "frames": 197,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 101.5,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/4ce088c6/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:24:22+00:00",
+        "video_info": {
+          "bytes": 8241338,
+          "fps": 25.0,
+          "frames": 197,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "4d979d99": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 35.003,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/4d979d99/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:28:23+00:00",
+        "video_info": {
+          "bytes": 935097,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 480,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 14.816,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/4d979d99/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:27:48+00:00",
+        "video_info": {
+          "bytes": 992686,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 480,
+          "width": 960
+        }
+      }
+    },
+    "4e6aa1e8": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 70.739,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/4e6aa1e8/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:31:04+00:00",
+        "video_info": {
+          "bytes": 1500164,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 29.125,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/4e6aa1e8/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:29:53+00:00",
+        "video_info": {
+          "bytes": 2406022,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 960,
+          "width": 544
+        }
+      }
+    },
+    "52a04667": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 37.18,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/52a04667/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:31:55+00:00",
+        "video_info": {
+          "bytes": 414439,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 400,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 14.415,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/52a04667/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:31:18+00:00",
+        "video_info": {
+          "bytes": 554270,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 400,
+          "width": 960
+        }
+      }
+    },
+    "561f6380": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 44.2,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/561f6380/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:33:59+00:00",
+        "video_info": {
+          "bytes": 1252254,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 18.882,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/561f6380/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:32:15+00:00",
+        "video_info": {
+          "bytes": 1482396,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 544
+        }
+      }
+    },
+    "5ba84e3f": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 86.871,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/5ba84e3f/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:37:08+00:00",
+        "video_info": {
+          "bytes": 3489639,
+          "fps": 25.0,
+          "frames": 77,
+          "height": 464,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 41.061,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/5ba84e3f/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:35:41+00:00",
+        "video_info": {
+          "bytes": 4254608,
+          "fps": 25.0,
+          "frames": 77,
+          "height": 464,
+          "width": 960
+        }
+      }
+    },
+    "5ff72128": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 51.256,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/5ff72128/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:39:24+00:00",
+        "video_info": {
+          "bytes": 978285,
+          "fps": 25.0,
+          "frames": 38,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 23.565,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/5ff72128/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:38:32+00:00",
+        "video_info": {
+          "bytes": 1015174,
+          "fps": 25.0,
+          "frames": 38,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "6042d64a": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 122.721,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/6042d64a/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:42:25+00:00",
+        "video_info": {
+          "bytes": 3577765,
+          "fps": 25.0,
+          "frames": 97,
+          "height": 624,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 57.89,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/6042d64a/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:40:22+00:00",
+        "video_info": {
+          "bytes": 4457441,
+          "fps": 25.0,
+          "frames": 97,
+          "height": 624,
+          "width": 960
+        }
+      }
+    },
+    "60ab04c5": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 114.976,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/60ab04c5/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:46:16+00:00",
+        "video_info": {
+          "bytes": 3056791,
+          "fps": 25.0,
+          "frames": 101,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 54.947,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/60ab04c5/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:44:21+00:00",
+        "video_info": {
+          "bytes": 3329735,
+          "fps": 25.0,
+          "frames": 101,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "6763a576": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 90.721,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/6763a576/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:48:28+00:00",
+        "video_info": {
+          "bytes": 929118,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 39.915,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/6763a576/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:46:57+00:00",
+        "video_info": {
+          "bytes": 1692700,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "7593caea": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 84.51,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/7593caea/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:50:29+00:00",
+        "video_info": {
+          "bytes": 1492707,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 36.472,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/7593caea/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:49:05+00:00",
+        "video_info": {
+          "bytes": 1631858,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "76b18413": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 46.607,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/76b18413/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:51:36+00:00",
+        "video_info": {
+          "bytes": 664862,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 20.038,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/76b18413/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:50:50+00:00",
+        "video_info": {
+          "bytes": 1162784,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "780a25de": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 61.934,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/780a25de/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:53:02+00:00",
+        "video_info": {
+          "bytes": 1656261,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 448,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 23.351,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/780a25de/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:52:00+00:00",
+        "video_info": {
+          "bytes": 1632614,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 448,
+          "width": 960
+        }
+      }
+    },
+    "782551f7": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 90.201,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/782551f7/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:56:13+00:00",
+        "video_info": {
+          "bytes": 1618863,
+          "fps": 25.0,
+          "frames": 69,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 39.824,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/782551f7/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:53:43+00:00",
+        "video_info": {
+          "bytes": 1744483,
+          "fps": 25.0,
+          "frames": 69,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "7ce2c865": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 81.9,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/7ce2c865/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:58:10+00:00",
+        "video_info": {
+          "bytes": 3817640,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 34.476,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/7ce2c865/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:56:48+00:00",
+        "video_info": {
+          "bytes": 3057066,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "843d3bf7": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 49.488,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/843d3bf7/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:00:23+00:00",
+        "video_info": {
+          "bytes": 3694835,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 22.4,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/843d3bf7/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T13:59:33+00:00",
+        "video_info": {
+          "bytes": 2888561,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "915f0d9a": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 50.467,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/915f0d9a/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:01:36+00:00",
+        "video_info": {
+          "bytes": 1239921,
+          "fps": 25.0,
+          "frames": 37,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 22.234,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/915f0d9a/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:00:46+00:00",
+        "video_info": {
+          "bytes": 1272583,
+          "fps": 25.0,
+          "frames": 37,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "91b2f707": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 76.228,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/91b2f707/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:04:19+00:00",
+        "video_info": {
+          "bytes": 1270666,
+          "fps": 25.0,
+          "frames": 40,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 26.447,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/91b2f707/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:02:03+00:00",
+        "video_info": {
+          "bytes": 1018345,
+          "fps": 25.0,
+          "frames": 40,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "9cff25e3": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 101.497,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/9cff25e3/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:06:46+00:00",
+        "video_info": {
+          "bytes": 5460722,
+          "fps": 25.0,
+          "frames": 71,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 43.5,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/9cff25e3/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:05:04+00:00",
+        "video_info": {
+          "bytes": 4754528,
+          "fps": 25.0,
+          "frames": 71,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "9fc933f6": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 58.133,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/9fc933f6/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:09:06+00:00",
+        "video_info": {
+          "bytes": 3320301,
+          "fps": 25.0,
+          "frames": 72,
+          "height": 368,
+          "width": 640
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 21.495,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/9fc933f6/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:07:08+00:00",
+        "video_info": {
+          "bytes": 2549934,
+          "fps": 25.0,
+          "frames": 72,
+          "height": 368,
+          "width": 640
+        }
+      }
+    },
+    "ac32a655": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 132.505,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/ac32a655/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:12:26+00:00",
+        "video_info": {
+          "bytes": 10746070,
+          "fps": 25.0,
+          "frames": 124,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 65.238,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/ac32a655/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:10:13+00:00",
+        "video_info": {
+          "bytes": 8261356,
+          "fps": 25.0,
+          "frames": 124,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "b7fb59c9": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 71.356,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/b7fb59c9/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:14:06+00:00",
+        "video_info": {
+          "bytes": 1126212,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 28.729,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/b7fb59c9/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:12:55+00:00",
+        "video_info": {
+          "bytes": 1388160,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "ba538072": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 49.183,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/ba538072/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:16:18+00:00",
+        "video_info": {
+          "bytes": 1639331,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 22.258,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/ba538072/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:14:29+00:00",
+        "video_info": {
+          "bytes": 1433558,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "c062f4d7": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 277.892,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/c062f4d7/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:23:25+00:00",
+        "video_info": {
+          "bytes": 12356293,
+          "fps": 25.0,
+          "frames": 190,
+          "height": 848,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 145.242,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/c062f4d7/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:18:46+00:00",
+        "video_info": {
+          "bytes": 12800473,
+          "fps": 25.0,
+          "frames": 190,
+          "height": 848,
+          "width": 960
+        }
+      }
+    },
+    "c9f7f69d": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 107.833,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/c9f7f69d/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:26:05+00:00",
+        "video_info": {
+          "bytes": 1974184,
+          "fps": 25.0,
+          "frames": 115,
+          "height": 448,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 51.614,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/c9f7f69d/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:24:17+00:00",
+        "video_info": {
+          "bytes": 2307832,
+          "fps": 25.0,
+          "frames": 115,
+          "height": 448,
+          "width": 960
+        }
+      }
+    },
+    "ca74a924": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 86.567,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/ca74a924/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:29:12+00:00",
+        "video_info": {
+          "bytes": 639007,
+          "fps": 25.0,
+          "frames": 66,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 39.568,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/ca74a924/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:26:45+00:00",
+        "video_info": {
+          "bytes": 1143433,
+          "fps": 25.0,
+          "frames": 66,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "ceaa6c65": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 83.666,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/ceaa6c65/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:31:11+00:00",
+        "video_info": {
+          "bytes": 3986437,
+          "fps": 25.0,
+          "frames": 61,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 34.464,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/ceaa6c65/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:29:47+00:00",
+        "video_info": {
+          "bytes": 3476557,
+          "fps": 25.0,
+          "frames": 61,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "cfc68a82": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 98.152,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/cfc68a82/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:34:35+00:00",
+        "video_info": {
+          "bytes": 6753914,
+          "fps": 25.0,
+          "frames": 82,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 44.326,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/cfc68a82/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:32:57+00:00",
+        "video_info": {
+          "bytes": 6641323,
+          "fps": 25.0,
+          "frames": 82,
+          "height": 960,
+          "width": 544
+        }
+      }
+    },
+    "dd5a4739": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 69.572,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/dd5a4739/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:38:14+00:00",
+        "video_info": {
+          "bytes": 2273014,
+          "fps": 25.0,
+          "frames": 48,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 28.29,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/dd5a4739/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:36:04+00:00",
+        "video_info": {
+          "bytes": 2326763,
+          "fps": 25.0,
+          "frames": 48,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "e1d9fb32": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 51.721,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/e1d9fb32/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:40:28+00:00",
+        "video_info": {
+          "bytes": 1003227,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 720
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 22.198,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/e1d9fb32/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:38:36+00:00",
+        "video_info": {
+          "bytes": 1337507,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 720
+        }
+      }
+    },
+    "eaff3301": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 176.217,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/eaff3301/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:45:03+00:00",
+        "video_info": {
+          "bytes": 24061502,
+          "fps": 25.0,
+          "frames": 180,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 94.509,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/eaff3301/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:42:06+00:00",
+        "video_info": {
+          "bytes": 21439461,
+          "fps": 25.0,
+          "frames": 180,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "f415f9ad": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 101.838,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/f415f9ad/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:47:27+00:00",
+        "video_info": {
+          "bytes": 3753664,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 928,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 40.642,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/f415f9ad/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:45:45+00:00",
+        "video_info": {
+          "bytes": 3528336,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 928,
+          "width": 960
+        }
+      }
+    },
+    "f89b54d0": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 44.313,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/f89b54d0/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:48:31+00:00",
+        "video_info": {
+          "bytes": 1995260,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 19.217,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/f89b54d0/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:47:46+00:00",
+        "video_info": {
+          "bytes": 2383268,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        }
+      }
+    },
+    "fe2dc281": {
+      "diffueraser": {
+        "action": "generated",
+        "elapsed_seconds": 43.352,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/diffueraser/fe2dc281/diffueraser_result.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:49:34+00:00",
+        "video_info": {
+          "bytes": 1536734,
+          "fps": 25.0,
+          "frames": 33,
+          "height": 480,
+          "width": 960
+        }
+      },
+      "propainter": {
+        "action": "generated",
+        "elapsed_seconds": 19.593,
+        "output": "/home/smayan/research/datasets/MOSEv1/results50/propainter/fe2dc281/inpaint_out.mp4",
+        "status": "complete",
+        "updated_at": "2026-10-12T14:48:51+00:00",
+        "video_info": {
+          "bytes": 1433802,
+          "fps": 25.0,
+          "frames": 33,
+          "height": 480,
+          "width": 960
+        }
+      }
+    }
+  },
+  "created_at": "2026-10-12T10:52:44+00:00",
+  "fps": 25,
+  "gpu": 1,
+  "mask_dilation": 8,
+  "max_side": 960,
+  "schema_version": 1,
+  "summary": {
+    "diffueraser_complete": 50,
+    "failures_this_run": 0,
+    "propainter_complete": 50,
+    "updated_at": "2026-10-12T14:49:55+00:00"
+  }
+}

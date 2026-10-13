@@ -1,0 +1,41 @@
+# MOSEv1 batch results
+
+I ran the same 50 MOSEv1 clips through ProPainter and DiffuEraser. One annotated object was removed from each clip using the same mask for both methods.
+
+## Result
+
+- ProPainter: 50/50 valid outputs
+- DiffuEraser: 50/50 valid outputs
+- Total: 100 videos, 3,351 frames per method
+- Final failures: 0
+
+Every output was decoded and checked for frame count, resolution and 25 FPS. The final line in [batch_supervisor_v2.log](batch_supervisor_v2.log) records the completed 50/50 result.
+
+## Settings
+
+- Maximum side: 960 px
+- Mask dilation: 8
+- ProPainter: FP16
+- GPU: NVIDIA RTX A6000
+- Object choice: largest annotated object by total pixel area
+- Selection seed: 42
+
+## Timing
+
+The first clip was the pilot, so the timing comparison below uses the other 49 paired runs.
+
+| Method | Total | Mean per clip | Seconds per frame |
+| --- | ---: | ---: | ---: |
+| ProPainter | 33.34 min | 40.82 s | 0.609 |
+| DiffuEraser | 73.43 min | 89.91 s | 1.342 |
+
+DiffuEraser took about 2.2 times as long as ProPainter. On the pilot clip, both removed the target fish, but DiffuEraser reconstructed the overlapping white fish more cleanly. ProPainter was softer around that area.
+
+## Pilot clip
+
+- [Original](sample/02b72b8d-original.mp4)
+- [Mask preview](sample/02b72b8d-mask-preview.png)
+- [ProPainter result](sample/02b72b8d-propainter.mp4)
+- [DiffuEraser result](sample/02b72b8d-diffueraser.mp4)
+
+The full 100-video archive is 464 MiB, so it is not committed here. Its checksum is in [full-archive.sha256](full-archive.sha256). The selection, mask metadata, runner, batch state and event history are included in this folder.
