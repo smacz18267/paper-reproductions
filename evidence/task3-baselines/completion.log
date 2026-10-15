@@ -1,0 +1,6 @@
+VideoSeal=0 Safe-Sora=0 VideoShield=0
+VideoSeal Task 3 batch finished: 100/100 succeeded
+Safe-Sora Task 3 batch finished: 100/100 succeeded
+VideoShield Task 3 negative-control batch finished: 100/100 succeeded
+Artifact counts: VideoSeal=100 Safe-Sora=100 VideoShield=100
+Checksum validation: OK
