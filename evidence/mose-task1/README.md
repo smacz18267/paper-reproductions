@@ -31,11 +31,41 @@ The first clip was the pilot, so the timing comparison below uses the other 49 p
 
 DiffuEraser took about 2.2 times as long as ProPainter. On the pilot clip, both removed the target fish, but DiffuEraser reconstructed the overlapping white fish more cleanly. ProPainter was softer around that area.
 
-## Pilot clip
+## Review all 50 clips
 
-- [Original](sample/02b72b8d-original.mp4)
-- [Mask preview](sample/02b72b8d-mask-preview.png)
-- [ProPainter result](sample/02b72b8d-propainter.mp4)
-- [DiffuEraser result](sample/02b72b8d-diffueraser.mp4)
+The old deliverable exposed only one pilot clip. The corrected deliverable is a
+single local review view at `review50/index.html` covering all 50 samples. Each
+sample shows the exact original MOSE video, raw selected-object mask, ProPainter
+result and DiffuEraser result. Playback can be synchronized, manual pass/fail
+decisions are stored locally, and the completed review can be exported as CSV.
 
-The full 100-video archive is 464 MiB, so it is not committed here. Its checksum is in [full-archive.sha256](full-archive.sha256). The selection, mask metadata, runner, batch state and event history are included in this folder.
+Start the review view from the repository root:
+
+```bash
+python3 -m http.server 8765 --directory evidence/mose-task1/review50
+```
+
+Then open `http://localhost:8765`. The pull request includes the complete media
+bundle so the review works after checkout. `scripts/build_mose_review.py`
+rebuilds the shared original/removal view, and
+`scripts/merge_mose_watermark_results.py` adds the corrected watermark-first
+outputs and metadata.
+
+The method picker contains all three requested watermark methods:
+
+- VideoSeal: watermarked input, both post-watermark removal videos, effective
+  GT masks, derived patch-grid predicted masks, and IoU for both attacks.
+- Safe-Sora: its official aligned 16-frame original, watermarked video, GT mask,
+  and both post-watermark removal videos. Pred mask and IoU are marked not
+  applicable because the released method does not provide spatial localization.
+- VideoShield: an explicit per-clip availability record and unwatermarked
+  negative control. It is marked not applicable because VideoShield embeds in a
+  diffusion generator's initial noise and cannot post-process a MOSE video.
+
+The full 100-video archive is 464 MiB. Its checksum is in
+[full-archive.sha256](full-archive.sha256). The selection, mask metadata,
+runner, batch state and event history are included in this folder.
+
+The required experiment ordering, IoU definition and watermark-method
+capability constraints are in [PROTOCOL.md](PROTOCOL.md). In particular, the
+original video must be watermarked *before* either inpainting method is applied.

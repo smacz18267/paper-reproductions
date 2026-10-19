@@ -1,0 +1,1509 @@
+{
+  "decoded_frames": 13404,
+  "media": {
+    "02b72b8d": {
+      "diffueraser": {
+        "bytes": 1038800,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 36612,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1275016,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1583925,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      }
+    },
+    "0ab75563": {
+      "diffueraser": {
+        "bytes": 1416848,
+        "fps": 25.0,
+        "frames": 104,
+        "height": 448,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 16559,
+        "fps": 25.0,
+        "frames": 104,
+        "height": 448,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1610688,
+        "fps": 25.0,
+        "frames": 104,
+        "height": 448,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2128587,
+        "fps": 25.0,
+        "frames": 104,
+        "height": 448,
+        "width": 960
+      }
+    },
+    "0b02886a": {
+      "diffueraser": {
+        "bytes": 344380,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 640,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 32087,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 640,
+        "width": 960
+      },
+      "original": {
+        "bytes": 434325,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 640,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 567188,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 640,
+        "width": 960
+      }
+    },
+    "0b787263": {
+      "diffueraser": {
+        "bytes": 1241522,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 65660,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1714956,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2154428,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "0f96e2d7": {
+      "diffueraser": {
+        "bytes": 817461,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 30520,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 987639,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1380123,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "1e44f47e": {
+      "diffueraser": {
+        "bytes": 1483536,
+        "fps": 25.0,
+        "frames": 90,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 7263,
+        "fps": 25.0,
+        "frames": 90,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1647886,
+        "fps": 25.0,
+        "frames": 90,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2157527,
+        "fps": 25.0,
+        "frames": 90,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "1fc5e086": {
+      "diffueraser": {
+        "bytes": 1807498,
+        "fps": 25.0,
+        "frames": 54,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 50726,
+        "fps": 25.0,
+        "frames": 54,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2060052,
+        "fps": 25.0,
+        "frames": 54,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2592768,
+        "fps": 25.0,
+        "frames": 54,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "230c2edf": {
+      "diffueraser": {
+        "bytes": 1388021,
+        "fps": 25.0,
+        "frames": 25,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 41487,
+        "fps": 25.0,
+        "frames": 25,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1868169,
+        "fps": 25.0,
+        "frames": 25,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1964268,
+        "fps": 25.0,
+        "frames": 25,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "26048547": {
+      "diffueraser": {
+        "bytes": 1085181,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 368,
+        "width": 640
+      },
+      "gt_mask": {
+        "bytes": 5529,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 368,
+        "width": 640
+      },
+      "original": {
+        "bytes": 1266463,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 368,
+        "width": 640
+      },
+      "propainter": {
+        "bytes": 1690776,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 368,
+        "width": 640
+      }
+    },
+    "2d8d7d35": {
+      "diffueraser": {
+        "bytes": 1499664,
+        "fps": 25.0,
+        "frames": 27,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 3761,
+        "fps": 25.0,
+        "frames": 27,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 1786992,
+        "fps": 25.0,
+        "frames": 27,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 2156323,
+        "fps": 25.0,
+        "frames": 27,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "2f5fb2a3": {
+      "diffueraser": {
+        "bytes": 589747,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 43481,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 723909,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 871087,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "337dfa1e": {
+      "diffueraser": {
+        "bytes": 4030367,
+        "fps": 25.0,
+        "frames": 127,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 20629,
+        "fps": 25.0,
+        "frames": 127,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 5575515,
+        "fps": 25.0,
+        "frames": 127,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 7502969,
+        "fps": 25.0,
+        "frames": 127,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "34ccea00": {
+      "diffueraser": {
+        "bytes": 1709299,
+        "fps": 25.0,
+        "frames": 84,
+        "height": 640,
+        "width": 640
+      },
+      "gt_mask": {
+        "bytes": 59417,
+        "fps": 25.0,
+        "frames": 84,
+        "height": 640,
+        "width": 640
+      },
+      "original": {
+        "bytes": 2028574,
+        "fps": 25.0,
+        "frames": 84,
+        "height": 640,
+        "width": 640
+      },
+      "propainter": {
+        "bytes": 2444453,
+        "fps": 25.0,
+        "frames": 84,
+        "height": 640,
+        "width": 640
+      }
+    },
+    "395224b3": {
+      "diffueraser": {
+        "bytes": 950643,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 448,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 15302,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 448,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1168228,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 448,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1348212,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 448,
+        "width": 960
+      }
+    },
+    "44476e77": {
+      "diffueraser": {
+        "bytes": 2839811,
+        "fps": 25.0,
+        "frames": 118,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 209196,
+        "fps": 25.0,
+        "frames": 118,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 4119921,
+        "fps": 25.0,
+        "frames": 118,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 4837150,
+        "fps": 25.0,
+        "frames": 118,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "4c42c747": {
+      "diffueraser": {
+        "bytes": 746365,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 368,
+        "width": 640
+      },
+      "gt_mask": {
+        "bytes": 53298,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 368,
+        "width": 640
+      },
+      "original": {
+        "bytes": 930487,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 368,
+        "width": 640
+      },
+      "propainter": {
+        "bytes": 1273379,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 368,
+        "width": 640
+      }
+    },
+    "4ce088c6": {
+      "diffueraser": {
+        "bytes": 5481802,
+        "fps": 25.0,
+        "frames": 197,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 37181,
+        "fps": 25.0,
+        "frames": 197,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 6762411,
+        "fps": 25.0,
+        "frames": 197,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 8241338,
+        "fps": 25.0,
+        "frames": 197,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "4d979d99": {
+      "diffueraser": {
+        "bytes": 653574,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 480,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 3213,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 480,
+        "width": 960
+      },
+      "original": {
+        "bytes": 816385,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 480,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 992686,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 480,
+        "width": 960
+      }
+    },
+    "4e6aa1e8": {
+      "diffueraser": {
+        "bytes": 1267657,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 34788,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 1848805,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 2406022,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "52a04667": {
+      "diffueraser": {
+        "bytes": 340958,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 400,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 4976,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 400,
+        "width": 960
+      },
+      "original": {
+        "bytes": 427599,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 400,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 554270,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 400,
+        "width": 960
+      }
+    },
+    "561f6380": {
+      "diffueraser": {
+        "bytes": 922019,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 16944,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 1220247,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 1482396,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "5ba84e3f": {
+      "diffueraser": {
+        "bytes": 2181040,
+        "fps": 25.0,
+        "frames": 77,
+        "height": 464,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 224022,
+        "fps": 25.0,
+        "frames": 77,
+        "height": 464,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2927408,
+        "fps": 25.0,
+        "frames": 77,
+        "height": 464,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 4254608,
+        "fps": 25.0,
+        "frames": 77,
+        "height": 464,
+        "width": 960
+      }
+    },
+    "5ff72128": {
+      "diffueraser": {
+        "bytes": 724282,
+        "fps": 25.0,
+        "frames": 38,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 16675,
+        "fps": 25.0,
+        "frames": 38,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 795099,
+        "fps": 25.0,
+        "frames": 38,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1015174,
+        "fps": 25.0,
+        "frames": 38,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "6042d64a": {
+      "diffueraser": {
+        "bytes": 2969218,
+        "fps": 25.0,
+        "frames": 97,
+        "height": 624,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 20170,
+        "fps": 25.0,
+        "frames": 97,
+        "height": 624,
+        "width": 960
+      },
+      "original": {
+        "bytes": 3561608,
+        "fps": 25.0,
+        "frames": 97,
+        "height": 624,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 4457441,
+        "fps": 25.0,
+        "frames": 97,
+        "height": 624,
+        "width": 960
+      }
+    },
+    "60ab04c5": {
+      "diffueraser": {
+        "bytes": 1792011,
+        "fps": 25.0,
+        "frames": 101,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 17531,
+        "fps": 25.0,
+        "frames": 101,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2251145,
+        "fps": 25.0,
+        "frames": 101,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 3329735,
+        "fps": 25.0,
+        "frames": 101,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "6763a576": {
+      "diffueraser": {
+        "bytes": 1016051,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 106924,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1289626,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1692700,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "7593caea": {
+      "diffueraser": {
+        "bytes": 1135884,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 44426,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1262385,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1631858,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "76b18413": {
+      "diffueraser": {
+        "bytes": 460006,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 39202,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 684069,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1162784,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "780a25de": {
+      "diffueraser": {
+        "bytes": 1117735,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 448,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 4439,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 448,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1327606,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 448,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1632614,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 448,
+        "width": 960
+      }
+    },
+    "782551f7": {
+      "diffueraser": {
+        "bytes": 1250531,
+        "fps": 25.0,
+        "frames": 69,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 54664,
+        "fps": 25.0,
+        "frames": 69,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1373884,
+        "fps": 25.0,
+        "frames": 69,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1744483,
+        "fps": 25.0,
+        "frames": 69,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "7ce2c865": {
+      "diffueraser": {
+        "bytes": 2108417,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 19195,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2259842,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 3057066,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "843d3bf7": {
+      "diffueraser": {
+        "bytes": 2008257,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 32050,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2456894,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2888561,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "915f0d9a": {
+      "diffueraser": {
+        "bytes": 803213,
+        "fps": 25.0,
+        "frames": 37,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 8226,
+        "fps": 25.0,
+        "frames": 37,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1004879,
+        "fps": 25.0,
+        "frames": 37,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1272583,
+        "fps": 25.0,
+        "frames": 37,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "91b2f707": {
+      "diffueraser": {
+        "bytes": 719207,
+        "fps": 25.0,
+        "frames": 40,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 32223,
+        "fps": 25.0,
+        "frames": 40,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 893948,
+        "fps": 25.0,
+        "frames": 40,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1018345,
+        "fps": 25.0,
+        "frames": 40,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "9cff25e3": {
+      "diffueraser": {
+        "bytes": 2607269,
+        "fps": 25.0,
+        "frames": 71,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 14452,
+        "fps": 25.0,
+        "frames": 71,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 3679830,
+        "fps": 25.0,
+        "frames": 71,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 4754528,
+        "fps": 25.0,
+        "frames": 71,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "9fc933f6": {
+      "diffueraser": {
+        "bytes": 1786041,
+        "fps": 25.0,
+        "frames": 72,
+        "height": 368,
+        "width": 640
+      },
+      "gt_mask": {
+        "bytes": 80010,
+        "fps": 25.0,
+        "frames": 72,
+        "height": 368,
+        "width": 640
+      },
+      "original": {
+        "bytes": 2057516,
+        "fps": 25.0,
+        "frames": 72,
+        "height": 368,
+        "width": 640
+      },
+      "propainter": {
+        "bytes": 2549934,
+        "fps": 25.0,
+        "frames": 72,
+        "height": 368,
+        "width": 640
+      }
+    },
+    "ac32a655": {
+      "diffueraser": {
+        "bytes": 5903115,
+        "fps": 25.0,
+        "frames": 124,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 78559,
+        "fps": 25.0,
+        "frames": 124,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 6512516,
+        "fps": 25.0,
+        "frames": 124,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 8261356,
+        "fps": 25.0,
+        "frames": 124,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "b7fb59c9": {
+      "diffueraser": {
+        "bytes": 970425,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 29425,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1034592,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1388160,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "ba538072": {
+      "diffueraser": {
+        "bytes": 999198,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 17524,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1216691,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1433558,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "c062f4d7": {
+      "diffueraser": {
+        "bytes": 8556764,
+        "fps": 25.0,
+        "frames": 190,
+        "height": 848,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 172813,
+        "fps": 25.0,
+        "frames": 190,
+        "height": 848,
+        "width": 960
+      },
+      "original": {
+        "bytes": 10726649,
+        "fps": 25.0,
+        "frames": 190,
+        "height": 848,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 12800473,
+        "fps": 25.0,
+        "frames": 190,
+        "height": 848,
+        "width": 960
+      }
+    },
+    "c9f7f69d": {
+      "diffueraser": {
+        "bytes": 1541088,
+        "fps": 25.0,
+        "frames": 115,
+        "height": 448,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 20767,
+        "fps": 25.0,
+        "frames": 115,
+        "height": 448,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1751202,
+        "fps": 25.0,
+        "frames": 115,
+        "height": 448,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2307832,
+        "fps": 25.0,
+        "frames": 115,
+        "height": 448,
+        "width": 960
+      }
+    },
+    "ca74a924": {
+      "diffueraser": {
+        "bytes": 611321,
+        "fps": 25.0,
+        "frames": 66,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 88956,
+        "fps": 25.0,
+        "frames": 66,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1003119,
+        "fps": 25.0,
+        "frames": 66,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1143433,
+        "fps": 25.0,
+        "frames": 66,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "ceaa6c65": {
+      "diffueraser": {
+        "bytes": 2315410,
+        "fps": 25.0,
+        "frames": 61,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 14097,
+        "fps": 25.0,
+        "frames": 61,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2646431,
+        "fps": 25.0,
+        "frames": 61,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 3476557,
+        "fps": 25.0,
+        "frames": 61,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "cfc68a82": {
+      "diffueraser": {
+        "bytes": 4326479,
+        "fps": 25.0,
+        "frames": 82,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 84308,
+        "fps": 25.0,
+        "frames": 82,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 5497942,
+        "fps": 25.0,
+        "frames": 82,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 6641323,
+        "fps": 25.0,
+        "frames": 82,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "dd5a4739": {
+      "diffueraser": {
+        "bytes": 1545583,
+        "fps": 25.0,
+        "frames": 48,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 41220,
+        "fps": 25.0,
+        "frames": 48,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1948502,
+        "fps": 25.0,
+        "frames": 48,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2326763,
+        "fps": 25.0,
+        "frames": 48,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "e1d9fb32": {
+      "diffueraser": {
+        "bytes": 860896,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 720
+      },
+      "gt_mask": {
+        "bytes": 76367,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 720
+      },
+      "original": {
+        "bytes": 1052688,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 720
+      },
+      "propainter": {
+        "bytes": 1337507,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 720
+      }
+    },
+    "eaff3301": {
+      "diffueraser": {
+        "bytes": 16292815,
+        "fps": 25.0,
+        "frames": 180,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 81228,
+        "fps": 25.0,
+        "frames": 180,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 18803109,
+        "fps": 25.0,
+        "frames": 180,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 21439461,
+        "fps": 25.0,
+        "frames": 180,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "f415f9ad": {
+      "diffueraser": {
+        "bytes": 2333477,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 928,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 70230,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 928,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2878061,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 928,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 3528336,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 928,
+        "width": 960
+      }
+    },
+    "f89b54d0": {
+      "diffueraser": {
+        "bytes": 1524970,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 32419,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1991379,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2383268,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "fe2dc281": {
+      "diffueraser": {
+        "bytes": 1029745,
+        "fps": 25.0,
+        "frames": 33,
+        "height": 480,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 13494,
+        "fps": 25.0,
+        "frames": 33,
+        "height": 480,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1060119,
+        "fps": 25.0,
+        "frames": 33,
+        "height": 480,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1433802,
+        "fps": 25.0,
+        "frames": 33,
+        "height": 480,
+        "width": 960
+      }
+    }
+  },
+  "samples": 50,
+  "status": "complete",
+  "validated_at": "2026-10-19T09:34:50+00:00",
+  "videos": 200
+}

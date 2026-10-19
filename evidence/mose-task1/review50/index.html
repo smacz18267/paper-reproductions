@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOSE 50-sample removal review</title>
+  <style>
+    :root { color-scheme: light dark; font-family: ui-sans-serif, system-ui, sans-serif; }
+    body { margin: 0; background: Canvas; color: CanvasText; }
+    main { max-width: 1500px; margin: auto; padding: 20px; }
+    header, .controls, .review, .metric-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    header { justify-content: space-between; }
+    button, select, textarea { font: inherit; }
+    button, select { min-height: 40px; padding: 7px 12px; }
+    .counter { font-variant-numeric: tabular-nums; }
+    .videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 16px 0; }
+    figure { margin: 0; padding: 12px; border: 1px solid color-mix(in srgb, CanvasText 20%, transparent); border-radius: 10px; }
+    figcaption { margin-bottom: 8px; font-weight: 600; }
+    video { width: 100%; background: #000; aspect-ratio: 16 / 9; object-fit: contain; }
+    .review { align-items: flex-start; }
+    .review label { padding: 10px 0; }
+    textarea { width: min(100%, 760px); min-height: 72px; padding: 8px; }
+    .watermark { margin-top: 24px; padding-top: 18px; border-top: 1px solid color-mix(in srgb, CanvasText 20%, transparent); }
+    .hidden { display: none; }
+    .status { min-height: 1.4em; }
+    @media (max-width: 800px) { .videos { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>MOSE removal review</h1>
+      <div class="counter" id="counter" aria-live="polite"></div>
+    </div>
+    <div class="controls">
+      <button id="previous" type="button">Previous</button>
+      <select id="sample" aria-label="Sample"></select>
+      <button id="next" type="button">Next</button>
+      <button id="play" type="button">Play all</button>
+      <button id="export" type="button">Export review CSV</button>
+    </div>
+  </header>
+
+  <section class="videos" aria-label="Removal comparison">
+    <figure><figcaption>Original MOSE video</figcaption><video id="original" controls muted playsinline></video></figure>
+    <figure><figcaption>GT object mask (white = removed)</figcaption><video id="gt-mask" controls muted playsinline></video></figure>
+    <figure><figcaption>ProPainter</figcaption><video id="propainter" controls muted playsinline></video></figure>
+    <figure><figcaption>DiffuEraser</figcaption><video id="diffueraser" controls muted playsinline></video></figure>
+  </section>
+
+  <section class="review" aria-label="Manual review">
+    <label><input id="propainter-pass" type="checkbox"> ProPainter removed the object satisfactorily</label>
+    <label><input id="diffueraser-pass" type="checkbox"> DiffuEraser removed the object satisfactorily</label>
+    <label for="notes">Notes</label>
+    <textarea id="notes"></textarea>
+  </section>
+
+  <section class="watermark hidden" id="watermark-section" aria-label="Watermark localization">
+    <div class="controls">
+      <label for="watermark-method">Watermark method</label>
+      <select id="watermark-method"></select>
+    </div>
+    <div class="metric-row" id="iou"></div>
+    <div class="videos">
+      <figure><figcaption>Watermarked video</figcaption><video id="watermarked" controls muted playsinline></video></figure>
+      <figure><figcaption>Pred mask — ProPainter</figcaption><video id="pred-propainter" controls muted playsinline></video></figure>
+      <figure><figcaption>Pred mask — DiffuEraser</figcaption><video id="pred-diffueraser" controls muted playsinline></video></figure>
+    </div>
+  </section>
+  <p class="status" id="status" aria-live="polite"></p>
+</main>
+<script>
+const state = { manifest: null, index: 0, reviews: {}, method: null };
+const ids = ['original','gt-mask','propainter','diffueraser','watermarked','pred-propainter','pred-diffueraser'];
+const videos = () => ids.map(id => document.getElementById(id)).filter(v => v.src);
+const reviewKey = 'mose-review50-v1';
+
+function saveReview() {
+  const clip = state.manifest.samples[state.index].clip_id;
+  state.reviews[clip] = {
+    propainter_removed: document.getElementById('propainter-pass').checked,
+    diffueraser_removed: document.getElementById('diffueraser-pass').checked,
+    notes: document.getElementById('notes').value
+  };
+  localStorage.setItem(reviewKey, JSON.stringify(state.reviews));
+}
+
+function mediaPath(path) { return path ? new URL(path, document.baseURI).href : ''; }
+function setVideo(id, path) {
+  const element = document.getElementById(id);
+  element.pause();
+  element.src = mediaPath(path);
+  element.load();
+}
+
+function render() {
+  const sample = state.manifest.samples[state.index];
+  document.getElementById('sample').value = String(state.index);
+  document.getElementById('counter').textContent = `Sample ${state.index + 1} of ${state.manifest.samples.length} · ${sample.clip_id} · ${sample.frame_count} frames`;
+  setVideo('original', sample.media.original);
+  setVideo('gt-mask', sample.media.gt_mask);
+  setVideo('propainter', sample.media.propainter);
+  setVideo('diffueraser', sample.media.diffueraser);
+  const review = state.reviews[sample.clip_id] || {};
+  document.getElementById('propainter-pass').checked = Boolean(review.propainter_removed);
+  document.getElementById('diffueraser-pass').checked = Boolean(review.diffueraser_removed);
+  document.getElementById('notes').value = review.notes || '';
+  renderWatermark(sample);
+}
+
+function renderWatermark(sample) {
+  const section = document.getElementById('watermark-section');
+  const methods = sample.watermarks || {};
+  const names = Object.keys(methods);
+  section.classList.toggle('hidden', names.length === 0);
+  if (!names.length) return;
+  if (!state.method || !methods[state.method]) state.method = names[0];
+  const picker = document.getElementById('watermark-method');
+  picker.innerHTML = names.map(name => `<option value="${name}">${name}</option>`).join('');
+  picker.value = state.method;
+  const result = methods[state.method];
+  setVideo('watermarked', result.watermarked);
+  setVideo('pred-propainter', result.pred_mask_propainter);
+  setVideo('pred-diffueraser', result.pred_mask_diffueraser);
+  const fmt = value => value == null ? 'not available' : Number(value).toFixed(4);
+  document.getElementById('iou').textContent = `IoU — ProPainter: ${fmt(result.iou_propainter)} · DiffuEraser: ${fmt(result.iou_diffueraser)}`;
+}
+
+function move(delta) {
+  saveReview();
+  state.index = (state.index + delta + state.manifest.samples.length) % state.manifest.samples.length;
+  render();
+}
+
+function exportCsv() {
+  saveReview();
+  const quote = value => `"${String(value ?? '').replaceAll('"', '""')}"`;
+  const rows = [['clip_id','propainter_removed','diffueraser_removed','notes']];
+  for (const sample of state.manifest.samples) {
+    const review = state.reviews[sample.clip_id] || {};
+    rows.push([sample.clip_id, Boolean(review.propainter_removed), Boolean(review.diffueraser_removed), review.notes || '']);
+  }
+  const blob = new Blob([rows.map(row => row.map(quote).join(',')).join('\n') + '\n'], {type:'text/csv'});
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob); link.download = 'mose-review50.csv'; link.click();
+  URL.revokeObjectURL(link.href);
+}
+
+async function init() {
+  try {
+    const response = await fetch('manifest.json');
+    if (!response.ok) throw new Error(`manifest.json: ${response.status}`);
+    state.manifest = await response.json();
+    state.reviews = JSON.parse(localStorage.getItem(reviewKey) || '{}');
+    const picker = document.getElementById('sample');
+    state.manifest.samples.forEach((sample, index) => picker.add(new Option(`${String(index + 1).padStart(2,'0')} — ${sample.clip_id}`, index)));
+    picker.addEventListener('change', event => { saveReview(); state.index = Number(event.target.value); render(); });
+    document.getElementById('previous').addEventListener('click', () => move(-1));
+    document.getElementById('next').addEventListener('click', () => move(1));
+    document.getElementById('export').addEventListener('click', exportCsv);
+    document.getElementById('watermark-method').addEventListener('change', event => { state.method = event.target.value; renderWatermark(state.manifest.samples[state.index]); });
+    document.getElementById('play').addEventListener('click', async event => {
+      const active = videos(); const playing = active.some(video => !video.paused);
+      if (playing) { active.forEach(video => video.pause()); event.target.textContent = 'Play all'; }
+      else { active.forEach(video => { video.currentTime = 0; }); await Promise.allSettled(active.map(video => video.play())); event.target.textContent = 'Pause all'; }
+    });
+    document.getElementById('original').addEventListener('timeupdate', event => {
+      if (event.target.paused) return;
+      videos().slice(1).forEach(video => { if (Math.abs(video.currentTime - event.target.currentTime) > 0.08) video.currentTime = event.target.currentTime; });
+    });
+    ['propainter-pass','diffueraser-pass','notes'].forEach(id => document.getElementById(id).addEventListener('change', saveReview));
+    render();
+  } catch (error) {
+    document.getElementById('status').textContent = `Could not load the review bundle: ${error.message}. Start a local web server in this folder; do not open index.html directly.`;
+  }
+}
+init();
+</script>
+</body>
+</html>

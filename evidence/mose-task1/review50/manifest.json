@@ -1,0 +1,658 @@
+{
+  "schema_version": 1,
+  "dataset": "MOSEv1 train",
+  "fps": 25,
+  "sample_count": 50,
+  "samples": [
+    {
+      "clip_id": "02b72b8d",
+      "frame_count": 67,
+      "width": 960,
+      "height": 480,
+      "media": {
+        "original": "media/02b72b8d/original.mp4",
+        "gt_mask": "media/02b72b8d/gt_mask.mp4",
+        "propainter": "media/02b72b8d/propainter.mp4",
+        "diffueraser": "media/02b72b8d/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "0ab75563",
+      "frame_count": 104,
+      "width": 960,
+      "height": 448,
+      "media": {
+        "original": "media/0ab75563/original.mp4",
+        "gt_mask": "media/0ab75563/gt_mask.mp4",
+        "propainter": "media/0ab75563/propainter.mp4",
+        "diffueraser": "media/0ab75563/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "0b02886a",
+      "frame_count": 30,
+      "width": 960,
+      "height": 640,
+      "media": {
+        "original": "media/0b02886a/original.mp4",
+        "gt_mask": "media/0b02886a/gt_mask.mp4",
+        "propainter": "media/0b02886a/propainter.mp4",
+        "diffueraser": "media/0b02886a/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "0b787263",
+      "frame_count": 70,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/0b787263/original.mp4",
+        "gt_mask": "media/0b787263/gt_mask.mp4",
+        "propainter": "media/0b787263/propainter.mp4",
+        "diffueraser": "media/0b787263/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "0f96e2d7",
+      "frame_count": 63,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/0f96e2d7/original.mp4",
+        "gt_mask": "media/0f96e2d7/gt_mask.mp4",
+        "propainter": "media/0f96e2d7/propainter.mp4",
+        "diffueraser": "media/0f96e2d7/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "1e44f47e",
+      "frame_count": 90,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/1e44f47e/original.mp4",
+        "gt_mask": "media/1e44f47e/gt_mask.mp4",
+        "propainter": "media/1e44f47e/propainter.mp4",
+        "diffueraser": "media/1e44f47e/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "1fc5e086",
+      "frame_count": 54,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/1fc5e086/original.mp4",
+        "gt_mask": "media/1fc5e086/gt_mask.mp4",
+        "propainter": "media/1fc5e086/propainter.mp4",
+        "diffueraser": "media/1fc5e086/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "230c2edf",
+      "frame_count": 25,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/230c2edf/original.mp4",
+        "gt_mask": "media/230c2edf/gt_mask.mp4",
+        "propainter": "media/230c2edf/propainter.mp4",
+        "diffueraser": "media/230c2edf/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "26048547",
+      "frame_count": 67,
+      "width": 640,
+      "height": 368,
+      "media": {
+        "original": "media/26048547/original.mp4",
+        "gt_mask": "media/26048547/gt_mask.mp4",
+        "propainter": "media/26048547/propainter.mp4",
+        "diffueraser": "media/26048547/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "2d8d7d35",
+      "frame_count": 27,
+      "width": 544,
+      "height": 960,
+      "media": {
+        "original": "media/2d8d7d35/original.mp4",
+        "gt_mask": "media/2d8d7d35/gt_mask.mp4",
+        "propainter": "media/2d8d7d35/propainter.mp4",
+        "diffueraser": "media/2d8d7d35/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "2f5fb2a3",
+      "frame_count": 26,
+      "width": 544,
+      "height": 960,
+      "media": {
+        "original": "media/2f5fb2a3/original.mp4",
+        "gt_mask": "media/2f5fb2a3/gt_mask.mp4",
+        "propainter": "media/2f5fb2a3/propainter.mp4",
+        "diffueraser": "media/2f5fb2a3/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "337dfa1e",
+      "frame_count": 127,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/337dfa1e/original.mp4",
+        "gt_mask": "media/337dfa1e/gt_mask.mp4",
+        "propainter": "media/337dfa1e/propainter.mp4",
+        "diffueraser": "media/337dfa1e/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "34ccea00",
+      "frame_count": 84,
+      "width": 640,
+      "height": 640,
+      "media": {
+        "original": "media/34ccea00/original.mp4",
+        "gt_mask": "media/34ccea00/gt_mask.mp4",
+        "propainter": "media/34ccea00/propainter.mp4",
+        "diffueraser": "media/34ccea00/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "395224b3",
+      "frame_count": 22,
+      "width": 960,
+      "height": 448,
+      "media": {
+        "original": "media/395224b3/original.mp4",
+        "gt_mask": "media/395224b3/gt_mask.mp4",
+        "propainter": "media/395224b3/propainter.mp4",
+        "diffueraser": "media/395224b3/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "44476e77",
+      "frame_count": 118,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/44476e77/original.mp4",
+        "gt_mask": "media/44476e77/gt_mask.mp4",
+        "propainter": "media/44476e77/propainter.mp4",
+        "diffueraser": "media/44476e77/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "4c42c747",
+      "frame_count": 58,
+      "width": 640,
+      "height": 368,
+      "media": {
+        "original": "media/4c42c747/original.mp4",
+        "gt_mask": "media/4c42c747/gt_mask.mp4",
+        "propainter": "media/4c42c747/propainter.mp4",
+        "diffueraser": "media/4c42c747/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "4ce088c6",
+      "frame_count": 197,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/4ce088c6/original.mp4",
+        "gt_mask": "media/4ce088c6/gt_mask.mp4",
+        "propainter": "media/4ce088c6/propainter.mp4",
+        "diffueraser": "media/4ce088c6/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "4d979d99",
+      "frame_count": 22,
+      "width": 960,
+      "height": 480,
+      "media": {
+        "original": "media/4d979d99/original.mp4",
+        "gt_mask": "media/4d979d99/gt_mask.mp4",
+        "propainter": "media/4d979d99/propainter.mp4",
+        "diffueraser": "media/4d979d99/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "4e6aa1e8",
+      "frame_count": 50,
+      "width": 544,
+      "height": 960,
+      "media": {
+        "original": "media/4e6aa1e8/original.mp4",
+        "gt_mask": "media/4e6aa1e8/gt_mask.mp4",
+        "propainter": "media/4e6aa1e8/propainter.mp4",
+        "diffueraser": "media/4e6aa1e8/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "52a04667",
+      "frame_count": 26,
+      "width": 960,
+      "height": 400,
+      "media": {
+        "original": "media/52a04667/original.mp4",
+        "gt_mask": "media/52a04667/gt_mask.mp4",
+        "propainter": "media/52a04667/propainter.mp4",
+        "diffueraser": "media/52a04667/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "561f6380",
+      "frame_count": 30,
+      "width": 544,
+      "height": 960,
+      "media": {
+        "original": "media/561f6380/original.mp4",
+        "gt_mask": "media/561f6380/gt_mask.mp4",
+        "propainter": "media/561f6380/propainter.mp4",
+        "diffueraser": "media/561f6380/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "5ba84e3f",
+      "frame_count": 77,
+      "width": 960,
+      "height": 464,
+      "media": {
+        "original": "media/5ba84e3f/original.mp4",
+        "gt_mask": "media/5ba84e3f/gt_mask.mp4",
+        "propainter": "media/5ba84e3f/propainter.mp4",
+        "diffueraser": "media/5ba84e3f/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "5ff72128",
+      "frame_count": 38,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/5ff72128/original.mp4",
+        "gt_mask": "media/5ff72128/gt_mask.mp4",
+        "propainter": "media/5ff72128/propainter.mp4",
+        "diffueraser": "media/5ff72128/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "6042d64a",
+      "frame_count": 97,
+      "width": 960,
+      "height": 624,
+      "media": {
+        "original": "media/6042d64a/original.mp4",
+        "gt_mask": "media/6042d64a/gt_mask.mp4",
+        "propainter": "media/6042d64a/propainter.mp4",
+        "diffueraser": "media/6042d64a/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "60ab04c5",
+      "frame_count": 101,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/60ab04c5/original.mp4",
+        "gt_mask": "media/60ab04c5/gt_mask.mp4",
+        "propainter": "media/60ab04c5/propainter.mp4",
+        "diffueraser": "media/60ab04c5/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "6763a576",
+      "frame_count": 70,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/6763a576/original.mp4",
+        "gt_mask": "media/6763a576/gt_mask.mp4",
+        "propainter": "media/6763a576/propainter.mp4",
+        "diffueraser": "media/6763a576/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "7593caea",
+      "frame_count": 63,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/7593caea/original.mp4",
+        "gt_mask": "media/7593caea/gt_mask.mp4",
+        "propainter": "media/7593caea/propainter.mp4",
+        "diffueraser": "media/7593caea/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "76b18413",
+      "frame_count": 30,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/76b18413/original.mp4",
+        "gt_mask": "media/76b18413/gt_mask.mp4",
+        "propainter": "media/76b18413/propainter.mp4",
+        "diffueraser": "media/76b18413/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "780a25de",
+      "frame_count": 46,
+      "width": 960,
+      "height": 448,
+      "media": {
+        "original": "media/780a25de/original.mp4",
+        "gt_mask": "media/780a25de/gt_mask.mp4",
+        "propainter": "media/780a25de/propainter.mp4",
+        "diffueraser": "media/780a25de/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "782551f7",
+      "frame_count": 69,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/782551f7/original.mp4",
+        "gt_mask": "media/782551f7/gt_mask.mp4",
+        "propainter": "media/782551f7/propainter.mp4",
+        "diffueraser": "media/782551f7/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "7ce2c865",
+      "frame_count": 58,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/7ce2c865/original.mp4",
+        "gt_mask": "media/7ce2c865/gt_mask.mp4",
+        "propainter": "media/7ce2c865/propainter.mp4",
+        "diffueraser": "media/7ce2c865/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "843d3bf7",
+      "frame_count": 35,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/843d3bf7/original.mp4",
+        "gt_mask": "media/843d3bf7/gt_mask.mp4",
+        "propainter": "media/843d3bf7/propainter.mp4",
+        "diffueraser": "media/843d3bf7/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "915f0d9a",
+      "frame_count": 37,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/915f0d9a/original.mp4",
+        "gt_mask": "media/915f0d9a/gt_mask.mp4",
+        "propainter": "media/915f0d9a/propainter.mp4",
+        "diffueraser": "media/915f0d9a/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "91b2f707",
+      "frame_count": 40,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/91b2f707/original.mp4",
+        "gt_mask": "media/91b2f707/gt_mask.mp4",
+        "propainter": "media/91b2f707/propainter.mp4",
+        "diffueraser": "media/91b2f707/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "9cff25e3",
+      "frame_count": 71,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/9cff25e3/original.mp4",
+        "gt_mask": "media/9cff25e3/gt_mask.mp4",
+        "propainter": "media/9cff25e3/propainter.mp4",
+        "diffueraser": "media/9cff25e3/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "9fc933f6",
+      "frame_count": 72,
+      "width": 640,
+      "height": 368,
+      "media": {
+        "original": "media/9fc933f6/original.mp4",
+        "gt_mask": "media/9fc933f6/gt_mask.mp4",
+        "propainter": "media/9fc933f6/propainter.mp4",
+        "diffueraser": "media/9fc933f6/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "ac32a655",
+      "frame_count": 124,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/ac32a655/original.mp4",
+        "gt_mask": "media/ac32a655/gt_mask.mp4",
+        "propainter": "media/ac32a655/propainter.mp4",
+        "diffueraser": "media/ac32a655/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "b7fb59c9",
+      "frame_count": 50,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/b7fb59c9/original.mp4",
+        "gt_mask": "media/b7fb59c9/gt_mask.mp4",
+        "propainter": "media/b7fb59c9/propainter.mp4",
+        "diffueraser": "media/b7fb59c9/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "ba538072",
+      "frame_count": 35,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/ba538072/original.mp4",
+        "gt_mask": "media/ba538072/gt_mask.mp4",
+        "propainter": "media/ba538072/propainter.mp4",
+        "diffueraser": "media/ba538072/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "c062f4d7",
+      "frame_count": 190,
+      "width": 960,
+      "height": 848,
+      "media": {
+        "original": "media/c062f4d7/original.mp4",
+        "gt_mask": "media/c062f4d7/gt_mask.mp4",
+        "propainter": "media/c062f4d7/propainter.mp4",
+        "diffueraser": "media/c062f4d7/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "c9f7f69d",
+      "frame_count": 115,
+      "width": 960,
+      "height": 448,
+      "media": {
+        "original": "media/c9f7f69d/original.mp4",
+        "gt_mask": "media/c9f7f69d/gt_mask.mp4",
+        "propainter": "media/c9f7f69d/propainter.mp4",
+        "diffueraser": "media/c9f7f69d/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "ca74a924",
+      "frame_count": 66,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/ca74a924/original.mp4",
+        "gt_mask": "media/ca74a924/gt_mask.mp4",
+        "propainter": "media/ca74a924/propainter.mp4",
+        "diffueraser": "media/ca74a924/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "ceaa6c65",
+      "frame_count": 61,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/ceaa6c65/original.mp4",
+        "gt_mask": "media/ceaa6c65/gt_mask.mp4",
+        "propainter": "media/ceaa6c65/propainter.mp4",
+        "diffueraser": "media/ceaa6c65/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "cfc68a82",
+      "frame_count": 82,
+      "width": 544,
+      "height": 960,
+      "media": {
+        "original": "media/cfc68a82/original.mp4",
+        "gt_mask": "media/cfc68a82/gt_mask.mp4",
+        "propainter": "media/cfc68a82/propainter.mp4",
+        "diffueraser": "media/cfc68a82/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "dd5a4739",
+      "frame_count": 48,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/dd5a4739/original.mp4",
+        "gt_mask": "media/dd5a4739/gt_mask.mp4",
+        "propainter": "media/dd5a4739/propainter.mp4",
+        "diffueraser": "media/dd5a4739/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "e1d9fb32",
+      "frame_count": 30,
+      "width": 720,
+      "height": 960,
+      "media": {
+        "original": "media/e1d9fb32/original.mp4",
+        "gt_mask": "media/e1d9fb32/gt_mask.mp4",
+        "propainter": "media/e1d9fb32/propainter.mp4",
+        "diffueraser": "media/e1d9fb32/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "eaff3301",
+      "frame_count": 180,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/eaff3301/original.mp4",
+        "gt_mask": "media/eaff3301/gt_mask.mp4",
+        "propainter": "media/eaff3301/propainter.mp4",
+        "diffueraser": "media/eaff3301/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "f415f9ad",
+      "frame_count": 46,
+      "width": 960,
+      "height": 928,
+      "media": {
+        "original": "media/f415f9ad/original.mp4",
+        "gt_mask": "media/f415f9ad/gt_mask.mp4",
+        "propainter": "media/f415f9ad/propainter.mp4",
+        "diffueraser": "media/f415f9ad/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "f89b54d0",
+      "frame_count": 30,
+      "width": 960,
+      "height": 544,
+      "media": {
+        "original": "media/f89b54d0/original.mp4",
+        "gt_mask": "media/f89b54d0/gt_mask.mp4",
+        "propainter": "media/f89b54d0/propainter.mp4",
+        "diffueraser": "media/f89b54d0/diffueraser.mp4"
+      },
+      "watermarks": {}
+    },
+    {
+      "clip_id": "fe2dc281",
+      "frame_count": 33,
+      "width": 960,
+      "height": 480,
+      "media": {
+        "original": "media/fe2dc281/original.mp4",
+        "gt_mask": "media/fe2dc281/gt_mask.mp4",
+        "propainter": "media/fe2dc281/propainter.mp4",
+        "diffueraser": "media/fe2dc281/diffueraser.mp4"
+      },
+      "watermarks": {}
+    }
+  ]
+}
