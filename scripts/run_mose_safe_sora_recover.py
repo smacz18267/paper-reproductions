@@ -50,23 +50,26 @@ def recover_half(extractor, revert_order, video: torch.Tensor) -> torch.Tensor:
             best_confidence[batch_index, position] = score
             index_map[batch_index, position] = global_index
 
+    # The released demo independently chooses the nearest vacant position for every
+    # duplicate patch. Under a strong attack, several patches can select the same
+    # vacancy and leave -1 entries, which makes revert_order fail on CUDA. Complete
+    # the same nearest-vacancy heuristic sequentially (highest-confidence duplicate
+    # first) so the result is always a valid one-to-one permutation.
     for batch_index in range(batch):
-        all_ids = torch.arange(batch_index * 256, (batch_index + 1) * 256, device=positions.device)
-        kept_ids = index_map[batch_index][index_map[batch_index] != -1]
-        lost_ids = torch.tensor(
-            list(set(all_ids.tolist()) - set(kept_ids.tolist())),
-            device=positions.device,
-            dtype=torch.long,
-        )
-        if lost_ids.numel() == 0:
-            continue
-        vacant = (index_map[batch_index] == -1).nonzero(as_tuple=False).squeeze(1)
-        distance = (positions[lost_ids].unsqueeze(1) - vacant.unsqueeze(0)).abs()
-        assignments = distance.argmin(dim=1)
-        for lost, vacancy_index in zip(lost_ids, assignments):
-            vacancy = vacant[vacancy_index]
-            if index_map[batch_index, vacancy] == -1:
-                index_map[batch_index, vacancy] = lost
+        offset = batch_index * 256
+        kept = set(index_map[batch_index][index_map[batch_index] >= 0].tolist())
+        missing = [index for index in range(offset, offset + 256) if index not in kept]
+        missing.sort(key=lambda index: (-float(confidence[index].item()), index))
+        vacant = set((index_map[batch_index] < 0).nonzero(as_tuple=False).squeeze(1).tolist())
+        for source_index in missing:
+            predicted = int(positions[source_index].item())
+            target = min(vacant, key=lambda candidate: (abs(predicted - candidate), candidate))
+            index_map[batch_index, target] = source_index
+            vacant.remove(target)
+        if vacant or (index_map[batch_index] < 0).any():
+            raise RuntimeError("Safe-Sora recovery could not construct a complete patch permutation")
+        if torch.unique(index_map[batch_index]).numel() != 256:
+            raise RuntimeError("Safe-Sora recovery patch permutation contains duplicate source indices")
 
     batch, channels, patches, height, width = watermark_exact.size()
     flattened = watermark_exact.permute(0, 2, 1, 3, 4).contiguous().view(batch, patches, -1)
@@ -139,6 +142,7 @@ def main() -> None:
                 "method": "safe-sora",
                 "clip_id": clip.clip_id,
                 "output_semantics": "graphical watermark recovery; not a spatial tamper mask",
+                "patch_reordering": "released nearest-vacancy heuristic with deterministic one-to-one completion",
                 "started_at": utc_now(),
             }
             started = time.monotonic()

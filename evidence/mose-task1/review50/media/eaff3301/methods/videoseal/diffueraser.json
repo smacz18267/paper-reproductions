@@ -1,0 +1,27 @@
+{
+  "clip_id": "eaff3301",
+  "compatibility_adapter": null,
+  "completed_at": "2026-10-19T12:49:47+00:00",
+  "elapsed_seconds": 175.766,
+  "input": {
+    "bytes": 16244058,
+    "fps": 25.0,
+    "frames": 180,
+    "height": 544,
+    "width": 960
+  },
+  "mask_dilation_iterations": 8,
+  "output": {
+    "bytes": 24065458,
+    "fps": 25.0,
+    "frames": 180,
+    "height": 544,
+    "width": 960
+  },
+  "processing_adapter": null,
+  "protocol": "watermark_original_then_remove_object",
+  "remover": "diffueraser",
+  "sha256": "e1f46eb46c351da95d0305156c80f24774195998668c4df67d643ac20209b3e5",
+  "status": "complete",
+  "watermark_method": "videoseal"
+}

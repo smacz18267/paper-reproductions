@@ -1,0 +1,27 @@
+{
+  "clip_id": "561f6380",
+  "compatibility_adapter": null,
+  "completed_at": "2026-10-19T12:14:58+00:00",
+  "elapsed_seconds": 43.26,
+  "input": {
+    "bytes": 1008150,
+    "fps": 25.0,
+    "frames": 30,
+    "height": 960,
+    "width": 544
+  },
+  "mask_dilation_iterations": 8,
+  "output": {
+    "bytes": 1233538,
+    "fps": 25.0,
+    "frames": 30,
+    "height": 960,
+    "width": 544
+  },
+  "processing_adapter": null,
+  "protocol": "watermark_original_then_remove_object",
+  "remover": "diffueraser",
+  "sha256": "7d2353e430290b7fae83810b3d2690ae86388b97a3ebd7f657a898e4a489dfe1",
+  "status": "complete",
+  "watermark_method": "videoseal"
+}

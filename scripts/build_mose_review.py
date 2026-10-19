@@ -448,7 +448,7 @@ def main() -> None:
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     (output / "index.html").write_text(html_document())
     with (output / "review.csv").open("w", newline="") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(("clip_id", "propainter_removed", "diffueraser_removed", "notes"))
         writer.writerows((sample["clip_id"], "", "", "") for sample in manifest["samples"])
     print(f"Review bundle ready: {output / 'index.html'}", flush=True)

@@ -14,16 +14,20 @@
     button, select { min-height: 40px; padding: 7px 12px; }
     .counter { font-variant-numeric: tabular-nums; }
     .videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 16px 0; }
+    .method-videos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     figure { margin: 0; padding: 12px; border: 1px solid color-mix(in srgb, CanvasText 20%, transparent); border-radius: 10px; }
     figcaption { margin-bottom: 8px; font-weight: 600; }
     video { width: 100%; background: #000; aspect-ratio: 16 / 9; object-fit: contain; }
+    img.recovery { width: 100%; background: #000; aspect-ratio: 3 / 1; object-fit: contain; }
     .review { align-items: flex-start; }
     .review label { padding: 10px 0; }
     textarea { width: min(100%, 760px); min-height: 72px; padding: 8px; }
     .watermark { margin-top: 24px; padding-top: 18px; border-top: 1px solid color-mix(in srgb, CanvasText 20%, transparent); }
+    .method-note { max-width: 1100px; line-height: 1.45; }
     .hidden { display: none; }
     .status { min-height: 1.4em; }
-    @media (max-width: 800px) { .videos { grid-template-columns: 1fr; } }
+    @media (max-width: 1000px) { .method-videos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 800px) { .videos, .method-videos { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -57,23 +61,33 @@
   </section>
 
   <section class="watermark hidden" id="watermark-section" aria-label="Watermark localization">
+    <h2>Watermark-before-removal experiment</h2>
     <div class="controls">
       <label for="watermark-method">Watermark method</label>
       <select id="watermark-method"></select>
     </div>
+    <p class="method-note" id="method-note"></p>
     <div class="metric-row" id="iou"></div>
-    <div class="videos">
+    <div class="videos method-videos">
+      <figure><figcaption>Method input — original</figcaption><video id="method-original" controls muted playsinline></video></figure>
       <figure><figcaption>Watermarked video</figcaption><video id="watermarked" controls muted playsinline></video></figure>
-      <figure><figcaption>Pred mask — ProPainter</figcaption><video id="pred-propainter" controls muted playsinline></video></figure>
-      <figure><figcaption>Pred mask — DiffuEraser</figcaption><video id="pred-diffueraser" controls muted playsinline></video></figure>
+      <figure><figcaption>Selected/aligned GT mask</figcaption><video id="method-gt-mask" controls muted playsinline></video></figure>
+      <figure><figcaption>ProPainter after watermarking</figcaption><video id="method-propainter" controls muted playsinline></video></figure>
+      <figure><figcaption>ProPainter effective GT mask</figcaption><video id="gt-propainter" controls muted playsinline></video></figure>
+      <figure><figcaption>ProPainter predicted tamper mask</figcaption><video id="pred-propainter" controls muted playsinline></video></figure>
+      <figure><figcaption>DiffuEraser after watermarking</figcaption><video id="method-diffueraser" controls muted playsinline></video></figure>
+      <figure><figcaption>DiffuEraser effective GT mask</figcaption><video id="gt-diffueraser" controls muted playsinline></video></figure>
+      <figure><figcaption>DiffuEraser predicted tamper mask</figcaption><video id="pred-diffueraser" controls muted playsinline></video></figure>
+      <figure><figcaption>Safe-Sora recovery — ProPainter</figcaption><img class="recovery" id="recovery-propainter" alt="Safe-Sora original, recovered watermark, and amplified error after ProPainter"></figure>
+      <figure><figcaption>Safe-Sora recovery — DiffuEraser</figcaption><img class="recovery" id="recovery-diffueraser" alt="Safe-Sora original, recovered watermark, and amplified error after DiffuEraser"></figure>
     </div>
   </section>
   <p class="status" id="status" aria-live="polite"></p>
 </main>
 <script>
 const state = { manifest: null, index: 0, reviews: {}, method: null };
-const ids = ['original','gt-mask','propainter','diffueraser','watermarked','pred-propainter','pred-diffueraser'];
-const videos = () => ids.map(id => document.getElementById(id)).filter(v => v.src);
+const ids = ['original','gt-mask','propainter','diffueraser','method-original','watermarked','method-gt-mask','method-propainter','gt-propainter','pred-propainter','method-diffueraser','gt-diffueraser','pred-diffueraser'];
+const videos = () => ids.map(id => document.getElementById(id)).filter(v => v.getAttribute('src') && !v.closest('figure').classList.contains('hidden'));
 const reviewKey = 'mose-review50-v1';
 
 function saveReview() {
@@ -90,8 +104,19 @@ function mediaPath(path) { return path ? new URL(path, document.baseURI).href : 
 function setVideo(id, path) {
   const element = document.getElementById(id);
   element.pause();
-  element.src = mediaPath(path);
+  const card = element.closest('figure');
+  card.classList.toggle('hidden', !path);
+  if (path) element.src = mediaPath(path);
+  else element.removeAttribute('src');
   element.load();
+}
+
+function setImage(id, path) {
+  const element = document.getElementById(id);
+  const card = element.closest('figure');
+  card.classList.toggle('hidden', !path);
+  if (path) element.src = mediaPath(path);
+  else element.removeAttribute('src');
 }
 
 function render() {
@@ -120,11 +145,21 @@ function renderWatermark(sample) {
   picker.innerHTML = names.map(name => `<option value="${name}">${name}</option>`).join('');
   picker.value = state.method;
   const result = methods[state.method];
+  setVideo('method-original', result.input_original);
   setVideo('watermarked', result.watermarked);
+  setVideo('method-gt-mask', result.gt_mask);
+  setVideo('method-propainter', result.propainter);
+  setVideo('gt-propainter', result.gt_mask_propainter);
   setVideo('pred-propainter', result.pred_mask_propainter);
+  setVideo('method-diffueraser', result.diffueraser);
+  setVideo('gt-diffueraser', result.gt_mask_diffueraser);
   setVideo('pred-diffueraser', result.pred_mask_diffueraser);
+  setImage('recovery-propainter', result.recovery_propainter);
+  setImage('recovery-diffueraser', result.recovery_diffueraser);
   const fmt = value => value == null ? 'not available' : Number(value).toFixed(4);
-  document.getElementById('iou').textContent = `IoU — ProPainter: ${fmt(result.iou_propainter)} · DiffuEraser: ${fmt(result.iou_diffueraser)}`;
+  const control = result.negative_control_accuracy == null ? '' : ` · Unwatermarked negative-control accuracy: ${fmt(result.negative_control_accuracy)}`;
+  document.getElementById('iou').textContent = `IoU — ProPainter: ${fmt(result.iou_propainter)} · DiffuEraser: ${fmt(result.iou_diffueraser)}${control}`;
+  document.getElementById('method-note').textContent = result.note || '';
 }
 
 function move(delta) {

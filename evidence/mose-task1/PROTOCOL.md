@@ -78,6 +78,13 @@ Two adapters are allowed only where their per-clip metadata records them:
   Its effective GT mask must follow the same resize, dilation, and restoration
   path before IoU. No other clip uses this spatial adapter unless its metadata
   explicitly says so.
+- Safe-Sora's released recovery demo can decode duplicate patch positions after
+  a strong attack. Its nearest-vacancy loop can then assign multiple duplicates
+  to the same vacancy and leave invalid `-1` indices. The runner preserves the
+  released highest-confidence exact matches, then assigns the remaining source
+  patches one-to-one to their nearest vacant positions in descending confidence
+  order. Each `recovery.json` records this deterministic completion. It affects
+  only graphical watermark reconstruction, not a spatial mask or IoU.
 
 ## Method capability constraint
 

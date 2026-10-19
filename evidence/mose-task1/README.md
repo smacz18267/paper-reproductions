@@ -62,7 +62,27 @@ The method picker contains all three requested watermark methods:
   negative control. It is marked not applicable because VideoShield embeds in a
   diffusion generator's initial noise and cannot post-process a MOSE video.
 
-The full 100-video archive is 464 MiB. Its checksum is in
+## Final validated bundle
+
+The corrected review contains 50 fixed samples, 800 MP4 files and 100 Safe-Sora
+recovery images. Validation decoded 40,861 video frames, rejected empty GT
+masks, and independently recomputed all 100 displayed VideoSeal IoUs from the
+committed predicted-mask and effective-GT videos.
+
+- VideoSeal: 50/50 complete for both attacks. The released global detector did
+  not produce a positive absence region through the documented 4 x 4 crop
+  proxy, so all derived predicted masks are empty and both mean IoUs are 0.0.
+- Safe-Sora: 50/50 complete for embedding, both attacks and graphical recovery.
+  Mean recovery PSNR is 8.5305 dB after ProPainter and 8.6739 dB after
+  DiffuEraser. These are watermark-recovery results, not spatial localization.
+- VideoShield: 50/50 explicit not-applicable records. Its mean unwatermarked
+  negative-control bit accuracy is 0.5028; this is not an embedding or
+  localization result.
+
+The complete review directory is about 815 MB. See `validation.json` for the
+per-file decoder inventory and `watermark-summary.json` for aggregate results.
+
+The earlier base-only 100-video archive is 464 MiB. Its checksum is in
 [full-archive.sha256](full-archive.sha256). The selection, mask metadata,
 runner, batch state and event history are included in this folder.
 

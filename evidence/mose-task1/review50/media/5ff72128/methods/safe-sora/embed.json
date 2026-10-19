@@ -1,0 +1,59 @@
+{
+  "clip_id": "5ff72128",
+  "completed_at": "2026-10-19T10:53:52+00:00",
+  "elapsed_seconds": 5.075,
+  "files": {
+    "gt-mask.mp4": "3b5694623bcbf1504519f7cca36a33cd76457a471f561d48d234a9ece3ecaf76",
+    "recovery-composite.png": "fb46706b74460fb8e37b4bdf6d202249fdc2ce345a46205b6397511b8ac4525a",
+    "sampled-original.mp4": "c168ef69b666c7a1bc9577b77cc78547b46bf3bbc2b85c258bd2b347f2ff697f",
+    "watermarked.mp4": "1a08c6c76f645666bae5936ac48ec583e1ca1fd8c0dffdce874dfa51279ef921"
+  },
+  "input_to_vae_reconstruction": {
+    "mean_absolute_error": 4.769824345906575,
+    "mse": 64.35457572937011,
+    "psnr_db": 30.04500929388699
+  },
+  "method": "safe-sora",
+  "protocol": "native_16_frame_postprocess_original_then_inpaint",
+  "sampling": {
+    "frames": 16,
+    "indices": [
+      0,
+      2,
+      5,
+      7,
+      10,
+      12,
+      15,
+      17,
+      20,
+      22,
+      25,
+      27,
+      30,
+      32,
+      35,
+      37
+    ],
+    "output_fps": 25,
+    "resize": [
+      512,
+      320
+    ],
+    "source_fps": 25.0
+  },
+  "seed": 2048,
+  "status": "complete",
+  "watermark_embedding_fidelity": {
+    "mean_absolute_error": 1.6392017364501954,
+    "mse": 4.762780125935873,
+    "psnr_db": 41.352198281274475
+  },
+  "watermarked": {
+    "bytes": 191414,
+    "fps": 25.0,
+    "frames": 16,
+    "height": 320,
+    "width": 512
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "clip_id": "0ab75563",
+  "compatibility_adapter": {
+    "padded_frames": 24,
+    "padding": "repeat final frame and final mask",
+    "reason": "DiffuEraser requires at least 22 frames; Safe-Sora natively produces 16.",
+    "reported_frames": 16
+  },
+  "completed_at": "2026-10-19T13:07:19+00:00",
+  "elapsed_seconds": 27.844,
+  "input": {
+    "bytes": 143463,
+    "fps": 25.0,
+    "frames": 16,
+    "height": 320,
+    "width": 512
+  },
+  "mask_dilation_iterations": 8,
+  "output": {
+    "bytes": 126288,
+    "fps": 25.0,
+    "frames": 16,
+    "height": 320,
+    "width": 512
+  },
+  "processing_adapter": null,
+  "protocol": "watermark_original_then_remove_object",
+  "remover": "diffueraser",
+  "sha256": "077df052ec476e223450e333c0c345140b85e5d0bbe44fbedc60dbeda966b33c",
+  "status": "complete",
+  "watermark_method": "safe-sora"
+}
