@@ -1,0 +1,7211 @@
+{
+  "decoded_frames": 40861,
+  "images": 100,
+  "media": {
+    "02b72b8d": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 119371,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 10906,
+          "foreground_pixels": 44454,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 128712,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 158570,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 241228,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 226610,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 146794,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1210350,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 480,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 45831,
+          "foreground_pixels": 828241,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 480,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 48054,
+          "foreground_pixels": 774798,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 480,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 12467,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 480,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 12467,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 480,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1174123,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 480,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1036254,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 480,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1038800,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 36612,
+        "foreground_pixels": 519130,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1275016,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1583925,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      }
+    },
+    "0ab75563": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 126288,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 5232,
+          "foreground_pixels": 42348,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 136063,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 156765,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 242532,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 226217,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 143463,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1810811,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 104,
+          "height": 448,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 31394,
+          "foreground_pixels": 499284,
+          "fps": 25.0,
+          "frames": 104,
+          "height": 448,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 33549,
+          "foreground_pixels": 490646,
+          "fps": 25.0,
+          "frames": 104,
+          "height": 448,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 18306,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 104,
+          "height": 448,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 18306,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 104,
+          "height": 448,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1786961,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 104,
+          "height": 448,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1524018,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 104,
+          "height": 448,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1416848,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 104,
+        "height": 448,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 16559,
+        "foreground_pixels": 403681,
+        "fps": 25.0,
+        "frames": 104,
+        "height": 448,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1610688,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 104,
+        "height": 448,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2128587,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 104,
+        "height": 448,
+        "width": 960
+      }
+    },
+    "0b02886a": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 83915,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 14231,
+          "foreground_pixels": 206137,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 87203,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 115651,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 253138,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 243414,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 104910,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 346073,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 640,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 44946,
+          "foreground_pixels": 1767014,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 640,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 44783,
+          "foreground_pixels": 1721722,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 640,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 8901,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 640,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 8901,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 640,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 489206,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 640,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 401041,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 640,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 344380,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 640,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 32087,
+        "foreground_pixels": 1448373,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 640,
+        "width": 960
+      },
+      "original": {
+        "bytes": 434325,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 640,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 567188,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 640,
+        "width": 960
+      }
+    },
+    "0b787263": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 142914,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 14712,
+          "foreground_pixels": 373114,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 166861,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 191676,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 253994,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 237211,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 170514,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1558721,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 94398,
+          "foreground_pixels": 6077532,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 95089,
+          "foreground_pixels": 5988399,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 14621,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 14621,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1752854,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1458843,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1241522,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 65660,
+        "foreground_pixels": 5460715,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1714956,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2154428,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "0f96e2d7": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 119931,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 8635,
+          "foreground_pixels": 30894,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 128474,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 158934,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 241020,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 236680,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 139989,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 949862,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 37548,
+          "foreground_pixels": 640380,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 41771,
+          "foreground_pixels": 618593,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 13354,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 13354,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1083141,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 880249,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 817461,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 30520,
+        "foreground_pixels": 399983,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 987639,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1380123,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "1e44f47e": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 160669,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 3935,
+          "foreground_pixels": 2673,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 167613,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 195402,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 232761,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 217818,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 176344,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 2082026,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 90,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 20949,
+          "foreground_pixels": 51632,
+          "fps": 25.0,
+          "frames": 90,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 21556,
+          "foreground_pixels": 49177,
+          "fps": 25.0,
+          "frames": 90,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 18241,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 90,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 18241,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 90,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1901534,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 90,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1530713,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 90,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1483536,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 90,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 7263,
+        "foreground_pixels": 32849,
+        "fps": 25.0,
+        "frames": 90,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1647886,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 90,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2157527,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 90,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "1fc5e086": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 372617,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 14577,
+          "foreground_pixels": 79250,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 230856,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 486309,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 241193,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 249206,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 422912,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 2205559,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 54,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 56298,
+          "foreground_pixels": 1296584,
+          "fps": 25.0,
+          "frames": 54,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 62152,
+          "foreground_pixels": 1245452,
+          "fps": 25.0,
+          "frames": 54,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 11725,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 54,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 11725,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 54,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 2088743,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 54,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1491782,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 54,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1807498,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 54,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 50726,
+        "foreground_pixels": 850674,
+        "fps": 25.0,
+        "frames": 54,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2060052,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 54,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2592768,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 54,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "230c2edf": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 296702,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 19341,
+          "foreground_pixels": 292359,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 430178,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 385570,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 242282,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 243482,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 382932,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 2315832,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 25,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 41807,
+          "foreground_pixels": 1787465,
+          "fps": 25.0,
+          "frames": 25,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 45938,
+          "foreground_pixels": 1750813,
+          "fps": 25.0,
+          "frames": 25,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 6476,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 25,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 6476,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 25,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1712448,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 25,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1628608,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 25,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1388021,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 25,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 41487,
+        "foreground_pixels": 1435344,
+        "fps": 25.0,
+        "frames": 25,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1868169,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 25,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1964268,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 25,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "26048547": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 273183,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 3981,
+          "foreground_pixels": 1106,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 197860,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 379301,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 243670,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 240716,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 336797,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1753464,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 368,
+          "width": 640
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 11137,
+          "foreground_pixels": 19025,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 368,
+          "width": 640
+        },
+        "gt_mask_propainter": {
+          "bytes": 11978,
+          "foreground_pixels": 16670,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 368,
+          "width": 640
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 9217,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 368,
+          "width": 640
+        },
+        "pred_mask_propainter": {
+          "bytes": 9217,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 368,
+          "width": 640
+        },
+        "propainter": {
+          "bytes": 1259313,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 368,
+          "width": 640
+        },
+        "watermarked": {
+          "bytes": 1066785,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 67,
+          "height": 368,
+          "width": 640
+        }
+      },
+      "diffueraser": {
+        "bytes": 1085181,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 368,
+        "width": 640
+      },
+      "gt_mask": {
+        "bytes": 5529,
+        "foreground_pixels": 5732,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 368,
+        "width": 640
+      },
+      "original": {
+        "bytes": 1266463,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 368,
+        "width": 640
+      },
+      "propainter": {
+        "bytes": 1690776,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 368,
+        "width": 640
+      }
+    },
+    "2d8d7d35": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 340844,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 4225,
+          "foreground_pixels": 1089,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 403524,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 439565,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 242355,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 241103,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 386303,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 2709438,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 27,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 12238,
+          "foreground_pixels": 13001,
+          "fps": 25.0,
+          "frames": 27,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_propainter": {
+          "bytes": 12475,
+          "foreground_pixels": 12990,
+          "fps": 25.0,
+          "frames": 27,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 11515,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 27,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_propainter": {
+          "bytes": 11515,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 27,
+          "height": 960,
+          "width": 544
+        },
+        "propainter": {
+          "bytes": 1804188,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 27,
+          "height": 960,
+          "width": 544
+        },
+        "watermarked": {
+          "bytes": 1580480,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 27,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "diffueraser": {
+        "bytes": 1499664,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 27,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 3761,
+        "foreground_pixels": 5166,
+        "fps": 25.0,
+        "frames": 27,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 1786992,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 27,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 2156323,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 27,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "2f5fb2a3": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 162225,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 20427,
+          "foreground_pixels": 233676,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 193819,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 204412,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 256938,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 253607,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 188739,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 913446,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 63555,
+          "foreground_pixels": 1631213,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_propainter": {
+          "bytes": 70455,
+          "foreground_pixels": 1583571,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 11176,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_propainter": {
+          "bytes": 11176,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 960,
+          "width": 544
+        },
+        "propainter": {
+          "bytes": 724294,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 960,
+          "width": 544
+        },
+        "watermarked": {
+          "bytes": 673519,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "diffueraser": {
+        "bytes": 589747,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 43481,
+        "foreground_pixels": 1220822,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 723909,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 871087,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "337dfa1e": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 298106,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 5290,
+          "foreground_pixels": 4334,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 208278,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 407709,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 241749,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 246510,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 358491,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 7219540,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 127,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 39215,
+          "foreground_pixels": 267216,
+          "fps": 25.0,
+          "frames": 127,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 41845,
+          "foreground_pixels": 251467,
+          "fps": 25.0,
+          "frames": 127,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 24938,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 127,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 24938,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 127,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 4481072,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 127,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 3663294,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 127,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 4030367,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 127,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 20629,
+        "foreground_pixels": 105570,
+        "fps": 25.0,
+        "frames": 127,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 5575515,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 127,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 7502969,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 127,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "34ccea00": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 236499,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 14631,
+          "foreground_pixels": 506143,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 246806,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 298392,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 255040,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 242280,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 277933,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 2183538,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 84,
+          "height": 640,
+          "width": 640
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 88445,
+          "foreground_pixels": 7424946,
+          "fps": 25.0,
+          "frames": 84,
+          "height": 640,
+          "width": 640
+        },
+        "gt_mask_propainter": {
+          "bytes": 93691,
+          "foreground_pixels": 7347919,
+          "fps": 25.0,
+          "frames": 84,
+          "height": 640,
+          "width": 640
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 20944,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 84,
+          "height": 640,
+          "width": 640
+        },
+        "pred_mask_propainter": {
+          "bytes": 20944,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 84,
+          "height": 640,
+          "width": 640
+        },
+        "propainter": {
+          "bytes": 1895149,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 84,
+          "height": 640,
+          "width": 640
+        },
+        "watermarked": {
+          "bytes": 1739609,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 84,
+          "height": 640,
+          "width": 640
+        }
+      },
+      "diffueraser": {
+        "bytes": 1709299,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 84,
+        "height": 640,
+        "width": 640
+      },
+      "gt_mask": {
+        "bytes": 59417,
+        "foreground_pixels": 6866599,
+        "fps": 25.0,
+        "frames": 84,
+        "height": 640,
+        "width": 640
+      },
+      "original": {
+        "bytes": 2028574,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 84,
+        "height": 640,
+        "width": 640
+      },
+      "propainter": {
+        "bytes": 2444453,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 84,
+        "height": 640,
+        "width": 640
+      }
+    },
+    "395224b3": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 363308,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 11156,
+          "foreground_pixels": 95817,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 353280,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 472639,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 226388,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 234055,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 422548,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1468043,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 448,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 16757,
+          "foreground_pixels": 466274,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 448,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 17773,
+          "foreground_pixels": 454172,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 448,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 5350,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 448,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 5350,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 448,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1206648,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 448,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1100904,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 448,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 950643,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 448,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 15302,
+        "foreground_pixels": 346477,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 448,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1168228,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 448,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1348212,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 448,
+        "width": 960
+      }
+    },
+    "44476e77": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 156421,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 28601,
+          "foreground_pixels": 501328,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 216186,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 225204,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 265696,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 260535,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 209703,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 3436422,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 118,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 261220,
+          "foreground_pixels": 14020223,
+          "fps": 25.0,
+          "frames": 118,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 276326,
+          "foreground_pixels": 13637299,
+          "fps": 25.0,
+          "frames": 118,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 23309,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 118,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 23309,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 118,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 3896334,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 118,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 3453023,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 118,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 2839811,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 118,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 209196,
+        "foreground_pixels": 11928656,
+        "fps": 25.0,
+        "frames": 118,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 4119921,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 118,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 4837150,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 118,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "4c42c747": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 182415,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 22221,
+          "foreground_pixels": 776605,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 209183,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 258234,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 243680,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 241620,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 225459,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1045899,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 368,
+          "width": 640
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 57742,
+          "foreground_pixels": 4600629,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 368,
+          "width": 640
+        },
+        "gt_mask_propainter": {
+          "bytes": 59547,
+          "foreground_pixels": 4522629,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 368,
+          "width": 640
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 8209,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 368,
+          "width": 640
+        },
+        "pred_mask_propainter": {
+          "bytes": 8209,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 368,
+          "width": 640
+        },
+        "propainter": {
+          "bytes": 1082605,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 368,
+          "width": 640
+        },
+        "watermarked": {
+          "bytes": 753885,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 368,
+          "width": 640
+        }
+      },
+      "diffueraser": {
+        "bytes": 746365,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 368,
+        "width": 640
+      },
+      "gt_mask": {
+        "bytes": 53298,
+        "foreground_pixels": 4041228,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 368,
+        "width": 640
+      },
+      "original": {
+        "bytes": 930487,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 368,
+        "width": 640
+      },
+      "propainter": {
+        "bytes": 1273379,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 368,
+        "width": 640
+      }
+    },
+    "4ce088c6": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 183302,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 5545,
+          "foreground_pixels": 4010,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 215136,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 239877,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 243535,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 237742,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 207459,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 8066319,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 197,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 61319,
+          "foreground_pixels": 401946,
+          "fps": 25.0,
+          "frames": 197,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 65645,
+          "foreground_pixels": 375840,
+          "fps": 25.0,
+          "frames": 197,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 37608,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 197,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 37608,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 197,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 6801641,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 197,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 5839236,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 197,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 5481802,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 197,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 37181,
+        "foreground_pixels": 160374,
+        "fps": 25.0,
+        "frames": 197,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 6762411,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 197,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 8241338,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 197,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "4d979d99": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 196007,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 3998,
+          "foreground_pixels": 904,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 232724,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 254823,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 240111,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 223477,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 226401,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 922273,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 480,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 6417,
+          "foreground_pixels": 11088,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 480,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 6695,
+          "foreground_pixels": 9639,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 480,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 5357,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 480,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 5357,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 480,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 832696,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 480,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 724638,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 22,
+          "height": 480,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 653574,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 480,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 3213,
+        "foreground_pixels": 4359,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 480,
+        "width": 960
+      },
+      "original": {
+        "bytes": 816385,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 480,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 992686,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 22,
+        "height": 480,
+        "width": 960
+      }
+    },
+    "4e6aa1e8": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 154575,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 9841,
+          "foreground_pixels": 89414,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 197199,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 208222,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 266769,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 237858,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 186743,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1445576,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 53100,
+          "foreground_pixels": 1177491,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_propainter": {
+          "bytes": 57208,
+          "foreground_pixels": 1130768,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 19312,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_propainter": {
+          "bytes": 19312,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 960,
+          "width": 544
+        },
+        "propainter": {
+          "bytes": 1762362,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 960,
+          "width": 544
+        },
+        "watermarked": {
+          "bytes": 1513667,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "diffueraser": {
+        "bytes": 1267657,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 34788,
+        "foreground_pixels": 937192,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 1848805,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 2406022,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "52a04667": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 151834,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 4845,
+          "foreground_pixels": 1864,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 124439,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 213051,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 242957,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 252962,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 177203,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 415506,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 400,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 8063,
+          "foreground_pixels": 26963,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 400,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 8435,
+          "foreground_pixels": 23503,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 400,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 5316,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 400,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 5316,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 400,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 461454,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 400,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 367897,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 26,
+          "height": 400,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 340958,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 400,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 4976,
+        "foreground_pixels": 7050,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 400,
+        "width": 960
+      },
+      "original": {
+        "bytes": 427599,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 400,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 554270,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 26,
+        "height": 400,
+        "width": 960
+      }
+    },
+    "561f6380": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 191137,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 8194,
+          "foreground_pixels": 29195,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 204094,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 248837,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 243870,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 238745,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 224384,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1233538,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 26364,
+          "foreground_pixels": 286535,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_propainter": {
+          "bytes": 28629,
+          "foreground_pixels": 272501,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 12532,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_propainter": {
+          "bytes": 12532,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 544
+        },
+        "propainter": {
+          "bytes": 1150050,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 544
+        },
+        "watermarked": {
+          "bytes": 1008150,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "diffueraser": {
+        "bytes": 922019,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 16944,
+        "foreground_pixels": 173283,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 1220247,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 1482396,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "5ba84e3f": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 262351,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 41967,
+          "foreground_pixels": 1157890,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 295359,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 434494,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 248078,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 255812,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 368826,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 3338703,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 77,
+          "height": 464,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 206611,
+          "foreground_pixels": 17240381,
+          "fps": 25.0,
+          "frames": 77,
+          "height": 464,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 239060,
+          "foreground_pixels": 16987938,
+          "fps": 25.0,
+          "frames": 77,
+          "height": 464,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 14043,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 77,
+          "height": 464,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 14043,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 77,
+          "height": 464,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 3613089,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 77,
+          "height": 464,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 2330989,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 77,
+          "height": 464,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 2181040,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 77,
+        "height": 464,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 224022,
+        "foreground_pixels": 15049055,
+        "fps": 25.0,
+        "frames": 77,
+        "height": 464,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2927408,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 77,
+        "height": 464,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 4254608,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 77,
+        "height": 464,
+        "width": 960
+      }
+    },
+    "5ff72128": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 169191,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 7764,
+          "foreground_pixels": 23211,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 165517,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 211560,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 239199,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 232380,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 191414,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 988347,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 38,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 20365,
+          "foreground_pixels": 294978,
+          "fps": 25.0,
+          "frames": 38,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 22661,
+          "foreground_pixels": 282896,
+          "fps": 25.0,
+          "frames": 38,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 8829,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 38,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 8829,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 38,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 810930,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 38,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 710782,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 38,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 724282,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 38,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 16675,
+        "foreground_pixels": 175236,
+        "fps": 25.0,
+        "frames": 38,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 795099,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 38,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1015174,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 38,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "6042d64a": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 177514,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 5205,
+          "foreground_pixels": 10654,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 219628,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 220580,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 269090,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 251360,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 201078,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 3543233,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 97,
+          "height": 624,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 36640,
+          "foreground_pixels": 315206,
+          "fps": 25.0,
+          "frames": 97,
+          "height": 624,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 38660,
+          "foreground_pixels": 296494,
+          "fps": 25.0,
+          "frames": 97,
+          "height": 624,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 21815,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 97,
+          "height": 624,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 21815,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 97,
+          "height": 624,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 3696220,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 97,
+          "height": 624,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 3178485,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 97,
+          "height": 624,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 2969218,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 97,
+        "height": 624,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 20170,
+        "foreground_pixels": 222500,
+        "fps": 25.0,
+        "frames": 97,
+        "height": 624,
+        "width": 960
+      },
+      "original": {
+        "bytes": 3561608,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 97,
+        "height": 624,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 4457441,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 97,
+        "height": 624,
+        "width": 960
+      }
+    },
+    "60ab04c5": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 200289,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 4907,
+          "foreground_pixels": 2811,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 122627,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 288879,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 228013,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 230336,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 258017,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 3008698,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 101,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 31352,
+          "foreground_pixels": 153629,
+          "fps": 25.0,
+          "frames": 101,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 33412,
+          "foreground_pixels": 140030,
+          "fps": 25.0,
+          "frames": 101,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 20232,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 101,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 20232,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 101,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1799620,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 101,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1528189,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 101,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1792011,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 101,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 17531,
+        "foreground_pixels": 57345,
+        "fps": 25.0,
+        "frames": 101,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2251145,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 101,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 3329735,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 101,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "6763a576": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 145154,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 22866,
+          "foreground_pixels": 379327,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 177309,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 193745,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 247829,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 243450,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 182965,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 945312,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 113527,
+          "foreground_pixels": 6306083,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 120274,
+          "foreground_pixels": 6180583,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 14621,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 14621,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1436900,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1175407,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 70,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1016051,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 106924,
+        "foreground_pixels": 5295097,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1289626,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1692700,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 70,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "7593caea": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 171423,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 11623,
+          "foreground_pixels": 141049,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 177025,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 215748,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 245967,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 245680,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 196784,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1510936,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 51356,
+          "foreground_pixels": 2285174,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 59773,
+          "foreground_pixels": 2249703,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 13354,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 13354,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1317849,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1124068,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 63,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1135884,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 44426,
+        "foreground_pixels": 1853038,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1262385,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1631858,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 63,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "76b18413": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 129254,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 18644,
+          "foreground_pixels": 1386803,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 165142,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 238724,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 224747,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 241788,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 179891,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 659307,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 40008,
+          "foreground_pixels": 8748987,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 44853,
+          "foreground_pixels": 8713797,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 7381,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 7381,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1133032,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 627362,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 460006,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 39202,
+        "foreground_pixels": 8317040,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 684069,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1162784,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "780a25de": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 206344,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 3796,
+          "foreground_pixels": 973,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 241512,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 255253,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 262444,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 253285,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 228924,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1648606,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 448,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 10682,
+          "foreground_pixels": 22984,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 448,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 10862,
+          "foreground_pixels": 21496,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 448,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 9142,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 448,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 9142,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 448,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1402820,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 448,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1184204,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 448,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1117735,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 448,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 4439,
+        "foreground_pixels": 11371,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 448,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1327606,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 448,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1632614,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 448,
+        "width": 960
+      }
+    },
+    "782551f7": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 177453,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 14249,
+          "foreground_pixels": 138179,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 180119,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 216132,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 249024,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 246280,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 197112,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1628754,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 69,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 65763,
+          "foreground_pixels": 2443025,
+          "fps": 25.0,
+          "frames": 69,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 71335,
+          "foreground_pixels": 2385168,
+          "fps": 25.0,
+          "frames": 69,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 14440,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 69,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 14440,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 69,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1539014,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 69,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1263389,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 69,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1250531,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 69,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 54664,
+        "foreground_pixels": 1944757,
+        "fps": 25.0,
+        "frames": 69,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1373884,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 69,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1744483,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 69,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "7ce2c865": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 219322,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 6543,
+          "foreground_pixels": 4474,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 196382,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 309952,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 236148,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 208907,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 272583,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 3702793,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 20724,
+          "foreground_pixels": 171008,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 21514,
+          "foreground_pixels": 160423,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 12449,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 12449,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 2400359,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 2068568,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 58,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 2108417,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 19195,
+        "foreground_pixels": 46546,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2259842,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 3057066,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 58,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "843d3bf7": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 396175,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 16258,
+          "foreground_pixels": 390300,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 415154,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 490399,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 248385,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 245868,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 449269,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 3620316,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 41381,
+          "foreground_pixels": 2968407,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 45048,
+          "foreground_pixels": 2914741,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 8286,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 8286,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 2405849,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 2023348,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 2008257,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 32050,
+        "foreground_pixels": 2677173,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2456894,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2888561,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "915f0d9a": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 194508,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 5177,
+          "foreground_pixels": 3382,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 163710,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 263481,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 238377,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 243887,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 232095,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1233458,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 37,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 13454,
+          "foreground_pixels": 64599,
+          "fps": 25.0,
+          "frames": 37,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 14310,
+          "foreground_pixels": 59698,
+          "fps": 25.0,
+          "frames": 37,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 8648,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 37,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 8648,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 37,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 917611,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 37,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 796074,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 37,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 803213,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 37,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 8226,
+        "foreground_pixels": 25402,
+        "fps": 25.0,
+        "frames": 37,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1004879,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 37,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1272583,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 37,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "91b2f707": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 142545,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 11702,
+          "foreground_pixels": 104978,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 159448,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 166545,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 252480,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 239232,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 160619,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1285695,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 40,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 39815,
+          "foreground_pixels": 1066423,
+          "fps": 25.0,
+          "frames": 40,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 41801,
+          "foreground_pixels": 1027940,
+          "fps": 25.0,
+          "frames": 40,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 9191,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 40,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 9191,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 40,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 899799,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 40,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 815685,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 40,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 719207,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 40,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 32223,
+        "foreground_pixels": 827636,
+        "fps": 25.0,
+        "frames": 40,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 893948,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 40,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1018345,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 40,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "9cff25e3": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 311501,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 5430,
+          "foreground_pixels": 22281,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 182517,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 448387,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 224428,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 204175,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 399911,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 5287843,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 71,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 27237,
+          "foreground_pixels": 446163,
+          "fps": 25.0,
+          "frames": 71,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 27469,
+          "foreground_pixels": 428144,
+          "fps": 25.0,
+          "frames": 71,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 14802,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 71,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 14802,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 71,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 2805185,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 71,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 2484365,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 71,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 2607269,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 71,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 14452,
+        "foreground_pixels": 295158,
+        "fps": 25.0,
+        "frames": 71,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 3679830,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 71,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 4754528,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 71,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "9fc933f6": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 364431,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 24447,
+          "foreground_pixels": 451425,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 399419,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 452503,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 238077,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 245329,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 429304,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 3338318,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 72,
+          "height": 368,
+          "width": 640
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 85524,
+          "foreground_pixels": 3874045,
+          "fps": 25.0,
+          "frames": 72,
+          "height": 368,
+          "width": 640
+        },
+        "gt_mask_propainter": {
+          "bytes": 92583,
+          "foreground_pixels": 3785095,
+          "fps": 25.0,
+          "frames": 72,
+          "height": 368,
+          "width": 640
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 9777,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 72,
+          "height": 368,
+          "width": 640
+        },
+        "pred_mask_propainter": {
+          "bytes": 9777,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 72,
+          "height": 368,
+          "width": 640
+        },
+        "propainter": {
+          "bytes": 2261475,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 72,
+          "height": 368,
+          "width": 640
+        },
+        "watermarked": {
+          "bytes": 1812879,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 72,
+          "height": 368,
+          "width": 640
+        }
+      },
+      "diffueraser": {
+        "bytes": 1786041,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 72,
+        "height": 368,
+        "width": 640
+      },
+      "gt_mask": {
+        "bytes": 80010,
+        "foreground_pixels": 3018358,
+        "fps": 25.0,
+        "frames": 72,
+        "height": 368,
+        "width": 640
+      },
+      "original": {
+        "bytes": 2057516,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 72,
+        "height": 368,
+        "width": 640
+      },
+      "propainter": {
+        "bytes": 2549934,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 72,
+        "height": 368,
+        "width": 640
+      }
+    },
+    "ac32a655": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 315592,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 11257,
+          "foreground_pixels": 39066,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 242689,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 414803,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 242808,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 241730,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 372395,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 10573037,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 124,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 91850,
+          "foreground_pixels": 1638531,
+          "fps": 25.0,
+          "frames": 124,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 101004,
+          "foreground_pixels": 1531242,
+          "fps": 25.0,
+          "frames": 124,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 24395,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 124,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 24395,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 124,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 6376370,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 124,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 5674405,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 124,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 5903115,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 124,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 78559,
+        "foreground_pixels": 981566,
+        "fps": 25.0,
+        "frames": 124,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 6512516,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 124,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 8261356,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 124,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "b7fb59c9": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 185758,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 9888,
+          "foreground_pixels": 35807,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 140998,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 260012,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 226657,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 237372,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 235592,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1132138,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 36472,
+          "foreground_pixels": 640208,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 37447,
+          "foreground_pixels": 595477,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 11001,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 11001,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 957059,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 803294,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 50,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 970425,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 29425,
+        "foreground_pixels": 353708,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1034592,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1388160,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 50,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "ba538072": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 216056,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 9098,
+          "foreground_pixels": 202693,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 204990,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 291917,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 265584,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 253906,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 267453,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1620990,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 25851,
+          "foreground_pixels": 1664047,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 27122,
+          "foreground_pixels": 1645926,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 8286,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 8286,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1103914,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 999163,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 35,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 999198,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 17524,
+        "foreground_pixels": 1499152,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1216691,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1433558,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 35,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "c062f4d7": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 224557,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 13281,
+          "foreground_pixels": 150253,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 279651,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 279543,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 263253,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 254728,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 257665,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 8594659,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 190,
+          "height": 848,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 243822,
+          "foreground_pixels": 10470648,
+          "fps": 25.0,
+          "frames": 190,
+          "height": 848,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 262660,
+          "foreground_pixels": 10165500,
+          "fps": 25.0,
+          "frames": 190,
+          "height": 848,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 58553,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 190,
+          "height": 848,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 58553,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 190,
+          "height": 848,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 8181448,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 190,
+          "height": 848,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 9216417,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 190,
+          "height": 848,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 8556764,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 190,
+        "height": 848,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 172813,
+        "foreground_pixels": 8570800,
+        "fps": 25.0,
+        "frames": 190,
+        "height": 848,
+        "width": 960
+      },
+      "original": {
+        "bytes": 10726649,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 190,
+        "height": 848,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 12800473,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 190,
+        "height": 848,
+        "width": 960
+      }
+    },
+    "c9f7f69d": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 126784,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 5938,
+          "foreground_pixels": 73301,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 135308,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 155670,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 252357,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 236446,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 142220,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1986687,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 115,
+          "height": 448,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 36584,
+          "foreground_pixels": 780334,
+          "fps": 25.0,
+          "frames": 115,
+          "height": 448,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 38443,
+          "foreground_pixels": 768496,
+          "fps": 25.0,
+          "frames": 115,
+          "height": 448,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 20044,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 115,
+          "height": 448,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 20044,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 115,
+          "height": 448,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1960975,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 115,
+          "height": 448,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1680358,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 115,
+          "height": 448,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1541088,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 115,
+        "height": 448,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 20767,
+        "foreground_pixels": 650351,
+        "fps": 25.0,
+        "frames": 115,
+        "height": 448,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1751202,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 115,
+        "height": 448,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2307832,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 115,
+        "height": 448,
+        "width": 960
+      }
+    },
+    "ca74a924": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 83316,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 22338,
+          "foreground_pixels": 320750,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 113412,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 126616,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 246567,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 235091,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 118859,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 649771,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 66,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 104791,
+          "foreground_pixels": 5046848,
+          "fps": 25.0,
+          "frames": 66,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 111045,
+          "foreground_pixels": 4896731,
+          "fps": 25.0,
+          "frames": 66,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 13897,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 66,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 13897,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 66,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1037755,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 66,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 928063,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 66,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 611321,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 66,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 88956,
+        "foreground_pixels": 4155818,
+        "fps": 25.0,
+        "frames": 66,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1003119,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 66,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1143433,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 66,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "ceaa6c65": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 356616,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 5638,
+          "foreground_pixels": 22326,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 221641,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 476647,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 231281,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 240055,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 423837,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 3887688,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 61,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 25173,
+          "foreground_pixels": 394468,
+          "fps": 25.0,
+          "frames": 61,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 25041,
+          "foreground_pixels": 376350,
+          "fps": 25.0,
+          "frames": 61,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 12992,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 61,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 12992,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 61,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 2066240,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 61,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1820214,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 61,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 2315410,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 61,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 14097,
+        "foreground_pixels": 254203,
+        "fps": 25.0,
+        "frames": 61,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2646431,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 61,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 3476557,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 61,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "cfc68a82": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 369779,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 14034,
+          "foreground_pixels": 183787,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 432603,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 473797,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 250736,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 241315,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 421866,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 6619225,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 82,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 115066,
+          "foreground_pixels": 3596708,
+          "fps": 25.0,
+          "frames": 82,
+          "height": 960,
+          "width": 544
+        },
+        "gt_mask_propainter": {
+          "bytes": 118536,
+          "foreground_pixels": 3489294,
+          "fps": 25.0,
+          "frames": 82,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 30160,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 82,
+          "height": 960,
+          "width": 544
+        },
+        "pred_mask_propainter": {
+          "bytes": 30160,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 82,
+          "height": 960,
+          "width": 544
+        },
+        "propainter": {
+          "bytes": 5114479,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 82,
+          "height": 960,
+          "width": 544
+        },
+        "watermarked": {
+          "bytes": 4154906,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 82,
+          "height": 960,
+          "width": 544
+        }
+      },
+      "diffueraser": {
+        "bytes": 4326479,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 82,
+        "height": 960,
+        "width": 544
+      },
+      "gt_mask": {
+        "bytes": 84308,
+        "foreground_pixels": 2912856,
+        "fps": 25.0,
+        "frames": 82,
+        "height": 960,
+        "width": 544
+      },
+      "original": {
+        "bytes": 5497942,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 82,
+        "height": 960,
+        "width": 544
+      },
+      "propainter": {
+        "bytes": 6641323,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 82,
+        "height": 960,
+        "width": 544
+      }
+    },
+    "dd5a4739": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 244515,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 12612,
+          "foreground_pixels": 91555,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 220143,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 338329,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 264153,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 272494,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 304545,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 2229447,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 48,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 40854,
+          "foreground_pixels": 1241637,
+          "fps": 25.0,
+          "frames": 48,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 45440,
+          "foreground_pixels": 1213657,
+          "fps": 25.0,
+          "frames": 48,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 10639,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 48,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 10639,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 48,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1838542,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 48,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1618985,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 48,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1545583,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 48,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 41220,
+        "foreground_pixels": 884914,
+        "fps": 25.0,
+        "frames": 48,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1948502,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 48,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2326763,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 48,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "e1d9fb32": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 201101,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 27125,
+          "foreground_pixels": 321720,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 194644,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 266511,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 242848,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 231428,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 248286,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 996282,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 720
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 74341,
+          "foreground_pixels": 3165904,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 720
+        },
+        "gt_mask_propainter": {
+          "bytes": 82874,
+          "foreground_pixels": 3071564,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 720
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 12653,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 720
+        },
+        "pred_mask_propainter": {
+          "bytes": 12653,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 720
+        },
+        "propainter": {
+          "bytes": 1122567,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 720
+        },
+        "watermarked": {
+          "bytes": 941073,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 960,
+          "width": 720
+        }
+      },
+      "diffueraser": {
+        "bytes": 860896,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 720
+      },
+      "gt_mask": {
+        "bytes": 76367,
+        "foreground_pixels": 2544173,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 720
+      },
+      "original": {
+        "bytes": 1052688,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 720
+      },
+      "propainter": {
+        "bytes": 1337507,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 960,
+        "width": 720
+      }
+    },
+    "eaff3301": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 561292,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 7832,
+          "foreground_pixels": 8719,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 709087,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 667123,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 260180,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 258840,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 598342,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 24065458,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 180,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 89824,
+          "foreground_pixels": 791136,
+          "fps": 25.0,
+          "frames": 180,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 107714,
+          "foreground_pixels": 735167,
+          "fps": 25.0,
+          "frames": 180,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 34531,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 180,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 34531,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 180,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 19273844,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 180,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 16244058,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 180,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 16292815,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 180,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 81228,
+        "foreground_pixels": 318272,
+        "fps": 25.0,
+        "frames": 180,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 18803109,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 180,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 21439461,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 180,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "f415f9ad": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 331145,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 15355,
+          "foreground_pixels": 62161,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 330046,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 408731,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 253247,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 246706,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 369465,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 2367552,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 928,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 54536,
+          "foreground_pixels": 1525727,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 928,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 61584,
+          "foreground_pixels": 1412968,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 928,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 17063,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 928,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 17063,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 928,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 2894031,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 928,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 2434383,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 46,
+          "height": 928,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 2333477,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 928,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 70230,
+        "foreground_pixels": 978374,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 928,
+        "width": 960
+      },
+      "original": {
+        "bytes": 2878061,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 928,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 3528336,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 46,
+        "height": 928,
+        "width": 960
+      }
+    },
+    "f89b54d0": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 395349,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 15267,
+          "foreground_pixels": 241216,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 292154,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 525478,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 228798,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 232700,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 445392,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1931881,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 38260,
+          "foreground_pixels": 1640955,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 40231,
+          "foreground_pixels": 1610034,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 7381,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 7381,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1882931,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 1288050,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 30,
+          "height": 544,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1524970,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 32419,
+        "foreground_pixels": 1413099,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1991379,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 2383268,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 30,
+        "height": 544,
+        "width": 960
+      }
+    },
+    "fe2dc281": {
+      "Safe-Sora": {
+        "diffueraser": {
+          "bytes": 248039,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "gt_mask": {
+          "bytes": 7325,
+          "foreground_pixels": 14454,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "input_original": {
+          "bytes": 167178,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "propainter": {
+          "bytes": 335402,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        },
+        "recovery_diffueraser": {
+          "bytes": 240860,
+          "height": 256,
+          "width": 768
+        },
+        "recovery_propainter": {
+          "bytes": 241186,
+          "height": 256,
+          "width": 768
+        },
+        "watermarked": {
+          "bytes": 297758,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 16,
+          "height": 320,
+          "width": 512
+        }
+      },
+      "VideoSeal": {
+        "diffueraser": {
+          "bytes": 1504484,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 33,
+          "height": 480,
+          "width": 960
+        },
+        "gt_mask_diffueraser": {
+          "bytes": 16630,
+          "foreground_pixels": 164037,
+          "fps": 25.0,
+          "frames": 33,
+          "height": 480,
+          "width": 960
+        },
+        "gt_mask_propainter": {
+          "bytes": 19863,
+          "foreground_pixels": 157783,
+          "fps": 25.0,
+          "frames": 33,
+          "height": 480,
+          "width": 960
+        },
+        "pred_mask_diffueraser": {
+          "bytes": 7095,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 33,
+          "height": 480,
+          "width": 960
+        },
+        "pred_mask_propainter": {
+          "bytes": 7095,
+          "foreground_pixels": 0,
+          "fps": 25.0,
+          "frames": 33,
+          "height": 480,
+          "width": 960
+        },
+        "propainter": {
+          "bytes": 1096235,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 33,
+          "height": 480,
+          "width": 960
+        },
+        "watermarked": {
+          "bytes": 949358,
+          "foreground_pixels": -1,
+          "fps": 25.0,
+          "frames": 33,
+          "height": 480,
+          "width": 960
+        }
+      },
+      "diffueraser": {
+        "bytes": 1029745,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 33,
+        "height": 480,
+        "width": 960
+      },
+      "gt_mask": {
+        "bytes": 13494,
+        "foreground_pixels": 87932,
+        "fps": 25.0,
+        "frames": 33,
+        "height": 480,
+        "width": 960
+      },
+      "original": {
+        "bytes": 1060119,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 33,
+        "height": 480,
+        "width": 960
+      },
+      "propainter": {
+        "bytes": 1433802,
+        "foreground_pixels": -1,
+        "fps": 25.0,
+        "frames": 33,
+        "height": 480,
+        "width": 960
+      }
+    }
+  },
+  "media_files": 900,
+  "samples": 50,
+  "status": "complete",
+  "validated_at": "2026-10-19T13:46:15+00:00",
+  "videos": 800
+}

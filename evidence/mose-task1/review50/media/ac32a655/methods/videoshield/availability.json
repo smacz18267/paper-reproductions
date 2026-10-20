@@ -1,0 +1,45 @@
+{
+  "availability": {
+    "diffueraser_video": "not_applicable",
+    "iou": "not_applicable",
+    "pred_mask": "not_applicable",
+    "propainter_video": "not_applicable",
+    "watermarked_video": "not_applicable"
+  },
+  "clip_id": "ac32a655",
+  "completed_at": "2026-10-19T10:58:38+00:00",
+  "ddim_inversion_steps": 25,
+  "elapsed_seconds": 3.963,
+  "interpretation": "Expected chance-level negative control; not an embedding or robustness score.",
+  "method": "videoshield",
+  "protocol": "unwatermarked_mose_negative_control_detection",
+  "reason": "VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video.",
+  "reference_watermark_accuracy": 0.490234375,
+  "sampling": {
+    "frames": 16,
+    "indices": [
+      0,
+      8,
+      16,
+      25,
+      33,
+      41,
+      49,
+      57,
+      66,
+      74,
+      82,
+      90,
+      98,
+      107,
+      115,
+      123
+    ],
+    "resize": [
+      256,
+      256
+    ],
+    "source_fps": 25.0
+  },
+  "status": "complete"
+}

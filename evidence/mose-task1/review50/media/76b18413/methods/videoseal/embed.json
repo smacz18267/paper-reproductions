@@ -1,0 +1,25 @@
+{
+  "clip_id": "76b18413",
+  "completed_at": "2026-10-19T10:51:03+00:00",
+  "elapsed_seconds": 0.72,
+  "message_bits": 256,
+  "method": "videoseal",
+  "protocol": "postprocess_original_then_inpaint",
+  "seed": 2025,
+  "sha256": "1bf8cb8ab508ca5d5d73103f387f57f98d5ee0e006c7c9e54eedec1890c80786",
+  "source": {
+    "bytes": 631236,
+    "fps": 25.0,
+    "frames": 30,
+    "height": 544,
+    "width": 960
+  },
+  "status": "complete",
+  "watermarked": {
+    "bytes": 627362,
+    "fps": 25.0,
+    "frames": 30,
+    "height": 544,
+    "width": 960
+  }
+}

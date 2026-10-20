@@ -11,6 +11,6 @@ Paper implementations and execution results by Smayan Gupta.
 | VideoShield (ICLR 2025) | [Reading notes and implementation](papers/videoshield/README.md) | [Recorded inference and localization](evidence/videoshield/recorded/20261013T115409Z-1323688/README.md) |
 | Safe-Sora (NeurIPS 2025) | [Reading notes and implementation](papers/safe-sora/README.md) | [Recorded graphical-watermark demonstration](evidence/safe-sora/recorded/20261013T124831Z-1384467/README.md) |
 
-[MOSEv1 batch comparison](evidence/mose-task1/README.md): the same 50 clips processed with ProPainter and DiffuEraser, with 100 validated outputs.
+[MOSEv1 50-clip removal and watermark review](evidence/mose-task1/README.md): all 50 originals, GT masks, ProPainter and DiffuEraser outputs, plus corrected watermark-first results for VideoSeal, Safe-Sora, and VideoShield capability records.
 
 [Recorded ProPainter execution](papers/propainter/README.md#execution-evidence)

@@ -1,0 +1,38 @@
+{
+  "clip_id": "c062f4d7",
+  "compatibility_adapter": null,
+  "completed_at": "2026-10-19T12:58:34+00:00",
+  "elapsed_seconds": 211.916,
+  "input": {
+    "bytes": 9216417,
+    "fps": 25.0,
+    "frames": 190,
+    "height": 848,
+    "width": 960
+  },
+  "mask_dilation_iterations": 8,
+  "output": {
+    "bytes": 8594659,
+    "fps": 25.0,
+    "frames": 190,
+    "height": 848,
+    "width": 960
+  },
+  "processing_adapter": {
+    "processing_size": [
+      800,
+      704
+    ],
+    "reason": "Shared-GPU memory limit at native spatial resolution.",
+    "reported_size": [
+      960,
+      848
+    ],
+    "restoration": "Lanczos resize of inference result"
+  },
+  "protocol": "watermark_original_then_remove_object",
+  "remover": "diffueraser",
+  "sha256": "44973a61e02e3f07747a812ff78de80e5723f3d1ddfd77888e66beb00c52ef30",
+  "status": "complete",
+  "watermark_method": "videoseal"
+}
