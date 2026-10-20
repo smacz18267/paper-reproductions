@@ -51,6 +51,9 @@ rebuilds the shared original/removal view, and
 `scripts/merge_mose_watermark_results.py` adds the corrected watermark-first
 outputs and metadata.
 
+See [RESULTS_GUIDE.md](RESULTS_GUIDE.md) for the result directory tree and a
+plain-language description of every MP4, PNG and JSON filename.
+
 The method picker contains all three requested watermark methods:
 
 - VideoSeal: watermarked input, both post-watermark removal videos, effective
