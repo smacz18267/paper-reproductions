@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Run VideoShield's detector on MOSE originals as an honest negative control.
 
-VideoShield embeds into a diffusion model's initial Gaussian noise. It cannot
-post-process arbitrary MOSE videos, so watermarked/removal/mask artifacts are
-explicitly unavailable. This run only measures the official inverse-diffusion
-detector against one fixed reference key.
+VideoShield embeds by supplying a diffusion model's complete initial Gaussian
+noise. The released code has no faithful post-processing path for an existing
+MOSE video, so watermarked/removal/mask artifacts are explicitly unavailable.
+This run only measures the official inverse-diffusion detector against one
+fixed reference key. A separate committed adapter check tests and quantifies
+the fidelity/detectability trade-off rather than treating this as an assumption.
 """
 
 from __future__ import annotations
@@ -152,7 +154,11 @@ def main() -> None:
                     "pred_mask": "not_applicable",
                     "iou": "not_applicable",
                 },
-                "reason": "VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video.",
+                "reason": (
+                    "The released VideoShield embedder creates a diffusion model's starting noise "
+                    "and has no faithful post-processing path for an existing MOSE video; the "
+                    "documented inversion-adapter check changes the input content."
+                ),
                 "reference_watermark_accuracy": accuracy,
                 "interpretation": "Expected chance-level negative control; not an embedding or robustness score.",
                 "sampling": {"frames": TARGET_FRAMES, "indices": indices, "resize": [TARGET_WIDTH, TARGET_HEIGHT], "source_fps": source_fps},
