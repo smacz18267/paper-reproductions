@@ -256,6 +256,17 @@ function setImage(id, path) {
   else element.removeAttribute('src');
 }
 
+function averageMetric(method, key) {
+  const values = state.manifest.samples
+    .map(sample => sample.watermarks?.[method]?.[key])
+    .filter(value => value != null && Number.isFinite(Number(value)))
+    .map(Number);
+  return {
+    value: values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : null,
+    count: values.length
+  };
+}
+
 function render() {
   const sample = state.manifest.samples[state.index];
   document.getElementById('sample').value = String(state.index);
@@ -294,8 +305,12 @@ function renderWatermark(sample) {
   setImage('recovery-propainter', result.recovery_propainter);
   setImage('recovery-diffueraser', result.recovery_diffueraser);
   const fmt = value => value == null ? 'not available' : Number(value).toFixed(4);
+  const propainterIou = averageMetric(state.method, 'iou_propainter');
+  const diffueraserIou = averageMetric(state.method, 'iou_diffueraser');
+  const iouCount = Math.max(propainterIou.count, diffueraserIou.count);
+  const iouScope = iouCount ? ` across ${iouCount} samples` : '';
   const control = result.negative_control_accuracy == null ? '' : ` · Unwatermarked negative-control accuracy: ${fmt(result.negative_control_accuracy)}`;
-  document.getElementById('iou').textContent = `IoU — ProPainter: ${fmt(result.iou_propainter)} · DiffuEraser: ${fmt(result.iou_diffueraser)}${control}`;
+  document.getElementById('iou').textContent = `Average IoU${iouScope} — ProPainter: ${fmt(propainterIou.value)} · DiffuEraser: ${fmt(diffueraserIou.value)}${control}`;
   document.getElementById('method-note').textContent = result.note || '';
 }
 

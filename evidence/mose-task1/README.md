@@ -54,7 +54,8 @@ outputs and metadata.
 The method picker contains all three requested watermark methods:
 
 - VideoSeal: watermarked input, both post-watermark removal videos, effective
-  GT masks, derived patch-grid predicted masks, and IoU for both attacks.
+  GT masks, derived patch-grid predicted masks, and the mean IoU across all 50
+  samples for both attacks.
 - Safe-Sora: its official aligned 16-frame original, watermarked video, GT mask,
   and both post-watermark removal videos. Pred mask and IoU are marked not
   applicable because the released method does not provide spatial localization.
