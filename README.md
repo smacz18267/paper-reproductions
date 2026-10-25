@@ -13,4 +13,6 @@ Paper implementations and execution results by Smayan Gupta.
 
 [MOSEv1 50-clip removal and watermark review](evidence/mose-task1/README.md): all 50 originals, GT masks, ProPainter and DiffuEraser outputs, plus corrected watermark-first results for VideoSeal, Safe-Sora, and VideoShield capability records.
 
+[Three explained MOSE sample notebooks](notebooks/mose-watermark-samples/README.md): one self-contained notebook per sample with every committed video, all three watermark-method records, both removal methods where applicable, and plain-language metric interpretation.
+
 [Recorded ProPainter execution](papers/propainter/README.md#execution-evidence)
