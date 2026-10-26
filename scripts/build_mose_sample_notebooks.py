@@ -165,16 +165,14 @@ The methods do not expose the same kind of signal, so their numbers must not be 
 
 def setup_cell(sample_id: str) -> dict[str, Any]:
     return code(
-        f'''from pathlib import Path
+        f'''import base64
+from pathlib import Path
 import html
 import json
 from IPython.display import HTML, Image, Markdown, display
 
 SAMPLE_ID = "{sample_id}"
-# Jupyter's /files route serves repository files when the server is started
-# from the repository root. Static Markdown links separately use GitHub-safe
-# ../../evidence/... paths.
-BROWSER_PREFIX = "/files/evidence/mose-task1/review50/"
+LFS_POINTER_PREFIX = b"version https://git-lfs.github.com/spec/v1"
 
 def find_repo_root():
     for start in (Path.cwd().resolve(), *Path.cwd().resolve().parents):
@@ -188,8 +186,16 @@ SAMPLE_ROOT = REVIEW_ROOT / "media" / SAMPLE_ID
 MANIFEST = json.loads((REVIEW_ROOT / "manifest.json").read_text())
 SAMPLE = next(item for item in MANIFEST["samples"] if item["clip_id"] == SAMPLE_ID)
 
-def browser_url(relative):
-    return BROWSER_PREFIX + str(relative).replace("\\\\", "/")
+def artifact_data_url(source, mime_type):
+    if not source.is_file():
+        raise FileNotFoundError(source)
+    payload = source.read_bytes()
+    if payload.startswith(LFS_POINTER_PREFIX):
+        raise RuntimeError(
+            f"{{source}} is a Git LFS pointer, not the real media file. "
+            "From the repository root run: python3 scripts/prepare_mose_notebooks.py"
+        )
+    return f"data:{{mime_type}};base64,{{base64.b64encode(payload).decode('ascii')}}"
 
 def show_videos(items, columns=3):
     cards = []
@@ -198,14 +204,13 @@ def show_videos(items, columns=3):
             cards.append(f"<section class='media-card'><h4>{{html.escape(title)}}</h4><p><strong>Not applicable.</strong></p><p>{{html.escape(explanation)}}</p></section>")
             continue
         source = REVIEW_ROOT / relative
-        if not source.is_file():
-            raise FileNotFoundError(source)
+        data_url = artifact_data_url(source, "video/mp4")
         cards.append(
             "<section class='media-card'>"
             f"<h4>{{html.escape(title)}}</h4>"
-            f"<video controls muted loop playsinline preload='metadata' src='{{html.escape(browser_url(relative))}}'></video>"
+            f"<video controls muted loop playsinline preload='metadata' src='{{data_url}}'></video>"
             f"<p>{{html.escape(explanation)}}</p>"
-            f"<p><a href='{{html.escape(browser_url(relative))}}'>Open video directly</a></p>"
+            f"<p><a href='{{data_url}}' download='{{html.escape(source.name)}}'>Download this video</a></p>"
             "</section>"
         )
     display(HTML(
@@ -219,14 +224,13 @@ def show_images(items, columns=2):
     cards = []
     for title, relative, explanation in items:
         source = REVIEW_ROOT / relative
-        if not source.is_file():
-            raise FileNotFoundError(source)
+        data_url = artifact_data_url(source, "image/png")
         cards.append(
             "<section class='media-card'>"
             f"<h4>{{html.escape(title)}}</h4>"
-            f"<img style='width:100%' src='{{html.escape(browser_url(relative))}}' alt='{{html.escape(title)}}'>"
+            f"<img style='width:100%' src='{{data_url}}' alt='{{html.escape(title)}}'>"
             f"<p>{{html.escape(explanation)}}</p>"
-            f"<p><a href='{{html.escape(browser_url(relative))}}'>Open image directly</a></p>"
+            f"<p><a href='{{data_url}}' download='{{html.escape(source.name)}}'>Download this image</a></p>"
             "</section>"
         )
     display(HTML(f"<div class='media-grid' style='grid-template-columns:repeat({{columns}},minmax(260px,1fr))'>{{''.join(cards)}}</div>"))
@@ -332,7 +336,7 @@ All media remains in the validated GitHub evidence bundle under `evidence/mose-t
         )
     )
     cells.append(markdown(metric_glossary()))
-    cells.append(markdown("## Notebook setup\n\nRun this cell once. It locates the repository and defines the inline video, image, and metadata viewers used below. Direct artifact links still work when reading the notebook without executing it."))
+    cells.append(markdown("## Notebook setup\n\nAfter a fresh clone, first run `python3 scripts/prepare_mose_notebooks.py` from the repository root. That downloads and verifies all 48 notebook videos in one Git LFS operation. Then run this cell once: it locates the repository and defines self-contained inline video, image, and metadata viewers. Each media card also provides a download link. If a clone contains an LFS pointer instead of a real video, this cell reports the exact preparation command rather than showing a broken player."))
     cells.append(setup_cell(sample_id))
 
     cells.append(
