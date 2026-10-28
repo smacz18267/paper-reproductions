@@ -15,4 +15,6 @@ Paper implementations and execution results by Smayan Gupta.
 
 [Three explained MOSE sample notebooks](notebooks/mose-watermark-samples/README.md): one self-contained notebook per sample with every committed video, all three watermark-method records, both removal methods where applicable, and plain-language metric interpretation.
 
+After a fresh clone, run `python3 scripts/prepare_mose_notebooks.py` once to download and verify all 48 notebook videos through Git LFS. Add `--all` to fetch the complete 50-sample video review in one batch.
+
 [Recorded ProPainter execution](papers/propainter/README.md#execution-evidence)

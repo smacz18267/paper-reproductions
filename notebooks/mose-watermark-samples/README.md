@@ -22,9 +22,32 @@ faithfully watermark an already-existing MOSE clip. VideoShield is therefore
 shown with its explicit negative-control/availability record rather than with
 fabricated ProPainter, DiffuEraser, mask, or IoU outputs.
 
-Run Jupyter from the repository root, open one notebook, and execute its cells
-to get inline video controls. Every video also has a direct relative link, so
-the evidence remains accessible when reading the notebook without execution.
+## Fresh clone: download every video at once
+
+The MP4 evidence is stored with Git LFS. A clone made without Git LFS can look
+complete while containing only tiny pointer files, which cannot play. From the
+repository root, download and verify all 48 videos used by these notebooks in
+one operation:
+
+```bash
+python3 scripts/prepare_mose_notebooks.py
+```
+
+To download and verify all videos for the complete 50-sample review instead:
+
+```bash
+python3 scripts/prepare_mose_notebooks.py --all
+```
+
+The script initializes Git LFS for the checkout, downloads the real media in
+one batch, rejects leftover pointer files, and verifies that every downloaded
+file is an MP4 container. If `git lfs` is unavailable, install Git LFS first
+(`brew install git-lfs` on macOS or `sudo apt-get install git-lfs` on Ubuntu).
+
+After preparation, start Jupyter from the repository root, open one notebook,
+and execute its cells to get inline video controls and per-video download
+links. The notebook raises a clear Git LFS error if a pointer file is still
+present instead of silently displaying a broken player.
 
 Regenerate the notebooks after changing the evidence bundle with:
 
