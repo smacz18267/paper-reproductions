@@ -86,7 +86,7 @@ def main() -> None:
             for sample_id in DEFAULT_SAMPLES
         ]
         include = ",".join(f"{root}/**" for root in relative_roots)
-        label = "three notebooks"
+        label = "three method notebooks"
 
     videos = tracked_videos(relative_roots)
     if not args.check_only:
