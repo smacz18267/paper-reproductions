@@ -223,6 +223,7 @@ def validation_cell(method_label: str) -> dict[str, Any]:
 - Aggregate results: [watermark-summary.json](../../evidence/mose-task1/review50/watermark-summary.json)
 - Experimental contract: [PROTOCOL.md](../../evidence/mose-task1/PROTOCOL.md)
 - Batch summary: [README.md](../../evidence/mose-task1/README.md)
+- DiffuEraser implementation used for every applicable removal result: [lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
 
 The displayed values come from the committed {method_label} evidence records.
 """
@@ -742,6 +743,7 @@ Localization for both attacked videos took {seconds(localization.get('elapsed_se
 - Full 50-sample aggregate metrics: [watermark-summary.json](../../evidence/mose-task1/review50/watermark-summary.json)
 - Experimental contract: [PROTOCOL.md](../../evidence/mose-task1/PROTOCOL.md)
 - Official repository: [{'EditGuard' if editguard else 'OmniGuard'}](https://github.com/xuanyuzhang21/{'EditGuard' if editguard else 'OmniGuard'})
+- DiffuEraser implementation used for every removal result: [lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
 
 The displayed values come from the committed {method_label} evidence records.
 """

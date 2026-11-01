@@ -18,6 +18,11 @@ records separately whether ProPainter and DiffuEraser removed that object
 satisfactorily. The watermark-first outputs are generated for all 50 fixed
 clips so the review does not change or cherry-pick the evaluated sample set.
 
+The DiffuEraser results use the official
+[lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
+repository. That repository is the existing DiffuEraser implementation in this
+experiment, not an additional remover.
+
 The committed `scripts/build_mose_review.py` creates a single viewer covering
 all 50 clips and exports the manual decisions as CSV.
 

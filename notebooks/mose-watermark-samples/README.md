@@ -39,6 +39,11 @@ native 960 x 480 MOSE size. It contains watermarked videos, both removal
 outputs, native predicted masks, effective ground-truth masks, and localization
 IoU. The public demo does not expose a recovered bit message.
 
+Every applicable notebook uses the official
+[lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
+implementation for its DiffuEraser column. This is the same checkout used by
+the batch runner; it is not a separate third remover.
+
 ## Download all notebook videos
 
 The MP4 evidence is stored with Git LFS. From the repository root, download and
