@@ -1,6 +1,6 @@
 # MOSE watermark method notebooks
 
-The results are organized into three notebooks. Each notebook covers one
+The results are organized into five notebooks. Each notebook covers one
 watermark method across the same three fixed MOSE samples.
 
 | Method | Notebook | Samples |
@@ -8,6 +8,8 @@ watermark method across the same three fixed MOSE samples.
 | VideoSeal | [Open notebook](videoseal.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
 | Safe-Sora | [Open notebook](safe_sora.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
 | VideoShield | [Open notebook](videoshield.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
+| EditGuard | [Open notebook](editguard.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
+| OmniGuard | [Open notebook](omniguard.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
 
 The selected samples are the first three records in the fixed 50-sample
 manifest. They were not selected after reviewing the results.
@@ -24,10 +26,20 @@ The VideoShield notebook contains the source videos, masks, and negative-control
 records. Authentic VideoShield embedding requires diffusion generation, so the
 existing MOSE clips do not have VideoShield-watermarked or removal outputs.
 
+The EditGuard notebook applies the released image method frame by frame using
+its official 512 x 512 input protocol. It contains aligned sources and masks,
+watermarked videos, both removal outputs, native predicted masks, effective
+ground-truth masks, localization IoU, and 64-bit recovery accuracy.
+
+The OmniGuard notebook applies the released image method frame by frame at the
+native 960 x 480 MOSE size. It contains watermarked videos, both removal
+outputs, native predicted masks, effective ground-truth masks, and localization
+IoU. The public demo does not expose a recovered bit message.
+
 ## Download all notebook videos
 
 The MP4 evidence is stored with Git LFS. From the repository root, download and
-verify all 48 videos used by the notebooks with:
+verify all videos used by the notebooks with:
 
 ```bash
 python3 scripts/prepare_mose_notebooks.py

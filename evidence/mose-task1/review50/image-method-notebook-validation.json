@@ -1,0 +1,461 @@
+{
+  "decoded_frames": 3216,
+  "methods": {
+    "editguard": {
+      "02b72b8d": {
+        "frames": 67,
+        "media": {
+          "aligned-original.mp4": {
+            "bytes": 691211,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "diffueraser.mp4": {
+            "bytes": 888917,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "effective-gt-mask-diffueraser.mp4": {
+            "bytes": 39004,
+            "foreground_pixels": 520937,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "effective-gt-mask-propainter.mp4": {
+            "bytes": 40948,
+            "foreground_pixels": 484318,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "gt-mask.mp4": {
+            "bytes": 45615,
+            "foreground_pixels": 295818,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "pred-mask-diffueraser.mp4": {
+            "bytes": 13822,
+            "foreground_pixels": 17563648,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "pred-mask-propainter.mp4": {
+            "bytes": 13822,
+            "foreground_pixels": 17563648,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "propainter.mp4": {
+            "bytes": 840896,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "watermarked.mp4": {
+            "bytes": 757124,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          }
+        },
+        "size": [
+          512,
+          512
+        ],
+        "status": "valid"
+      },
+      "0ab75563": {
+        "frames": 104,
+        "media": {
+          "aligned-original.mp4": {
+            "bytes": 1106150,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "diffueraser.mp4": {
+            "bytes": 1806092,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "effective-gt-mask-diffueraser.mp4": {
+            "bytes": 30036,
+            "foreground_pixels": 331240,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "effective-gt-mask-propainter.mp4": {
+            "bytes": 31939,
+            "foreground_pixels": 329133,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "gt-mask.mp4": {
+            "bytes": 32765,
+            "foreground_pixels": 246655,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "pred-mask-diffueraser.mp4": {
+            "bytes": 20408,
+            "foreground_pixels": 27262976,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "pred-mask-propainter.mp4": {
+            "bytes": 20408,
+            "foreground_pixels": 27262976,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "propainter.mp4": {
+            "bytes": 1674510,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "watermarked.mp4": {
+            "bytes": 1415824,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          }
+        },
+        "size": [
+          512,
+          512
+        ],
+        "status": "valid"
+      },
+      "0b02886a": {
+        "frames": 30,
+        "media": {
+          "aligned-original.mp4": {
+            "bytes": 204069,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "diffueraser.mp4": {
+            "bytes": 231553,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "effective-gt-mask-diffueraser.mp4": {
+            "bytes": 28780,
+            "foreground_pixels": 831438,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "effective-gt-mask-propainter.mp4": {
+            "bytes": 29872,
+            "foreground_pixels": 804730,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "gt-mask.mp4": {
+            "bytes": 31373,
+            "foreground_pixels": 617979,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "pred-mask-diffueraser.mp4": {
+            "bytes": 7236,
+            "foreground_pixels": 7864320,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "pred-mask-propainter.mp4": {
+            "bytes": 7236,
+            "foreground_pixels": 7864320,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "propainter.mp4": {
+            "bytes": 292292,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "watermarked.mp4": {
+            "bytes": 247362,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          }
+        },
+        "size": [
+          512,
+          512
+        ],
+        "status": "valid"
+      }
+    },
+    "omniguard": {
+      "02b72b8d": {
+        "frames": 67,
+        "media": {
+          "diffueraser.mp4": {
+            "bytes": 1216288,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          },
+          "effective-gt-mask-diffueraser.mp4": {
+            "bytes": 45831,
+            "foreground_pixels": 828241,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          },
+          "effective-gt-mask-propainter.mp4": {
+            "bytes": 48054,
+            "foreground_pixels": 774798,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          },
+          "pred-mask-diffueraser.mp4": {
+            "bytes": 34027,
+            "foreground_pixels": 97675,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          },
+          "pred-mask-propainter.mp4": {
+            "bytes": 34234,
+            "foreground_pixels": 97948,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          },
+          "propainter.mp4": {
+            "bytes": 1165496,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          },
+          "watermarked.mp4": {
+            "bytes": 1026867,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          }
+        },
+        "size": [
+          960,
+          480
+        ],
+        "status": "valid"
+      },
+      "0ab75563": {
+        "frames": 104,
+        "media": {
+          "diffueraser.mp4": {
+            "bytes": 1804891,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          },
+          "effective-gt-mask-diffueraser.mp4": {
+            "bytes": 31394,
+            "foreground_pixels": 499284,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          },
+          "effective-gt-mask-propainter.mp4": {
+            "bytes": 33549,
+            "foreground_pixels": 490646,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          },
+          "pred-mask-diffueraser.mp4": {
+            "bytes": 29258,
+            "foreground_pixels": 15014,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          },
+          "pred-mask-propainter.mp4": {
+            "bytes": 25990,
+            "foreground_pixels": 9844,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          },
+          "propainter.mp4": {
+            "bytes": 1762981,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          },
+          "watermarked.mp4": {
+            "bytes": 1498409,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          }
+        },
+        "size": [
+          960,
+          448
+        ],
+        "status": "valid"
+      },
+      "0b02886a": {
+        "frames": 30,
+        "media": {
+          "diffueraser.mp4": {
+            "bytes": 340809,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          },
+          "effective-gt-mask-diffueraser.mp4": {
+            "bytes": 44946,
+            "foreground_pixels": 1767014,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          },
+          "effective-gt-mask-propainter.mp4": {
+            "bytes": 44783,
+            "foreground_pixels": 1721722,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          },
+          "pred-mask-diffueraser.mp4": {
+            "bytes": 9620,
+            "foreground_pixels": 1468,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          },
+          "pred-mask-propainter.mp4": {
+            "bytes": 13282,
+            "foreground_pixels": 19743,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          },
+          "propainter.mp4": {
+            "bytes": 465325,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          },
+          "watermarked.mp4": {
+            "bytes": 384934,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          }
+        },
+        "size": [
+          960,
+          640
+        ],
+        "status": "valid"
+      }
+    }
+  },
+  "samples": [
+    "02b72b8d",
+    "0ab75563",
+    "0b02886a"
+  ],
+  "status": "complete",
+  "validated_at": "2026-11-01T05:51:11+00:00",
+  "videos": 48
+}

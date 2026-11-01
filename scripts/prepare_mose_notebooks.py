@@ -67,7 +67,7 @@ def main() -> None:
     parser.add_argument(
         "--all",
         action="store_true",
-        help="download and verify all 50-sample review videos instead of the 48 notebook videos",
+        help="download and verify all 50-sample review videos instead of the notebook videos",
     )
     parser.add_argument(
         "--check-only",
@@ -86,7 +86,7 @@ def main() -> None:
             for sample_id in DEFAULT_SAMPLES
         ]
         include = ",".join(f"{root}/**" for root in relative_roots)
-        label = "three method notebooks"
+        label = "five method notebooks"
 
     videos = tracked_videos(relative_roots)
     if not args.check_only:

@@ -97,7 +97,7 @@ def setup_markdown() -> dict[str, Any]:
         """
 ## Notebook setup
 
-After a fresh clone, run `python3 scripts/prepare_mose_notebooks.py` from the repository root. This downloads and verifies the 48 videos shared by the three method notebooks. Run the next cell once to enable the video, image, download, and metadata viewers. If Git LFS has left a pointer file in place of a video, the viewer reports the preparation command instead of displaying a broken player.
+After a fresh clone, run `python3 scripts/prepare_mose_notebooks.py` from the repository root. This downloads and verifies the videos shared by the method notebooks. Run the next cell once to enable the video, image, download, and metadata viewers. If Git LFS has left a pointer file in place of a video, the viewer reports the preparation command instead of displaying a broken player.
 """
     )
 
@@ -543,6 +543,188 @@ The negative control sampled {sampling['frames']} frames, resized them to {sampl
     return notebook(cells)
 
 
+def build_image_localizer(
+    records: list[dict[str, Any]],
+    review_root: Path,
+    *,
+    method_label: str,
+    slug: str,
+    editguard: bool,
+) -> dict[str, Any]:
+    if editguard:
+        adapter_text = (
+            "The released EditGuard app resizes every input image to 512 x 512. "
+            "The video adapter therefore applies the released image method independently to each frame "
+            "after the same 512 x 512 resize, and aligns the object masks to that size."
+        )
+        detector_text = (
+            "EditGuard's released residual threshold is 0.2. White predicted pixels are locations where "
+            "at least one recovered residual channel exceeds that threshold. The notebook also reports "
+            "mean recovery accuracy for the fixed 64-bit copyright message."
+        )
+    else:
+        adapter_text = (
+            "OmniGuard is released for images. The video adapter applies it independently to each frame "
+            "without resizing these 960 x 480 MOSE sources."
+        )
+        detector_text = (
+            "The released OmniGuard detector returns pixel probabilities. For binary mask display and IoU, "
+            "this evaluation uses the conventional 0.5 probability threshold. OmniGuard's public demo "
+            "does not expose a recovered bit message, so bit accuracy is not applicable."
+        )
+
+    cells: list[dict[str, Any]] = [
+        markdown(
+            f"""
+# {method_label} results for three MOSE samples
+
+{method_label} watermark embedding, object removal, and native tamper localization are shown for the same three fixed MOSE samples used by the other notebooks.
+
+```text
+original -> framewise {method_label} embedding -> watermarked video -> ProPainter or DiffuEraser -> {method_label} localization
+```
+
+{adapter_text}
+
+{detector_text}
+"""
+        ),
+        markdown(
+            """
+## Metric guide
+
+| Term | Meaning | Interpretation |
+| --- | --- | --- |
+| Embedding PSNR | Similarity between the aligned source frames and watermarked frames. | Higher is better; it measures embedding distortion, not detector quality. |
+| Global pixel IoU | Total intersection divided by total union across all frames and pixels. | 1 is perfect overlap. 0 means no overlap. This is the primary localization result. |
+| Mean frame IoU | IoU calculated for each frame and then averaged. | Empty ground-truth and prediction masks score 1, so global IoU remains the primary score. |
+| Effective GT mask | The removal mask after the remover's actual dilation and spatial preprocessing. | This is the correct reference mask for IoU. |
+| Predicted mask | The method's own detector output after documented binarization. | White indicates predicted tampering. |
+| Message bit accuracy | Fraction of fixed copyright bits recovered correctly, averaged across frames. | Available for EditGuard; not exposed by OmniGuard's public demo. |
+| Runtime | Wall-clock time recorded on the shared experiment hardware. | Useful for this run, not a hardware-independent benchmark. |
+| SHA-256 | File fingerprint stored in the JSON record. | Confirms exact file identity. It is not a quality metric. |
+"""
+        ),
+        setup_markdown(),
+        setup_cell(),
+    ]
+
+    for index, record in enumerate(records, 1):
+        sample_id = record["clip_id"]
+        relative_dir = f"media/{sample_id}/methods/{slug}"
+        local_dir = review_root / relative_dir
+        embed = read_json(local_dir / "embed.json")
+        prop = read_json(local_dir / "propainter.json")
+        diff = read_json(local_dir / "diffueraser.json")
+        localization = read_json(local_dir / "localization.json")
+        prop_loc = localization["propainter"]
+        diff_loc = localization["diffueraser"]
+        embedding = embed["embedding_fidelity"]
+        frame_volume = (
+            int(embed["watermarked"]["frames"])
+            * int(embed["watermarked"]["width"])
+            * int(embed["watermarked"]["height"])
+        )
+
+        if editguard:
+            input_original = f"{relative_dir}/aligned-original.mp4"
+            raw_mask = f"{relative_dir}/gt-mask.mp4"
+            input_description = "Source resized to the released EditGuard 512 x 512 input protocol."
+            mask_description = "Selected-object mask aligned to EditGuard's 512 x 512 frames."
+            bit_row = (
+                f"| Mean 64-bit recovery accuracy | {fmt(prop_loc['mean_message_bit_accuracy'])} "
+                f"| {fmt(diff_loc['mean_message_bit_accuracy'])} |"
+            )
+            protocol_note = "Every displayed method video has 512 x 512 frames."
+            if all(
+                int(localization[remover]["union_pixels"]) == frame_volume
+                for remover in ("propainter", "diffueraser")
+            ):
+                prediction_note = (
+                    " For this sample, the released EditGuard threshold marks the full displayed frame "
+                    "as tampered after both removal pipelines. The low IoU therefore equals the fraction "
+                    "of the full frame occupied by the effective removal mask; it is not a missing-mask result."
+                )
+            else:
+                prediction_note = ""
+        else:
+            input_original = record["media"]["original"]
+            raw_mask = record["media"]["gt_mask"]
+            input_description = "Original MOSE source at native 960 x 480 resolution."
+            mask_description = "Native selected-object mask before remover preprocessing."
+            bit_row = "| Message bit accuracy | N/A | N/A |"
+            protocol_note = "Every displayed method video retains the native 960 x 480 frames."
+            prediction_note = ""
+
+        cells.extend(
+            [
+                markdown(f"## {index}. Sample `{sample_id}`"),
+                baseline_markdown(record),
+                baseline_videos(record),
+                markdown(
+                    f"""
+### {method_label} results
+
+{protocol_note} Embedding took {seconds(embed.get('elapsed_seconds'))}. The embedding PSNR is **{fmt(embedding['psnr_db'])} dB**, with MSE {fmt(embedding['mse'])} and MAE {fmt(embedding['mean_absolute_error'])}.
+
+| Metric | ProPainter | DiffuEraser |
+| --- | ---: | ---: |
+| Removal runtime | {seconds(prop.get('elapsed_seconds'))} | {seconds(diff.get('elapsed_seconds'))} |
+| Global pixel IoU | **{fmt(prop_loc['global_iou'])}** | **{fmt(diff_loc['global_iou'])}** |
+| Mean frame IoU | {fmt(prop_loc['mean_frame_iou'])} | {fmt(diff_loc['mean_frame_iou'])} |
+| Minimum frame IoU | {fmt(prop_loc['minimum_frame_iou'])} | {fmt(diff_loc['minimum_frame_iou'])} |
+| Maximum frame IoU | {fmt(prop_loc['maximum_frame_iou'])} | {fmt(diff_loc['maximum_frame_iou'])} |
+| Intersection pixels | {fmt(prop_loc['intersection_pixels'])} | {fmt(diff_loc['intersection_pixels'])} |
+| Union pixels | {fmt(prop_loc['union_pixels'])} | {fmt(diff_loc['union_pixels'])} |
+{bit_row}
+
+Localization for both attacked videos took {seconds(localization.get('elapsed_seconds'))} in total. The global IoU compares the displayed binary prediction with the effective mask actually used by each remover.{prediction_note}
+"""
+                ),
+                video_cell(
+                    [
+                        (f"{method_label} input", input_original, input_description),
+                        (f"{method_label} aligned mask", raw_mask, mask_description),
+                        (f"{method_label} watermarked", f"{relative_dir}/watermarked.mp4", "Watermarked video before object removal."),
+                        ("ProPainter attacked video", f"{relative_dir}/propainter.mp4", f"ProPainter output from the {method_label}-watermarked input."),
+                        ("ProPainter effective GT", f"{relative_dir}/effective-gt-mask-propainter.mp4", "Mask after ProPainter preprocessing; the IoU reference."),
+                        ("ProPainter predicted mask", f"{relative_dir}/pred-mask-propainter.mp4", f"Native {method_label} localization after ProPainter."),
+                        ("DiffuEraser attacked video", f"{relative_dir}/diffueraser.mp4", f"DiffuEraser output from the {method_label}-watermarked input."),
+                        ("DiffuEraser effective GT", f"{relative_dir}/effective-gt-mask-diffueraser.mp4", "Mask after DiffuEraser preprocessing; the IoU reference."),
+                        ("DiffuEraser predicted mask", f"{relative_dir}/pred-mask-diffueraser.mp4", f"Native {method_label} localization after DiffuEraser."),
+                    ]
+                ),
+                markdown(
+                    "### Run records\n\nThe next cell prints the embedding, removal, and localization JSON records, including checkpoints, repository commits, thresholds, runtimes, per-frame values, and file fingerprints."
+                ),
+                json_cell(
+                    [
+                        f"{relative_dir}/embed.json",
+                        f"{relative_dir}/propainter.json",
+                        f"{relative_dir}/diffueraser.json",
+                        f"{relative_dir}/localization.json",
+                    ]
+                ),
+            ]
+        )
+
+    cells.append(
+        markdown(
+            f"""
+## Validation and provenance
+
+- The committed image-method validator decoded every displayed {method_label} video and checked frame counts, dimensions, FPS, mask foreground, and displayed-mask IoU against the JSON result.
+- Validation report: [image-method-notebook-validation.json](../../evidence/mose-task1/review50/image-method-notebook-validation.json)
+- Experimental contract: [PROTOCOL.md](../../evidence/mose-task1/PROTOCOL.md)
+- Official repository: [{'EditGuard' if editguard else 'OmniGuard'}](https://github.com/xuanyuzhang21/{'EditGuard' if editguard else 'OmniGuard'})
+
+The displayed values come from the committed {method_label} evidence records.
+"""
+        )
+    )
+    return notebook(cells)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--review-root", type=Path, default=Path("evidence/mose-task1/review50"))
@@ -565,6 +747,12 @@ def main() -> None:
         "videoseal.ipynb": build_videoseal(records, review_root),
         "safe_sora.ipynb": build_safe_sora(records, review_root),
         "videoshield.ipynb": build_videoshield(records, review_root),
+        "editguard.ipynb": build_image_localizer(
+            records, review_root, method_label="EditGuard", slug="editguard", editguard=True
+        ),
+        "omniguard.ipynb": build_image_localizer(
+            records, review_root, method_label="OmniGuard", slug="omniguard", editguard=False
+        ),
     }
     for filename, document in outputs.items():
         destination = output / filename
