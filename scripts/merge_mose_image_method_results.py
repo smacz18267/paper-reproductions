@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 EXPECTED_CLIPS = 50
-REMOVERS = ("propainter", "diffueraser")
+REMOVERS = ("propainter", "diffueraser", "effecterase")
 
 
 def read_complete(path: Path) -> dict:
@@ -52,34 +52,27 @@ def main() -> None:
     if len(samples) != EXPECTED_CLIPS:
         raise RuntimeError(f"Expected {EXPECTED_CLIPS} review samples, found {len(samples)}")
 
-    editguard_summary: dict[str, object] = {
-        "complete": 0,
-        "embedding_psnr_db": [],
-        "propainter_iou": [],
-        "diffueraser_iou": [],
-        "propainter_message_bit_accuracy": [],
-        "diffueraser_message_bit_accuracy": [],
-    }
-    omniguard_summary: dict[str, object] = {
-        "complete": 0,
-        "embedding_psnr_db": [],
-        "propainter_iou": [],
-        "diffueraser_iou": [],
-    }
+    editguard_summary: dict[str, object] = {"complete": 0, "embedding_psnr_db": []}
+    omniguard_summary: dict[str, object] = {"complete": 0, "embedding_psnr_db": []}
+    for remover in REMOVERS:
+        editguard_summary[f"{remover}_iou"] = []
+        editguard_summary[f"{remover}_message_bit_accuracy"] = []
+        omniguard_summary[f"{remover}_iou"] = []
 
     common_files = [
         "watermarked.mp4",
-        "propainter.mp4",
-        "diffueraser.mp4",
-        "effective-gt-mask-propainter.mp4",
-        "effective-gt-mask-diffueraser.mp4",
-        "pred-mask-propainter.mp4",
-        "pred-mask-diffueraser.mp4",
         "embed.json",
-        "propainter.json",
-        "diffueraser.json",
         "localization.json",
     ]
+    for remover in REMOVERS:
+        common_files.extend(
+            [
+                f"{remover}.mp4",
+                f"effective-gt-mask-{remover}.mp4",
+                f"pred-mask-{remover}.mp4",
+                f"{remover}.json",
+            ]
+        )
 
     for index, sample in enumerate(samples, 1):
         clip_id = sample["clip_id"]
@@ -88,28 +81,16 @@ def main() -> None:
         edit_dir = review_root / "media" / clip_id / "methods" / "editguard"
         require_files(edit_dir, common_files + ["aligned-original.mp4", "gt-mask.mp4"])
         edit_embed = read_complete(edit_dir / "embed.json")
-        read_complete(edit_dir / "propainter.json")
-        read_complete(edit_dir / "diffueraser.json")
+        for remover in REMOVERS:
+            read_complete(edit_dir / f"{remover}.json")
         edit_localization = read_complete(edit_dir / "localization.json")
-        methods["EditGuard"] = {
+        edit_record = {
             "status": "complete",
             "input_original": relative(edit_dir / "aligned-original.mp4", review_root),
             "watermarked": relative(edit_dir / "watermarked.mp4", review_root),
             "gt_mask": relative(edit_dir / "gt-mask.mp4", review_root),
-            "propainter": relative(edit_dir / "propainter.mp4", review_root),
-            "gt_mask_propainter": relative(edit_dir / "effective-gt-mask-propainter.mp4", review_root),
-            "pred_mask_propainter": relative(edit_dir / "pred-mask-propainter.mp4", review_root),
-            "iou_propainter": edit_localization["propainter"]["global_iou"],
-            "mean_message_bit_accuracy_propainter": edit_localization["propainter"]["mean_message_bit_accuracy"],
-            "diffueraser": relative(edit_dir / "diffueraser.mp4", review_root),
-            "gt_mask_diffueraser": relative(edit_dir / "effective-gt-mask-diffueraser.mp4", review_root),
-            "pred_mask_diffueraser": relative(edit_dir / "pred-mask-diffueraser.mp4", review_root),
-            "iou_diffueraser": edit_localization["diffueraser"]["global_iou"],
-            "mean_message_bit_accuracy_diffueraser": edit_localization["diffueraser"]["mean_message_bit_accuracy"],
             "metadata": {
                 "embed": relative(edit_dir / "embed.json", review_root),
-                "propainter": relative(edit_dir / "propainter.json", review_root),
-                "diffueraser": relative(edit_dir / "diffueraser.json", review_root),
                 "localization": relative(edit_dir / "localization.json", review_root),
             },
             "release_adapter": edit_embed["release_adapter"],
@@ -120,6 +101,20 @@ def main() -> None:
                 "frame after attack; IoU uses each remover's effective aligned mask."
             ),
         }
+        for remover in REMOVERS:
+            edit_record[remover] = relative(edit_dir / f"{remover}.mp4", review_root)
+            edit_record[f"gt_mask_{remover}"] = relative(
+                edit_dir / f"effective-gt-mask-{remover}.mp4", review_root
+            )
+            edit_record[f"pred_mask_{remover}"] = relative(
+                edit_dir / f"pred-mask-{remover}.mp4", review_root
+            )
+            edit_record[f"iou_{remover}"] = edit_localization[remover]["global_iou"]
+            edit_record[f"mean_message_bit_accuracy_{remover}"] = edit_localization[remover][
+                "mean_message_bit_accuracy"
+            ]
+            edit_record["metadata"][remover] = relative(edit_dir / f"{remover}.json", review_root)
+        methods["EditGuard"] = edit_record
         editguard_summary["complete"] = int(editguard_summary["complete"]) + 1
         cast_lists = editguard_summary
         cast_lists["embedding_psnr_db"].append(edit_embed["embedding_fidelity"]["psnr_db"])
@@ -132,26 +127,16 @@ def main() -> None:
         omni_dir = review_root / "media" / clip_id / "methods" / "omniguard"
         require_files(omni_dir, common_files)
         omni_embed = read_complete(omni_dir / "embed.json")
-        read_complete(omni_dir / "propainter.json")
-        read_complete(omni_dir / "diffueraser.json")
+        for remover in REMOVERS:
+            read_complete(omni_dir / f"{remover}.json")
         omni_localization = read_complete(omni_dir / "localization.json")
-        methods["OmniGuard"] = {
+        omni_record = {
             "status": "complete",
             "input_original": sample["media"]["original"],
             "watermarked": relative(omni_dir / "watermarked.mp4", review_root),
             "gt_mask": sample["media"]["gt_mask"],
-            "propainter": relative(omni_dir / "propainter.mp4", review_root),
-            "gt_mask_propainter": relative(omni_dir / "effective-gt-mask-propainter.mp4", review_root),
-            "pred_mask_propainter": relative(omni_dir / "pred-mask-propainter.mp4", review_root),
-            "iou_propainter": omni_localization["propainter"]["global_iou"],
-            "diffueraser": relative(omni_dir / "diffueraser.mp4", review_root),
-            "gt_mask_diffueraser": relative(omni_dir / "effective-gt-mask-diffueraser.mp4", review_root),
-            "pred_mask_diffueraser": relative(omni_dir / "pred-mask-diffueraser.mp4", review_root),
-            "iou_diffueraser": omni_localization["diffueraser"]["global_iou"],
             "metadata": {
                 "embed": relative(omni_dir / "embed.json", review_root),
-                "propainter": relative(omni_dir / "propainter.json", review_root),
-                "diffueraser": relative(omni_dir / "diffueraser.json", review_root),
                 "localization": relative(omni_dir / "localization.json", review_root),
             },
             "release_adapter": omni_embed["release_adapter"],
@@ -162,6 +147,17 @@ def main() -> None:
                 "threshold of 0.5; IoU uses each remover's effective aligned mask."
             ),
         }
+        for remover in REMOVERS:
+            omni_record[remover] = relative(omni_dir / f"{remover}.mp4", review_root)
+            omni_record[f"gt_mask_{remover}"] = relative(
+                omni_dir / f"effective-gt-mask-{remover}.mp4", review_root
+            )
+            omni_record[f"pred_mask_{remover}"] = relative(
+                omni_dir / f"pred-mask-{remover}.mp4", review_root
+            )
+            omni_record[f"iou_{remover}"] = omni_localization[remover]["global_iou"]
+            omni_record["metadata"][remover] = relative(omni_dir / f"{remover}.json", review_root)
+        methods["OmniGuard"] = omni_record
         omniguard_summary["complete"] = int(omniguard_summary["complete"]) + 1
         omni_lists = omniguard_summary
         omni_lists["embedding_psnr_db"].append(omni_embed["embedding_fidelity"]["psnr_db"])

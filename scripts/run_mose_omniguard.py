@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Embed OmniGuard framewise into MOSE clips or localize the two removal attacks."""
+"""Embed OmniGuard framewise into MOSE clips or localize removal attacks."""
 
 from __future__ import annotations
 
@@ -203,6 +203,7 @@ def localize(args: argparse.Namespace, model, detector) -> None:
 
     dwt, iwt = DWT(), IWT()
     clips = choose_clips(args)
+    selected_removers = tuple(args.remover or ("propainter", "diffueraser"))
     detector_checkpoint = checkpoint_record(args.detector_checkpoint)
     events = args.output_root / "omniguard-localize-events.jsonl"
     failures = 0
@@ -212,13 +213,25 @@ def localize(args: argparse.Namespace, model, detector) -> None:
         try:
             embed_record = __import__("json").loads((destination / "embed.json").read_text())
             native_size = (int(embed_record["watermarked"]["width"]), int(embed_record["watermarked"]["height"]))
-            if metrics_path.is_file() and not args.force:
-                print(f"[{ordinal}/{len(clips)}] skip OmniGuard localization {clip.clip_id}", flush=True)
-                continue
+            existing: dict[str, object] = {}
+            if metrics_path.is_file():
+                existing = __import__("json").loads(metrics_path.read_text())
+                if not args.force and all(
+                    remover in existing
+                    and (destination / f"pred-mask-{remover}.mp4").is_file()
+                    and (destination / f"effective-gt-mask-{remover}.mp4").is_file()
+                    for remover in selected_removers
+                ):
+                    print(f"[{ordinal}/{len(clips)}] skip OmniGuard localization {clip.clip_id}", flush=True)
+                    continue
             started = time.monotonic()
             base_masks = [mask > 127 for mask in read_mask_sequence(raw_mask_frames(args.dataset_root, clip.clip_id))]
-            results: dict[str, object] = {}
-            for remover in ("propainter", "diffueraser"):
+            results: dict[str, object] = {
+                remover: existing[remover]
+                for remover in ("propainter", "diffueraser", "effecterase")
+                if remover in existing and remover not in selected_removers
+            }
+            for remover in selected_removers:
                 attacked_path = destination / f"{remover}.mp4"
                 attacked_info = validate_video(attacked_path, frames=clip.frame_count, size=native_size)
                 frames, rate = decode_rgb(attacked_path)
@@ -279,6 +292,12 @@ def main() -> None:
     parser.add_argument("--output-root", required=True, type=Path)
     parser.add_argument("--repository-commit", default="2e3c86b3650cb904d2a8a112c640a78895aa93eb")
     parser.add_argument("--gpu", type=int, default=0)
+    parser.add_argument(
+        "--remover",
+        action="append",
+        choices=("propainter", "diffueraser", "effecterase"),
+        help="Localization attack to process; repeat for multiple. Defaults to the original two.",
+    )
     parser.add_argument("--only", action="append")
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()

@@ -18,12 +18,12 @@ The selected samples are the first three records in the fixed 50-sample
 manifest. They were not selected after reviewing the results.
 
 The VideoSeal notebook contains the source videos, masks, unwatermarked removal
-references, watermarked videos, ProPainter and DiffuEraser outputs, effective
+references, watermarked videos, ProPainter, DiffuEraser, and EffectErase outputs, effective
 ground-truth masks, derived predicted masks, and localization metrics.
 
 The Safe-Sora notebook contains the source videos, masks, unwatermarked removal
-references, sampled inputs, aligned masks, watermarked videos, ProPainter and
-DiffuEraser outputs, graphical watermark recovery images, and fidelity metrics.
+references, sampled inputs, aligned masks, watermarked videos, ProPainter,
+DiffuEraser, and EffectErase outputs, graphical watermark recovery images, and fidelity metrics.
 
 The VideoShield notebook contains the source videos, masks, and negative-control
 records. Authentic VideoShield embedding requires diffusion generation, so the
@@ -31,11 +31,11 @@ existing MOSE clips do not have VideoShield-watermarked or removal outputs.
 
 The EditGuard notebook applies the released image method frame by frame using
 its official 512 x 512 input protocol. It contains aligned sources and masks,
-watermarked videos, both removal outputs, native predicted masks, effective
+watermarked videos, all three removal outputs, native predicted masks, effective
 ground-truth masks, localization IoU, and 64-bit recovery accuracy.
 
 The OmniGuard notebook applies the released image method frame by frame at the
-native 960 x 480 MOSE size. It contains watermarked videos, both removal
+native 960 x 480 MOSE size. It contains watermarked videos, all three removal
 outputs, native predicted masks, effective ground-truth masks, and localization
 IoU. The public demo does not expose a recovered bit message.
 
@@ -43,6 +43,11 @@ Every applicable notebook uses the official
 [lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
 implementation for its DiffuEraser column. This is the same checkout used by
 the batch runner; it is not a separate third remover.
+
+Every applicable notebook also uses the official
+[FudanCVL/EffectErase](https://github.com/FudanCVL/EffectErase) implementation
+as a third removal column. EffectErase is evaluated on the same fixed clips and
+masks as ProPainter and DiffuEraser.
 
 ## Download all notebook videos
 

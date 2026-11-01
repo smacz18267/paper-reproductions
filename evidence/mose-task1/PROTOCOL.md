@@ -10,11 +10,12 @@ clip, the review view must show:
 
 1. the exact original MOSE video;
 2. the selected MOSE object mask, with white meaning remove;
-3. the ProPainter result; and
-4. the DiffuEraser result.
+3. the ProPainter result;
+4. the DiffuEraser result; and
+5. the EffectErase result.
 
-Both removal methods must receive the same selected MOSE object. The reviewer
-records separately whether ProPainter and DiffuEraser removed that object
+All three removal methods must receive the same selected MOSE object. The reviewer
+records separately whether ProPainter, DiffuEraser, and EffectErase removed that object
 satisfactorily. The watermark-first outputs are generated for all 50 fixed
 clips so the review does not change or cherry-pick the evaluated sample set.
 
@@ -22,6 +23,14 @@ The DiffuEraser results use the official
 [lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
 repository. That repository is the existing DiffuEraser implementation in this
 experiment, not an additional remover.
+
+The third remover uses the official
+[FudanCVL/EffectErase](https://github.com/FudanCVL/EffectErase) repository at
+commit `bcee0a5da5ef387c2ba39390dc4d579503669fb8`. The adapter preserves every
+source frame, uses aspect-preserving inference at a maximum side of 832 pixels,
+and splits long clips into overlapping Wan `4n+1` temporal windows of at most
+81 frames. Padding and the one-frame overlap are removed from the reported
+output.
 
 The committed `scripts/build_mose_review.py` creates a single viewer covering
 all 50 clips and exports the manual decisions as CSV.
@@ -34,7 +43,7 @@ For every watermark method and every selected clip, the order is:
 original MOSE video
   -> watermark embedding
   -> watermarked video
-  -> ProPainter or DiffuEraser using the selected object mask
+  -> ProPainter, DiffuEraser, or EffectErase using the selected object mask
   -> attacked/tampered video
   -> the watermark method's detector
   -> predicted tamper mask, when that method has a native localization output
@@ -58,9 +67,13 @@ method*, because the saved Task 1 runs expanded the mask at inference:
   binary dilation for 8 iterations.
 - DiffuEraser resized with nearest-neighbour interpolation, eroded once with a
   3 x 3 rectangular kernel, and then dilated 8 times with that kernel.
+- EffectErase applies no dilation. Its released video transform resizes the
+  binary mask bilinearly; the effective binary IoU mask is thresholded at the
+  model zero point and restored to the reported output size with nearest-neighbour
+  interpolation.
 
-Therefore ProPainter and DiffuEraser need separate effective GT masks for IoU,
-even though both start from the same MOSE object annotation. Report global
+Therefore all three removers need separate effective GT masks for IoU, even
+though they start from the same MOSE object annotation. Report global
 pixel IoU over all frames, matching the VideoShield paper implementation:
 
 ```text
@@ -159,6 +172,9 @@ python3 scripts/merge_mose_watermark_results.py \
   --review-root evidence/mose-task1/review50
 
 python3 scripts/merge_mose_image_method_results.py \
+  --review-root evidence/mose-task1/review50
+
+python3 scripts/merge_mose_effecterase_results.py \
   --review-root evidence/mose-task1/review50
 
 python3 scripts/validate_mose_review.py evidence/mose-task1/review50

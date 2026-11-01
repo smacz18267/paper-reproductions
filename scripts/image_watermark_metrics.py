@@ -60,6 +60,15 @@ def effective_attack_mask(
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
         eroded = cv2.erode(resized.astype(np.uint8), kernel, iterations=1)
         effective = cv2.dilate(eroded, kernel, iterations=8).astype(bool)
+    elif remover == "effecterase":
+        # EffectErase consumes the undilated mask after its released bilinear
+        # video resize. Threshold at the model's zero point (127.5 in pixel
+        # space) to obtain the binary mask used for the displayed IoU.
+        effective = cv2.resize(
+            mask.astype(np.uint8) * 255,
+            inference_size,
+            interpolation=cv2.INTER_LINEAR,
+        ) > 127
     else:
         raise ValueError(f"Unknown remover: {remover}")
     if inference_size != output_size:

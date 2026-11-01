@@ -112,10 +112,13 @@ def main() -> None:
                 [
                     "propainter.mp4",
                     "diffueraser.mp4",
+                    "effecterase.mp4",
                     "effective-gt-mask-propainter.mp4",
                     "effective-gt-mask-diffueraser.mp4",
+                    "effective-gt-mask-effecterase.mp4",
                     "pred-mask-propainter.mp4",
                     "pred-mask-diffueraser.mp4",
+                    "pred-mask-effecterase.mp4",
                 ]
             )
             directory = root / "media" / sample_id / "methods" / method
@@ -136,7 +139,7 @@ def main() -> None:
                 media[name] = info
                 report["videos"] += 1
                 report["decoded_frames"] += int(info["frames"])
-            for remover in ("propainter", "diffueraser"):
+            for remover in ("propainter", "diffueraser", "effecterase"):
                 measured = displayed_iou(
                     directory / f"pred-mask-{remover}.mp4",
                     directory / f"effective-gt-mask-{remover}.mp4",

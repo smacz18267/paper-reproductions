@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build a browsable 50-clip MOSE removal-review bundle.
 
-The builder combines the exact MOSE JPEG sequences with the previously generated
-ProPainter and DiffuEraser videos into the review bundle committed for inspection.
+The completed bundle combines the exact MOSE JPEG sequences with ProPainter,
+DiffuEraser, and EffectErase videos for inspection.
 """
 
 from __future__ import annotations
@@ -188,11 +188,13 @@ def html_document() -> str:
     <figure><figcaption>GT object mask (white = removed)</figcaption><video id="gt-mask" controls muted playsinline></video></figure>
     <figure><figcaption>ProPainter</figcaption><video id="propainter" controls muted playsinline></video></figure>
     <figure><figcaption>DiffuEraser</figcaption><video id="diffueraser" controls muted playsinline></video></figure>
+    <figure><figcaption>EffectErase</figcaption><video id="effecterase" controls muted playsinline></video></figure>
   </section>
 
   <section class="review" aria-label="Manual review">
     <label><input id="propainter-pass" type="checkbox"> ProPainter removed the object satisfactorily</label>
     <label><input id="diffueraser-pass" type="checkbox"> DiffuEraser removed the object satisfactorily</label>
+    <label><input id="effecterase-pass" type="checkbox"> EffectErase removed the object satisfactorily</label>
     <label for="notes">Notes</label>
     <textarea id="notes"></textarea>
   </section>
@@ -215,15 +217,19 @@ def html_document() -> str:
       <figure><figcaption>DiffuEraser after watermarking</figcaption><video id="method-diffueraser" controls muted playsinline></video></figure>
       <figure><figcaption>DiffuEraser effective GT mask</figcaption><video id="gt-diffueraser" controls muted playsinline></video></figure>
       <figure><figcaption>DiffuEraser predicted tamper mask</figcaption><video id="pred-diffueraser" controls muted playsinline></video></figure>
+      <figure><figcaption>EffectErase after watermarking</figcaption><video id="method-effecterase" controls muted playsinline></video></figure>
+      <figure><figcaption>EffectErase effective GT mask</figcaption><video id="gt-effecterase" controls muted playsinline></video></figure>
+      <figure><figcaption>EffectErase predicted tamper mask</figcaption><video id="pred-effecterase" controls muted playsinline></video></figure>
       <figure><figcaption>Safe-Sora recovery — ProPainter</figcaption><img class="recovery" id="recovery-propainter" alt="Safe-Sora original, recovered watermark, and amplified error after ProPainter"></figure>
       <figure><figcaption>Safe-Sora recovery — DiffuEraser</figcaption><img class="recovery" id="recovery-diffueraser" alt="Safe-Sora original, recovered watermark, and amplified error after DiffuEraser"></figure>
+      <figure><figcaption>Safe-Sora recovery — EffectErase</figcaption><img class="recovery" id="recovery-effecterase" alt="Safe-Sora original, recovered watermark, and amplified error after EffectErase"></figure>
     </div>
   </section>
   <p class="status" id="status" aria-live="polite"></p>
 </main>
 <script>
 const state = { manifest: null, index: 0, reviews: {}, method: null };
-const ids = ['original','gt-mask','propainter','diffueraser','method-original','watermarked','method-gt-mask','method-propainter','gt-propainter','pred-propainter','method-diffueraser','gt-diffueraser','pred-diffueraser'];
+const ids = ['original','gt-mask','propainter','diffueraser','effecterase','method-original','watermarked','method-gt-mask','method-propainter','gt-propainter','pred-propainter','method-diffueraser','gt-diffueraser','pred-diffueraser','method-effecterase','gt-effecterase','pred-effecterase'];
 const videos = () => ids.map(id => document.getElementById(id)).filter(v => v.getAttribute('src') && !v.closest('figure').classList.contains('hidden'));
 const reviewKey = 'mose-review50-v1';
 
@@ -232,6 +238,7 @@ function saveReview() {
   state.reviews[clip] = {
     propainter_removed: document.getElementById('propainter-pass').checked,
     diffueraser_removed: document.getElementById('diffueraser-pass').checked,
+    effecterase_removed: document.getElementById('effecterase-pass').checked,
     notes: document.getElementById('notes').value
   };
   localStorage.setItem(reviewKey, JSON.stringify(state.reviews));
@@ -275,9 +282,11 @@ function render() {
   setVideo('gt-mask', sample.media.gt_mask);
   setVideo('propainter', sample.media.propainter);
   setVideo('diffueraser', sample.media.diffueraser);
+  setVideo('effecterase', sample.media.effecterase);
   const review = state.reviews[sample.clip_id] || {};
   document.getElementById('propainter-pass').checked = Boolean(review.propainter_removed);
   document.getElementById('diffueraser-pass').checked = Boolean(review.diffueraser_removed);
+  document.getElementById('effecterase-pass').checked = Boolean(review.effecterase_removed);
   document.getElementById('notes').value = review.notes || '';
   renderWatermark(sample);
 }
@@ -302,15 +311,20 @@ function renderWatermark(sample) {
   setVideo('method-diffueraser', result.diffueraser);
   setVideo('gt-diffueraser', result.gt_mask_diffueraser);
   setVideo('pred-diffueraser', result.pred_mask_diffueraser);
+  setVideo('method-effecterase', result.effecterase);
+  setVideo('gt-effecterase', result.gt_mask_effecterase);
+  setVideo('pred-effecterase', result.pred_mask_effecterase);
   setImage('recovery-propainter', result.recovery_propainter);
   setImage('recovery-diffueraser', result.recovery_diffueraser);
+  setImage('recovery-effecterase', result.recovery_effecterase);
   const fmt = value => value == null ? 'not available' : Number(value).toFixed(4);
   const propainterIou = averageMetric(state.method, 'iou_propainter');
   const diffueraserIou = averageMetric(state.method, 'iou_diffueraser');
-  const iouCount = Math.max(propainterIou.count, diffueraserIou.count);
+  const effecteraseIou = averageMetric(state.method, 'iou_effecterase');
+  const iouCount = Math.max(propainterIou.count, diffueraserIou.count, effecteraseIou.count);
   const iouScope = iouCount ? ` across ${iouCount} samples` : '';
   const control = result.negative_control_accuracy == null ? '' : ` · Unwatermarked negative-control accuracy: ${fmt(result.negative_control_accuracy)}`;
-  document.getElementById('iou').textContent = `Average IoU${iouScope} — ProPainter: ${fmt(propainterIou.value)} · DiffuEraser: ${fmt(diffueraserIou.value)}${control}`;
+  document.getElementById('iou').textContent = `Average IoU${iouScope} — ProPainter: ${fmt(propainterIou.value)} · DiffuEraser: ${fmt(diffueraserIou.value)} · EffectErase: ${fmt(effecteraseIou.value)}${control}`;
   document.getElementById('method-note').textContent = result.note || '';
 }
 
@@ -323,10 +337,10 @@ function move(delta) {
 function exportCsv() {
   saveReview();
   const quote = value => `"${String(value ?? '').replaceAll('"', '""')}"`;
-  const rows = [['clip_id','propainter_removed','diffueraser_removed','notes']];
+  const rows = [['clip_id','propainter_removed','diffueraser_removed','effecterase_removed','notes']];
   for (const sample of state.manifest.samples) {
     const review = state.reviews[sample.clip_id] || {};
-    rows.push([sample.clip_id, Boolean(review.propainter_removed), Boolean(review.diffueraser_removed), review.notes || '']);
+    rows.push([sample.clip_id, Boolean(review.propainter_removed), Boolean(review.diffueraser_removed), Boolean(review.effecterase_removed), review.notes || '']);
   }
   const blob = new Blob([rows.map(row => row.map(quote).join(',')).join('\n') + '\n'], {type:'text/csv'});
   const link = document.createElement('a');
@@ -356,7 +370,7 @@ async function init() {
       if (event.target.paused) return;
       videos().slice(1).forEach(video => { if (Math.abs(video.currentTime - event.target.currentTime) > 0.08) video.currentTime = event.target.currentTime; });
     });
-    ['propainter-pass','diffueraser-pass','notes'].forEach(id => document.getElementById(id).addEventListener('change', saveReview));
+    ['propainter-pass','diffueraser-pass','effecterase-pass','notes'].forEach(id => document.getElementById(id).addEventListener('change', saveReview));
     render();
   } catch (error) {
     document.getElementById('status').textContent = `Could not load the review bundle: ${error.message}. Start a local web server in this folder; do not open index.html directly.`;
@@ -428,6 +442,7 @@ def main() -> None:
                 "gt_mask": clip_media / "gt_mask.mp4",
                 "propainter": clip_media / "propainter.mp4",
                 "diffueraser": clip_media / "diffueraser.mp4",
+                "effecterase": clip_media / "baseline" / "effecterase.mp4",
             }
 
             print(f"[{index}/{EXPECTED_CLIPS}] {clip_id}", flush=True)
@@ -464,8 +479,8 @@ def main() -> None:
     (output / "index.html").write_text(html_document())
     with (output / "review.csv").open("w", newline="") as handle:
         writer = csv.writer(handle, lineterminator="\n")
-        writer.writerow(("clip_id", "propainter_removed", "diffueraser_removed", "notes"))
-        writer.writerows((sample["clip_id"], "", "", "") for sample in manifest["samples"])
+        writer.writerow(("clip_id", "propainter_removed", "diffueraser_removed", "effecterase_removed", "notes"))
+        writer.writerows((sample["clip_id"], "", "", "", "") for sample in manifest["samples"])
     print(f"Review bundle ready: {output / 'index.html'}", flush=True)
 
 
