@@ -110,6 +110,8 @@ def embed(args: argparse.Namespace, model) -> None:
     if secret_bgr is None:
         raise RuntimeError(f"Could not read OmniGuard secret image {secret_path}")
     secret_image = cv2.cvtColor(secret_bgr, cv2.COLOR_BGR2RGB)
+    checkpoint = checkpoint_record(args.checkpoint)
+    secret_record = {"path": str(secret_path), "sha256": sha256(secret_path)}
     clips = choose_clips(args)
     events = args.output_root / "omniguard-embed-events.jsonl"
     failures = 0
@@ -139,8 +141,8 @@ def embed(args: argparse.Namespace, model) -> None:
                 "protocol": "framewise_postprocess_original_then_inpaint",
                 "clip_id": clip.clip_id,
                 "repository_commit": args.repository_commit,
-                "checkpoint": checkpoint_record(args.checkpoint),
-                "secret_image": {"path": str(secret_path), "sha256": sha256(secret_path)},
+                "checkpoint": checkpoint,
+                "secret_image": secret_record,
                 "release_adapter": {
                     "reason": "OmniGuard is released for images; each source frame is processed independently.",
                     "resize": None,
@@ -201,6 +203,7 @@ def localize(args: argparse.Namespace, model, detector) -> None:
 
     dwt, iwt = DWT(), IWT()
     clips = choose_clips(args)
+    detector_checkpoint = checkpoint_record(args.detector_checkpoint)
     events = args.output_root / "omniguard-localize-events.jsonl"
     failures = 0
     for ordinal, clip in enumerate(clips, 1):
@@ -249,7 +252,7 @@ def localize(args: argparse.Namespace, model, detector) -> None:
                 "repository_commit": args.repository_commit,
                 "detector_probability_threshold": DETECTOR_THRESHOLD,
                 "detector_input_size": DETECTOR_INPUT_SIZE,
-                "detector_checkpoint": checkpoint_record(args.detector_checkpoint),
+                "detector_checkpoint": detector_checkpoint,
                 **results,
                 "elapsed_seconds": round(time.monotonic() - started, 3),
                 "completed_at": utc_now(),

@@ -551,6 +551,7 @@ def build_image_localizer(
     slug: str,
     editguard: bool,
 ) -> dict[str, Any]:
+    method_summary = read_json(review_root / "watermark-summary.json")["methods"][slug]
     if editguard:
         adapter_text = (
             "The released EditGuard app resizes every input image to 512 x 512. "
@@ -562,6 +563,11 @@ def build_image_localizer(
             "at least one recovered residual channel exceeds that threshold. The notebook also reports "
             "mean recovery accuracy for the fixed 64-bit copyright message."
         )
+        aggregate_bit_row = (
+            f"| Mean 64-bit recovery accuracy | "
+            f"{fmt(method_summary['mean_propainter_message_bit_accuracy'])} | "
+            f"{fmt(method_summary['mean_diffueraser_message_bit_accuracy'])} |"
+        )
     else:
         adapter_text = (
             "OmniGuard is released for images. The video adapter applies it independently to each frame "
@@ -572,13 +578,14 @@ def build_image_localizer(
             "this evaluation uses the conventional 0.5 probability threshold. OmniGuard's public demo "
             "does not expose a recovered bit message, so bit accuracy is not applicable."
         )
+        aggregate_bit_row = "| Message bit accuracy | N/A | N/A |"
 
     cells: list[dict[str, Any]] = [
         markdown(
             f"""
-# {method_label} results for three MOSE samples
+# {method_label}: full 50-sample evaluation with three displayed examples
 
-{method_label} watermark embedding, object removal, and native tamper localization are shown for the same three fixed MOSE samples used by the other notebooks.
+{method_label} was run on **all 50 clips in the fixed MOSE selection**. To keep the notebook readable, it displays the same three fixed examples used by the other notebooks; the aggregate table below and linked evidence cover all 50.
 
 ```text
 original -> framewise {method_label} embedding -> watermarked video -> ProPainter or DiffuEraser -> {method_label} localization
@@ -603,6 +610,22 @@ original -> framewise {method_label} embedding -> watermarked video -> ProPainte
 | Message bit accuracy | Fraction of fixed copyright bits recovered correctly, averaged across frames. | Available for EditGuard; not exposed by OmniGuard's public demo. |
 | Runtime | Wall-clock time recorded on the shared experiment hardware. | Useful for this run, not a hardware-independent benchmark. |
 | SHA-256 | File fingerprint stored in the JSON record. | Confirms exact file identity. It is not a quality metric. |
+"""
+        ),
+        markdown(
+            f"""
+## Aggregate results across all 50 selected clips
+
+All 50 clips completed embedding, ProPainter, DiffuEraser, and native localization. The values below are unweighted means of the 50 per-clip results; the complete arrays are in [watermark-summary.json](../../evidence/mose-task1/review50/watermark-summary.json).
+
+| Metric | ProPainter | DiffuEraser |
+| --- | ---: | ---: |
+| Mean global pixel IoU | **{fmt(method_summary['mean_propainter_iou'])}** | **{fmt(method_summary['mean_diffueraser_iou'])}** |
+{aggregate_bit_row}
+
+Mean embedding PSNR across all 50 clips: **{fmt(method_summary['mean_embedding_psnr_db'])} dB**.
+
+The remainder of this notebook deliberately displays only three clips: `{DEFAULT_SAMPLES[0]}`, `{DEFAULT_SAMPLES[1]}`, and `{DEFAULT_SAMPLES[2]}`.
 """
         ),
         setup_markdown(),
@@ -713,8 +736,10 @@ Localization for both attacked videos took {seconds(localization.get('elapsed_se
             f"""
 ## Validation and provenance
 
-- The committed image-method validator decoded every displayed {method_label} video and checked frame counts, dimensions, FPS, mask foreground, and displayed-mask IoU against the JSON result.
-- Validation report: [image-method-notebook-validation.json](../../evidence/mose-task1/review50/image-method-notebook-validation.json)
+- The full-review validator decoded all 50 {method_label} result sets and checked frame counts, dimensions, FPS, mask foreground, and displayed-mask IoU against the JSON result.
+- Full 50-sample validation report: [validation.json](../../evidence/mose-task1/review50/validation.json)
+- Three-example notebook validation: [image-method-notebook-validation.json](../../evidence/mose-task1/review50/image-method-notebook-validation.json)
+- Full 50-sample aggregate metrics: [watermark-summary.json](../../evidence/mose-task1/review50/watermark-summary.json)
 - Experimental contract: [PROTOCOL.md](../../evidence/mose-task1/PROTOCOL.md)
 - Official repository: [{'EditGuard' if editguard else 'OmniGuard'}](https://github.com/xuanyuzhang21/{'EditGuard' if editguard else 'OmniGuard'})
 

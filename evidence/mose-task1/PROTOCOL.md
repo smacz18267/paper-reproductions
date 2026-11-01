@@ -88,7 +88,7 @@ Two adapters are allowed only where their per-clip metadata records them:
 
 ## Method capability constraint
 
-The three previously selected methods are not interchangeable:
+The five evaluated methods are not interchangeable:
 
 - VideoSeal can post-process an existing MOSE video. The available released
   checkpoint exposes a global watermark-presence detector, not a native
@@ -101,6 +101,15 @@ The three previously selected methods are not interchangeable:
 - Safe-Sora recovers a graphical watermark. Its released method does not output
   a spatial tamper mask, so it can be evaluated for watermark recovery after
   removal but cannot truthfully produce Pred mask or IoU.
+- EditGuard is released for individual 512 x 512 images. For MOSE, resize the
+  source and object mask to that released size and run embedding and native
+  residual localization independently on every frame. Use the released 0.2
+  residual threshold and retain the fixed 64-bit recovery accuracy.
+- OmniGuard is released for individual images. For MOSE, run embedding and its
+  native localization independently on every native-size frame. Convert the
+  detector probability map to the displayed binary mask at threshold 0.5. Its
+  public demo does not expose a recovered bit message, so bit accuracy remains
+  not applicable.
 
 Do not fabricate Pred-mask/IoU fields for a method that does not provide spatial
 localization. A cross-method comparison must either use a separate common
@@ -144,9 +153,13 @@ python3 scripts/merge_mose_watermark_results.py \
   --results-root /path/to/watermark-review50 \
   --review-root evidence/mose-task1/review50
 
+python3 scripts/merge_mose_image_method_results.py \
+  --review-root evidence/mose-task1/review50
+
 python3 scripts/validate_mose_review.py evidence/mose-task1/review50
 ```
 
 The validator decodes every video, checks frame count, resolution and frame
 rate, rejects empty GT masks, enforces explicit N/A fields, and recomputes each
-displayed VideoSeal IoU from the committed Pred-mask and effective-GT videos.
+displayed VideoSeal, EditGuard, and OmniGuard IoU from the committed Pred-mask
+and effective-GT videos.

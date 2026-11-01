@@ -1,15 +1,18 @@
 # MOSE watermark method notebooks
 
-The results are organized into five notebooks. Each notebook covers one
-watermark method across the same three fixed MOSE samples.
+The results are organized into five notebooks. EditGuard and OmniGuard were
+evaluated across all 50 clips in the fixed MOSE selection, while their
+notebooks display the same three fixed examples used by the other notebooks.
+Their full 50-sample aggregate metrics and evidence are linked from each
+notebook.
 
 | Method | Notebook | Samples |
 | --- | --- | --- |
 | VideoSeal | [Open notebook](videoseal.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
 | Safe-Sora | [Open notebook](safe_sora.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
 | VideoShield | [Open notebook](videoshield.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
-| EditGuard | [Open notebook](editguard.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
-| OmniGuard | [Open notebook](omniguard.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
+| EditGuard | [Open notebook](editguard.ipynb) | 50 evaluated; `02b72b8d`, `0ab75563`, `0b02886a` displayed |
+| OmniGuard | [Open notebook](omniguard.ipynb) | 50 evaluated; `02b72b8d`, `0ab75563`, `0b02886a` displayed |
 
 The selected samples are the first three records in the fixed 50-sample
 manifest. They were not selected after reviewing the results.

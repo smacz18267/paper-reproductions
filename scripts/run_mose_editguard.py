@@ -111,6 +111,7 @@ def fixed_message(path: Path, seed: int) -> tuple[str, np.ndarray]:
 def embed(args: argparse.Namespace, model) -> None:
     clips = choose_clips(args)
     bits, message = fixed_message(args.output_root / "editguard-message.txt", args.seed)
+    checkpoint = checkpoint_record(args.checkpoint)
     events = args.output_root / "editguard-embed-events.jsonl"
     failures = 0
     for ordinal, clip in enumerate(clips, 1):
@@ -150,7 +151,7 @@ def embed(args: argparse.Namespace, model) -> None:
                 "protocol": "framewise_postprocess_original_then_inpaint",
                 "clip_id": clip.clip_id,
                 "repository_commit": args.repository_commit,
-                "checkpoint": checkpoint_record(args.checkpoint),
+                "checkpoint": checkpoint,
                 "seed": args.seed,
                 "message": bits,
                 "message_bits": len(bits),
