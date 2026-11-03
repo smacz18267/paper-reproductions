@@ -96,8 +96,13 @@ The three previously selected methods are not interchangeable:
   patch-grid absence mask by running that detector on spatial crops. The result
   and its IoU must not be described as native VideoSeal localization.
 - VideoShield provides the paper's native spatial tamper mask and IoU, but it
-  embeds into a diffusion generator's initial noise. It cannot faithfully add
-  its watermark to an already-existing MOSE video by post-processing.
+  embeds into a diffusion generator's initial noise. The released code has no
+  faithful path for adding the watermark to an already-existing MOSE video.
+  This was checked by tracing the embed/extract code and by running the
+  documented DDIM-inversion strength sweep in
+  `videoshield-adapter-check/README.md`. The literal method generates unrelated
+  content; the experimental adapter obtains strong detection only after
+  visibly changing or destroying the input content.
 - Safe-Sora recovers a graphical watermark. Its released method does not output
   a spatial tamper mask, so it can be evaluated for watermark recovery after
   removal but cannot truthfully produce Pred mask or IoU.
@@ -150,3 +155,23 @@ python3 scripts/validate_mose_review.py evidence/mose-task1/review50
 The validator decodes every video, checks frame count, resolution and frame
 rate, rejects empty GT masks, enforces explicit N/A fields, and recomputes each
 displayed VideoSeal IoU from the committed Pred-mask and effective-GT videos.
+
+## VideoShield existing-video compatibility command
+
+The separate compatibility check reuses the released watermark object, first
+through its canonical generation path and then through a clearly labelled
+experimental DDIM-inversion adapter:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 \
+  /home/smayan/research/VideoShield/.venv/bin/python -u \
+  /home/smayan/research/mose50-corrected/scripts/test_mose_videoshield_adapter.py \
+  --source /home/smayan/research/VideoShield \
+  --model-path /home/smayan/research/VideoShield/models/modelscope \
+  --input-video /home/smayan/research/datasets/MOSEv1/batch_inputs/02b72b8d/video.mp4 \
+  --output-dir /home/smayan/research/videoshield-mose-adapter/02b72b8d-final \
+  --device cuda:0
+```
+
+See `videoshield-adapter-check/README.md` for the exact latent formula, all
+strengths, full metrics, videos, contact sheet, and the scope of the conclusion.
