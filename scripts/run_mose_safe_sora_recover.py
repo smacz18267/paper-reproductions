@@ -96,6 +96,12 @@ def main() -> None:
     parser.add_argument("--selection", required=True, type=Path)
     parser.add_argument("--output-root", required=True, type=Path)
     parser.add_argument("--watermark", required=True, type=Path)
+    parser.add_argument(
+        "--remover",
+        action="append",
+        choices=("propainter", "diffueraser", "effecterase"),
+        help="Removal result to recover from; repeat for multiple. Defaults to the original two.",
+    )
     parser.add_argument("--only", action="append")
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
@@ -103,6 +109,7 @@ def main() -> None:
     if not torch.cuda.is_available():
         raise RuntimeError("Safe-Sora recovery requires CUDA")
     clips = load_clips(args.selection)
+    selected_removers = tuple(args.remover or ("propainter", "diffueraser"))
     if args.only:
         requested = set(args.only)
         clips = [clip for clip in clips if clip.clip_id in requested]
@@ -132,10 +139,19 @@ def main() -> None:
         destination = method_dir(args.output_root, clip.clip_id, "safe-sora")
         summary_path = destination / "recovery.json"
         try:
-            outputs = {remover: destination / f"recovery-{remover}.png" for remover in ("propainter", "diffueraser")}
-            if summary_path.is_file() and all(path.is_file() for path in outputs.values()) and not args.force:
-                print(f"[{ordinal}/50] skip Safe-Sora recovery {clip.clip_id}", flush=True)
-                continue
+            outputs = {
+                remover: destination / f"recovery-{remover}.png" for remover in selected_removers
+            }
+            existing: dict[str, object] = {}
+            if summary_path.is_file():
+                existing = __import__("json").loads(summary_path.read_text())
+                if (
+                    not args.force
+                    and all(path.is_file() for path in outputs.values())
+                    and all(remover in existing for remover in selected_removers)
+                ):
+                    print(f"[{ordinal}/50] skip Safe-Sora recovery {clip.clip_id}", flush=True)
+                    continue
 
             result: dict[str, object] = {
                 "status": "complete",
@@ -145,6 +161,9 @@ def main() -> None:
                 "patch_reordering": "released nearest-vacancy heuristic with deterministic one-to-one completion",
                 "started_at": utc_now(),
             }
+            for remover in ("propainter", "diffueraser", "effecterase"):
+                if remover in existing and remover not in selected_removers:
+                    result[remover] = existing[remover]
             started = time.monotonic()
             for remover, output in outputs.items():
                 attack = destination / f"{remover}.mp4"

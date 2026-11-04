@@ -1,6 +1,6 @@
 {
   "clip_id": "9cff25e3",
-  "completed_at": "2026-10-19T13:36:19+00:00",
+  "completed_at": "2026-11-03T15:45:42+00:00",
   "diffueraser": {
     "fidelity": {
       "mean_absolute_error": 84.0107421875,
@@ -10,7 +10,16 @@
     "image": "recovery-diffueraser.png",
     "sha256": "588c1bb2f7c921b8447bde1330c8b5adff51fc2434a766a7228b23d43d7765bc"
   },
-  "elapsed_seconds": 1.025,
+  "effecterase": {
+    "fidelity": {
+      "mean_absolute_error": 83.41524251302083,
+      "mse": 8904.407063802084,
+      "psnr_db": 8.634753553721097
+    },
+    "image": "recovery-effecterase.png",
+    "sha256": "de6d1f5b7620a8efee00fc01808d1f3d5db74864c7f8db8e6ea5c80b5bf2e6c1"
+  },
+  "elapsed_seconds": 3.568,
   "method": "safe-sora",
   "output_semantics": "graphical watermark recovery; not a spatial tamper mask",
   "patch_reordering": "released nearest-vacancy heuristic with deterministic one-to-one completion",
@@ -23,6 +32,6 @@
     "image": "recovery-propainter.png",
     "sha256": "896587251e1de035ca05496128cb1d56378ec6c92f235b31d3576c818d07bb4d"
   },
-  "started_at": "2026-10-19T13:36:18+00:00",
+  "started_at": "2026-11-03T15:45:38+00:00",
   "status": "complete"
 }

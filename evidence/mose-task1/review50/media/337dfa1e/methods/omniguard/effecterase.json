@@ -1,0 +1,74 @@
+{
+  "clip_id": "337dfa1e",
+  "completed_at": "2026-11-03T11:30:31+00:00",
+  "elapsed_seconds": 697.652,
+  "input": {
+    "bytes": 3715384,
+    "fps": 25.0,
+    "frames": 127,
+    "height": 544,
+    "width": 960
+  },
+  "mask_preprocessing": "binary source mask, bilinear resize by the released input transform, no dilation",
+  "model": {
+    "base_model_revision": "9bcbbcf673c0e6a996df6f3f25bee596ffa36d47",
+    "effecterase_checkpoint": {
+      "path": "/home/smayan/research/EffectErase/EffectErase.ckpt",
+      "sha256": "4e9ace4607a348a0d820328f827f7f4f751a0e44d4cf60665c03e9740dfa024d"
+    },
+    "effecterase_revision": "95c9d455300c265c57159767ba3e3e1eebb347b0",
+    "repository": "https://github.com/FudanCVL/EffectErase",
+    "repository_commit": "bcee0a5da5ef387c2ba39390dc4d579503669fb8"
+  },
+  "output": {
+    "bytes": 3420260,
+    "fps": 25.0,
+    "frames": 127,
+    "height": 544,
+    "width": 960
+  },
+  "processing_adapter": {
+    "processing_size": [
+      832,
+      464
+    ],
+    "reason": "Preserve aspect ratio within EffectErase's released Wan inference scale.",
+    "reported_size": [
+      960,
+      544
+    ],
+    "restoration": "Lanczos resize to the aligned input size"
+  },
+  "protocol": "watermark_original_then_remove_object",
+  "remover": "effecterase",
+  "settings": {
+    "cfg": 1.0,
+    "num_inference_steps": 50,
+    "seed": 2025,
+    "teacache": false,
+    "tiled": true
+  },
+  "sha256": "e0f23ed6e2246b0479564b8a609fbabadabb0afa5bde317d0c1ab568b5472d9d",
+  "status": "complete",
+  "temporal_adapter": {
+    "blank_mask_chunks_copied_without_generation": 0,
+    "chunks": [
+      {
+        "drop_prefix": 0,
+        "end_exclusive": 81,
+        "padded_frames": 81,
+        "start": 0
+      },
+      {
+        "drop_prefix": 1,
+        "end_exclusive": 127,
+        "padded_frames": 49,
+        "start": 80
+      }
+    ],
+    "maximum_model_frames": 81,
+    "reason": "EffectErase uses Wan 4n+1 latent windows; long clips use one-frame overlap.",
+    "trimmed_back_to_source_frames": true
+  },
+  "watermark_method": "omniguard"
+}

@@ -10,13 +10,27 @@ clip, the review view must show:
 
 1. the exact original MOSE video;
 2. the selected MOSE object mask, with white meaning remove;
-3. the ProPainter result; and
-4. the DiffuEraser result.
+3. the ProPainter result;
+4. the DiffuEraser result; and
+5. the EffectErase result.
 
-Both removal methods must receive the same selected MOSE object. The reviewer
-records separately whether ProPainter and DiffuEraser removed that object
+All three removal methods must receive the same selected MOSE object. The reviewer
+records separately whether ProPainter, DiffuEraser, and EffectErase removed that object
 satisfactorily. The watermark-first outputs are generated for all 50 fixed
 clips so the review does not change or cherry-pick the evaluated sample set.
+
+The DiffuEraser results use the official
+[lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
+repository. That repository is the existing DiffuEraser implementation in this
+experiment, not an additional remover.
+
+The third remover uses the official
+[FudanCVL/EffectErase](https://github.com/FudanCVL/EffectErase) repository at
+commit `bcee0a5da5ef387c2ba39390dc4d579503669fb8`. The adapter preserves every
+source frame, uses aspect-preserving inference at a maximum side of 832 pixels,
+and splits long clips into overlapping Wan `4n+1` temporal windows of at most
+81 frames. Padding and the one-frame overlap are removed from the reported
+output.
 
 The committed `scripts/build_mose_review.py` creates a single viewer covering
 all 50 clips and exports the manual decisions as CSV.
@@ -29,7 +43,7 @@ For every watermark method and every selected clip, the order is:
 original MOSE video
   -> watermark embedding
   -> watermarked video
-  -> ProPainter or DiffuEraser using the selected object mask
+  -> ProPainter, DiffuEraser, or EffectErase using the selected object mask
   -> attacked/tampered video
   -> the watermark method's detector
   -> predicted tamper mask, when that method has a native localization output
@@ -53,9 +67,13 @@ method*, because the saved Task 1 runs expanded the mask at inference:
   binary dilation for 8 iterations.
 - DiffuEraser resized with nearest-neighbour interpolation, eroded once with a
   3 x 3 rectangular kernel, and then dilated 8 times with that kernel.
+- EffectErase applies no dilation. Its released video transform resizes the
+  binary mask bilinearly; the effective binary IoU mask is thresholded at the
+  model zero point and restored to the reported output size with nearest-neighbour
+  interpolation.
 
-Therefore ProPainter and DiffuEraser need separate effective GT masks for IoU,
-even though both start from the same MOSE object annotation. Report global
+Therefore all three removers need separate effective GT masks for IoU, even
+though they start from the same MOSE object annotation. Report global
 pixel IoU over all frames, matching the VideoShield paper implementation:
 
 ```text
@@ -88,7 +106,7 @@ Two adapters are allowed only where their per-clip metadata records them:
 
 ## Method capability constraint
 
-The three previously selected methods are not interchangeable:
+The five evaluated methods are not interchangeable:
 
 - VideoSeal can post-process an existing MOSE video. The available released
   checkpoint exposes a global watermark-presence detector, not a native
@@ -101,6 +119,15 @@ The three previously selected methods are not interchangeable:
 - Safe-Sora recovers a graphical watermark. Its released method does not output
   a spatial tamper mask, so it can be evaluated for watermark recovery after
   removal but cannot truthfully produce Pred mask or IoU.
+- EditGuard is released for individual 512 x 512 images. For MOSE, resize the
+  source and object mask to that released size and run embedding and native
+  residual localization independently on every frame. Use the released 0.2
+  residual threshold and retain the fixed 64-bit recovery accuracy.
+- OmniGuard is released for individual images. For MOSE, run embedding and its
+  native localization independently on every native-size frame. Convert the
+  detector probability map to the displayed binary mask at threshold 0.5. Its
+  public demo does not expose a recovered bit message, so bit accuracy remains
+  not applicable.
 
 Do not fabricate Pred-mask/IoU fields for a method that does not provide spatial
 localization. A cross-method comparison must either use a separate common
@@ -144,9 +171,16 @@ python3 scripts/merge_mose_watermark_results.py \
   --results-root /path/to/watermark-review50 \
   --review-root evidence/mose-task1/review50
 
+python3 scripts/merge_mose_image_method_results.py \
+  --review-root evidence/mose-task1/review50
+
+python3 scripts/merge_mose_effecterase_results.py \
+  --review-root evidence/mose-task1/review50
+
 python3 scripts/validate_mose_review.py evidence/mose-task1/review50
 ```
 
 The validator decodes every video, checks frame count, resolution and frame
 rate, rejects empty GT masks, enforces explicit N/A fields, and recomputes each
-displayed VideoSeal IoU from the committed Pred-mask and effective-GT videos.
+displayed VideoSeal, EditGuard, and OmniGuard IoU from the committed Pred-mask
+and effective-GT videos.

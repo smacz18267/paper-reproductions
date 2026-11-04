@@ -43,10 +43,18 @@ def attack_mask(
     resized = cv2.resize(mask, inference_size, interpolation=cv2.INTER_NEAREST) > 0
     if remover == "propainter":
         effective = scipy.ndimage.binary_dilation(resized, iterations=8)
-    else:
+    elif remover == "diffueraser":
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
         value = cv2.erode(resized.astype(np.uint8), kernel, iterations=1)
         effective = cv2.dilate(value, kernel, iterations=8).astype(bool)
+    elif remover == "effecterase":
+        effective = cv2.resize(
+            (mask > 0).astype(np.uint8) * 255,
+            inference_size,
+            interpolation=cv2.INTER_LINEAR,
+        ) > 127
+    else:
+        raise ValueError(f"Unknown remover: {remover}")
     if inference_size != size:
         effective = cv2.resize(effective.astype(np.uint8), size, interpolation=cv2.INTER_NEAREST) > 0
     return effective
@@ -136,6 +144,12 @@ def main() -> None:
     parser.add_argument("--output-root", required=True, type=Path)
     parser.add_argument("--chunk-size", type=int, default=8)
     parser.add_argument("--grid-size", type=int, default=4)
+    parser.add_argument(
+        "--remover",
+        action="append",
+        choices=("propainter", "diffueraser", "effecterase"),
+        help="Localization attack to process; repeat for multiple. Defaults to the original two.",
+    )
     parser.add_argument("--only", action="append")
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
@@ -143,6 +157,7 @@ def main() -> None:
     if not torch.cuda.is_available():
         raise RuntimeError("VideoSeal localization requires CUDA")
     clips = load_clips(args.selection)
+    selected_removers = tuple(args.remover or ("propainter", "diffueraser"))
     if args.only:
         requested = set(args.only)
         clips = [clip for clip in clips if clip.clip_id in requested]
@@ -162,14 +177,18 @@ def main() -> None:
         destination = method_dir(args.output_root, clip.clip_id, "videoseal")
         summary_path = destination / "localization.json"
         try:
-            if summary_path.is_file() and not args.force:
+            existing: dict[str, object] = {}
+            if summary_path.is_file():
                 existing = __import__("json").loads(summary_path.read_text())
-                for remover in ("propainter", "diffueraser"):
-                    validate_video(destination / f"pred-mask-{remover}.mp4", frames=clip.frame_count)
-                    if existing[remover]["global_iou"] is None:
-                        raise RuntimeError("Stored localization has no IoU")
-                print(f"[{ordinal}/50] skip VideoSeal localization {clip.clip_id}", flush=True)
-                continue
+                if not args.force and all(
+                    remover in existing
+                    and existing[remover].get("global_iou") is not None
+                    and (destination / f"pred-mask-{remover}.mp4").is_file()
+                    and (destination / f"effective-gt-mask-{remover}.mp4").is_file()
+                    for remover in selected_removers
+                ):
+                    print(f"[{ordinal}/50] skip VideoSeal localization {clip.clip_id}", flush=True)
+                    continue
 
             masks_raw = read_mask_sequence(raw_mask_frames(args.dataset_root, clip.clip_id))
             if len(masks_raw) != clip.frame_count:
@@ -183,8 +202,11 @@ def main() -> None:
                 "prediction_resize": "nearest from detector resolution to attack-video resolution",
                 "started_at": utc_now(),
             }
+            for remover in ("propainter", "diffueraser", "effecterase"):
+                if remover in existing and remover not in selected_removers:
+                    result[remover] = existing[remover]
             started = time.monotonic()
-            for remover in ("propainter", "diffueraser"):
+            for remover in selected_removers:
                 attack_path = destination / f"{remover}.mp4"
                 info = validate_video(attack_path, frames=clip.frame_count, fps=FPS)
                 size = (int(info["width"]), int(info["height"]))
@@ -208,7 +230,11 @@ def main() -> None:
                     "effective_gt": (
                         "scipy binary_dilation, 8 iterations"
                         if remover == "propainter"
-                        else "OpenCV 3x3 rectangle erosion once, then dilation 8 iterations"
+                        else (
+                            "OpenCV 3x3 rectangle erosion once, then dilation 8 iterations"
+                            if remover == "diffueraser"
+                            else "EffectErase bilinear mask resize, thresholded at the model zero point"
+                        )
                     ),
                     "localization_mode": localization_mode,
                     "processing_adapter": adapter,
@@ -220,7 +246,9 @@ def main() -> None:
             append_jsonl(events, result)
             print(
                 f"[{ordinal}/50] complete VideoSeal localization {clip.clip_id}: "
-                f"P={result['propainter']['global_iou']:.4f} D={result['diffueraser']['global_iou']:.4f}",
+                + " ".join(
+                    f"{remover}={result[remover]['global_iou']:.4f}" for remover in selected_removers
+                ),
                 flush=True,
             )
         except Exception as error:
