@@ -1,0 +1,27 @@
+{
+  "clip_id": "ac32a655",
+  "compatibility_adapter": null,
+  "completed_at": "2026-11-01T08:26:47+00:00",
+  "elapsed_seconds": 192.169,
+  "input": {
+    "bytes": 4054078,
+    "fps": 25.0,
+    "frames": 124,
+    "height": 512,
+    "width": 512
+  },
+  "mask_dilation_iterations": 8,
+  "output": {
+    "bytes": 6895262,
+    "fps": 25.0,
+    "frames": 124,
+    "height": 512,
+    "width": 512
+  },
+  "processing_adapter": null,
+  "protocol": "watermark_original_then_remove_object",
+  "remover": "diffueraser",
+  "sha256": "f9392393d2c52f098be039f00b64154c85aaa5db6e0b6e4743e1c918b620bea9",
+  "status": "complete",
+  "watermark_method": "editguard"
+}

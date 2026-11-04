@@ -1,5 +1,5 @@
 {
-  "decoded_frames": 3216,
+  "decoded_frames": 4422,
   "methods": {
     "editguard": {
       "02b72b8d": {
@@ -21,9 +21,25 @@
             "height": 512,
             "width": 512
           },
+          "effecterase.mp4": {
+            "bytes": 415508,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
           "effective-gt-mask-diffueraser.mp4": {
             "bytes": 39004,
             "foreground_pixels": 520937,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "effective-gt-mask-effecterase.mp4": {
+            "bytes": 45615,
+            "foreground_pixels": 295818,
             "fps": 25.0,
             "frames": 67,
             "height": 512,
@@ -46,6 +62,14 @@
             "width": 512
           },
           "pred-mask-diffueraser.mp4": {
+            "bytes": 13822,
+            "foreground_pixels": 17563648,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 512,
+            "width": 512
+          },
+          "pred-mask-effecterase.mp4": {
             "bytes": 13822,
             "foreground_pixels": 17563648,
             "fps": 25.0,
@@ -103,9 +127,25 @@
             "height": 512,
             "width": 512
           },
+          "effecterase.mp4": {
+            "bytes": 1377275,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
           "effective-gt-mask-diffueraser.mp4": {
             "bytes": 30036,
             "foreground_pixels": 331240,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "effective-gt-mask-effecterase.mp4": {
+            "bytes": 32765,
+            "foreground_pixels": 246655,
             "fps": 25.0,
             "frames": 104,
             "height": 512,
@@ -128,6 +168,14 @@
             "width": 512
           },
           "pred-mask-diffueraser.mp4": {
+            "bytes": 20408,
+            "foreground_pixels": 27262976,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 512,
+            "width": 512
+          },
+          "pred-mask-effecterase.mp4": {
             "bytes": 20408,
             "foreground_pixels": 27262976,
             "fps": 25.0,
@@ -185,9 +233,25 @@
             "height": 512,
             "width": 512
           },
+          "effecterase.mp4": {
+            "bytes": 277291,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
           "effective-gt-mask-diffueraser.mp4": {
             "bytes": 28780,
             "foreground_pixels": 831438,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "effective-gt-mask-effecterase.mp4": {
+            "bytes": 31373,
+            "foreground_pixels": 617979,
             "fps": 25.0,
             "frames": 30,
             "height": 512,
@@ -210,6 +274,14 @@
             "width": 512
           },
           "pred-mask-diffueraser.mp4": {
+            "bytes": 7236,
+            "foreground_pixels": 7864320,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 512,
+            "width": 512
+          },
+          "pred-mask-effecterase.mp4": {
             "bytes": 7236,
             "foreground_pixels": 7864320,
             "fps": 25.0,
@@ -261,9 +333,25 @@
             "height": 480,
             "width": 960
           },
+          "effecterase.mp4": {
+            "bytes": 533879,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          },
           "effective-gt-mask-diffueraser.mp4": {
             "bytes": 45831,
             "foreground_pixels": 828241,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          },
+          "effective-gt-mask-effecterase.mp4": {
+            "bytes": 53620,
+            "foreground_pixels": 519894,
             "fps": 25.0,
             "frames": 67,
             "height": 480,
@@ -280,6 +368,14 @@
           "pred-mask-diffueraser.mp4": {
             "bytes": 34027,
             "foreground_pixels": 97675,
+            "fps": 25.0,
+            "frames": 67,
+            "height": 480,
+            "width": 960
+          },
+          "pred-mask-effecterase.mp4": {
+            "bytes": 40844,
+            "foreground_pixels": 175085,
             "fps": 25.0,
             "frames": 67,
             "height": 480,
@@ -327,9 +423,25 @@
             "height": 448,
             "width": 960
           },
+          "effecterase.mp4": {
+            "bytes": 1394113,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          },
           "effective-gt-mask-diffueraser.mp4": {
             "bytes": 31394,
             "foreground_pixels": 499284,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          },
+          "effective-gt-mask-effecterase.mp4": {
+            "bytes": 33716,
+            "foreground_pixels": 404260,
             "fps": 25.0,
             "frames": 104,
             "height": 448,
@@ -346,6 +458,14 @@
           "pred-mask-diffueraser.mp4": {
             "bytes": 29258,
             "foreground_pixels": 15014,
+            "fps": 25.0,
+            "frames": 104,
+            "height": 448,
+            "width": 960
+          },
+          "pred-mask-effecterase.mp4": {
+            "bytes": 27936,
+            "foreground_pixels": 15986,
             "fps": 25.0,
             "frames": 104,
             "height": 448,
@@ -393,9 +513,25 @@
             "height": 640,
             "width": 960
           },
+          "effecterase.mp4": {
+            "bytes": 279461,
+            "foreground_pixels": 0,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          },
           "effective-gt-mask-diffueraser.mp4": {
             "bytes": 44946,
             "foreground_pixels": 1767014,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          },
+          "effective-gt-mask-effecterase.mp4": {
+            "bytes": 48963,
+            "foreground_pixels": 1448228,
             "fps": 25.0,
             "frames": 30,
             "height": 640,
@@ -412,6 +548,14 @@
           "pred-mask-diffueraser.mp4": {
             "bytes": 9620,
             "foreground_pixels": 1468,
+            "fps": 25.0,
+            "frames": 30,
+            "height": 640,
+            "width": 960
+          },
+          "pred-mask-effecterase.mp4": {
+            "bytes": 11686,
+            "foreground_pixels": 8170,
             "fps": 25.0,
             "frames": 30,
             "height": 640,
@@ -456,6 +600,6 @@
     "0b02886a"
   ],
   "status": "complete",
-  "validated_at": "2026-11-01T05:51:11+00:00",
-  "videos": 48
+  "validated_at": "2026-11-04T22:47:59+00:00",
+  "videos": 66
 }

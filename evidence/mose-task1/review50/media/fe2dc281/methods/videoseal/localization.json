@@ -1,6 +1,6 @@
 {
   "clip_id": "fe2dc281",
-  "completed_at": "2026-10-19T13:42:52+00:00",
+  "completed_at": "2026-11-03T15:43:20+00:00",
   "detector_semantics": "preds[:,0] > 0 is watermark present; reported mask is preds[:,0] <= 0",
   "diffueraser": {
     "effective_gt": "OpenCV 3x3 rectangle erosion once, then dilation 8 iterations",
@@ -53,7 +53,69 @@
     "union_pixels": 164037,
     "width": 960
   },
-  "elapsed_seconds": 3.471,
+  "effecterase": {
+    "effective_gt": "EffectErase bilinear mask resize, thresholded at the model zero point",
+    "effective_gt_mask_sha256": "6f3116888504836cd76a0bbf9e9040f1d0ee97917bb7b8610b5b05bb078cc693",
+    "frames": 33,
+    "global_iou": 0.0,
+    "height": 480,
+    "intersection_pixels": 0,
+    "localization_mode": "derived_4x4_patch_grid_from_global_presence_detector",
+    "maximum_frame_iou": 0.0,
+    "mean_frame_iou": 0.0,
+    "minimum_frame_iou": 0.0,
+    "per_frame_iou": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pred_mask_sha256": "abd561f764b8421bfdb770d4a4645da527951de54bbd2a0c3fe4810b940e9f08",
+    "processing_adapter": {
+      "processing_size": [
+        832,
+        416
+      ],
+      "reason": "Preserve aspect ratio within EffectErase's released Wan inference scale.",
+      "reported_size": [
+        960,
+        480
+      ],
+      "restoration": "Lanczos resize to the aligned input size"
+    },
+    "union_pixels": 87709,
+    "width": 960
+  },
+  "elapsed_seconds": 2.965,
   "method": "videoseal",
   "prediction_resize": "nearest from detector resolution to attack-video resolution",
   "propainter": {
@@ -107,7 +169,7 @@
     "union_pixels": 157783,
     "width": 960
   },
-  "started_at": "2026-10-19T13:42:48+00:00",
+  "started_at": "2026-11-03T15:43:17+00:00",
   "status": "complete",
   "threshold": 0.0
 }

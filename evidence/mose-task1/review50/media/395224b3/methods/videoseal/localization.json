@@ -1,6 +1,6 @@
 {
   "clip_id": "395224b3",
-  "completed_at": "2026-10-19T13:38:06+00:00",
+  "completed_at": "2026-11-03T15:39:24+00:00",
   "detector_semantics": "preds[:,0] > 0 is watermark present; reported mask is preds[:,0] <= 0",
   "diffueraser": {
     "effective_gt": "OpenCV 3x3 rectangle erosion once, then dilation 8 iterations",
@@ -42,7 +42,58 @@
     "union_pixels": 466274,
     "width": 960
   },
-  "elapsed_seconds": 2.39,
+  "effecterase": {
+    "effective_gt": "EffectErase bilinear mask resize, thresholded at the model zero point",
+    "effective_gt_mask_sha256": "9cc4089a6bde450491275f3090c947e96efb24babf808245626ad099a74a8db1",
+    "frames": 22,
+    "global_iou": 0.0,
+    "height": 448,
+    "intersection_pixels": 0,
+    "localization_mode": "derived_4x4_patch_grid_from_global_presence_detector",
+    "maximum_frame_iou": 0.0,
+    "mean_frame_iou": 0.0,
+    "minimum_frame_iou": 0.0,
+    "per_frame_iou": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pred_mask_sha256": "c58f143c5b16896783d2551c6a98bcbaf53d9aa04607ad6b9e4bcf8baf6a9ca9",
+    "processing_adapter": {
+      "processing_size": [
+        832,
+        384
+      ],
+      "reason": "Preserve aspect ratio within EffectErase's released Wan inference scale.",
+      "reported_size": [
+        960,
+        448
+      ],
+      "restoration": "Lanczos resize to the aligned input size"
+    },
+    "union_pixels": 346800,
+    "width": 960
+  },
+  "elapsed_seconds": 1.943,
   "method": "videoseal",
   "prediction_resize": "nearest from detector resolution to attack-video resolution",
   "propainter": {
@@ -85,7 +136,7 @@
     "union_pixels": 454172,
     "width": 960
   },
-  "started_at": "2026-10-19T13:38:04+00:00",
+  "started_at": "2026-11-03T15:39:22+00:00",
   "status": "complete",
   "threshold": 0.0
 }
