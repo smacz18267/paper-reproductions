@@ -1,0 +1,53 @@
+{
+  "checkpoint": {
+    "path": "/mnt/data_fast/smayan/research/E2FGVI/release_model/E2FGVI-HQ-CVPR22.pth",
+    "sha256": "afff989d41205598a79ce24630b9c83af4b0a06f45b137979a25937d94c121a5"
+  },
+  "command": [
+    "/mnt/data_fast/smayan/research/DiffuEraser/.venv/bin/python",
+    "/mnt/data_fast/smayan/research/E2FGVI/test.py",
+    "--model",
+    "e2fgvi_hq",
+    "--video",
+    "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/sigmark/native-vbench2/attack/input-watermarked.mp4",
+    "--mask",
+    "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/sigmark/native-vbench2/attack/gt-mask-frames",
+    "--ckpt",
+    "/mnt/data_fast/smayan/research/E2FGVI/release_model/E2FGVI-HQ-CVPR22.pth",
+    "--savefps",
+    "8"
+  ],
+  "completed_at": "2026-11-10T10:45:50+00:00",
+  "elapsed_seconds": 18.51,
+  "input": {
+    "path": "input-watermarked.mp4",
+    "sha256": "62fb3a015d24943848fd9221ae9592e0864807ba3b03aad9fe544f826ef304f8"
+  },
+  "mask": {
+    "path": "gt-mask-frames",
+    "preprocessing": "official read_mask: nearest resize, binary threshold, 3x3 cross dilation x4"
+  },
+  "output": {
+    "path": "e2fgvi.mp4",
+    "sha256": "a309f170d100eb04ae8d876e8ab42b84d575b5a5ec5200fb40ede50caf43a6cc",
+    "video": {
+      "bytes": 1260419,
+      "fps": 8.0,
+      "frames": 65,
+      "height": 512,
+      "width": 512
+    }
+  },
+  "protocol": "official test.py with the same authentic watermarked video and binary mask frames",
+  "remover": "E2FGVI-HQ",
+  "repository": "https://github.com/MCG-NKU/E2FGVI",
+  "repository_commit": "709cbe319edc21b8a365a28e14cba595a93d62cf",
+  "sample_id": "first-VBench2-aug-small-scale",
+  "settings": {
+    "model": "e2fgvi_hq",
+    "save_fps": 8,
+    "visible_device": "1"
+  },
+  "status": "complete",
+  "watermark_method": "SIGMark"
+}

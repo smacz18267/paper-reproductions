@@ -1,0 +1,28 @@
+{
+  "case": "propainter",
+  "completed_at": "2026-11-07T00:14:37+00:00",
+  "dimension_normalization": {
+    "expected_size": [
+      512,
+      512
+    ],
+    "interpolation": "cv2.INTER_LINEAR",
+    "reason": "restore the official ProPainter prior from its default resize_ratio=0.6 to the source dimensions",
+    "resized": true,
+    "source_size": [
+      306,
+      306
+    ]
+  },
+  "output": {
+    "bytes": 216217,
+    "fps": 10.0,
+    "frames": 16,
+    "height": 512,
+    "width": 512
+  },
+  "sha256": "eb052f03e6caf8b6c28b5f504db35ad22d013865b10f44098fae30db72059d6c",
+  "source_video": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/vidsig/red-panda-seed42/attack/work/removal-pair/propainter_prior.mp4",
+  "status": "complete",
+  "trimmed_compatibility_padding": 8
+}

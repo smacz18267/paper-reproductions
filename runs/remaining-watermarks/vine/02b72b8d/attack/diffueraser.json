@@ -1,0 +1,28 @@
+{
+  "case": "diffueraser",
+  "completed_at": "2026-11-07T00:12:38+00:00",
+  "dimension_normalization": {
+    "expected_size": [
+      480,
+      480
+    ],
+    "interpolation": null,
+    "reason": null,
+    "resized": false,
+    "source_size": [
+      480,
+      480
+    ]
+  },
+  "output": {
+    "bytes": 532990,
+    "fps": 25.0,
+    "frames": 67,
+    "height": 480,
+    "width": 480
+  },
+  "sha256": "64dfc78887fa15469981902a8f9614dec268b80cef29abb187579ac3501b33c9",
+  "source_video": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/vine/02b72b8d/attack/work/removal-pair/diffueraser_result.mp4",
+  "status": "complete",
+  "trimmed_compatibility_padding": 0
+}

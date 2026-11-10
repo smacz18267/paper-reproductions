@@ -1,0 +1,43 @@
+{
+  "attack_frames": 24,
+  "fps": 10.0,
+  "frames": 16,
+  "input_sha256": "4622dfbf58f7b99bd2475d7790eb31ced7638e5dbff8ccd10345df3240a2c484",
+  "mask_foreground_pixels": [
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152,
+    49152
+  ],
+  "mask_input_sha256": null,
+  "padding": {
+    "method": "repeat final input frame and final mask only for inference",
+    "padded_frames": 24,
+    "reason": "DiffuEraser requires at least 22 frames",
+    "reported_frames": 16
+  },
+  "prepared_at": "2026-11-10T10:29:08+00:00",
+  "protocol": "authentic watermarked sample -> one aligned mask -> ProPainter and DiffuEraser",
+  "provenance": {},
+  "sample_id": "modelscope-red-panda",
+  "sample_source": "VideoShield authors provided ModelScope sample",
+  "size": [
+    256,
+    256
+  ],
+  "source_kind": "authors_provided",
+  "status": "prepared",
+  "watermark_method": "VideoShield"
+}

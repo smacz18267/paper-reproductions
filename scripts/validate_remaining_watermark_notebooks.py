@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Statically validate the six current-batch execution notebooks."""
+"""Statically validate the eight remaining-method execution notebooks."""
 
 from __future__ import annotations
 
@@ -11,17 +11,21 @@ from remaining_watermark_methods import METHODS
 
 
 EXPECTED = {
+    "rivagan": ("rivagan", "mose_post_hoc"),
     "watermark_anything": ("watermark-anything", "mose_post_hoc"),
     "vine": ("vine", "mose_post_hoc"),
     "videomark": ("videomark", "authors_provided"),
     "sigmark": ("sigmark", "authors_generated"),
     "vidsig": ("vidsig", "authors_generated"),
     "genptw": ("genptw", "mose_post_hoc"),
+    "lvmark": ("lvmark", "authors_generated"),
 }
 
 REQUIRED_SCRIPTS = (
     "prepare_watermark_removal_sample.py",
     "run_watermark_removal_pair.py",
+    "run_prepared_effecterase.py",
+    "run_prepared_e2fgvi.py",
     "run_diffueraser_recorded.py",
     "make_native_removal_mask.py",
     "watermark_anything_video.py",
@@ -63,6 +67,8 @@ def main() -> None:
             spec.verified_commit,
             "ProPainter",
             "DiffuEraser",
+            "EffectErase",
+            "E2FGVI-HQ",
             "prepare_watermark_removal_sample.py",
             "run_watermark_removal_pair.py",
             source_kind,

@@ -1,0 +1,43 @@
+{
+  "attack_frames": 24,
+  "fps": 10.0,
+  "frames": 16,
+  "input_sha256": "9faf45256c55aeb4977e8fa2086a1a5dd83501ae6b9376f33ab32531b14520db",
+  "mask_foreground_pixels": [
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041,
+    32041
+  ],
+  "mask_input_sha256": "36f0e6de43ce142f420f9cb2718c95ea13d1b85b885828e35ec398e672dfb444",
+  "padding": {
+    "method": "repeat final input frame and final mask only for inference",
+    "padded_frames": 24,
+    "reason": "DiffuEraser requires at least 22 frames",
+    "reported_frames": 16
+  },
+  "prepared_at": "2026-11-06T13:18:24+00:00",
+  "protocol": "authentic watermarked sample -> one aligned mask -> ProPainter and DiffuEraser",
+  "provenance": {},
+  "sample_id": "red-panda-prompt-0-seed-42",
+  "sample_source": "Video Signature authors' prompt, key, checkpoints, and ModelScope pipeline",
+  "size": [
+    512,
+    512
+  ],
+  "source_kind": "authors_generated",
+  "status": "prepared",
+  "watermark_method": "VidSig"
+}

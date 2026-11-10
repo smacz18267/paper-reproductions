@@ -1,0 +1,28 @@
+{
+  "case": "diffueraser",
+  "completed_at": "2026-11-10T10:29:54+00:00",
+  "dimension_normalization": {
+    "expected_size": [
+      256,
+      256
+    ],
+    "interpolation": null,
+    "reason": null,
+    "resized": false,
+    "source_size": [
+      256,
+      256
+    ]
+  },
+  "output": {
+    "bytes": 102825,
+    "fps": 10.0,
+    "frames": 16,
+    "height": 256,
+    "width": 256
+  },
+  "sha256": "ee8db06ab0dd3e189b79c1e6b19689213bdf6ae1c41c5cc6cd1c0a260e078ddc",
+  "source_video": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs-pairs/videoshield/modelscope-red-panda/attack/work/removal-pair/diffueraser_result.mp4",
+  "status": "complete",
+  "trimmed_compatibility_padding": 8
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build execution notebooks for the eight remaining watermark methods."""
+"""Build four-inpainter execution notebooks for the remaining watermark methods."""
 
 from __future__ import annotations
 
@@ -79,12 +79,19 @@ def show_results(run_root):
             print(name)
             display(Video(str(path), embed=True, html_attributes="controls muted loop"))
     attack = run_root / "attack"
-    for name in ("input-watermarked.mp4", "gt-mask.mp4", "propainter.mp4", "diffueraser.mp4"):
+    for name in (
+        "input-watermarked.mp4", "gt-mask.mp4", "propainter.mp4", "diffueraser.mp4",
+        "effecterase.mp4", "e2fgvi.mp4",
+    ):
         path = attack / name
         if path.is_file():
             print(name)
             display(Video(str(path), embed=True, html_attributes="controls muted loop"))
-    for path in sorted(run_root.rglob("summary.json")):
+    result_json = {
+        *run_root.rglob("summary.json"),
+        *(attack / name for name in ("sample.json", "removal-pair.json", "effecterase.json", "e2fgvi.json")),
+    }
+    for path in sorted(path for path in result_json if path.is_file()):
         print(path.relative_to(run_root))
         display(JSON(json.loads(path.read_text())))
 
@@ -102,7 +109,7 @@ def intro(slug: str, extra: str) -> list[dict[str, Any]]:
     return [
         markdown(
             f"""
-# {spec.label}: ProPainter and DiffuEraser
+# {spec.label}: four inpainting methods
 
 Repository: [{spec.official_repository}]({spec.official_repository})
 
@@ -115,7 +122,7 @@ Domain: {spec.domain}
 
 {compatibility}
 
-The two removers receive the exact same watermarked frames and binary mask. One official DiffuEraser execution is used: its internal ProPainter prior is preserved as the ProPainter result, and its final refinement is the DiffuEraser result. Inputs shorter than 22 frames are padded by repeating only the last frame/mask to 24 for inference, then both reported outputs are trimmed to the authentic length.
+ProPainter, DiffuEraser, EffectErase, and E2FGVI-HQ receive the same authentic watermarked frames and binary mask. One official DiffuEraser execution is used: its internal ProPainter prior is preserved as the ProPainter result, and its final refinement is the DiffuEraser result. Inputs shorter than 22 frames are padded by repeating only the last frame/mask to 24 for that pipeline, then both reported outputs are trimmed to the authentic length. EffectErase applies its released Wan 4n+1 temporal adapter; E2FGVI-HQ uses the authors' official arbitrary-resolution test entry point.
 
 {extra}
 """
@@ -142,9 +149,9 @@ def common_attack_cells(
     return [
         markdown(
             """
-## Run the identical two-method attack
+## Run all four inpainting methods on the frozen input
 
-The preparation cell freezes hashes, frame count, dimensions, FPS, mask foreground counts, provenance, and any short-video padding. The next cell runs both methods from that frozen input.
+The preparation cell freezes hashes, frame count, dimensions, FPS, mask foreground counts, provenance, and any short-video padding. Every remover below consumes that frozen input and mask.
 """
         ),
         code(
@@ -171,6 +178,33 @@ else:
 else:
     print("Both removal outputs already exist:", ATTACK_RUN / "removal-pair.json")'''
         ),
+        code(
+            '''EFFECTERASE = Path(os.environ.get("EFFECTERASE", "/mnt/data_fast/smayan/research/EffectErase"))
+EFFECTERASE_PYTHON = Path(os.environ.get("EFFECTERASE_PYTHON", str(EFFECTERASE / ".venv/bin/python")))
+E2FGVI = Path(os.environ.get("E2FGVI", "/mnt/data_fast/smayan/research/E2FGVI"))
+E2FGVI_CHECKPOINT = Path(os.environ.get(
+    "E2FGVI_CHECKPOINT", str(E2FGVI / "release_model/E2FGVI-HQ-CVPR22.pth")
+))
+E2FGVI_PYTHON = Path(os.environ.get("E2FGVI_PYTHON", str(DIFFUERASER_PYTHON)))
+
+if not (ATTACK_RUN / "effecterase.json").is_file():
+    effect_env = os.environ.copy(); effect_env["CUDA_VISIBLE_DEVICES"] = GPU
+    run([
+        EFFECTERASE_PYTHON, SCRIPTS / "run_prepared_effecterase.py",
+        "--source", EFFECTERASE, "--run", ATTACK_RUN, "--device", GPU,
+    ], env=effect_env)
+else:
+    print("EffectErase output already exists:", ATTACK_RUN / "effecterase.json")
+
+if not (ATTACK_RUN / "e2fgvi.json").is_file():
+    run([
+        E2FGVI_PYTHON, SCRIPTS / "run_prepared_e2fgvi.py",
+        "--source", E2FGVI, "--checkpoint", E2FGVI_CHECKPOINT,
+        "--run", ATTACK_RUN, "--python", E2FGVI_PYTHON, "--device", GPU,
+    ])
+else:
+    print("E2FGVI-HQ output already exists:", ATTACK_RUN / "e2fgvi.json")'''
+        ),
     ]
 
 
@@ -181,7 +215,7 @@ def results_cell() -> dict[str, Any]:
 def rivagan() -> dict[str, Any]:
     cells = intro(
         "rivagan",
-        "**Current blocker:** DAI-Lab publishes training code but no pretrained `model.pt`. The notebook is fully wired, but it deliberately stops before embedding unless you provide a trained checkpoint and its provenance. The RivaGAN sample committed by the VideoMark authors is not treated as natively decodable because its matching RivaGAN checkpoint/message are absent.",
+        "**Status: intentionally deferred for this run, as requested.** Independently, DAI-Lab publishes training code but no pretrained `model.pt`. The notebook remains fully wired for a future run, but it deliberately stops before embedding unless a trained checkpoint and its provenance are supplied. The RivaGAN sample committed by the VideoMark authors is not treated as natively decodable because its matching RivaGAN checkpoint/message are absent.",
     )
     cells += [
         code(
@@ -227,6 +261,8 @@ require(MOSE_MASK, "MOSE mask")'''
     "--case", f"original={ATTACK_RUN / 'input-watermarked.mp4'}",
     "--case", f"propainter={ATTACK_RUN / 'propainter.mp4'}",
     "--case", f"diffueraser={ATTACK_RUN / 'diffueraser.mp4'}",
+    "--case", f"effecterase={ATTACK_RUN / 'effecterase.mp4'}",
+    "--case", f"e2fgvi={ATTACK_RUN / 'e2fgvi.mp4'}",
 ])'''
         ),
         results_cell(),
@@ -282,6 +318,8 @@ for path, label in [(WAM_PYTHON, "WAM Python"), (WAM_CHECKPOINT, "wam_mit.pth"),
     "--case", f"original={ATTACK_RUN / 'input-watermarked.mp4'}",
     "--case", f"propainter={ATTACK_RUN / 'propainter.mp4'}",
     "--case", f"diffueraser={ATTACK_RUN / 'diffueraser.mp4'}",
+    "--case", f"effecterase={ATTACK_RUN / 'effecterase.mp4'}",
+    "--case", f"e2fgvi={ATTACK_RUN / 'e2fgvi.mp4'}",
 ])'''
         ),
         results_cell(),
@@ -334,6 +372,8 @@ require(VINE_PYTHON, "VINE Python")'''
     "--case", f"original={ATTACK_RUN / 'input-watermarked.mp4'}",
     "--case", f"propainter={ATTACK_RUN / 'propainter.mp4'}",
     "--case", f"diffueraser={ATTACK_RUN / 'diffueraser.mp4'}",
+    "--case", f"effecterase={ATTACK_RUN / 'effecterase.mp4'}",
+    "--case", f"e2fgvi={ATTACK_RUN / 'e2fgvi.mp4'}",
 ])'''
         ),
         results_cell(),
@@ -390,6 +430,8 @@ for path, label in [(SAMPLE, "authors' watermarked sample"), (SHIFT, "shift valu
     "--case", f"original={ATTACK_RUN / 'input-watermarked.mp4'}",
     "--case", f"propainter={ATTACK_RUN / 'propainter.mp4'}",
     "--case", f"diffueraser={ATTACK_RUN / 'diffueraser.mp4'}",
+    "--case", f"effecterase={ATTACK_RUN / 'effecterase.mp4'}",
+    "--case", f"e2fgvi={ATTACK_RUN / 'e2fgvi.mp4'}",
 ])'''
         ),
         results_cell(),
@@ -537,6 +579,8 @@ run([
     "--case", f"original={ATTACK_RUN / 'input-watermarked.mp4'}",
     "--case", f"propainter={ATTACK_RUN / 'propainter.mp4'}",
     "--case", f"diffueraser={ATTACK_RUN / 'diffueraser.mp4'}",
+    "--case", f"effecterase={ATTACK_RUN / 'effecterase.mp4'}",
+    "--case", f"e2fgvi={ATTACK_RUN / 'e2fgvi.mp4'}",
 ])'''
         ),
         results_cell(),
@@ -547,7 +591,7 @@ run([
 def lvmark() -> dict[str, Any]:
     cells = intro(
         "lvmark",
-        "**Release blocker:** the repository's inference shell script contains placeholders and refers to `prompts/512_ours` plus a prompt/key JSON that are not checked in. The official 2.05 GB weight archive's central index contains four nested weight archives and no prompt/key data. Those two inputs must therefore be obtained separately from the authors. Once supplied, the notebook runs their unchanged DynamiCrafter entry point, attacks its native output, and applies the released LVMark decoder/BCH record.",
+        "**Release/resource blocker recorded on 2026-11-10:** the repository's inference shell script contains placeholders and refers to `prompts/512_ours` plus a prompt/key JSON that are not checked in. A documented one-sample replacement can be constructed, but the official 2.05 GB weight archive was served to Zeppelin at roughly 25 KB/s (more than 24 hours estimated), so the native watermark could not be generated during this run. The partial download was preserved for resume. Once the weights are available, the notebook runs the unchanged DynamiCrafter entry point, attacks its native output, and applies the released LVMark decoder/BCH record.",
     )
     cells += [
         code(
@@ -621,6 +665,8 @@ print(WATERMARKED_VIDEO, BCH)'''
     "--case", f"original={ATTACK_RUN / 'input-watermarked.mp4'}",
     "--case", f"propainter={ATTACK_RUN / 'propainter.mp4'}",
     "--case", f"diffueraser={ATTACK_RUN / 'diffueraser.mp4'}",
+    "--case", f"effecterase={ATTACK_RUN / 'effecterase.mp4'}",
+    "--case", f"e2fgvi={ATTACK_RUN / 'e2fgvi.mp4'}",
 ])'''
         ),
         results_cell(),
@@ -684,6 +730,8 @@ for path, label in [
     "--case", f"original={ATTACK_RUN / 'input-watermarked.mp4'}",
     "--case", f"propainter={ATTACK_RUN / 'propainter.mp4'}",
     "--case", f"diffueraser={ATTACK_RUN / 'diffueraser.mp4'}",
+    "--case", f"effecterase={ATTACK_RUN / 'effecterase.mp4'}",
+    "--case", f"e2fgvi={ATTACK_RUN / 'e2fgvi.mp4'}",
 ])'''
         ),
         results_cell(),
@@ -692,12 +740,14 @@ for path, label in [
 
 
 BUILDERS = {
+    "rivagan": rivagan,
     "watermark_anything": wam,
     "vine": vine,
     "videomark": videomark,
     "sigmark": sigmark,
     "vidsig": vidsig,
     "genptw": genptw,
+    "lvmark": lvmark,
 }
 
 
