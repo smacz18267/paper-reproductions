@@ -97,7 +97,7 @@ def setup_markdown() -> dict[str, Any]:
         """
 ## Notebook setup
 
-After a fresh clone, run `python3 scripts/prepare_mose_notebooks.py` from the repository root. This downloads and verifies the 48 videos shared by the three method notebooks. Run the next cell once to enable the video, image, download, and metadata viewers. If Git LFS has left a pointer file in place of a video, the viewer reports the preparation command instead of displaying a broken player.
+After a fresh clone, run `python3 scripts/prepare_mose_notebooks.py` from the repository root. This downloads and verifies the videos shared by the method notebooks. Run the next cell once to enable the video, image, download, and metadata viewers. If Git LFS has left a pointer file in place of a video, the viewer reports the preparation command instead of displaying a broken player.
 """
     )
 
@@ -194,9 +194,9 @@ def baseline_markdown(record: dict[str, Any]) -> dict[str, Any]:
         f"""
 ### Source and unwatermarked removal reference
 
-The source has {record['frame_count']} frames at {record['width']} x {record['height']}, 25 FPS, and a duration of about {duration:.2f} seconds. The raw mask marks the object selected for removal. The two unwatermarked outputs show how ProPainter and DiffuEraser behave before watermarking is introduced.
+The source has {record['frame_count']} frames at {record['width']} x {record['height']}, 25 FPS, and a duration of about {duration:.2f} seconds. The raw mask marks the object selected for removal. The three unwatermarked outputs show how ProPainter, DiffuEraser, and EffectErase behave before watermarking is introduced.
 
-Direct links: {link(media['original'], 'original')} | {link(media['gt_mask'], 'raw mask')} | {link(media['propainter'], 'ProPainter reference')} | {link(media['diffueraser'], 'DiffuEraser reference')}
+Direct links: {link(media['original'], 'original')} | {link(media['gt_mask'], 'raw mask')} | {link(media['propainter'], 'ProPainter reference')} | {link(media['diffueraser'], 'DiffuEraser reference')} | {link(media['effecterase'], 'EffectErase reference')}
 """
     )
 
@@ -209,6 +209,7 @@ def baseline_videos(record: dict[str, Any]) -> dict[str, Any]:
             ("Raw selected-object mask", media["gt_mask"], "White pixels identify the object selected for removal."),
             ("ProPainter without watermark", media["propainter"], "Unwatermarked ProPainter removal reference."),
             ("DiffuEraser without watermark", media["diffueraser"], "Unwatermarked DiffuEraser removal reference."),
+            ("EffectErase without watermark", media["effecterase"], "Unwatermarked EffectErase removal reference."),
         ]
     )
 
@@ -223,6 +224,8 @@ def validation_cell(method_label: str) -> dict[str, Any]:
 - Aggregate results: [watermark-summary.json](../../evidence/mose-task1/review50/watermark-summary.json)
 - Experimental contract: [PROTOCOL.md](../../evidence/mose-task1/PROTOCOL.md)
 - Batch summary: [README.md](../../evidence/mose-task1/README.md)
+- DiffuEraser implementation used for every applicable removal result: [lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
+- EffectErase implementation used for every applicable removal result: [FudanCVL/EffectErase](https://github.com/FudanCVL/EffectErase)
 
 The displayed values come from the committed {method_label} evidence records.
 """
@@ -238,7 +241,7 @@ def build_videoseal(records: list[dict[str, Any]], review_root: Path) -> dict[st
 VideoSeal watermark embedding, object removal, and derived spatial localization are shown for three fixed MOSE samples.
 
 ```text
-original -> VideoSeal embedding -> watermarked video -> ProPainter or DiffuEraser -> derived localization
+original -> VideoSeal embedding -> watermarked video -> ProPainter, DiffuEraser, or EffectErase -> derived localization
 ```
 
 VideoSeal can watermark an existing video. The released checkpoint provides a global watermark-presence detector rather than a native pixel-level tamper map. The evaluation therefore divides each frame into a 4 x 4 crop grid and derives an absence mask. White predicted pixels indicate crops where the detector did not find the watermark. The result must be described as a derived crop-grid proxy, not native VideoSeal localization.
@@ -271,9 +274,11 @@ VideoSeal can watermark an existing video. The released checkpoint provides a gl
         embed = read_json(method_dir / "embed.json")
         prop = read_json(method_dir / "propainter.json")
         diff = read_json(method_dir / "diffueraser.json")
+        effect = read_json(method_dir / "effecterase.json")
         localization = read_json(method_dir / "localization.json")
         prop_loc = localization["propainter"]
         diff_loc = localization["diffueraser"]
+        effect_loc = localization["effecterase"]
 
         frame_ious = prop_loc.get("per_frame_iou", [])
         empty_match_frames = sum(value == 1.0 for value in frame_ious)
@@ -295,19 +300,19 @@ VideoSeal can watermark an existing video. The released checkpoint provides a gl
 
 VideoSeal embedded a {embed['message_bits']}-bit message into {embed['watermarked']['frames']} frames. Embedding took {seconds(embed.get('elapsed_seconds'))}. The detector threshold was `{localization['threshold']}`. A positive detector score means watermark present. A score at or below the threshold becomes predicted tampering.
 
-| Metric | ProPainter | DiffuEraser |
-| --- | ---: | ---: |
-| Removal runtime | {seconds(prop.get('elapsed_seconds'))} | {seconds(diff.get('elapsed_seconds'))} |
-| Frames | {fmt(prop['output']['frames'])} | {fmt(diff['output']['frames'])} |
-| Output dimensions | {prop['output']['width']} x {prop['output']['height']} | {diff['output']['width']} x {diff['output']['height']} |
-| Global pixel IoU | **{fmt(prop_loc['global_iou'])}** | **{fmt(diff_loc['global_iou'])}** |
-| Mean frame IoU | {fmt(prop_loc['mean_frame_iou'])} | {fmt(diff_loc['mean_frame_iou'])} |
-| Minimum frame IoU | {fmt(prop_loc['minimum_frame_iou'])} | {fmt(diff_loc['minimum_frame_iou'])} |
-| Maximum frame IoU | {fmt(prop_loc['maximum_frame_iou'])} | {fmt(diff_loc['maximum_frame_iou'])} |
-| Intersection pixels | {fmt(prop_loc['intersection_pixels'])} | {fmt(diff_loc['intersection_pixels'])} |
-| Union pixels | {fmt(prop_loc['union_pixels'])} | {fmt(diff_loc['union_pixels'])} |
+| Metric | ProPainter | DiffuEraser | EffectErase |
+| --- | ---: | ---: | ---: |
+| Removal runtime | {seconds(prop.get('elapsed_seconds'))} | {seconds(diff.get('elapsed_seconds'))} | {seconds(effect.get('elapsed_seconds'))} |
+| Frames | {fmt(prop['output']['frames'])} | {fmt(diff['output']['frames'])} | {fmt(effect['output']['frames'])} |
+| Output dimensions | {prop['output']['width']} x {prop['output']['height']} | {diff['output']['width']} x {diff['output']['height']} | {effect['output']['width']} x {effect['output']['height']} |
+| Global pixel IoU | **{fmt(prop_loc['global_iou'])}** | **{fmt(diff_loc['global_iou'])}** | **{fmt(effect_loc['global_iou'])}** |
+| Mean frame IoU | {fmt(prop_loc['mean_frame_iou'])} | {fmt(diff_loc['mean_frame_iou'])} | {fmt(effect_loc['mean_frame_iou'])} |
+| Minimum frame IoU | {fmt(prop_loc['minimum_frame_iou'])} | {fmt(diff_loc['minimum_frame_iou'])} | {fmt(effect_loc['minimum_frame_iou'])} |
+| Maximum frame IoU | {fmt(prop_loc['maximum_frame_iou'])} | {fmt(diff_loc['maximum_frame_iou'])} | {fmt(effect_loc['maximum_frame_iou'])} |
+| Intersection pixels | {fmt(prop_loc['intersection_pixels'])} | {fmt(diff_loc['intersection_pixels'])} | {fmt(effect_loc['intersection_pixels'])} |
+| Union pixels | {fmt(prop_loc['union_pixels'])} | {fmt(diff_loc['union_pixels'])} | {fmt(effect_loc['union_pixels'])} |
 
-Localization for both attacks took {seconds(localization.get('elapsed_seconds'))} in total.
+The localization record contains results for all three attacks. Its latest detector pass took {seconds(localization.get('elapsed_seconds'))}.
 
 **Interpretation:** The derived proxy is evaluated against the effective mask used by each remover. A global IoU of 0 means that no predicted tamper pixels overlapped the actual removal region.{empty_note}
 """
@@ -321,6 +326,9 @@ Localization for both attacks took {seconds(localization.get('elapsed_seconds'))
                         ("DiffuEraser attacked video", method["diffueraser"], "DiffuEraser output from the VideoSeal-watermarked input."),
                         ("DiffuEraser effective GT", method["gt_mask_diffueraser"], "Mask after DiffuEraser preprocessing. This is its IoU reference."),
                         ("DiffuEraser predicted mask", method["pred_mask_diffueraser"], "Derived VideoSeal crop-grid prediction after DiffuEraser."),
+                        ("EffectErase attacked video", method["effecterase"], "EffectErase output from the VideoSeal-watermarked input."),
+                        ("EffectErase effective GT", method["gt_mask_effecterase"], "Mask after EffectErase bilinear preprocessing. This is its IoU reference."),
+                        ("EffectErase predicted mask", method["pred_mask_effecterase"], "Derived VideoSeal crop-grid prediction after EffectErase."),
                     ]
                 ),
                 markdown(
@@ -343,7 +351,7 @@ def build_safe_sora(records: list[dict[str, Any]], review_root: Path) -> dict[st
 Safe-Sora graphical watermark embedding, object removal, and watermark recovery are shown for three fixed MOSE samples.
 
 ```text
-sampled original -> Safe-Sora embedding -> watermarked video -> ProPainter or DiffuEraser -> graphical watermark recovery
+sampled original -> Safe-Sora embedding -> watermarked video -> ProPainter, DiffuEraser, or EffectErase -> graphical watermark recovery
 ```
 
 Safe-Sora reconstructs a graphical watermark image. It does not produce a spatial tamper mask, so predicted-mask and IoU fields are not applicable.
@@ -376,18 +384,13 @@ Safe-Sora reconstructs a graphical watermark image. It does not produce a spatia
         embed = read_json(method_dir / "embed.json")
         prop = read_json(method_dir / "propainter.json")
         diff = read_json(method_dir / "diffueraser.json")
+        effect = read_json(method_dir / "effecterase.json")
         recovery = read_json(method_dir / "recovery.json")
         vae = embed["input_to_vae_reconstruction"]
         embedding = embed["watermark_embedding_fidelity"]
         prop_recovery = recovery["propainter"]["fidelity"]
         diff_recovery = recovery["diffueraser"]["fidelity"]
-
-        if prop_recovery["psnr_db"] > diff_recovery["psnr_db"]:
-            better = "ProPainter"
-            gap = prop_recovery["psnr_db"] - diff_recovery["psnr_db"]
-        else:
-            better = "DiffuEraser"
-            gap = diff_recovery["psnr_db"] - prop_recovery["psnr_db"]
+        effect_recovery = recovery["effecterase"]["fidelity"]
 
         adapter = diff.get("compatibility_adapter")
         adapter_text = "No temporal compatibility adapter was needed."
@@ -423,16 +426,16 @@ The first row measures ordinary VAE reconstruction change. The second row isolat
 
 #### Removal and recovery
 
-| Metric | ProPainter | DiffuEraser |
-| --- | ---: | ---: |
-| Removal runtime | {seconds(prop.get('elapsed_seconds'))} | {seconds(diff.get('elapsed_seconds'))} |
-| Reported output frames | {fmt(prop['output']['frames'])} | {fmt(diff['output']['frames'])} |
-| Recovery PSNR | **{fmt(prop_recovery['psnr_db'])} dB** | **{fmt(diff_recovery['psnr_db'])} dB** |
-| Recovery MSE | {fmt(prop_recovery['mse'])} | {fmt(diff_recovery['mse'])} |
-| Recovery MAE | {fmt(prop_recovery['mean_absolute_error'])} | {fmt(diff_recovery['mean_absolute_error'])} |
-| Spatial predicted mask and IoU | N/A | N/A |
+| Metric | ProPainter | DiffuEraser | EffectErase |
+| --- | ---: | ---: | ---: |
+| Removal runtime | {seconds(prop.get('elapsed_seconds'))} | {seconds(diff.get('elapsed_seconds'))} | {seconds(effect.get('elapsed_seconds'))} |
+| Reported output frames | {fmt(prop['output']['frames'])} | {fmt(diff['output']['frames'])} | {fmt(effect['output']['frames'])} |
+| Recovery PSNR | **{fmt(prop_recovery['psnr_db'])} dB** | **{fmt(diff_recovery['psnr_db'])} dB** | **{fmt(effect_recovery['psnr_db'])} dB** |
+| Recovery MSE | {fmt(prop_recovery['mse'])} | {fmt(diff_recovery['mse'])} | {fmt(effect_recovery['mse'])} |
+| Recovery MAE | {fmt(prop_recovery['mean_absolute_error'])} | {fmt(diff_recovery['mean_absolute_error'])} | {fmt(effect_recovery['mean_absolute_error'])} |
+| Spatial predicted mask and IoU | N/A | N/A | N/A |
 
-Recovery for both attacks took {seconds(recovery.get('elapsed_seconds'))} in total. {better} has the higher recovery PSNR by {gap:.4f} dB for this sample. This comparison concerns watermark recovery, not the visual quality of the inpainted video.
+The recovery record contains all three attacks. Its latest recovery pass took {seconds(recovery.get('elapsed_seconds'))}. These values concern graphical-watermark recovery, not the visual quality of the inpainted video.
 """
                 ),
                 video_cell(
@@ -442,6 +445,7 @@ Recovery for both attacks took {seconds(recovery.get('elapsed_seconds'))} in tot
                         ("Safe-Sora watermarked", method["watermarked"], "Graphical-watermarked video before object removal."),
                         ("Safe-Sora with ProPainter", method["propainter"], "ProPainter output after Safe-Sora embedding."),
                         ("Safe-Sora with DiffuEraser", method["diffueraser"], "DiffuEraser output after Safe-Sora embedding. Temporary padding is not shown."),
+                        ("Safe-Sora with EffectErase", method["effecterase"], "EffectErase output after Safe-Sora embedding. Wan temporal padding is not shown."),
                     ]
                 ),
                 markdown(
@@ -451,6 +455,7 @@ Recovery for both attacks took {seconds(recovery.get('elapsed_seconds'))} in tot
                     [
                         ("Recovery after ProPainter", method["recovery_propainter"], f"Recovery PSNR: {prop_recovery['psnr_db']:.4f} dB."),
                         ("Recovery after DiffuEraser", method["recovery_diffueraser"], f"Recovery PSNR: {diff_recovery['psnr_db']:.4f} dB."),
+                        ("Recovery after EffectErase", method["recovery_effecterase"], f"Recovery PSNR: {effect_recovery['psnr_db']:.4f} dB."),
                     ]
                 ),
                 markdown(
@@ -519,7 +524,7 @@ The negative control sampled {sampling['frames']} frames, resized them to {sampl
 | DDIM inversion steps | {availability['ddim_inversion_steps']} | Detector configuration. |
 | Control runtime | {seconds(availability.get('elapsed_seconds'))} | Runtime for the negative control. |
 | Watermarked video | N/A | No authentic VideoShield embedding exists for this clip. |
-| ProPainter and DiffuEraser outputs | N/A | No watermarked input exists to attack. |
+| ProPainter, DiffuEraser, and EffectErase outputs | N/A | No watermarked input exists to attack. |
 | Predicted tamper mask and IoU | N/A | No valid removal experiment exists for this clip. |
 
 **Interpretation:** A value near 0.5 is expected for an unwatermarked input. This control does not measure watermark robustness or localization.
@@ -540,6 +545,223 @@ The negative control sampled {sampling['frames']} frames, resized them to {sampl
         )
 
     cells.append(validation_cell("VideoShield"))
+    return notebook(cells)
+
+
+def build_image_localizer(
+    records: list[dict[str, Any]],
+    review_root: Path,
+    *,
+    method_label: str,
+    slug: str,
+    editguard: bool,
+) -> dict[str, Any]:
+    method_summary = read_json(review_root / "watermark-summary.json")["methods"][slug]
+    if editguard:
+        adapter_text = (
+            "The released EditGuard app resizes every input image to 512 x 512. "
+            "The video adapter therefore applies the released image method independently to each frame "
+            "after the same 512 x 512 resize, and aligns the object masks to that size."
+        )
+        detector_text = (
+            "EditGuard's released residual threshold is 0.2. White predicted pixels are locations where "
+            "at least one recovered residual channel exceeds that threshold. The notebook also reports "
+            "mean recovery accuracy for the fixed 64-bit copyright message."
+        )
+        aggregate_bit_row = (
+            f"| Mean 64-bit recovery accuracy | "
+            f"{fmt(method_summary['mean_propainter_message_bit_accuracy'])} | "
+            f"{fmt(method_summary['mean_diffueraser_message_bit_accuracy'])} | "
+            f"{fmt(method_summary['mean_effecterase_message_bit_accuracy'])} |"
+        )
+    else:
+        adapter_text = (
+            "OmniGuard is released for images. The video adapter applies it independently to each frame "
+            "without resizing these 960 x 480 MOSE sources."
+        )
+        detector_text = (
+            "The released OmniGuard detector returns pixel probabilities. For binary mask display and IoU, "
+            "this evaluation uses the conventional 0.5 probability threshold. OmniGuard's public demo "
+            "does not expose a recovered bit message, so bit accuracy is not applicable."
+        )
+        aggregate_bit_row = "| Message bit accuracy | N/A | N/A | N/A |"
+
+    cells: list[dict[str, Any]] = [
+        markdown(
+            f"""
+# {method_label}: full 50-sample evaluation with three displayed examples
+
+{method_label} was run on **all 50 clips in the fixed MOSE selection**. To keep the notebook readable, it displays the same three fixed examples used by the other notebooks; the aggregate table below and linked evidence cover all 50.
+
+```text
+original -> framewise {method_label} embedding -> watermarked video -> ProPainter, DiffuEraser, or EffectErase -> {method_label} localization
+```
+
+{adapter_text}
+
+{detector_text}
+"""
+        ),
+        markdown(
+            """
+## Metric guide
+
+| Term | Meaning | Interpretation |
+| --- | --- | --- |
+| Embedding PSNR | Similarity between the aligned source frames and watermarked frames. | Higher is better; it measures embedding distortion, not detector quality. |
+| Global pixel IoU | Total intersection divided by total union across all frames and pixels. | 1 is perfect overlap. 0 means no overlap. This is the primary localization result. |
+| Mean frame IoU | IoU calculated for each frame and then averaged. | Empty ground-truth and prediction masks score 1, so global IoU remains the primary score. |
+| Effective GT mask | The removal mask after the remover's actual dilation and spatial preprocessing. | This is the correct reference mask for IoU. |
+| Predicted mask | The method's own detector output after documented binarization. | White indicates predicted tampering. |
+| Message bit accuracy | Fraction of fixed copyright bits recovered correctly, averaged across frames. | Available for EditGuard; not exposed by OmniGuard's public demo. |
+| Runtime | Wall-clock time recorded on the shared experiment hardware. | Useful for this run, not a hardware-independent benchmark. |
+| SHA-256 | File fingerprint stored in the JSON record. | Confirms exact file identity. It is not a quality metric. |
+"""
+        ),
+        markdown(
+            f"""
+## Aggregate results across all 50 selected clips
+
+All 50 clips completed embedding, ProPainter, DiffuEraser, EffectErase, and native localization. The values below are unweighted means of the 50 per-clip results; the complete arrays are in [watermark-summary.json](../../evidence/mose-task1/review50/watermark-summary.json).
+
+| Metric | ProPainter | DiffuEraser | EffectErase |
+| --- | ---: | ---: | ---: |
+| Mean global pixel IoU | **{fmt(method_summary['mean_propainter_iou'])}** | **{fmt(method_summary['mean_diffueraser_iou'])}** | **{fmt(method_summary['mean_effecterase_iou'])}** |
+{aggregate_bit_row}
+
+Mean embedding PSNR across all 50 clips: **{fmt(method_summary['mean_embedding_psnr_db'])} dB**.
+
+The remainder of this notebook deliberately displays only three clips: `{DEFAULT_SAMPLES[0]}`, `{DEFAULT_SAMPLES[1]}`, and `{DEFAULT_SAMPLES[2]}`.
+"""
+        ),
+        setup_markdown(),
+        setup_cell(),
+    ]
+
+    for index, record in enumerate(records, 1):
+        sample_id = record["clip_id"]
+        relative_dir = f"media/{sample_id}/methods/{slug}"
+        local_dir = review_root / relative_dir
+        embed = read_json(local_dir / "embed.json")
+        prop = read_json(local_dir / "propainter.json")
+        diff = read_json(local_dir / "diffueraser.json")
+        effect = read_json(local_dir / "effecterase.json")
+        localization = read_json(local_dir / "localization.json")
+        prop_loc = localization["propainter"]
+        diff_loc = localization["diffueraser"]
+        effect_loc = localization["effecterase"]
+        embedding = embed["embedding_fidelity"]
+        frame_volume = (
+            int(embed["watermarked"]["frames"])
+            * int(embed["watermarked"]["width"])
+            * int(embed["watermarked"]["height"])
+        )
+
+        if editguard:
+            input_original = f"{relative_dir}/aligned-original.mp4"
+            raw_mask = f"{relative_dir}/gt-mask.mp4"
+            input_description = "Source resized to the released EditGuard 512 x 512 input protocol."
+            mask_description = "Selected-object mask aligned to EditGuard's 512 x 512 frames."
+            bit_row = (
+                f"| Mean 64-bit recovery accuracy | {fmt(prop_loc['mean_message_bit_accuracy'])} "
+                f"| {fmt(diff_loc['mean_message_bit_accuracy'])} "
+                f"| {fmt(effect_loc['mean_message_bit_accuracy'])} |"
+            )
+            protocol_note = "Every displayed method video has 512 x 512 frames."
+            if all(
+                int(localization[remover]["union_pixels"]) == frame_volume
+                for remover in ("propainter", "diffueraser", "effecterase")
+            ):
+                prediction_note = (
+                    " For this sample, the released EditGuard threshold marks the full displayed frame "
+                    "as tampered after all three removal pipelines. The low IoU therefore equals the fraction "
+                    "of the full frame occupied by the effective removal mask; it is not a missing-mask result."
+                )
+            else:
+                prediction_note = ""
+        else:
+            input_original = record["media"]["original"]
+            raw_mask = record["media"]["gt_mask"]
+            input_description = "Original MOSE source at native 960 x 480 resolution."
+            mask_description = "Native selected-object mask before remover preprocessing."
+            bit_row = "| Message bit accuracy | N/A | N/A | N/A |"
+            protocol_note = "Every displayed method video retains the native 960 x 480 frames."
+            prediction_note = ""
+
+        cells.extend(
+            [
+                markdown(f"## {index}. Sample `{sample_id}`"),
+                baseline_markdown(record),
+                baseline_videos(record),
+                markdown(
+                    f"""
+### {method_label} results
+
+{protocol_note} Embedding took {seconds(embed.get('elapsed_seconds'))}. The embedding PSNR is **{fmt(embedding['psnr_db'])} dB**, with MSE {fmt(embedding['mse'])} and MAE {fmt(embedding['mean_absolute_error'])}.
+
+| Metric | ProPainter | DiffuEraser | EffectErase |
+| --- | ---: | ---: | ---: |
+| Removal runtime | {seconds(prop.get('elapsed_seconds'))} | {seconds(diff.get('elapsed_seconds'))} | {seconds(effect.get('elapsed_seconds'))} |
+| Global pixel IoU | **{fmt(prop_loc['global_iou'])}** | **{fmt(diff_loc['global_iou'])}** | **{fmt(effect_loc['global_iou'])}** |
+| Mean frame IoU | {fmt(prop_loc['mean_frame_iou'])} | {fmt(diff_loc['mean_frame_iou'])} | {fmt(effect_loc['mean_frame_iou'])} |
+| Minimum frame IoU | {fmt(prop_loc['minimum_frame_iou'])} | {fmt(diff_loc['minimum_frame_iou'])} | {fmt(effect_loc['minimum_frame_iou'])} |
+| Maximum frame IoU | {fmt(prop_loc['maximum_frame_iou'])} | {fmt(diff_loc['maximum_frame_iou'])} | {fmt(effect_loc['maximum_frame_iou'])} |
+| Intersection pixels | {fmt(prop_loc['intersection_pixels'])} | {fmt(diff_loc['intersection_pixels'])} | {fmt(effect_loc['intersection_pixels'])} |
+| Union pixels | {fmt(prop_loc['union_pixels'])} | {fmt(diff_loc['union_pixels'])} | {fmt(effect_loc['union_pixels'])} |
+{bit_row}
+
+The localization record contains all three attacked videos. Its latest detector pass took {seconds(localization.get('elapsed_seconds'))}. The global IoU compares the displayed binary prediction with the effective mask actually used by each remover.{prediction_note}
+"""
+                ),
+                video_cell(
+                    [
+                        (f"{method_label} input", input_original, input_description),
+                        (f"{method_label} aligned mask", raw_mask, mask_description),
+                        (f"{method_label} watermarked", f"{relative_dir}/watermarked.mp4", "Watermarked video before object removal."),
+                        ("ProPainter attacked video", f"{relative_dir}/propainter.mp4", f"ProPainter output from the {method_label}-watermarked input."),
+                        ("ProPainter effective GT", f"{relative_dir}/effective-gt-mask-propainter.mp4", "Mask after ProPainter preprocessing; the IoU reference."),
+                        ("ProPainter predicted mask", f"{relative_dir}/pred-mask-propainter.mp4", f"Native {method_label} localization after ProPainter."),
+                        ("DiffuEraser attacked video", f"{relative_dir}/diffueraser.mp4", f"DiffuEraser output from the {method_label}-watermarked input."),
+                        ("DiffuEraser effective GT", f"{relative_dir}/effective-gt-mask-diffueraser.mp4", "Mask after DiffuEraser preprocessing; the IoU reference."),
+                        ("DiffuEraser predicted mask", f"{relative_dir}/pred-mask-diffueraser.mp4", f"Native {method_label} localization after DiffuEraser."),
+                        ("EffectErase attacked video", f"{relative_dir}/effecterase.mp4", f"EffectErase output from the {method_label}-watermarked input."),
+                        ("EffectErase effective GT", f"{relative_dir}/effective-gt-mask-effecterase.mp4", "Mask after EffectErase bilinear preprocessing; the IoU reference."),
+                        ("EffectErase predicted mask", f"{relative_dir}/pred-mask-effecterase.mp4", f"Native {method_label} localization after EffectErase."),
+                    ]
+                ),
+                markdown(
+                    "### Run records\n\nThe next cell prints the embedding, removal, and localization JSON records, including checkpoints, repository commits, thresholds, runtimes, per-frame values, and file fingerprints."
+                ),
+                json_cell(
+                    [
+                        f"{relative_dir}/embed.json",
+                        f"{relative_dir}/propainter.json",
+                        f"{relative_dir}/diffueraser.json",
+                        f"{relative_dir}/effecterase.json",
+                        f"{relative_dir}/localization.json",
+                    ]
+                ),
+            ]
+        )
+
+    cells.append(
+        markdown(
+            f"""
+## Validation and provenance
+
+- The full-review validator decoded all 50 {method_label} result sets and checked frame counts, dimensions, FPS, mask foreground, and displayed-mask IoU against the JSON result.
+- Full 50-sample validation report: [validation.json](../../evidence/mose-task1/review50/validation.json)
+- Three-example notebook validation: [image-method-notebook-validation.json](../../evidence/mose-task1/review50/image-method-notebook-validation.json)
+- Full 50-sample aggregate metrics: [watermark-summary.json](../../evidence/mose-task1/review50/watermark-summary.json)
+- Experimental contract: [PROTOCOL.md](../../evidence/mose-task1/PROTOCOL.md)
+- Official repository: [{'EditGuard' if editguard else 'OmniGuard'}](https://github.com/xuanyuzhang21/{'EditGuard' if editguard else 'OmniGuard'})
+- DiffuEraser implementation used for every removal result: [lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
+- EffectErase implementation used for every removal result: [FudanCVL/EffectErase](https://github.com/FudanCVL/EffectErase)
+
+The displayed values come from the committed {method_label} evidence records.
+"""
+        )
+    )
     return notebook(cells)
 
 
@@ -565,6 +787,12 @@ def main() -> None:
         "videoseal.ipynb": build_videoseal(records, review_root),
         "safe_sora.ipynb": build_safe_sora(records, review_root),
         "videoshield.ipynb": build_videoshield(records, review_root),
+        "editguard.ipynb": build_image_localizer(
+            records, review_root, method_label="EditGuard", slug="editguard", editguard=True
+        ),
+        "omniguard.ipynb": build_image_localizer(
+            records, review_root, method_label="OmniGuard", slug="omniguard", editguard=False
+        ),
     }
     for filename, document in outputs.items():
         destination = output / filename

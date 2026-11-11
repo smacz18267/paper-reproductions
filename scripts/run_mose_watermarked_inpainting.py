@@ -69,6 +69,20 @@ def safe_sora_masks(dataset_root: Path, embed: dict, output: Path, clip_id: str)
     return directory
 
 
+def video_mask_frames(mask_video: Path, output: Path) -> Path:
+    directory = output / ".mask-frames"
+    if directory.exists():
+        shutil.rmtree(directory)
+    directory.mkdir(parents=True)
+    frames, _rate = decode_rgb(mask_video)
+    for index, frame in enumerate(frames):
+        mask = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
+        _, mask = cv2.threshold(mask, 127, 255, cv2.THRESH_BINARY)
+        if not cv2.imwrite(str(directory / f"{index:05d}.png"), mask):
+            raise RuntimeError(f"Could not write temporary mask frame {index}")
+    return directory
+
+
 def clean_temporary(path: Path) -> None:
     if path.is_dir():
         shutil.rmtree(path)
@@ -81,7 +95,11 @@ def main() -> None:
     parser.add_argument("--selection", required=True, type=Path)
     parser.add_argument("--dataset-root", required=True, type=Path)
     parser.add_argument("--output-root", required=True, type=Path)
-    parser.add_argument("--watermark-method", required=True, choices=("videoseal", "safe-sora"))
+    parser.add_argument(
+        "--watermark-method",
+        required=True,
+        choices=("videoseal", "safe-sora", "editguard", "omniguard"),
+    )
     parser.add_argument("--remover", required=True, choices=("propainter", "diffueraser"))
     parser.add_argument("--propainter", type=Path, default=Path("/home/smayan/research/ProPainter"))
     parser.add_argument("--diffueraser", type=Path, default=Path("/home/smayan/research/DiffuEraser"))
@@ -127,6 +145,8 @@ def main() -> None:
                 raise RuntimeError(f"VideoSeal frame count differs for {clip.clip_id}")
             if args.watermark_method == "safe-sora" and expected_frames != 16:
                 raise RuntimeError(f"Safe-Sora must contain 16 frames for {clip.clip_id}")
+            if args.watermark_method in ("editguard", "omniguard") and expected_frames != clip.frame_count:
+                raise RuntimeError(f"{args.watermark_method} frame count differs for {clip.clip_id}")
             if final.is_file() and metrics_path.is_file() and not args.force:
                 validate_video(final, frames=expected_frames, size=size)
                 print(f"[{ordinal}/50] skip {args.watermark_method}/{args.remover} {clip.clip_id}", flush=True)
@@ -149,6 +169,10 @@ def main() -> None:
                 temporary_masks = safe_sora_masks(args.dataset_root, embed, destination, clip.clip_id)
                 mask_directory = temporary_masks
                 mask_video = destination / "gt-mask.mp4"
+            elif args.watermark_method == "editguard":
+                mask_video = destination / "gt-mask.mp4"
+                temporary_masks = video_mask_frames(mask_video, destination)
+                mask_directory = temporary_masks
             else:
                 mask_directory = raw_mask_frames(args.dataset_root, clip.clip_id)
                 mask_video = args.dataset_root / "batch_inputs" / clip.clip_id / "mask.mp4"

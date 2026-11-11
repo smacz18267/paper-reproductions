@@ -1,6 +1,6 @@
 {
   "clip_id": "230c2edf",
-  "completed_at": "2026-10-19T13:37:29+00:00",
+  "completed_at": "2026-11-03T15:38:52+00:00",
   "detector_semantics": "preds[:,0] > 0 is watermark present; reported mask is preds[:,0] <= 0",
   "diffueraser": {
     "effective_gt": "OpenCV 3x3 rectangle erosion once, then dilation 8 iterations",
@@ -45,7 +45,61 @@
     "union_pixels": 1787465,
     "width": 960
   },
-  "elapsed_seconds": 2.897,
+  "effecterase": {
+    "effective_gt": "EffectErase bilinear mask resize, thresholded at the model zero point",
+    "effective_gt_mask_sha256": "a68e83aa40f53350d7ca6196ea2d83cb7a10db447af5d7b267dfec0e0668d9ee",
+    "frames": 25,
+    "global_iou": 0.0,
+    "height": 544,
+    "intersection_pixels": 0,
+    "localization_mode": "derived_4x4_patch_grid_from_global_presence_detector",
+    "maximum_frame_iou": 0.0,
+    "mean_frame_iou": 0.0,
+    "minimum_frame_iou": 0.0,
+    "per_frame_iou": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pred_mask_sha256": "44addbe6220f01edbffe250d79c9e5942163e7ea360a9dce092e17df9f1a1328",
+    "processing_adapter": {
+      "processing_size": [
+        832,
+        464
+      ],
+      "reason": "Preserve aspect ratio within EffectErase's released Wan inference scale.",
+      "reported_size": [
+        960,
+        544
+      ],
+      "restoration": "Lanczos resize to the aligned input size"
+    },
+    "union_pixels": 1431582,
+    "width": 960
+  },
+  "elapsed_seconds": 2.26,
   "method": "videoseal",
   "prediction_resize": "nearest from detector resolution to attack-video resolution",
   "propainter": {
@@ -91,7 +145,7 @@
     "union_pixels": 1750813,
     "width": 960
   },
-  "started_at": "2026-10-19T13:37:26+00:00",
+  "started_at": "2026-11-03T15:38:50+00:00",
   "status": "complete",
   "threshold": 0.0
 }

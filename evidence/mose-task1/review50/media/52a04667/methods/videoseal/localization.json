@@ -1,6 +1,6 @@
 {
   "clip_id": "52a04667",
-  "completed_at": "2026-10-19T13:38:59+00:00",
+  "completed_at": "2026-11-03T15:40:08+00:00",
   "detector_semantics": "preds[:,0] > 0 is watermark present; reported mask is preds[:,0] <= 0",
   "diffueraser": {
     "effective_gt": "OpenCV 3x3 rectangle erosion once, then dilation 8 iterations",
@@ -46,7 +46,62 @@
     "union_pixels": 26963,
     "width": 960
   },
-  "elapsed_seconds": 2.542,
+  "effecterase": {
+    "effective_gt": "EffectErase bilinear mask resize, thresholded at the model zero point",
+    "effective_gt_mask_sha256": "f6a7acb4d273395b75c930c0c5ebe4f8f259816d1b47b9613413b06eff54cd0f",
+    "frames": 26,
+    "global_iou": 0.0,
+    "height": 400,
+    "intersection_pixels": 0,
+    "localization_mode": "derived_4x4_patch_grid_from_global_presence_detector",
+    "maximum_frame_iou": 0.0,
+    "mean_frame_iou": 0.0,
+    "minimum_frame_iou": 0.0,
+    "per_frame_iou": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pred_mask_sha256": "080258b5a21eb65601c3c72e9dc132e7376f122ad75e9f4b87b6c701c5bd8c3e",
+    "processing_adapter": {
+      "processing_size": [
+        832,
+        336
+      ],
+      "reason": "Preserve aspect ratio within EffectErase's released Wan inference scale.",
+      "reported_size": [
+        960,
+        400
+      ],
+      "restoration": "Lanczos resize to the aligned input size"
+    },
+    "union_pixels": 7016,
+    "width": 960
+  },
+  "elapsed_seconds": 2.209,
   "method": "videoseal",
   "prediction_resize": "nearest from detector resolution to attack-video resolution",
   "propainter": {
@@ -93,7 +148,7 @@
     "union_pixels": 23503,
     "width": 960
   },
-  "started_at": "2026-10-19T13:38:56+00:00",
+  "started_at": "2026-11-03T15:40:06+00:00",
   "status": "complete",
   "threshold": 0.0
 }
