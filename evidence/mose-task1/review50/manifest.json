@@ -209,7 +209,7 @@
             "availability": "media/02b72b8d/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -421,7 +421,7 @@
             "availability": "media/0ab75563/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.48046875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -633,7 +633,7 @@
             "availability": "media/0b02886a/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.498046875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -845,7 +845,7 @@
             "availability": "media/0b787263/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5234375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -1057,7 +1057,7 @@
             "availability": "media/0f96e2d7/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.466796875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -1269,7 +1269,7 @@
             "availability": "media/1e44f47e/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.482421875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -1481,7 +1481,7 @@
             "availability": "media/1fc5e086/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.53125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -1693,7 +1693,7 @@
             "availability": "media/230c2edf/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.50390625,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -1905,7 +1905,7 @@
             "availability": "media/26048547/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.494140625,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -2117,7 +2117,7 @@
             "availability": "media/2d8d7d35/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.4609375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -2329,7 +2329,7 @@
             "availability": "media/2f5fb2a3/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -2541,7 +2541,7 @@
             "availability": "media/337dfa1e/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.509765625,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -2753,7 +2753,7 @@
             "availability": "media/34ccea00/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5390625,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -2965,7 +2965,7 @@
             "availability": "media/395224b3/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.505859375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -3177,7 +3177,7 @@
             "availability": "media/44476e77/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5234375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -3389,7 +3389,7 @@
             "availability": "media/4c42c747/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.521484375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -3601,7 +3601,7 @@
             "availability": "media/4ce088c6/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.53125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -3813,7 +3813,7 @@
             "availability": "media/4d979d99/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.48828125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -4025,7 +4025,7 @@
             "availability": "media/4e6aa1e8/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.513671875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -4237,7 +4237,7 @@
             "availability": "media/52a04667/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.517578125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -4449,7 +4449,7 @@
             "availability": "media/561f6380/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.482421875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -4661,7 +4661,7 @@
             "availability": "media/5ba84e3f/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -4873,7 +4873,7 @@
             "availability": "media/5ff72128/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5078125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -5085,7 +5085,7 @@
             "availability": "media/6042d64a/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.501953125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -5297,7 +5297,7 @@
             "availability": "media/60ab04c5/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.474609375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -5509,7 +5509,7 @@
             "availability": "media/6763a576/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.49609375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -5721,7 +5721,7 @@
             "availability": "media/7593caea/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.455078125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -5933,7 +5933,7 @@
             "availability": "media/76b18413/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.50390625,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -6145,7 +6145,7 @@
             "availability": "media/780a25de/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.501953125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -6357,7 +6357,7 @@
             "availability": "media/782551f7/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.53515625,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -6569,7 +6569,7 @@
             "availability": "media/7ce2c865/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.533203125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -6781,7 +6781,7 @@
             "availability": "media/843d3bf7/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.544921875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -6993,7 +6993,7 @@
             "availability": "media/915f0d9a/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.517578125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -7205,7 +7205,7 @@
             "availability": "media/91b2f707/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5234375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -7417,7 +7417,7 @@
             "availability": "media/9cff25e3/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.4921875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -7629,7 +7629,7 @@
             "availability": "media/9fc933f6/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5078125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -7841,7 +7841,7 @@
             "availability": "media/ac32a655/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.490234375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -8053,7 +8053,7 @@
             "availability": "media/b7fb59c9/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.48828125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -8265,7 +8265,7 @@
             "availability": "media/ba538072/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.484375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -8477,7 +8477,7 @@
             "availability": "media/c062f4d7/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5390625,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -8689,7 +8689,7 @@
             "availability": "media/c9f7f69d/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.505859375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -8901,7 +8901,7 @@
             "availability": "media/ca74a924/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.4453125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -9113,7 +9113,7 @@
             "availability": "media/ceaa6c65/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.4921875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -9325,7 +9325,7 @@
             "availability": "media/cfc68a82/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5078125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -9537,7 +9537,7 @@
             "availability": "media/dd5a4739/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.5234375,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -9749,7 +9749,7 @@
             "availability": "media/e1d9fb32/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.509765625,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -9961,7 +9961,7 @@
             "availability": "media/eaff3301/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.51171875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -10173,7 +10173,7 @@
             "availability": "media/f415f9ad/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.486328125,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -10385,7 +10385,7 @@
             "availability": "media/f89b54d0/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.50390625,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,
@@ -10597,7 +10597,7 @@
             "availability": "media/fe2dc281/methods/videoshield/availability.json"
           },
           "negative_control_accuracy": 0.48046875,
-          "note": "Not applicable: VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score.",
+          "note": "Not applicable: The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content. The shown score is an explicitly labelled unwatermarked negative control, not an embedding, robustness, or localization score. See evidence/mose-task1/videoshield-adapter-check for the tested inversion adapter, videos, and metrics.",
           "pred_mask_diffueraser": null,
           "pred_mask_effecterase": null,
           "pred_mask_propainter": null,

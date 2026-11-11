@@ -13,7 +13,7 @@
   "interpretation": "Expected chance-level negative control; not an embedding or robustness score.",
   "method": "videoshield",
   "protocol": "unwatermarked_mose_negative_control_detection",
-  "reason": "VideoShield embeds in diffusion-generation noise and cannot post-process an existing MOSE video.",
+  "reason": "The released VideoShield embedder creates a diffusion model's starting noise and has no faithful post-processing path for an existing MOSE video; the documented inversion-adapter check changes the input content.",
   "reference_watermark_accuracy": 0.4609375,
   "sampling": {
     "frames": 16,
