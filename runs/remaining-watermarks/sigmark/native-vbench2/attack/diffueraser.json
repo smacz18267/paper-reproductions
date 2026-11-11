@@ -1,0 +1,28 @@
+{
+  "case": "diffueraser",
+  "completed_at": "2026-11-07T00:30:54+00:00",
+  "dimension_normalization": {
+    "expected_size": [
+      512,
+      512
+    ],
+    "interpolation": null,
+    "reason": null,
+    "resized": false,
+    "source_size": [
+      512,
+      512
+    ]
+  },
+  "output": {
+    "bytes": 1375954,
+    "fps": 8.0,
+    "frames": 65,
+    "height": 512,
+    "width": 512
+  },
+  "sha256": "b05a8f82c3eae1cef0d10b12c2768e6452350c943f7040ec96528622bdbc3c94",
+  "source_video": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/sigmark/native-vbench2/attack/work/removal-pair/diffueraser_result.mp4",
+  "status": "complete",
+  "trimmed_compatibility_padding": 0
+}

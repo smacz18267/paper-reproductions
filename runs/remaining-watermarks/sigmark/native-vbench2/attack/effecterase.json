@@ -1,0 +1,69 @@
+{
+  "completed_at": "2026-11-10T10:43:19+00:00",
+  "elapsed_seconds": 95.511,
+  "input": {
+    "path": "input-watermarked.mp4",
+    "sha256": "62fb3a015d24943848fd9221ae9592e0864807ba3b03aad9fe544f826ef304f8"
+  },
+  "mask": {
+    "path": "gt-mask.mp4",
+    "sha256": "292f0384bb443608b23e2baadbf451c6ecee5ded58d1e50c4471f55e1580bce7"
+  },
+  "model": {
+    "base_model_revision": "9bcbbcf673c0e6a996df6f3f25bee596ffa36d47",
+    "effecterase_checkpoint": {
+      "path": "/mnt/data_fast/smayan/research/EffectErase/EffectErase.ckpt",
+      "sha256": "4e9ace4607a348a0d820328f827f7f4f751a0e44d4cf60665c03e9740dfa024d"
+    },
+    "effecterase_revision": "95c9d455300c265c57159767ba3e3e1eebb347b0",
+    "repository": "https://github.com/FudanCVL/EffectErase",
+    "repository_commit": "bcee0a5da5ef387c2ba39390dc4d579503669fb8"
+  },
+  "output": {
+    "path": "effecterase.mp4",
+    "sha256": "38215cd0dd8692dfa9b938cb52a243232ce97fb4f7dbad3d464eb0f1cbab63ff",
+    "video": {
+      "bytes": 1415857,
+      "fps": 8.0,
+      "frames": 65,
+      "height": 512,
+      "width": 512
+    }
+  },
+  "processing_adapter": {
+    "processing_size": [
+      512,
+      512
+    ],
+    "reported_size": [
+      512,
+      512
+    ],
+    "restoration": "Lanczos resize to the aligned input size"
+  },
+  "protocol": "official EffectErase inference on the same authentic watermarked video and binary mask",
+  "remover": "EffectErase",
+  "sample_id": "first-VBench2-aug-small-scale",
+  "settings": {
+    "cfg": 1.0,
+    "num_inference_steps": 50,
+    "seed": 2025,
+    "teacache": false,
+    "tiled": false,
+    "visible_device": "0"
+  },
+  "status": "complete",
+  "temporal_adapter": {
+    "chunks": [
+      {
+        "drop_prefix": 0,
+        "end_exclusive": 65,
+        "padded_frames": 65,
+        "start": 0
+      }
+    ],
+    "reason": "EffectErase uses Wan 4n+1 latent windows",
+    "trimmed_back_to_source_frames": true
+  },
+  "watermark_method": "SIGMark"
+}

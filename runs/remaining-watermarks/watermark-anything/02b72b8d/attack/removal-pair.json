@@ -1,0 +1,69 @@
+{
+  "command": [
+    "/home/smayan/research/DiffuEraser/.venv/bin/python",
+    "-u",
+    "/mnt/data_fast/smayan/research/remaining-watermark-experiments/scripts/run_diffueraser_recorded.py",
+    "--source",
+    "/mnt/data_fast/smayan/research/DiffuEraser",
+    "--seed",
+    "2025",
+    "--input_video",
+    "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/watermark-anything/02b72b8d/attack/attack-input.mp4",
+    "--input_mask",
+    "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/watermark-anything/02b72b8d/attack/attack-mask.mp4",
+    "--video_length",
+    "3",
+    "--mask_dilation_iter",
+    "8",
+    "--max_img_size",
+    "960",
+    "--ref_stride",
+    "10",
+    "--neighbor_length",
+    "10",
+    "--subvideo_length",
+    "40",
+    "--save_path",
+    "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/watermark-anything/02b72b8d/attack/work/removal-pair",
+    "--base_model_path",
+    "/mnt/data_fast/smayan/research/DiffuEraser/weights/stable-diffusion-v1-5",
+    "--vae_path",
+    "/mnt/data_fast/smayan/research/DiffuEraser/weights/sd-vae-ft-mse",
+    "--diffueraser_path",
+    "/mnt/data_fast/smayan/research/DiffuEraser/weights/diffuEraser",
+    "--propainter_model_dir",
+    "/mnt/data_fast/smayan/research/DiffuEraser/weights/propainter"
+  ],
+  "completed_at": "2026-11-07T00:11:33+00:00",
+  "diffueraser_commit": "8e6f279ac7531e27ad1849c6f8dab5372a8597e7",
+  "diffueraser_source": "/mnt/data_fast/smayan/research/DiffuEraser",
+  "finalized_existing_official_execution": true,
+  "mask_dilation_iterations": 8,
+  "outputs": {
+    "diffueraser": {
+      "path": "diffueraser.mp4",
+      "sha256": "cf2c09e4f9dcf6ff2f2894eed8f32736dece14517623bc7ed802ee51876a3e54",
+      "video": {
+        "bytes": 1037977,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      }
+    },
+    "propainter": {
+      "path": "propainter.mp4",
+      "sha256": "ad518a8547e55207149d5fa17b8527840cdc0a72a977048fdeee3650b2e6d27f",
+      "video": {
+        "bytes": 876176,
+        "fps": 25.0,
+        "frames": 67,
+        "height": 480,
+        "width": 960
+      }
+    }
+  },
+  "protocol": "one official DiffuEraser execution; preserved ProPainter prior and final DiffuEraser output",
+  "seed": 2025,
+  "status": "complete"
+}

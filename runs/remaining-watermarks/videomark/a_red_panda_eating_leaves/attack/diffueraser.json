@@ -1,0 +1,28 @@
+{
+  "case": "diffueraser",
+  "completed_at": "2026-11-07T00:13:32+00:00",
+  "dimension_normalization": {
+    "expected_size": [
+      512,
+      512
+    ],
+    "interpolation": null,
+    "reason": null,
+    "resized": false,
+    "source_size": [
+      512,
+      512
+    ]
+  },
+  "output": {
+    "bytes": 319885,
+    "fps": 10.0,
+    "frames": 16,
+    "height": 512,
+    "width": 512
+  },
+  "sha256": "8851d80bc92dec355b1634394a642a52f98b258a97cab2d099c747ffb7abd669",
+  "source_video": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/videomark/a_red_panda_eating_leaves/attack/work/removal-pair/diffueraser_result.mp4",
+  "status": "complete",
+  "trimmed_compatibility_padding": 8
+}

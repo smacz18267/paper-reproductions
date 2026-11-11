@@ -1,0 +1,28 @@
+{
+  "case": "diffueraser",
+  "completed_at": "2026-11-07T00:14:37+00:00",
+  "dimension_normalization": {
+    "expected_size": [
+      512,
+      512
+    ],
+    "interpolation": null,
+    "reason": null,
+    "resized": false,
+    "source_size": [
+      512,
+      512
+    ]
+  },
+  "output": {
+    "bytes": 516470,
+    "fps": 10.0,
+    "frames": 16,
+    "height": 512,
+    "width": 512
+  },
+  "sha256": "d8e5d8150002cbb265546f4f3338bb5468e37095b5a2c5c64a0b32f80d85389c",
+  "source_video": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/vidsig/red-panda-seed42/attack/work/removal-pair/diffueraser_result.mp4",
+  "status": "complete",
+  "trimmed_compatibility_padding": 8
+}

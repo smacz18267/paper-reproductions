@@ -1,0 +1,28 @@
+{
+  "case": "propainter",
+  "completed_at": "2026-11-07T00:11:31+00:00",
+  "dimension_normalization": {
+    "expected_size": [
+      960,
+      480
+    ],
+    "interpolation": "cv2.INTER_LINEAR",
+    "reason": "restore the official ProPainter prior from its default resize_ratio=0.6 to the source dimensions",
+    "resized": true,
+    "source_size": [
+      576,
+      288
+    ]
+  },
+  "output": {
+    "bytes": 876176,
+    "fps": 25.0,
+    "frames": 67,
+    "height": 480,
+    "width": 960
+  },
+  "sha256": "ad518a8547e55207149d5fa17b8527840cdc0a72a977048fdeee3650b2e6d27f",
+  "source_video": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/watermark-anything/02b72b8d/attack/work/removal-pair/propainter_prior.mp4",
+  "status": "complete",
+  "trimmed_compatibility_padding": 0
+}

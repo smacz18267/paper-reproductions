@@ -1,0 +1,28 @@
+{
+  "case": "diffueraser",
+  "completed_at": "2026-11-07T00:15:35+00:00",
+  "dimension_normalization": {
+    "expected_size": [
+      512,
+      512
+    ],
+    "interpolation": null,
+    "reason": null,
+    "resized": false,
+    "source_size": [
+      512,
+      512
+    ]
+  },
+  "output": {
+    "bytes": 574312,
+    "fps": 25.0,
+    "frames": 67,
+    "height": 512,
+    "width": 512
+  },
+  "sha256": "d4cd6818be373d02eb23e0f4fc878928c061ac50e5eae8f612b69dca85a4d5f4",
+  "source_video": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/genptw/02b72b8d/attack/work/removal-pair/diffueraser_result.mp4",
+  "status": "complete",
+  "trimmed_compatibility_padding": 0
+}

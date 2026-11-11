@@ -1,74 +1,37 @@
-# MOSE watermark method notebooks
+# Watermark removal notebooks
 
-The results are organized into five notebooks. EditGuard and OmniGuard were
-evaluated across all 50 clips in the fixed MOSE selection, while their
-notebooks display the same three fixed examples used by the other notebooks.
-Their full 50-sample aggregate metrics and evidence are linked from each
-notebook.
+This directory contains exactly 13 Jupyter notebooks, one for every watermarking method in the study. The completed minimum is one authentic clip per applicable watermarking method, attacked with the same four inpainting methods:
 
-| Method | Notebook | Samples |
-| --- | --- | --- |
-| VideoSeal | [Open notebook](videoseal.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
-| Safe-Sora | [Open notebook](safe_sora.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
-| VideoShield | [Open notebook](videoshield.ipynb) | `02b72b8d`, `0ab75563`, `0b02886a` |
-| EditGuard | [Open notebook](editguard.ipynb) | 50 evaluated; `02b72b8d`, `0ab75563`, `0b02886a` displayed |
-| OmniGuard | [Open notebook](omniguard.ipynb) | 50 evaluated; `02b72b8d`, `0ab75563`, `0b02886a` displayed |
+1. ProPainter
+2. DiffuEraser
+3. EffectErase
+4. E2FGVI-HQ
 
-The selected samples are the first three records in the fixed 50-sample
-manifest. They were not selected after reviewing the results.
+The recorded matrix has 44 completed pair cells across 11 watermarking methods. RivaGAN's four cells are intentionally deferred at the user's request. LVMark's four cells are explicitly blocked: its repository omits the referenced prompt inputs, and its official 2.05 GB weight archive was served to Zeppelin at roughly 25 KB/s (more than 24 hours estimated). No results are fabricated for either method.
 
-The VideoSeal notebook contains the source videos, masks, unwatermarked removal
-references, watermarked videos, ProPainter, DiffuEraser, and EffectErase outputs, effective
-ground-truth masks, derived predicted masks, and localization metrics.
+| Watermarking method | Notebook | One-clip source | Four-inpainter status |
+|---|---|---|---:|
+| EditGuard | [editguard.ipynb](editguard.ipynb) | Fixed MOSE `02b72b8d` | Complete |
+| OmniGuard | [omniguard.ipynb](omniguard.ipynb) | Fixed MOSE `02b72b8d` | Complete |
+| Watermark Anything | [watermark_anything.ipynb](watermark_anything.ipynb) | Fixed MOSE `02b72b8d` | Complete |
+| VINE | [vine.ipynb](vine.ipynb) | Fixed MOSE `02b72b8d` | Complete |
+| GenPTW | [genptw.ipynb](genptw.ipynb) | Fixed MOSE `02b72b8d` | Complete |
+| VideoSeal | [videoseal.ipynb](videoseal.ipynb) | Fixed MOSE `02b72b8d` | Complete |
+| Safe-Sora | [safe_sora.ipynb](safe_sora.ipynb) | Fixed MOSE `02b72b8d` | Complete |
+| VideoShield | [videoshield.ipynb](videoshield.ipynb) | Authors' native ModelScope red-panda sample | Complete |
+| VideoMark | [videomark.ipynb](videomark.ipynb) | Authors' committed ModelScope sample | Complete |
+| SIGMark | [sigmark.ipynb](sigmark.ipynb) | Authors' VBench2 native generation | Complete |
+| VidSig / Video Signature | [vidsig.ipynb](vidsig.ipynb) | Authors' prompt/key native generation | Complete |
+| RivaGAN | [rivagan.ipynb](rivagan.ipynb) | Not executed | Deferred by request |
+| LVMark | [lvmark.ipynb](lvmark.ipynb) | Not generated | Blocked, reason recorded |
 
-The Safe-Sora notebook contains the source videos, masks, unwatermarked removal
-references, sampled inputs, aligned masks, watermarked videos, ProPainter,
-DiffuEraser, and EffectErase outputs, graphical watermark recovery images, and fidelity metrics.
+Generation-coupled watermark methods are not represented as having watermarked MOSE. VideoShield, VideoMark, SIGMark, and VidSig use author-provided or author-generated native media. Every completed pair preserves the input/mask provenance and records any method-specific temporal padding, resizing, or mask dilation in JSON.
 
-The VideoShield notebook contains the source videos, masks, and negative-control
-records. Authentic VideoShield embedding requires diffusion generation, so the
-existing MOSE clips do not have VideoShield-watermarked or removal outputs.
-
-The EditGuard notebook applies the released image method frame by frame using
-its official 512 x 512 input protocol. It contains aligned sources and masks,
-watermarked videos, all three removal outputs, native predicted masks, effective
-ground-truth masks, localization IoU, and 64-bit recovery accuracy.
-
-The OmniGuard notebook applies the released image method frame by frame at the
-native 960 x 480 MOSE size. It contains watermarked videos, all three removal
-outputs, native predicted masks, effective ground-truth masks, and localization
-IoU. The public demo does not expose a recovered bit message.
-
-Every applicable notebook uses the official
-[lixiaowen-xw/DiffuEraser](https://github.com/lixiaowen-xw/DiffuEraser)
-implementation for its DiffuEraser column. This is the same checkout used by
-the batch runner; it is not a separate third remover.
-
-Every applicable notebook also uses the official
-[FudanCVL/EffectErase](https://github.com/FudanCVL/EffectErase) implementation
-as a third removal column. EffectErase is evaluated on the same fixed clips and
-masks as ProPainter and DiffuEraser.
-
-## Download all notebook videos
-
-The MP4 evidence is stored with Git LFS. From the repository root, download and
-verify all videos used by the notebooks with:
+The authoritative machine-readable status is [four-inpainter-matrix.json](../../evidence/four-inpainter-matrix.json). Regenerate and validate the notebooks from the repository root with:
 
 ```bash
-python3 scripts/prepare_mose_notebooks.py
-```
-
-To download and verify all videos for the complete 50-sample review:
-
-```bash
-python3 scripts/prepare_mose_notebooks.py --all
-```
-
-After preparation, start Jupyter from the repository root, open a notebook, and
-run its cells. Each displayed video has a download link.
-
-Regenerate the notebooks after changing the evidence bundle with:
-
-```bash
-python3 scripts/build_mose_sample_notebooks.py
+python3 scripts/build_remaining_watermark_notebooks.py
+python3 scripts/finalize_four_inpainter_notebooks.py
+python3 scripts/validate_remaining_watermark_notebooks.py
+python3 scripts/validate_four_inpainter_matrix.py
 ```

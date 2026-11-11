@@ -1,0 +1,53 @@
+{
+  "checkpoint": {
+    "path": "/mnt/data_fast/smayan/research/E2FGVI/release_model/E2FGVI-HQ-CVPR22.pth",
+    "sha256": "afff989d41205598a79ce24630b9c83af4b0a06f45b137979a25937d94c121a5"
+  },
+  "command": [
+    "/mnt/data_fast/smayan/research/DiffuEraser/.venv/bin/python",
+    "/mnt/data_fast/smayan/research/E2FGVI/test.py",
+    "--model",
+    "e2fgvi_hq",
+    "--video",
+    "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/videomark/a_red_panda_eating_leaves/attack/input-watermarked.mp4",
+    "--mask",
+    "/mnt/data_fast/smayan/research/remaining-watermark-experiments/runs/videomark/a_red_panda_eating_leaves/attack/gt-mask-frames",
+    "--ckpt",
+    "/mnt/data_fast/smayan/research/E2FGVI/release_model/E2FGVI-HQ-CVPR22.pth",
+    "--savefps",
+    "10"
+  ],
+  "completed_at": "2026-11-10T10:46:41+00:00",
+  "elapsed_seconds": 7.757,
+  "input": {
+    "path": "input-watermarked.mp4",
+    "sha256": "cd2cdaac68f2e2d78824017f6f67d18bb0d42e60eabf7b48c9e45ade6365eec4"
+  },
+  "mask": {
+    "path": "gt-mask-frames",
+    "preprocessing": "official read_mask: nearest resize, binary threshold, 3x3 cross dilation x4"
+  },
+  "output": {
+    "path": "e2fgvi.mp4",
+    "sha256": "36fd335315701d015af535eda890b56009fedd8d18718bcd6d6173f5896d6798",
+    "video": {
+      "bytes": 343315,
+      "fps": 10.0,
+      "frames": 16,
+      "height": 512,
+      "width": 512
+    }
+  },
+  "protocol": "official test.py with the same authentic watermarked video and binary mask frames",
+  "remover": "E2FGVI-HQ",
+  "repository": "https://github.com/MCG-NKU/E2FGVI",
+  "repository_commit": "709cbe319edc21b8a365a28e14cba595a93d62cf",
+  "sample_id": "a_red_panda_eating_leaves",
+  "settings": {
+    "model": "e2fgvi_hq",
+    "save_fps": 10,
+    "visible_device": "0"
+  },
+  "status": "complete",
+  "watermark_method": "VideoMark"
+}
