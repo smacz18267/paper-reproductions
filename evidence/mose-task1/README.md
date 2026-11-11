@@ -51,6 +51,9 @@ rebuilds the shared original/removal view, and
 `scripts/merge_mose_watermark_results.py` adds the corrected watermark-first
 outputs and metadata.
 
+See [RESULTS_GUIDE.md](RESULTS_GUIDE.md) for the result directory tree and a
+plain-language description of every MP4, PNG and JSON filename.
+
 The method picker contains all three requested watermark methods:
 
 - VideoSeal: watermarked input, both post-watermark removal videos, effective
@@ -60,8 +63,12 @@ The method picker contains all three requested watermark methods:
   and both post-watermark removal videos. Pred mask and IoU are marked not
   applicable because the released method does not provide spatial localization.
 - VideoShield: an explicit per-clip availability record and unwatermarked
-  negative control. It is marked not applicable because VideoShield embeds in a
-  diffusion generator's initial noise and cannot post-process a MOSE video.
+  negative control. It is marked not applicable because the released embedder
+  creates a diffusion generator's initial noise and provides no faithful
+  post-processing path for an existing MOSE video. This was verified with the
+  source-level and empirical
+  [existing-video adapter check](videoshield-adapter-check/README.md), not
+  assumed from the paper title.
 
 ## Final validated bundle
 
@@ -78,7 +85,10 @@ committed predicted-mask and effective-GT videos.
   DiffuEraser. These are watermark-recovery results, not spatial localization.
 - VideoShield: 50/50 explicit not-applicable records. Its mean unwatermarked
   negative-control bit accuracy is 0.5028; this is not an embedding or
-  localization result.
+  localization result. A separate compatibility sweep on MOSE clip `02b72b8d`
+  tested both the literal released generation path and a custom DDIM-inversion
+  adapter. The literal path generated unrelated content; the adapter reached
+  0.9668 recovery only after fidelity fell to 14.81 dB PSNR / 0.4929 SSIM.
 
 The complete review directory is about 815 MB. See `validation.json` for the
 per-file decoder inventory and `watermark-summary.json` for aggregate results.
