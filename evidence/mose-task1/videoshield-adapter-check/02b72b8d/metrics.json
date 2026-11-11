@@ -1,0 +1,222 @@
+{
+  "purpose": "Empirical compatibility check for applying VideoShield to an existing MOSE video",
+  "upstream_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075",
+  "seed": 2025,
+  "device": "cuda:0",
+  "gpu": "NVIDIA RTX A6000",
+  "input_video": "/home/smayan/research/datasets/MOSEv1/batch_inputs/02b72b8d/video.mp4",
+  "model_path": "/home/smayan/research/VideoShield/models/modelscope",
+  "frames": 16,
+  "size": 256,
+  "inference_and_inversion_steps": 25,
+  "prompt": "",
+  "input": {
+    "source_frame_count_reported": 67,
+    "source_frame_count_decoded": 67,
+    "source_fps": 25.0,
+    "source_width": 960,
+    "source_height": 480,
+    "sample_indices": [
+      0,
+      4,
+      9,
+      13,
+      18,
+      22,
+      26,
+      31,
+      35,
+      40,
+      44,
+      48,
+      53,
+      57,
+      62,
+      66
+    ],
+    "adapter_width": 256,
+    "adapter_height": 256
+  },
+  "adapter": {
+    "description": "DDIM inversion followed by VideoShield encrypted-sign imposition with inverted magnitudes preserved",
+    "formula": "z_alpha = normalize((1-alpha)*z_inverted + alpha*sign(w)*abs(z_inverted))",
+    "status": "experimental adapter; not provided or validated by upstream VideoShield"
+  },
+  "variants": [
+    {
+      "name": "alpha-0.00",
+      "route": "inversion-sign-adapter",
+      "alpha": 0.0,
+      "starting_noise_sign_match": 0.4992218017578125,
+      "recovered_noise_sign_match": 0.497039794921875,
+      "watermark_accuracy": 0.470703125,
+      "versus_mose_input": {
+        "mse": 0.008534573018550873,
+        "psnr_db": 20.68818201593863,
+        "ssim": 0.7208485156297684
+      }
+    },
+    {
+      "name": "alpha-0.05",
+      "route": "inversion-sign-adapter",
+      "alpha": 0.05,
+      "starting_noise_sign_match": 0.4992218017578125,
+      "recovered_noise_sign_match": 0.5042266845703125,
+      "watermark_accuracy": 0.5,
+      "versus_mose_input": {
+        "mse": 0.009351575747132301,
+        "psnr_db": 20.29115204033851,
+        "ssim": 0.7022449560463428
+      },
+      "versus_alpha_0_reconstruction": {
+        "mse": 0.0007865040097385645,
+        "psnr_db": 31.042990589238556,
+        "ssim": 0.9287962540984154
+      }
+    },
+    {
+      "name": "alpha-0.10",
+      "route": "inversion-sign-adapter",
+      "alpha": 0.1,
+      "starting_noise_sign_match": 0.4992218017578125,
+      "recovered_noise_sign_match": 0.5103912353515625,
+      "watermark_accuracy": 0.58203125,
+      "versus_mose_input": {
+        "mse": 0.011019614525139332,
+        "psnr_db": 19.578335971841362,
+        "ssim": 0.6827609911561012
+      },
+      "versus_alpha_0_reconstruction": {
+        "mse": 0.002157144248485565,
+        "psnr_db": 26.66120812604143,
+        "ssim": 0.868194505572319
+      }
+    },
+    {
+      "name": "alpha-0.15",
+      "route": "inversion-sign-adapter",
+      "alpha": 0.15,
+      "starting_noise_sign_match": 0.4992218017578125,
+      "recovered_noise_sign_match": 0.5173492431640625,
+      "watermark_accuracy": 0.638671875,
+      "versus_mose_input": {
+        "mse": 0.014584030956029892,
+        "psnr_db": 18.361224225196533,
+        "ssim": 0.6530302539467812
+      },
+      "versus_alpha_0_reconstruction": {
+        "mse": 0.005413434002548456,
+        "psnr_db": 22.665271535192886,
+        "ssim": 0.7997902072966099
+      }
+    },
+    {
+      "name": "alpha-0.20",
+      "route": "inversion-sign-adapter",
+      "alpha": 0.2,
+      "starting_noise_sign_match": 0.4992218017578125,
+      "recovered_noise_sign_match": 0.5242462158203125,
+      "watermark_accuracy": 0.71484375,
+      "versus_mose_input": {
+        "mse": 0.019409706816077232,
+        "psnr_db": 17.11981024586984,
+        "ssim": 0.604756273329258
+      },
+      "versus_alpha_0_reconstruction": {
+        "mse": 0.01056105550378561,
+        "psnr_db": 19.762926749308008,
+        "ssim": 0.712585087865591
+      }
+    },
+    {
+      "name": "alpha-0.25",
+      "route": "inversion-sign-adapter",
+      "alpha": 0.25,
+      "starting_noise_sign_match": 0.4992218017578125,
+      "recovered_noise_sign_match": 0.53533935546875,
+      "watermark_accuracy": 0.794921875,
+      "versus_mose_input": {
+        "mse": 0.02247808687388897,
+        "psnr_db": 16.482406546452253,
+        "ssim": 0.5832461267709732
+      },
+      "versus_alpha_0_reconstruction": {
+        "mse": 0.014352056197822094,
+        "psnr_db": 18.43085873745618,
+        "ssim": 0.656643345952034
+      }
+    },
+    {
+      "name": "alpha-0.50",
+      "route": "inversion-sign-adapter",
+      "alpha": 0.5,
+      "starting_noise_sign_match": 0.754058837890625,
+      "recovered_noise_sign_match": 0.58905029296875,
+      "watermark_accuracy": 0.966796875,
+      "versus_mose_input": {
+        "mse": 0.03306056186556816,
+        "psnr_db": 14.806897698498016,
+        "ssim": 0.4929385166615248
+      },
+      "versus_alpha_0_reconstruction": {
+        "mse": 0.034266773611307144,
+        "psnr_db": 14.651267846500529,
+        "ssim": 0.48498314805328846
+      }
+    },
+    {
+      "name": "alpha-0.75",
+      "route": "inversion-sign-adapter",
+      "alpha": 0.75,
+      "starting_noise_sign_match": 1.0,
+      "recovered_noise_sign_match": 0.5123748779296875,
+      "watermark_accuracy": 0.599609375,
+      "versus_mose_input": {
+        "mse": 0.04698006808757782,
+        "psnr_db": 13.280863581408331,
+        "ssim": 0.47780830413103104
+      },
+      "versus_alpha_0_reconstruction": {
+        "mse": 0.05396987125277519,
+        "psnr_db": 12.678486179599112,
+        "ssim": 0.4532307330518961
+      }
+    },
+    {
+      "name": "alpha-1.00",
+      "route": "inversion-sign-adapter",
+      "alpha": 1.0,
+      "starting_noise_sign_match": 1.0,
+      "recovered_noise_sign_match": 0.5175628662109375,
+      "watermark_accuracy": 0.65625,
+      "versus_mose_input": {
+        "mse": 0.04980660602450371,
+        "psnr_db": 13.027130514225965,
+        "ssim": 0.46914071403443813
+      },
+      "versus_alpha_0_reconstruction": {
+        "mse": 0.056885045021772385,
+        "psnr_db": 12.450018938543252,
+        "ssim": 0.44683706015348434
+      }
+    },
+    {
+      "name": "canonical",
+      "route": "released-generation-path",
+      "alpha": null,
+      "starting_noise_sign_match": 1.0,
+      "recovered_noise_sign_match": 0.8592681884765625,
+      "watermark_accuracy": 1.0,
+      "versus_mose_input": {
+        "mse": 0.06267205625772476,
+        "psnr_db": 12.029260559505293,
+        "ssim": 0.12974797934293747
+      },
+      "versus_alpha_0_reconstruction": {
+        "mse": 0.06984318792819977,
+        "psnr_db": 11.558759458771103,
+        "ssim": 0.12915788870304823
+      }
+    }
+  ]
+}

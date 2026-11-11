@@ -112,12 +112,16 @@ def append_record(path: Path, method: str, attack: Path) -> None:
     path.write_text(json.dumps(document, indent=1, ensure_ascii=False) + "\n")
 
 
-def video_shield_notebook(attack: Path) -> dict[str, Any]:
-    return {
-        "cells": [
+def append_video_shield_record(path: Path, attack: Path) -> None:
+    document = json.loads(path.read_text())
+    document["cells"] = [
+        cell for cell in document["cells"] if TAG not in cell.get("metadata", {}).get("tags", [])
+    ]
+    document["cells"].extend(
+        [
             markdown(
                 """
-# VideoShield: four inpainting methods on its native sample
+## Native VideoShield sample: four inpainting methods
 
 VideoShield is generation-coupled, so MOSE is not used. This notebook uses the authors' recorded 16-frame, 256×256 ModelScope red-panda output, its saved watermark information, and its spatial tamper mask. The same authentic watermarked clip and mask are passed to ProPainter, DiffuEraser, EffectErase, and E2FGVI-HQ.
 
@@ -128,14 +132,9 @@ Inspected commit: `a61efa73abb15d30f50ee535c3301cea7dec3075`
             ),
             markdown(completion_markdown("VideoShield", attack)),
             code(display_cell(attack)),
-        ],
-        "metadata": {
-            "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
-            "language_info": {"name": "python", "version": "3"},
-        },
-        "nbformat": 4,
-        "nbformat_minor": 5,
-    }
+        ]
+    )
+    path.write_text(json.dumps(document, indent=1, ensure_ascii=False) + "\n")
 
 
 def main() -> None:
@@ -145,9 +144,7 @@ def main() -> None:
         append_record(NOTEBOOKS / f"{notebook_name}.ipynb", notebook_name.replace("_", " ").title(), attack)
 
     shield_attack = ROOT / "runs/remaining-watermarks/videoshield/modelscope-red-panda/attack"
-    (NOTEBOOKS / "videoshield.ipynb").write_text(
-        json.dumps(video_shield_notebook(shield_attack), indent=1, ensure_ascii=False) + "\n"
-    )
+    append_video_shield_record(NOTEBOOKS / "videoshield.ipynb", shield_attack)
     print(f"Finalized 11 implemented notebooks in {NOTEBOOKS}")
 
 

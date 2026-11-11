@@ -1,0 +1,42 @@
+{
+  "checkpoint": {
+    "path": "/home/smayan/research/OmniGuard/checkpoint/model_checkpoint_01500.pt",
+    "sha256": "e313c99d80a4088c3802611b08d28e768343dbb55ac4a8ba9d7d187c96f7e64a"
+  },
+  "clip_id": "1fc5e086",
+  "completed_at": "2026-11-01T06:18:40+00:00",
+  "elapsed_seconds": 25.032,
+  "embedding_fidelity": {
+    "mean_absolute_error": 0.6967349220262951,
+    "mse": 0.9092762208567841,
+    "psnr_db": 48.54384527182713
+  },
+  "method": "omniguard",
+  "protocol": "framewise_postprocess_original_then_inpaint",
+  "release_adapter": {
+    "framewise": true,
+    "reason": "OmniGuard is released for images; each source frame is processed independently.",
+    "resize": null
+  },
+  "repository_commit": "2e3c86b3650cb904d2a8a112c640a78895aa93eb",
+  "secret_image": {
+    "path": "/home/smayan/research/OmniGuard/bluesky_white2.png",
+    "sha256": "5775990a9282c81aacb9dd8f1cdfc3ae90521359743af182e5bf80a86d4630fa"
+  },
+  "sha256": "e2e32d735f6d540e1e46068facbaf291b219ab257619d215ddad1df4c8a3a84c",
+  "source": {
+    "bytes": 1573930,
+    "fps": 25.0,
+    "frames": 54,
+    "height": 544,
+    "width": 960
+  },
+  "status": "complete",
+  "watermarked": {
+    "bytes": 1429940,
+    "fps": 25.0,
+    "frames": 54,
+    "height": 544,
+    "width": 960
+  }
+}

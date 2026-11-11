@@ -45,6 +45,19 @@ VideoShield code is MIT-licensed. The ModelScope generator is non-commercial and
 its model card currently lists CC BY-NC 4.0; the downloaded weights remain outside
 this repository.
 
+## Existing-video compatibility
+
+The released `create_watermark_and_return_w()` function creates the diffusion
+model's complete marked starting noise; it is not a frame-domain embedder. The
+official generation path, extraction path and spatial localizer were traced,
+then a MOSE clip was tested with both the literal generation route and a custom
+DDIM-inversion/sign-imposition adapter. The canonical route recovered the mark
+but generated unrelated content. The experimental adapter showed a sharp
+detectability/fidelity trade-off and did not preserve the MOSE input at strong
+recovery settings. See
+[`evidence/mose-task1/videoshield-adapter-check/README.md`](../../evidence/mose-task1/videoshield-adapter-check/README.md)
+for the exact code path, command, sweep, videos and metrics.
+
 ## Citation
 
 ```bibtex

@@ -1,0 +1,62 @@
+{
+  "aligned_source": {
+    "bytes": 528415,
+    "fps": 25.0,
+    "frames": 40,
+    "height": 512,
+    "width": 512
+  },
+  "checkpoint": {
+    "path": "/home/smayan/research/EditGuard/checkpoints/clean.pth",
+    "sha256": "b967b91b94a464ab73f82db63a57ee818e6fc5d99d7ae6aa094a1777cac977d5"
+  },
+  "clip_id": "91b2f707",
+  "completed_at": "2026-11-01T06:09:45+00:00",
+  "elapsed_seconds": 12.573,
+  "embedding_fidelity": {
+    "mean_absolute_error": 3.093881607055664,
+    "mse": 15.106812667846679,
+    "psnr_db": 36.33907517096979
+  },
+  "gt_mask": {
+    "bytes": 33103,
+    "fps": 25.0,
+    "frames": 40,
+    "height": 512,
+    "width": 512
+  },
+  "message": "0100110011000010100000001110000000001011101111010101010111100110",
+  "message_bits": 64,
+  "method": "editguard",
+  "protocol": "framewise_postprocess_original_then_inpaint",
+  "release_adapter": {
+    "framewise": true,
+    "reason": "The released EditGuard app resizes every input image to 512x512.",
+    "resize": [
+      512,
+      512
+    ]
+  },
+  "repository_commit": "174778fb371640bb31b32fcb9f7bfd440c88766b",
+  "seed": 2025,
+  "sha256": {
+    "aligned_source": "23c2747acc275afb3b0794dfcabb08e49e8210fbf576e577350aa28f8f92a37e",
+    "gt_mask": "3b79f6a1b3c4161767694bba270e28194bf1f8e469d27b2a351d542fa1515110",
+    "watermarked": "8d279f0331fe9ea10eed2fa10aa9cb166a011ed27cc7db5fe5f0c7d409ec2c6b"
+  },
+  "source": {
+    "bytes": 817699,
+    "fps": 25.0,
+    "frames": 40,
+    "height": 544,
+    "width": 960
+  },
+  "status": "complete",
+  "watermarked": {
+    "bytes": 636530,
+    "fps": 25.0,
+    "frames": 40,
+    "height": 512,
+    "width": 512
+  }
+}

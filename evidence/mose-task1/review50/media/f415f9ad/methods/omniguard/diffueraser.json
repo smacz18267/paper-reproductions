@@ -1,0 +1,27 @@
+{
+  "clip_id": "f415f9ad",
+  "compatibility_adapter": null,
+  "completed_at": "2026-11-01T13:34:23+00:00",
+  "elapsed_seconds": 309.164,
+  "input": {
+    "bytes": 2418653,
+    "fps": 25.0,
+    "frames": 46,
+    "height": 928,
+    "width": 960
+  },
+  "mask_dilation_iterations": 8,
+  "output": {
+    "bytes": 3720677,
+    "fps": 25.0,
+    "frames": 46,
+    "height": 928,
+    "width": 960
+  },
+  "processing_adapter": null,
+  "protocol": "watermark_original_then_remove_object",
+  "remover": "diffueraser",
+  "sha256": "132acc91cafb7f4028e6f0272effefda9d77250c791bdefb6e2e990bd516b335",
+  "status": "complete",
+  "watermark_method": "omniguard"
+}

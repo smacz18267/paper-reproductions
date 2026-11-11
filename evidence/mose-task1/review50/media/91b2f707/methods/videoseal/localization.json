@@ -1,6 +1,6 @@
 {
   "clip_id": "91b2f707",
-  "completed_at": "2026-10-19T13:40:28+00:00",
+  "completed_at": "2026-11-03T15:41:22+00:00",
   "detector_semantics": "preds[:,0] > 0 is watermark present; reported mask is preds[:,0] <= 0",
   "diffueraser": {
     "effective_gt": "OpenCV 3x3 rectangle erosion once, then dilation 8 iterations",
@@ -60,7 +60,76 @@
     "union_pixels": 1066423,
     "width": 960
   },
-  "elapsed_seconds": 4.227,
+  "effecterase": {
+    "effective_gt": "EffectErase bilinear mask resize, thresholded at the model zero point",
+    "effective_gt_mask_sha256": "61cb14d7c98918d6b342439b379b386d078510592e7d561e7b7ac926ecb03405",
+    "frames": 40,
+    "global_iou": 0.0,
+    "height": 544,
+    "intersection_pixels": 0,
+    "localization_mode": "derived_4x4_patch_grid_from_global_presence_detector",
+    "maximum_frame_iou": 0.0,
+    "mean_frame_iou": 0.0,
+    "minimum_frame_iou": 0.0,
+    "per_frame_iou": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pred_mask_sha256": "f09003c7fa48e74260154e2ecc390ee5296f9e50ee8cd681bd92fe585adbcb62",
+    "processing_adapter": {
+      "processing_size": [
+        832,
+        464
+      ],
+      "reason": "Preserve aspect ratio within EffectErase's released Wan inference scale.",
+      "reported_size": [
+        960,
+        544
+      ],
+      "restoration": "Lanczos resize to the aligned input size"
+    },
+    "union_pixels": 827026,
+    "width": 960
+  },
+  "elapsed_seconds": 3.505,
   "method": "videoseal",
   "prediction_resize": "nearest from detector resolution to attack-video resolution",
   "propainter": {
@@ -121,7 +190,7 @@
     "union_pixels": 1027940,
     "width": 960
   },
-  "started_at": "2026-10-19T13:40:24+00:00",
+  "started_at": "2026-11-03T15:41:19+00:00",
   "status": "complete",
   "threshold": 0.0
 }

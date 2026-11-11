@@ -1,6 +1,6 @@
 {
   "clip_id": "0b02886a",
-  "completed_at": "2026-11-01T05:48:40+00:00",
+  "completed_at": "2026-11-03T16:00:30+00:00",
   "detector_checkpoint": {
     "path": "/home/smayan/research/OmniGuard/checkpoint/checkpoint-175.pth",
     "sha256": "905612f6e364a086898b84efb2a8b8e2cd7d1e6ea615f113c988f65438b727dc"
@@ -57,7 +57,57 @@
     "predicted_mask_sha256": "8d1147d5995c9c7ab6b01e12017fc30e01b9668bfe2577fb04ec584533235e41",
     "union_pixels": 1768264
   },
-  "elapsed_seconds": 60.949,
+  "effecterase": {
+    "attacked": {
+      "bytes": 279461,
+      "fps": 25.0,
+      "frames": 30,
+      "height": 640,
+      "width": 960
+    },
+    "effective_gt_mask_sha256": "efbbe6e232a06c9bff2653bd219e799b061273e89caa98c6f40c242d512a51f0",
+    "global_iou": 0.0037990579549323656,
+    "intersection_pixels": 5512,
+    "maximum_frame_iou": 0.03493914942345077,
+    "mean_frame_iou": 0.0038612997369586377,
+    "mean_predicted_probability": 0.008282815106213093,
+    "minimum_frame_iou": 0.0,
+    "per_frame_iou": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.01371571072319202,
+      0.0003923312321816232,
+      0.03493914942345077,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.008415544004808883,
+      0.0024242424242424242,
+      0.0047801599697098775,
+      0.006304253898424919,
+      0.01596122434486187,
+      0.02344116268166901,
+      0.0,
+      0.004697907533663975,
+      0.0,
+      0.0,
+      0.00013870779815241212,
+      0.0005281573909024889,
+      0.0001004406834988512
+    ],
+    "predicted_mask_sha256": "5dafea974e4fbe2dd29fb4dcbf2252cf4e83556f3ef10ba88cfbc7ec333f8ba4",
+    "union_pixels": 1450886
+  },
+  "elapsed_seconds": 19.657,
   "method": "omniguard",
   "propainter": {
     "attacked": {

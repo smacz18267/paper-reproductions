@@ -215,7 +215,9 @@ def main() -> None:
             "metadata": {"availability": shield_files["availability.json"]},
             "note": (
                 f"Not applicable: {shield['reason']} The shown score is an explicitly labelled "
-                "unwatermarked negative control, not an embedding, robustness, or localization score."
+                "unwatermarked negative control, not an embedding, robustness, or localization score. "
+                "See evidence/mose-task1/videoshield-adapter-check for the source inspection, "
+                "experimental inversion adapter, videos, and fidelity/detection sweep."
             ),
         }
         aggregate["methods"]["videoshield"]["availability_records"] += 1
