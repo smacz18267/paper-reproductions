@@ -81,7 +81,7 @@ def show_results(run_root):
     attack = run_root / "attack"
     for name in (
         "input-watermarked.mp4", "gt-mask.mp4", "propainter.mp4", "diffueraser.mp4",
-        "effecterase.mp4", "e2fgvi.mp4",
+        "effecterase.mp4", "e2fgvi-browser.mp4",
     ):
         path = attack / name
         if path.is_file():

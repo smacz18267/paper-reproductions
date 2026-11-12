@@ -11,11 +11,32 @@ import subprocess
 import time
 from pathlib import Path
 
-from mose_watermark_common import atomic_json, sha256, utc_now, validate_video
+from mose_watermark_common import (
+    atomic_json,
+    decode_rgb,
+    encode_rgb,
+    sha256,
+    utc_now,
+    validate_video,
+)
 
 
 def git_revision(path: Path) -> str:
     return subprocess.check_output(["git", "-C", str(path), "rev-parse", "HEAD"], text=True).strip()
+
+
+def create_browser_preview(
+    source: Path,
+    destination: Path,
+    *,
+    frames: int,
+    size: tuple[int, int],
+    fps: float,
+) -> dict[str, int | float]:
+    """Create an H.264 playback copy without replacing the evaluated output."""
+    decoded, rate = decode_rgb(source)
+    encode_rgb(destination, decoded, rate, crf=18)
+    return validate_video(destination, frames=frames, size=size, fps=fps)
 
 
 def main() -> None:
@@ -35,6 +56,7 @@ def main() -> None:
     input_video = run / "input-watermarked.mp4"
     mask_frames = run / "gt-mask-frames"
     output_video = run / "e2fgvi.mp4"
+    browser_video = run / "e2fgvi-browser.mp4"
     metadata_path = run / "e2fgvi.json"
     expected_frames = int(sample["frames"])
     size = tuple(int(value) for value in sample["size"])
@@ -46,6 +68,14 @@ def main() -> None:
     validate_video(input_video, frames=expected_frames, size=size, fps=fps)
     if output_video.is_file() and metadata_path.is_file() and not args.force:
         validate_video(output_video, frames=expected_frames, size=size, fps=fps)
+        if not browser_video.is_file():
+            create_browser_preview(
+                output_video,
+                browser_video,
+                frames=expected_frames,
+                size=size,
+                fps=fps,
+            )
         print(f"E2FGVI-HQ already complete: {output_video}")
         return
 
@@ -80,6 +110,13 @@ def main() -> None:
     shutil.copy2(generated, temporary)
     temporary.replace(output_video)
     output_info = validate_video(output_video, frames=expected_frames, size=size, fps=fps)
+    browser_info = create_browser_preview(
+        output_video,
+        browser_video,
+        frames=expected_frames,
+        size=size,
+        fps=fps,
+    )
     atomic_json(
         metadata_path,
         {
@@ -98,6 +135,12 @@ def main() -> None:
                 "preprocessing": "official read_mask: nearest resize, binary threshold, 3x3 cross dilation x4",
             },
             "output": {"path": output_video.name, "sha256": sha256(output_video), "video": output_info},
+            "browser_preview": {
+                "path": browser_video.name,
+                "sha256": sha256(browser_video),
+                "video": browser_info,
+                "encoding": "H.264/yuv420p playback derivative; evaluation uses output.path",
+            },
             "settings": {"visible_device": args.device, "model": "e2fgvi_hq", "save_fps": max(1, round(fps))},
             "command": command,
             "elapsed_seconds": round(time.monotonic() - started, 3),

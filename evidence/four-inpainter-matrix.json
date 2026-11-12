@@ -36,7 +36,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "evidence/mose-task1/review50/media/02b72b8d/methods/editguard/e2fgvi.mp4",
-          "metadata": "evidence/mose-task1/review50/media/02b72b8d/methods/editguard/e2fgvi.json"
+          "metadata": "evidence/mose-task1/review50/media/02b72b8d/methods/editguard/e2fgvi.json",
+          "browser_preview": "evidence/mose-task1/review50/media/02b72b8d/methods/editguard/e2fgvi-browser.mp4"
         }
       }
     },
@@ -62,7 +63,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "evidence/mose-task1/review50/media/02b72b8d/methods/omniguard/e2fgvi.mp4",
-          "metadata": "evidence/mose-task1/review50/media/02b72b8d/methods/omniguard/e2fgvi.json"
+          "metadata": "evidence/mose-task1/review50/media/02b72b8d/methods/omniguard/e2fgvi.json",
+          "browser_preview": "evidence/mose-task1/review50/media/02b72b8d/methods/omniguard/e2fgvi-browser.mp4"
         }
       }
     },
@@ -88,7 +90,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "evidence/mose-task1/review50/media/02b72b8d/methods/safe-sora/e2fgvi.mp4",
-          "metadata": "evidence/mose-task1/review50/media/02b72b8d/methods/safe-sora/e2fgvi.json"
+          "metadata": "evidence/mose-task1/review50/media/02b72b8d/methods/safe-sora/e2fgvi.json",
+          "browser_preview": "evidence/mose-task1/review50/media/02b72b8d/methods/safe-sora/e2fgvi-browser.mp4"
         }
       }
     },
@@ -114,7 +117,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "evidence/mose-task1/review50/media/02b72b8d/methods/videoseal/e2fgvi.mp4",
-          "metadata": "evidence/mose-task1/review50/media/02b72b8d/methods/videoseal/e2fgvi.json"
+          "metadata": "evidence/mose-task1/review50/media/02b72b8d/methods/videoseal/e2fgvi.json",
+          "browser_preview": "evidence/mose-task1/review50/media/02b72b8d/methods/videoseal/e2fgvi-browser.mp4"
         }
       }
     },
@@ -140,7 +144,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "runs/remaining-watermarks/watermark-anything/02b72b8d/attack/e2fgvi.mp4",
-          "metadata": "runs/remaining-watermarks/watermark-anything/02b72b8d/attack/e2fgvi.json"
+          "metadata": "runs/remaining-watermarks/watermark-anything/02b72b8d/attack/e2fgvi.json",
+          "browser_preview": "runs/remaining-watermarks/watermark-anything/02b72b8d/attack/e2fgvi-browser.mp4"
         }
       }
     },
@@ -166,7 +171,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "runs/remaining-watermarks/vine/02b72b8d/attack/e2fgvi.mp4",
-          "metadata": "runs/remaining-watermarks/vine/02b72b8d/attack/e2fgvi.json"
+          "metadata": "runs/remaining-watermarks/vine/02b72b8d/attack/e2fgvi.json",
+          "browser_preview": "runs/remaining-watermarks/vine/02b72b8d/attack/e2fgvi-browser.mp4"
         }
       }
     },
@@ -192,7 +198,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "runs/remaining-watermarks/genptw/02b72b8d/attack/e2fgvi.mp4",
-          "metadata": "runs/remaining-watermarks/genptw/02b72b8d/attack/e2fgvi.json"
+          "metadata": "runs/remaining-watermarks/genptw/02b72b8d/attack/e2fgvi.json",
+          "browser_preview": "runs/remaining-watermarks/genptw/02b72b8d/attack/e2fgvi-browser.mp4"
         }
       }
     },
@@ -218,7 +225,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "runs/remaining-watermarks/videomark/a_red_panda_eating_leaves/attack/e2fgvi.mp4",
-          "metadata": "runs/remaining-watermarks/videomark/a_red_panda_eating_leaves/attack/e2fgvi.json"
+          "metadata": "runs/remaining-watermarks/videomark/a_red_panda_eating_leaves/attack/e2fgvi.json",
+          "browser_preview": "runs/remaining-watermarks/videomark/a_red_panda_eating_leaves/attack/e2fgvi-browser.mp4"
         }
       }
     },
@@ -244,7 +252,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "runs/remaining-watermarks/sigmark/native-vbench2/attack/e2fgvi.mp4",
-          "metadata": "runs/remaining-watermarks/sigmark/native-vbench2/attack/e2fgvi.json"
+          "metadata": "runs/remaining-watermarks/sigmark/native-vbench2/attack/e2fgvi.json",
+          "browser_preview": "runs/remaining-watermarks/sigmark/native-vbench2/attack/e2fgvi-browser.mp4"
         }
       }
     },
@@ -270,7 +279,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "runs/remaining-watermarks/vidsig/red-panda-seed42/attack/e2fgvi.mp4",
-          "metadata": "runs/remaining-watermarks/vidsig/red-panda-seed42/attack/e2fgvi.json"
+          "metadata": "runs/remaining-watermarks/vidsig/red-panda-seed42/attack/e2fgvi.json",
+          "browser_preview": "runs/remaining-watermarks/vidsig/red-panda-seed42/attack/e2fgvi-browser.mp4"
         }
       }
     },
@@ -296,7 +306,8 @@
         "e2fgvi_hq": {
           "status": "complete",
           "video": "runs/remaining-watermarks/videoshield/modelscope-red-panda/attack/e2fgvi.mp4",
-          "metadata": "runs/remaining-watermarks/videoshield/modelscope-red-panda/attack/e2fgvi.json"
+          "metadata": "runs/remaining-watermarks/videoshield/modelscope-red-panda/attack/e2fgvi.json",
+          "browser_preview": "runs/remaining-watermarks/videoshield/modelscope-red-panda/attack/e2fgvi-browser.mp4"
         }
       }
     },
