@@ -69,6 +69,11 @@ def effective_attack_mask(
             inference_size,
             interpolation=cv2.INTER_LINEAR,
         ) > 127
+    elif remover == "e2fgvi":
+        # E2FGVI's released read_mask helper uses nearest-neighbour resize,
+        # binarization, and four dilations with a 3x3 cross kernel.
+        kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, (3, 3))
+        effective = cv2.dilate(resized.astype(np.uint8), kernel, iterations=4).astype(bool)
     else:
         raise ValueError(f"Unknown remover: {remover}")
     if inference_size != output_size:

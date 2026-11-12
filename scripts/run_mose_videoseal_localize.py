@@ -53,6 +53,9 @@ def attack_mask(
             inference_size,
             interpolation=cv2.INTER_LINEAR,
         ) > 127
+    elif remover == "e2fgvi":
+        kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, (3, 3))
+        effective = cv2.dilate(resized.astype(np.uint8), kernel, iterations=4).astype(bool)
     else:
         raise ValueError(f"Unknown remover: {remover}")
     if inference_size != size:
@@ -147,7 +150,7 @@ def main() -> None:
     parser.add_argument(
         "--remover",
         action="append",
-        choices=("propainter", "diffueraser", "effecterase"),
+        choices=("propainter", "diffueraser", "effecterase", "e2fgvi"),
         help="Localization attack to process; repeat for multiple. Defaults to the original two.",
     )
     parser.add_argument("--only", action="append")
@@ -202,7 +205,7 @@ def main() -> None:
                 "prediction_resize": "nearest from detector resolution to attack-video resolution",
                 "started_at": utc_now(),
             }
-            for remover in ("propainter", "diffueraser", "effecterase"):
+            for remover in ("propainter", "diffueraser", "effecterase", "e2fgvi"):
                 if remover in existing and remover not in selected_removers:
                     result[remover] = existing[remover]
             started = time.monotonic()
@@ -233,7 +236,11 @@ def main() -> None:
                         else (
                             "OpenCV 3x3 rectangle erosion once, then dilation 8 iterations"
                             if remover == "diffueraser"
-                            else "EffectErase bilinear mask resize, thresholded at the model zero point"
+                            else (
+                                "EffectErase bilinear mask resize, thresholded at the model zero point"
+                                if remover == "effecterase"
+                                else "E2FGVI nearest mask resize, binary threshold, 3x3 cross dilation x4"
+                            )
                         )
                     ),
                     "localization_mode": localization_mode,

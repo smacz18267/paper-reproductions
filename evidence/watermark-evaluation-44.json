@@ -1,0 +1,385 @@
+{
+  "status": "complete",
+  "completed_at": "2026-11-12T01:29:18+00:00",
+  "scope": {
+    "watermark_methods_total": 13,
+    "watermark_methods_runnable": 11,
+    "inpainting_methods": [
+      "propainter",
+      "diffueraser",
+      "effecterase",
+      "e2fgvi_hq"
+    ],
+    "completed_runnable_evaluations": 44,
+    "expected_runnable_evaluations": 44,
+    "excluded_evaluations": 8
+  },
+  "interpretation": {
+    "accuracy_metrics": "Lower payload, bit, frame-detection, or watermark accuracy means the watermark was less recoverable after inpainting.",
+    "localization_iou": "Higher IoU means the method's tamper/localization map better overlaps the effective inpainted region. IoU is not a payload-survival metric.",
+    "safe_sora_psnr": "Lower recovery PSNR means poorer recovery of Safe-Sora's graphical watermark.",
+    "comparison_limit": "Metrics are method-native and several methods use author-generated native samples. Compare the four inpainters within a watermark method, not absolute values between watermark methods."
+  },
+  "methods": {
+    "editguard": {
+      "display_name": "EditGuard",
+      "sample": "MOSE clip 02b72b8d",
+      "primary_metrics": [
+        "mean_message_bit_accuracy",
+        "global_localization_iou"
+      ],
+      "results": {
+        "propainter": {
+          "mean_message_bit_accuracy": 0.824160447761194,
+          "global_localization_iou": 0.027575023138701027
+        },
+        "diffueraser": {
+          "mean_message_bit_accuracy": 0.7164179104477612,
+          "global_localization_iou": 0.029659954469595382
+        },
+        "effecterase": {
+          "mean_message_bit_accuracy": 0.5149253731343284,
+          "global_localization_iou": 0.016842628592875466
+        },
+        "e2fgvi_hq": {
+          "mean_message_bit_accuracy": 0.7119869402985075,
+          "global_localization_iou": 0.022303567003847946
+        }
+      }
+    },
+    "genptw": {
+      "display_name": "GenPTW",
+      "sample": "MOSE clip 02b72b8d",
+      "baseline_original": {
+        "video_majority_bit_accuracy": 1.0,
+        "frame_bit_accuracy_mean": 1.0,
+        "spatial_localization_iou": 0.0012964583167615852
+      },
+      "primary_metrics": [
+        "video_majority_bit_accuracy",
+        "frame_bit_accuracy_mean",
+        "spatial_localization_iou"
+      ],
+      "results": {
+        "propainter": {
+          "video_majority_bit_accuracy": 1.0,
+          "frame_bit_accuracy_mean": 0.8922574626865671,
+          "spatial_localization_iou": 0.001262744095459897
+        },
+        "diffueraser": {
+          "video_majority_bit_accuracy": 1.0,
+          "frame_bit_accuracy_mean": 0.9745802238805971,
+          "spatial_localization_iou": 0.0011162493411954408
+        },
+        "effecterase": {
+          "video_majority_bit_accuracy": 0.734375,
+          "frame_bit_accuracy_mean": 0.5998134328358209,
+          "spatial_localization_iou": 0.0012626647949218032
+        },
+        "e2fgvi_hq": {
+          "video_majority_bit_accuracy": 1.0,
+          "frame_bit_accuracy_mean": 0.9888059701492538,
+          "spatial_localization_iou": 0.0012114091385796992
+        }
+      }
+    },
+    "omniguard": {
+      "display_name": "OmniGuard",
+      "sample": "MOSE clip 02b72b8d",
+      "primary_metrics": [
+        "mean_predicted_tamper_probability",
+        "global_localization_iou"
+      ],
+      "note": "The released detector exposes a tamper-probability map, not message-bit recovery.",
+      "results": {
+        "propainter": {
+          "mean_predicted_tamper_probability": 0.012480409815907478,
+          "global_localization_iou": 0.001116116236680879
+        },
+        "diffueraser": {
+          "mean_predicted_tamper_probability": 0.0134376036003232,
+          "global_localization_iou": 0.0015164724384920077
+        },
+        "effecterase": {
+          "mean_predicted_tamper_probability": 0.020115232095122337,
+          "global_localization_iou": 0.0006090221666791446
+        },
+        "e2fgvi_hq": {
+          "mean_predicted_tamper_probability": 0.013279110193252563,
+          "global_localization_iou": 0.000559099956589114
+        }
+      }
+    },
+    "safe_sora": {
+      "display_name": "Safe-Sora",
+      "sample": "MOSE clip 02b72b8d",
+      "primary_metrics": [
+        "graphical_watermark_recovery_psnr_db",
+        "mean_absolute_error"
+      ],
+      "note": "Safe-Sora recovers a graphical watermark; it does not produce a spatial tamper mask.",
+      "results": {
+        "propainter": {
+          "graphical_watermark_recovery_psnr_db": 8.231725539094953,
+          "mean_absolute_error": 87.53727722167969,
+          "mse": 9770.297927856445
+        },
+        "diffueraser": {
+          "graphical_watermark_recovery_psnr_db": 8.544231417847378,
+          "mean_absolute_error": 82.64962768554688,
+          "mse": 9091.953776041666
+        },
+        "effecterase": {
+          "graphical_watermark_recovery_psnr_db": 8.586060773573301,
+          "mean_absolute_error": 83.39054870605469,
+          "mse": 9004.804397583008
+        },
+        "e2fgvi_hq": {
+          "graphical_watermark_recovery_psnr_db": 8.090634595762765,
+          "mean_absolute_error": 90.94394429524739,
+          "mse": 10092.921635945639
+        }
+      }
+    },
+    "sigmark": {
+      "display_name": "SIGMark",
+      "sample": "Authors' native VBench2 HunyuanVideo sample, 65 frames, 8192 bits",
+      "baseline_original": {
+        "bit_accuracy": 0.967529296875
+      },
+      "primary_metrics": [
+        "bit_accuracy"
+      ],
+      "note": "The released decoder does not output a spatial tamper mask.",
+      "results": {
+        "propainter": {
+          "bit_accuracy": 0.4989013671875
+        },
+        "diffueraser": {
+          "bit_accuracy": 0.618896484375
+        },
+        "effecterase": {
+          "bit_accuracy": 0.500732421875
+        },
+        "e2fgvi_hq": {
+          "bit_accuracy": 0.6824951171875
+        }
+      }
+    },
+    "videomark": {
+      "display_name": "VideoMark",
+      "sample": "Authors' native red-panda sample, 16 frames",
+      "baseline_original": {
+        "detected_frames": 11,
+        "frame_detection_rate": 0.6875,
+        "bit_accuracy_authors_protocol": 0.32903645833333334
+      },
+      "primary_metrics": [
+        "detected_frames",
+        "frame_detection_rate",
+        "bit_accuracy_authors_protocol"
+      ],
+      "note": "The authors' protocol excludes frame index 0 for bit accuracy and does not output a spatial tamper mask.",
+      "results": {
+        "propainter": {
+          "detected_frames": 2,
+          "total_frames": 16,
+          "frame_detection_rate": 0.125,
+          "bit_accuracy_authors_protocol": 0.06458333333333334
+        },
+        "diffueraser": {
+          "detected_frames": 1,
+          "total_frames": 16,
+          "frame_detection_rate": 0.0625,
+          "bit_accuracy_authors_protocol": 0.03359375
+        },
+        "effecterase": {
+          "detected_frames": 0,
+          "total_frames": 16,
+          "frame_detection_rate": 0.0,
+          "bit_accuracy_authors_protocol": 0.0
+        },
+        "e2fgvi_hq": {
+          "detected_frames": 1,
+          "total_frames": 16,
+          "frame_detection_rate": 0.0625,
+          "bit_accuracy_authors_protocol": 0.033463541666666666
+        }
+      }
+    },
+    "videoseal": {
+      "display_name": "VideoSeal",
+      "sample": "MOSE clip 02b72b8d",
+      "primary_metrics": [
+        "global_localization_iou"
+      ],
+      "note": "VideoSeal's released global presence detector was evaluated on a derived 4x4 patch grid. It predicted no attacked-region pixels in all four cases, so every IoU is zero. This is a localization failure, not a direct payload-bit result.",
+      "results": {
+        "propainter": {
+          "global_localization_iou": 0.0
+        },
+        "diffueraser": {
+          "global_localization_iou": 0.0
+        },
+        "effecterase": {
+          "global_localization_iou": 0.0
+        },
+        "e2fgvi_hq": {
+          "global_localization_iou": 0.0
+        }
+      }
+    },
+    "videoshield": {
+      "display_name": "VideoShield",
+      "sample": "Authors' native ModelScope red-panda sample, 16 frames",
+      "primary_metrics": [
+        "watermark_accuracy",
+        "spatial_localization_iou"
+      ],
+      "results": {
+        "propainter": {
+          "watermark_accuracy": 0.6328125,
+          "spatial_localization_iou": 0.7708595488584457
+        },
+        "diffueraser": {
+          "watermark_accuracy": 0.76953125,
+          "spatial_localization_iou": 0.8426737419235452
+        },
+        "effecterase": {
+          "watermark_accuracy": 0.548828125,
+          "spatial_localization_iou": 0.7490090756833954
+        },
+        "e2fgvi_hq": {
+          "watermark_accuracy": 0.794921875,
+          "spatial_localization_iou": 0.8728519921633435
+        }
+      }
+    },
+    "vidsig": {
+      "display_name": "VidSig / Video Signature",
+      "sample": "Authors' native red-panda sample, 16 frames, 48-bit key",
+      "baseline_original": {
+        "video_majority_bit_accuracy": 0.9375,
+        "frame_bit_accuracy_mean": 0.9270833730697632
+      },
+      "primary_metrics": [
+        "video_majority_bit_accuracy",
+        "frame_bit_accuracy_mean"
+      ],
+      "note": "The released decoder recovers a global key and does not output a spatial tamper mask.",
+      "results": {
+        "propainter": {
+          "video_majority_bit_accuracy": 0.6041666865348816,
+          "frame_bit_accuracy_mean": 0.58984375,
+          "matched_bits": 29
+        },
+        "diffueraser": {
+          "video_majority_bit_accuracy": 0.8958333730697632,
+          "frame_bit_accuracy_mean": 0.9049479365348816,
+          "matched_bits": 43
+        },
+        "effecterase": {
+          "video_majority_bit_accuracy": 0.5416666865348816,
+          "frame_bit_accuracy_mean": 0.54296875,
+          "matched_bits": 26
+        },
+        "e2fgvi_hq": {
+          "video_majority_bit_accuracy": 0.9166666865348816,
+          "frame_bit_accuracy_mean": 0.9192708730697632,
+          "matched_bits": 44
+        }
+      }
+    },
+    "vine": {
+      "display_name": "VINE-R",
+      "sample": "MOSE clip 02b72b8d, 100-bit payload",
+      "baseline_original": {
+        "video_majority_bit_accuracy": 1.0,
+        "frame_bit_accuracy_mean": 1.0
+      },
+      "primary_metrics": [
+        "video_majority_bit_accuracy",
+        "frame_bit_accuracy_mean"
+      ],
+      "note": "The released decoder recovers a global payload and does not output a spatial tamper mask.",
+      "results": {
+        "propainter": {
+          "video_majority_bit_accuracy": 1.0,
+          "frame_bit_accuracy_mean": 0.9988059701492538
+        },
+        "diffueraser": {
+          "video_majority_bit_accuracy": 1.0,
+          "frame_bit_accuracy_mean": 0.9998507462686569
+        },
+        "effecterase": {
+          "video_majority_bit_accuracy": 0.82,
+          "frame_bit_accuracy_mean": 0.6655223880597015
+        },
+        "e2fgvi_hq": {
+          "video_majority_bit_accuracy": 1.0,
+          "frame_bit_accuracy_mean": 0.9998507462686569
+        }
+      }
+    },
+    "watermark_anything": {
+      "display_name": "Watermark Anything",
+      "sample": "MOSE clip 02b72b8d, 32-bit payload",
+      "baseline_original": {
+        "video_majority_bit_accuracy": 1.0,
+        "frame_bit_accuracy_mean": 0.9990671641791045,
+        "spatial_localization_iou": 0.02896420054080149
+      },
+      "primary_metrics": [
+        "video_majority_bit_accuracy",
+        "frame_bit_accuracy_mean",
+        "spatial_localization_iou"
+      ],
+      "results": {
+        "propainter": {
+          "video_majority_bit_accuracy": 0.90625,
+          "frame_bit_accuracy_mean": 0.8614738805970149,
+          "spatial_localization_iou": 0.02322249663123464
+        },
+        "diffueraser": {
+          "video_majority_bit_accuracy": 0.90625,
+          "frame_bit_accuracy_mean": 0.9197761194029851,
+          "spatial_localization_iou": 0.05524161816553735
+        },
+        "effecterase": {
+          "video_majority_bit_accuracy": 0.75,
+          "frame_bit_accuracy_mean": 0.6497201492537313,
+          "spatial_localization_iou": 0.01734671250843837
+        },
+        "e2fgvi_hq": {
+          "video_majority_bit_accuracy": 1.0,
+          "frame_bit_accuracy_mean": 0.9566231343283582,
+          "spatial_localization_iou": 0.06694227074530316
+        }
+      }
+    }
+  },
+  "excluded_methods": {
+    "rivagan": {
+      "status": "deferred_not_runnable",
+      "excluded_pair_count": 4,
+      "reason": "The official repository publishes training code but no pretrained model.pt. The available sample also lacks its matching trained checkpoint and embedded message, so authentic embedding and decoding cannot be evaluated.",
+      "what_is_needed": "A trained RivaGAN checkpoint with provenance and the matching message/embedding record. Merely running the current notebook locally does not supply these missing release assets."
+    },
+    "lvmark": {
+      "status": "blocked_not_runnable",
+      "excluded_pair_count": 4,
+      "reason": "The released inference script refers to prompt images and a prompt/key JSON that are not included. Its official 2.05 GB weight archive was served to Zeppelin at about 25 KB/s, implying more than 24 hours for the download, so an authentic native watermarked sample could not be generated in this run.",
+      "what_is_needed": "The complete official LVMark weight archive plus the missing prompt/key inputs, or a documented equivalent input record. A local run helps only if those resources are supplied."
+    }
+  },
+  "resolved_execution_issues": [
+    "VideoSeal's checkpoint host presented an expired TLS certificate; the checkpoint was retrieved with certificate verification bypassed only after its exact previously recorded SHA-256 was enforced.",
+    "Safe-Sora's custom CUDA extensions initially failed because Zeppelin had GCC 12 without G++ 12. The official extensions built successfully with the machine's complete GCC/G++ 11 pair and CUDA 12.2.",
+    "Several detector environments lacked small declared Python dependencies; they were installed before the affected evaluations were rerun successfully."
+  ],
+  "evidence": {
+    "local_four_inpainter_results_commit": "416816d",
+    "zeppelin_root": "/mnt/data_fast/smayan/research/remaining-watermark-experiments",
+    "final_safe_sora_result": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/eval44-core/clips/02b72b8d/methods/safe-sora/recovery.json"
+  }
+}
