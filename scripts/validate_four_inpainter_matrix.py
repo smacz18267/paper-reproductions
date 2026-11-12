@@ -124,14 +124,25 @@ def main() -> None:
         for remover, (video_name, json_name) in REMOVERS.items():
             video = attack / video_name
             metadata = attack / json_name
-            complete = video.is_file() and metadata.is_file()
+            browser_preview = attack / "e2fgvi-browser.mp4" if remover == "e2fgvi_hq" else None
+            complete = (
+                video.is_file()
+                and metadata.is_file()
+                and (browser_preview is None or browser_preview.is_file())
+            )
             method_record["pairs"][remover] = {
                 "status": "complete" if complete else "missing",
                 "video": str(video.relative_to(root)),
                 "metadata": str(metadata.relative_to(root)),
             }
+            if browser_preview is not None:
+                method_record["pairs"][remover]["browser_preview"] = str(
+                    browser_preview.relative_to(root)
+                )
             if not complete:
-                failures.append(f"{method}/{remover}: missing {video_name} or {json_name}")
+                failures.append(
+                    f"{method}/{remover}: missing {video_name}, {json_name}, or browser preview"
+                )
             elif json.loads(metadata.read_text()).get("status") != "complete":
                 failures.append(f"{method}/{remover}: metadata status is not complete")
         for text in LABELS:
