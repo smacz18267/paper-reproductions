@@ -43,7 +43,12 @@
         },
         "e2fgvi_hq": {
           "mean_message_bit_accuracy": 0.7119869402985075,
-          "global_localization_iou": 0.022303567003847946
+          "global_localization_iou": 0.022303567003847946,
+          "mean_frame_iou": 0.022303567003847946,
+          "minimum_frame_iou": 0.018543243408203125,
+          "maximum_frame_iou": 0.026882171630859375,
+          "intersection_pixels": 391732,
+          "union_pixels": 17563648
         }
       }
     },
@@ -106,7 +111,12 @@
         },
         "e2fgvi_hq": {
           "mean_predicted_tamper_probability": 0.013279110193252563,
-          "global_localization_iou": 0.000559099956589114
+          "global_localization_iou": 0.000559099956589114,
+          "mean_frame_iou": 0.00047929847586682415,
+          "minimum_frame_iou": 0.0,
+          "maximum_frame_iou": 0.013068357562635323,
+          "intersection_pixels": 416,
+          "union_pixels": 744053
         }
       }
     },
@@ -225,7 +235,12 @@
           "global_localization_iou": 0.0
         },
         "e2fgvi_hq": {
-          "global_localization_iou": 0.0
+          "global_localization_iou": 0.0,
+          "mean_frame_iou": 0.0,
+          "minimum_frame_iou": 0.0,
+          "maximum_frame_iou": 0.0,
+          "intersection_pixels": 0,
+          "union_pixels": 647729
         }
       }
     },

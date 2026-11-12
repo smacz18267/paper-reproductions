@@ -10,6 +10,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOKS = ROOT / "notebooks/mose-watermark-samples"
+EVALUATION_RESULTS = ROOT / "evidence/watermark-evaluation-44.json"
 TAG = "equal-four-inpainter-comparison"
 LEGACY_TAG = "four-inpainter-recorded-status"
 
@@ -34,6 +35,51 @@ REMAINING = {
     "videomark": ROOT / "runs/remaining-watermarks/videomark/a_red_panda_eating_leaves/attack",
     "sigmark": ROOT / "runs/remaining-watermarks/sigmark/native-vbench2/attack",
     "vidsig": ROOT / "runs/remaining-watermarks/vidsig/red-panda-seed42/attack",
+}
+
+EVALUATION_COLUMNS = {
+    "editguard": (
+        ("Payload bit accuracy", "mean_message_bit_accuracy", "percent"),
+        ("Localization IoU", "global_localization_iou", "decimal4"),
+    ),
+    "genptw": (
+        ("Majority payload accuracy", "video_majority_bit_accuracy", "percent"),
+        ("Mean frame accuracy", "frame_bit_accuracy_mean", "percent"),
+        ("Localization IoU", "spatial_localization_iou", "decimal4"),
+    ),
+    "omniguard": (
+        ("Mean tamper probability", "mean_predicted_tamper_probability", "decimal4"),
+        ("Localization IoU", "global_localization_iou", "decimal4"),
+    ),
+    "safe_sora": (
+        ("Recovery PSNR", "graphical_watermark_recovery_psnr_db", "db3"),
+        ("Recovery MAE", "mean_absolute_error", "decimal2"),
+    ),
+    "sigmark": (("Bit accuracy", "bit_accuracy", "percent"),),
+    "videomark": (
+        ("Detected frames", "detected_frames", "count"),
+        ("Frame detection rate", "frame_detection_rate", "percent"),
+        ("Bit accuracy", "bit_accuracy_authors_protocol", "percent"),
+    ),
+    "videoseal": (("Derived localization IoU", "global_localization_iou", "decimal4"),),
+    "videoshield": (
+        ("Watermark accuracy", "watermark_accuracy", "percent"),
+        ("Localization IoU", "spatial_localization_iou", "decimal4"),
+    ),
+    "vidsig": (
+        ("Majority payload accuracy", "video_majority_bit_accuracy", "percent"),
+        ("Mean frame accuracy", "frame_bit_accuracy_mean", "percent"),
+        ("Matched bits", "matched_bits", "integer"),
+    ),
+    "vine": (
+        ("Majority payload accuracy", "video_majority_bit_accuracy", "percent"),
+        ("Mean frame accuracy", "frame_bit_accuracy_mean", "percent"),
+    ),
+    "watermark_anything": (
+        ("Majority payload accuracy", "video_majority_bit_accuracy", "percent"),
+        ("Mean frame accuracy", "frame_bit_accuracy_mean", "percent"),
+        ("Localization IoU", "spatial_localization_iou", "decimal4"),
+    ),
 }
 
 
@@ -73,6 +119,93 @@ def format_number(value: Any, *, digits: int = 3) -> str:
     if value is None:
         return "not recorded"
     return f"{float(value):.{digits}f}"
+
+
+def format_evaluation_value(record: dict[str, Any], key: str, style: str) -> str:
+    value = record[key]
+    if style == "percent":
+        return f"{100 * float(value):.2f}%"
+    if style == "decimal4":
+        return f"{float(value):.4f}"
+    if style == "decimal2":
+        return f"{float(value):.2f}"
+    if style == "db3":
+        return f"{float(value):.3f} dB"
+    if style == "integer":
+        return str(int(value))
+    if style == "count":
+        return f"{int(value)}/{int(record['total_frames'])}"
+    raise ValueError(f"Unknown evaluation value style: {style}")
+
+
+def evaluation_markdown(notebook_name: str) -> str:
+    evaluation = json.loads(EVALUATION_RESULTS.read_text())
+    record_link = relative(EVALUATION_RESULTS)
+    if notebook_name in evaluation["excluded_methods"]:
+        blocked = evaluation["excluded_methods"][notebook_name]
+        rows = "\n".join(
+            f"| {label} | not run | {blocked['reason']} |" for label, _stem in REMOVERS
+        )
+        return f"""
+## Watermark evaluation results: all four inpainters
+
+No authentic watermark evaluation can be reported for this method. This is a release-resource blocker, not a missing local or Zeppelin execution.
+
+| Inpainting method | Evaluation status | Reason |
+|---|---:|---|
+{rows}
+
+**Required to proceed:** {blocked['what_is_needed']}
+
+See the [consolidated 44-case record]({record_link}) for the complete runnable matrix and blocker provenance.
+"""
+
+    method = evaluation["methods"][notebook_name]
+    columns = EVALUATION_COLUMNS[notebook_name]
+    headers = ["Inpainting method", *(label for label, _key, _style in columns)]
+    alignments = ["---", *("---:" for _column in columns)]
+    rows = []
+    for label, stem in REMOVERS:
+        result_key = "e2fgvi_hq" if stem == "e2fgvi" else stem
+        result = method["results"][result_key]
+        values = [
+            format_evaluation_value(result, key, style)
+            for _label, key, style in columns
+        ]
+        rows.append("| " + " | ".join([label, *values]) + " |")
+
+    if notebook_name == "safe_sora":
+        interpretation = "Lower recovery PSNR means poorer graphical-watermark recovery."
+    elif notebook_name == "omniguard":
+        interpretation = (
+            "The released detector reports tamper probability and localization, not message-bit recovery. "
+            "Higher IoU means better overlap with the effective inpainted region."
+        )
+    elif notebook_name == "videoseal":
+        interpretation = (
+            "The released global-presence detector was evaluated on a derived 4×4 patch grid. "
+            "Zero IoU means it did not localize the edited region; it is not a zero-bit payload result."
+        )
+    else:
+        interpretation = (
+            "Lower accuracy means less of the watermark remained recoverable after inpainting. "
+            "Where IoU is reported, higher IoU means better overlap with the effective inpainted region."
+        )
+    note = method.get("note")
+    note_text = f"\n\n**Method note:** {note}" if note else ""
+    return f"""
+## Watermark evaluation results: all four inpainters
+
+The downstream watermark evaluation is complete for this method. These are the exact recorded outputs for the same four canonical attack cases; they are not estimates.
+
+| {' | '.join(headers)} |
+| {' | '.join(alignments)} |
+{chr(10).join(rows)}
+
+**How to read this table:** {interpretation}{note_text}
+
+Exact unrounded values and execution notes are in the [consolidated 44-case record]({record_link}).
+"""
 
 
 def completion_markdown(method: str, attack: Path) -> str:
@@ -154,8 +287,12 @@ for name in ("sample.json", "removal-pair.json"):
         display(JSON(json.loads(metadata.read_text())))'''
 
 
-def comparison_cells(method: str, attack: Path) -> list[dict[str, Any]]:
-    return [markdown(completion_markdown(method, attack)), code(display_cell(attack))]
+def comparison_cells(notebook_name: str, method: str, attack: Path) -> list[dict[str, Any]]:
+    return [
+        markdown(completion_markdown(method, attack)),
+        code(display_cell(attack)),
+        markdown(evaluation_markdown(notebook_name)),
+    ]
 
 
 def status_markdown(method: str, status: str, reason: str) -> str:
@@ -191,7 +328,7 @@ def remove_generated_cells(document: dict[str, Any]) -> None:
 def integrate_record(path: Path, method: str, attack: Path, *, preface: str | None = None) -> None:
     document = json.loads(path.read_text())
     remove_generated_cells(document)
-    generated = comparison_cells(method, attack)
+    generated = comparison_cells(path.stem, method, attack)
     if preface:
         generated.insert(0, markdown(preface))
     index = insertion_index(document["cells"])
@@ -203,7 +340,10 @@ def integrate_status(path: Path, method: str, status: str, reason: str) -> None:
     document = json.loads(path.read_text())
     remove_generated_cells(document)
     index = insertion_index(document["cells"])
-    document["cells"][index:index] = [markdown(status_markdown(method, status, reason))]
+    document["cells"][index:index] = [
+        markdown(status_markdown(method, status, reason)),
+        markdown(evaluation_markdown(path.stem)),
+    ]
     path.write_text(json.dumps(document, indent=1, ensure_ascii=False) + "\n")
 
 
@@ -212,12 +352,53 @@ def add_e2fgvi_to_legacy_tables(path: Path, attack: Path) -> None:
     document = json.loads(path.read_text())
     metadata = json.loads((attack / "e2fgvi.json").read_text())
     output = output_record(metadata)
+    evaluation = json.loads(EVALUATION_RESULTS.read_text())
+    e2fgvi = evaluation["methods"][path.stem]["results"]["e2fgvi_hq"]
     first_values = {
         "removal runtime": f"{float(metadata['elapsed_seconds']):.3f} s",
         "frames": str(output["frames"]),
         "reported output frames": str(output["frames"]),
         "output dimensions": f"{output['width']} × {output['height']}",
     }
+    if path.stem == "editguard":
+        downstream_values = {
+            "global pixel iou": f"{e2fgvi['global_localization_iou']:.4f}",
+            "mean frame iou": f"{e2fgvi['mean_frame_iou']:.4f}",
+            "minimum frame iou": f"{e2fgvi['minimum_frame_iou']:.4f}",
+            "maximum frame iou": f"{e2fgvi['maximum_frame_iou']:.4f}",
+            "intersection pixels": f"{e2fgvi['intersection_pixels']:,}",
+            "union pixels": f"{e2fgvi['union_pixels']:,}",
+            "mean 64-bit recovery accuracy": f"{e2fgvi['mean_message_bit_accuracy']:.4f}",
+        }
+    elif path.stem == "omniguard":
+        downstream_values = {
+            "global pixel iou": f"{e2fgvi['global_localization_iou']:.4f}",
+            "mean frame iou": f"{e2fgvi['mean_frame_iou']:.4f}",
+            "minimum frame iou": f"{e2fgvi['minimum_frame_iou']:.4f}",
+            "maximum frame iou": f"{e2fgvi['maximum_frame_iou']:.4f}",
+            "intersection pixels": f"{e2fgvi['intersection_pixels']:,}",
+            "union pixels": f"{e2fgvi['union_pixels']:,}",
+            "message bit accuracy": "N/A",
+        }
+    elif path.stem == "safe_sora":
+        downstream_values = {
+            "recovery psnr": f"{e2fgvi['graphical_watermark_recovery_psnr_db']:.4f} dB",
+            "recovery mse": f"{e2fgvi['mse']:.4f}",
+            "recovery mae": f"{e2fgvi['mean_absolute_error']:.4f}",
+            "spatial predicted mask and iou": "N/A",
+        }
+    elif path.stem == "videoseal":
+        downstream_values = {
+            "global pixel iou": f"{e2fgvi['global_localization_iou']:.4f}",
+            "mean frame iou": f"{e2fgvi['mean_frame_iou']:.4f}",
+            "minimum frame iou": f"{e2fgvi['minimum_frame_iou']:.4f}",
+            "maximum frame iou": f"{e2fgvi['maximum_frame_iou']:.4f}",
+            "intersection pixels": f"{e2fgvi['intersection_pixels']:,}",
+            "union pixels": f"{e2fgvi['union_pixels']:,}",
+        }
+    else:
+        raise ValueError(f"Unknown core notebook: {path.stem}")
+    first_values.update(downstream_values)
     table_cells = [
         cell
         for cell in document["cells"]
@@ -245,8 +426,9 @@ def add_e2fgvi_to_legacy_tables(path: Path, attack: Path) -> None:
         elif occurrence == sample_occurrence:
             note = (
                 "> **Four-inpainter scope:** E2FGVI-HQ is shown in this table. Its common inpainting "
-                "metrics come from the recorded one-clip run; downstream watermark "
-                "localization/recovery was not rerun and is marked `not evaluated`."
+                "metrics and downstream watermark evaluation come from the completed canonical "
+                "one-clip run. E2FGVI-HQ's exact detector output is preserved in the consolidated "
+                "44-case record linked below."
             )
         else:
             note = (
@@ -257,13 +439,27 @@ def add_e2fgvi_to_legacy_tables(path: Path, attack: Path) -> None:
         skip_note_blank = False
         in_target_table = False
         text = text.replace(
+            "The localization record contains all three attacked videos.",
+            "The historical localization record contains ProPainter, DiffuEraser, and EffectErase; "
+            "E2FGVI-HQ's completed result is stored in the consolidated 44-case record.",
+        ).replace(
             "The localization record contains results for all three attacks.",
             "The historical localization record contains results for ProPainter, DiffuEraser, "
-            "and EffectErase. E2FGVI-HQ downstream localization was not run.",
+            "and EffectErase. E2FGVI-HQ's completed result is stored in the consolidated 44-case record.",
         ).replace(
             "The recovery record contains all three attacks.",
             "The historical recovery record contains results for ProPainter, DiffuEraser, and "
+            "EffectErase. E2FGVI-HQ's completed result is stored in the consolidated 44-case record.",
+        ).replace(
+            "The historical localization record contains results for ProPainter, DiffuEraser, "
+            "and EffectErase. E2FGVI-HQ downstream localization was not run.",
+            "The historical localization record contains results for ProPainter, DiffuEraser, "
+            "and EffectErase. E2FGVI-HQ's completed result is stored in the consolidated 44-case record.",
+        ).replace(
+            "The historical recovery record contains results for ProPainter, DiffuEraser, and "
             "EffectErase. E2FGVI-HQ downstream recovery was not run.",
+            "The historical recovery record contains results for ProPainter, DiffuEraser, and "
+            "EffectErase. E2FGVI-HQ's completed result is stored in the consolidated 44-case record.",
         )
         for line in text.splitlines():
             if line.startswith("> **Four-inpainter scope:**"):
