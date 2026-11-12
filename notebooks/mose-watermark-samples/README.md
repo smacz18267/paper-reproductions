@@ -9,6 +9,8 @@ This directory contains exactly 13 Jupyter notebooks, one for every watermarking
 
 The recorded matrix has 44 completed pair cells across 11 watermarking methods. RivaGAN's four cells are intentionally deferred at the user's request. LVMark's four cells are explicitly blocked: its repository omits the referenced prompt inputs, and its official 2.05 GB weight archive was served to Zeppelin at roughly 25 KB/s (more than 24 hours estimated). No results are fabricated for either method.
 
+Every notebook puts a canonical equal four-inpainter comparison near the beginning. Each completed remover is shown in the same order with status, recorded runtime, frame count, dimensions, FPS, byte size, video, and JSON metadata. The adjacent code cell displays each of the four output videos and metadata records through the same loop. Older multi-sample MOSE tables also retain an explicit E2FGVI-HQ column; values outside the required one-clip run are labelled `not run`, and unavailable downstream detector metrics are labelled `not evaluated` rather than silently omitted.
+
 | Watermarking method | Notebook | One-clip source | Four-inpainter status |
 |---|---|---|---:|
 | EditGuard | [editguard.ipynb](editguard.ipynb) | Fixed MOSE `02b72b8d` | Complete |

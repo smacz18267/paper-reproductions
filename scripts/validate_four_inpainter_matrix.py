@@ -34,6 +34,70 @@ DEFERRED = {
     "lvmark": "blocked_official_weight_server_and_missing_release_prompt_inputs",
 }
 
+EQUAL_TAG = "equal-four-inpainter-comparison"
+LEGACY_TAG = "four-inpainter-recorded-status"
+LABELS = ("ProPainter", "DiffuEraser", "EffectErase", "E2FGVI-HQ")
+
+
+def cell_source(cell: dict[str, object]) -> str:
+    value = cell.get("source", "")
+    return "".join(value) if isinstance(value, list) else str(value)
+
+
+def validate_presentation(
+    notebook: Path,
+    *,
+    status: str,
+    failures: list[str],
+) -> None:
+    try:
+        document = json.loads(notebook.read_text())
+    except (OSError, json.JSONDecodeError) as error:
+        failures.append(f"{notebook}: invalid notebook JSON: {error}")
+        return
+
+    generated = []
+    for index, cell in enumerate(document.get("cells", [])):
+        tags = set(cell.get("metadata", {}).get("tags", []))
+        if LEGACY_TAG in tags:
+            failures.append(f"{notebook}: still contains the old appended-only comparison tag")
+        if EQUAL_TAG in tags:
+            generated.append((index, cell_source(cell)))
+
+    if not generated:
+        failures.append(f"{notebook}: missing canonical equal four-inpainter section")
+        return
+    if min(index for index, _source in generated) > 5:
+        failures.append(f"{notebook}: canonical comparison is hidden too late in the notebook")
+
+    combined = "\n".join(source for _index, source in generated)
+    for label in LABELS:
+        if combined.count(label) < 1:
+            failures.append(f"{notebook}: canonical comparison omits {label}")
+
+    if status == "complete":
+        expected_header = (
+            "| Inpainting method | Status | Runtime (s) | Frames | Dimensions | "
+            "FPS | Bytes | Evidence |"
+        )
+        if expected_header not in combined:
+            failures.append(f"{notebook}: canonical comparison lacks the uniform output table")
+        for stem in ("propainter", "diffueraser", "effecterase", "e2fgvi"):
+            if f'{stem}.mp4' not in combined or f'{stem}.json' not in combined:
+                failures.append(f"{notebook}: canonical comparison lacks equal {stem} evidence")
+    else:
+        for label in LABELS:
+            if f"| {label} | {status} |" not in combined:
+                failures.append(f"{notebook}: {label} does not carry status {status}")
+
+    for cell in document.get("cells", []):
+        source = cell_source(cell)
+        if "| Metric | ProPainter | DiffuEraser | EffectErase |" in source:
+            for line in source.splitlines():
+                if line.strip().startswith("| Metric | ProPainter | DiffuEraser | EffectErase |"):
+                    if "E2FGVI-HQ" not in line:
+                        failures.append(f"{notebook}: legacy metric table silently omits E2FGVI-HQ")
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -68,15 +132,24 @@ def main() -> None:
             }
             if not complete:
                 failures.append(f"{method}/{remover}: missing {video_name} or {json_name}")
-        for text in ("ProPainter", "DiffuEraser", "EffectErase", "E2FGVI-HQ"):
+            elif json.loads(metadata.read_text()).get("status") != "complete":
+                failures.append(f"{method}/{remover}: metadata status is not complete")
+        for text in LABELS:
             if text not in combined:
                 failures.append(f"{notebook}: missing {text}")
+        validate_presentation(notebook, status="complete", failures=failures)
         matrix[method] = method_record
 
     for method, reason in DEFERRED.items():
         notebook = notebook_dir / f"{method}.ipynb"
         if not notebook.is_file():
             failures.append(f"missing deferred notebook: {notebook}")
+        else:
+            validate_presentation(
+                notebook,
+                status="deferred" if method == "rivagan" else "blocked",
+                failures=failures,
+            )
         matrix[method] = {
             "status": "deferred" if method == "rivagan" else "blocked",
             "reason": reason,

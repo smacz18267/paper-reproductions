@@ -13,7 +13,7 @@ Paper implementations and execution results by Smayan Gupta.
 
 [MOSEv1 50-clip removal and watermark review](evidence/mose-task1/README.md): all 50 originals, GT masks, ProPainter, DiffuEraser, and EffectErase outputs, plus corrected watermark-first results for VideoSeal, Safe-Sora, EditGuard, OmniGuard, and VideoShield capability records.
 
-[Five MOSE watermark method notebooks](notebooks/mose-watermark-samples/README.md): one notebook each for VideoSeal, Safe-Sora, VideoShield, EditGuard, and OmniGuard. The full fixed selection is evaluated while the same three examples are displayed in each notebook.
+[Thirteen watermark-removal notebooks](notebooks/mose-watermark-samples/README.md): one notebook for every watermarking method in the study. Each notebook presents the same canonical four-inpainter comparison near the beginning. Eleven watermark methods have complete ProPainter, DiffuEraser, EffectErase, and E2FGVI-HQ one-clip outputs; RivaGAN is explicitly deferred and LVMark is explicitly blocked with the same status applied to all four inpainters.
 
 After a fresh clone, run `python3 scripts/prepare_mose_notebooks.py` once to download and verify the notebook videos through Git LFS. Add `--all` to fetch the complete 50-sample video review in one batch.
 
