@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import shutil
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -18,7 +19,10 @@ import numpy as np
 
 
 FPS = 25
-EXPECTED_CLIPS = 50
+# Full MOSE review runs use 50 clips.  A smaller explicitly recorded value is
+# useful for isolated reproduction/evaluation jobs without weakening the
+# default validation contract.
+EXPECTED_CLIPS = int(os.environ.get("MOSE_EXPECTED_CLIPS", "50"))
 
 
 @dataclass(frozen=True)

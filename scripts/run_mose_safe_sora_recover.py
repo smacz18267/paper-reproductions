@@ -99,7 +99,7 @@ def main() -> None:
     parser.add_argument(
         "--remover",
         action="append",
-        choices=("propainter", "diffueraser", "effecterase"),
+        choices=("propainter", "diffueraser", "effecterase", "e2fgvi"),
         help="Removal result to recover from; repeat for multiple. Defaults to the original two.",
     )
     parser.add_argument("--only", action="append")
@@ -161,7 +161,7 @@ def main() -> None:
                 "patch_reordering": "released nearest-vacancy heuristic with deterministic one-to-one completion",
                 "started_at": utc_now(),
             }
-            for remover in ("propainter", "diffueraser", "effecterase"):
+            for remover in ("propainter", "diffueraser", "effecterase", "e2fgvi"):
                 if remover in existing and remover not in selected_removers:
                     result[remover] = existing[remover]
             started = time.monotonic()

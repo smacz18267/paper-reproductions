@@ -214,7 +214,7 @@ def localize(args: argparse.Namespace, model) -> None:
             base_masks = mask_video(destination / "gt-mask.mp4")
             results: dict[str, object] = {
                 remover: existing[remover]
-                for remover in ("propainter", "diffueraser", "effecterase")
+                for remover in ("propainter", "diffueraser", "effecterase", "e2fgvi")
                 if remover in existing and remover not in selected_removers
             }
             for remover in selected_removers:
@@ -288,7 +288,7 @@ def main() -> None:
     parser.add_argument(
         "--remover",
         action="append",
-        choices=("propainter", "diffueraser", "effecterase"),
+        choices=("propainter", "diffueraser", "effecterase", "e2fgvi"),
         help="Localization attack to process; repeat for multiple. Defaults to the original two.",
     )
     parser.add_argument("--only", action="append")
