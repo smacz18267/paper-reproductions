@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-ROOT=${1:-/home/smayan/research/remaining-watermark-experiments}
-SOURCE_ROOT=${2:-/home/smayan/research}
+REPOSITORY_ROOT=$(cd "$(dirname "$0")/.." && pwd)
+ROOT=${1:-${WATERMARK_EXPERIMENT_ROOT:-$REPOSITORY_ROOT}}
+SOURCE_ROOT=${2:-${WATERMARK_SOURCE_ROOT:-}}
+: "${SOURCE_ROOT:?Pass SOURCE_ROOT as argument 2 or set WATERMARK_SOURCE_ROOT}"
 RUNNER="$ROOT/scripts/run_remaining_watermark_direct.sh"
 STATUS="$ROOT/logs/experiment-status.tsv"
 LOCK="$ROOT/logs/experiment-manager.lock"

@@ -10,12 +10,15 @@ from pathlib import Path
 
 import cv2
 
+from watermark_artifact_validation import require_materialized
+
 
 MEDIA_KEYS = ("original", "gt_mask", "propainter", "diffueraser", "effecterase")
 REMOVERS = ("propainter", "diffueraser", "effecterase")
 
 
 def inspect(path: Path, *, mask: bool = False) -> dict[str, float | int]:
+    require_materialized(path, "video")
     capture = cv2.VideoCapture(str(path))
     if not capture.isOpened():
         raise RuntimeError(f"Could not open {path}")
@@ -59,8 +62,7 @@ def validate_media(
     if path in used_paths:
         raise RuntimeError(f"Duplicate media file instead of a shared manifest reference: {path}")
     used_paths.add(path)
-    if not path.is_file() or path.stat().st_size == 0:
-        raise RuntimeError(f"Missing or empty media: {path}")
+    require_materialized(path, "video")
     info = inspect(path, mask=mask)
     if info["frames"] != expected_frames:
         raise RuntimeError(f"{label}: expected {expected_frames} frames, got {info['frames']}")
@@ -99,6 +101,7 @@ def validate_image(root: Path, relative: str, used_paths: set[Path], label: str)
     if root not in path.parents or path in used_paths:
         raise RuntimeError(f"Invalid or duplicate image path for {label}: {path}")
     used_paths.add(path)
+    require_materialized(path, "image")
     image = cv2.imread(str(path), cv2.IMREAD_COLOR)
     if image is None:
         raise RuntimeError(f"Could not decode image for {label}: {path}")

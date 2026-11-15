@@ -1,0 +1,759 @@
+{
+  "created_at": "2026-11-13T12:28:41+00:00",
+  "mask_protocol": "Every native generation receives the same deterministic centered 35% x 35% region-inpainting mask. These are not author-provided object annotations.",
+  "method": "videomark",
+  "sample_count": 50,
+  "samples": [
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_red_panda_eating_leaves_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a red panda eating leaves",
+        "rng_sequence_index": 0,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-000",
+      "source_mask": "../native-full50/masks/videomark/videomark-000.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_red_panda_eating_leaves_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_squirrel_eating_nuts_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a squirrel eating nuts",
+        "rng_sequence_index": 1,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-001",
+      "source_mask": "../native-full50/masks/videomark/videomark-001.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_squirrel_eating_nuts_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_cute_pomeranian_dog_playing_with_a_soccer_ball_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a cute pomeranian dog playing with a soccer ball",
+        "rng_sequence_index": 2,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-002",
+      "source_mask": "../native-full50/masks/videomark/videomark-002.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_cute_pomeranian_dog_playing_with_a_soccer_ball_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/curious_cat_sitting_and_looking_around_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "curious cat sitting and looking around",
+        "rng_sequence_index": 3,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-003",
+      "source_mask": "../native-full50/masks/videomark/videomark-003.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/curious_cat_sitting_and_looking_around_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/wild_rabbit_in_a_green_meadow_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "wild rabbit in a green meadow",
+        "rng_sequence_index": 4,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-004",
+      "source_mask": "../native-full50/masks/videomark/videomark-004.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/wild_rabbit_in_a_green_meadow_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/underwater_footage_of_an_octopus_in_a_coral_reef_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "underwater footage of an octopus in a coral reef",
+        "rng_sequence_index": 5,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-005",
+      "source_mask": "../native-full50/masks/videomark/videomark-005.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/underwater_footage_of_an_octopus_in_a_coral_reef_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/hedgehog_crossing_road_in_forest_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "hedgehog crossing road in forest",
+        "rng_sequence_index": 6,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-006",
+      "source_mask": "../native-full50/masks/videomark/videomark-006.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/hedgehog_crossing_road_in_forest_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/shark_swimming_in_the_sea_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "shark swimming in the sea",
+        "rng_sequence_index": 7,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-007",
+      "source_mask": "../native-full50/masks/videomark/videomark-007.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/shark_swimming_in_the_sea_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/an_african_penguin_walking_on_a_beach_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "an african penguin walking on a beach",
+        "rng_sequence_index": 8,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-008",
+      "source_mask": "../native-full50/masks/videomark/videomark-008.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/an_african_penguin_walking_on_a_beach_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_tortoise_covered_with_algae_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a tortoise covered with algae",
+        "rng_sequence_index": 9,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-009",
+      "source_mask": "../native-full50/masks/videomark/videomark-009.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_tortoise_covered_with_algae_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_boy_covering_a_rose_flower_with_a_dome_glass_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a boy covering a rose flower with a dome glass",
+        "rng_sequence_index": 10,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-010",
+      "source_mask": "../native-full50/masks/videomark/videomark-010.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_boy_covering_a_rose_flower_with_a_dome_glass_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/boy_sitting_on_grass_petting_a_dog_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "boy sitting on grass petting a dog",
+        "rng_sequence_index": 11,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-011",
+      "source_mask": "../native-full50/masks/videomark/videomark-011.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/boy_sitting_on_grass_petting_a_dog_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_child_playing_with_water_0/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a child playing with water",
+        "rng_sequence_index": 12,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-012",
+      "source_mask": "../native-full50/masks/videomark/videomark-012.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_child_playing_with_water_0/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_red_panda_eating_leaves_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a red panda eating leaves",
+        "rng_sequence_index": 13,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-013",
+      "source_mask": "../native-full50/masks/videomark/videomark-013.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_red_panda_eating_leaves_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_squirrel_eating_nuts_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a squirrel eating nuts",
+        "rng_sequence_index": 14,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-014",
+      "source_mask": "../native-full50/masks/videomark/videomark-014.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_squirrel_eating_nuts_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_cute_pomeranian_dog_playing_with_a_soccer_ball_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a cute pomeranian dog playing with a soccer ball",
+        "rng_sequence_index": 15,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-015",
+      "source_mask": "../native-full50/masks/videomark/videomark-015.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_cute_pomeranian_dog_playing_with_a_soccer_ball_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/curious_cat_sitting_and_looking_around_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "curious cat sitting and looking around",
+        "rng_sequence_index": 16,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-016",
+      "source_mask": "../native-full50/masks/videomark/videomark-016.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/curious_cat_sitting_and_looking_around_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/wild_rabbit_in_a_green_meadow_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "wild rabbit in a green meadow",
+        "rng_sequence_index": 17,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-017",
+      "source_mask": "../native-full50/masks/videomark/videomark-017.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/wild_rabbit_in_a_green_meadow_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/underwater_footage_of_an_octopus_in_a_coral_reef_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "underwater footage of an octopus in a coral reef",
+        "rng_sequence_index": 18,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-018",
+      "source_mask": "../native-full50/masks/videomark/videomark-018.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/underwater_footage_of_an_octopus_in_a_coral_reef_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/hedgehog_crossing_road_in_forest_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "hedgehog crossing road in forest",
+        "rng_sequence_index": 19,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-019",
+      "source_mask": "../native-full50/masks/videomark/videomark-019.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/hedgehog_crossing_road_in_forest_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/shark_swimming_in_the_sea_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "shark swimming in the sea",
+        "rng_sequence_index": 20,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-020",
+      "source_mask": "../native-full50/masks/videomark/videomark-020.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/shark_swimming_in_the_sea_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/an_african_penguin_walking_on_a_beach_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "an african penguin walking on a beach",
+        "rng_sequence_index": 21,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-021",
+      "source_mask": "../native-full50/masks/videomark/videomark-021.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/an_african_penguin_walking_on_a_beach_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_tortoise_covered_with_algae_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a tortoise covered with algae",
+        "rng_sequence_index": 22,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-022",
+      "source_mask": "../native-full50/masks/videomark/videomark-022.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_tortoise_covered_with_algae_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_boy_covering_a_rose_flower_with_a_dome_glass_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a boy covering a rose flower with a dome glass",
+        "rng_sequence_index": 23,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-023",
+      "source_mask": "../native-full50/masks/videomark/videomark-023.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_boy_covering_a_rose_flower_with_a_dome_glass_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/boy_sitting_on_grass_petting_a_dog_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "boy sitting on grass petting a dog",
+        "rng_sequence_index": 24,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-024",
+      "source_mask": "../native-full50/masks/videomark/videomark-024.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/boy_sitting_on_grass_petting_a_dog_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_child_playing_with_water_1/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a child playing with water",
+        "rng_sequence_index": 25,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-025",
+      "source_mask": "../native-full50/masks/videomark/videomark-025.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_child_playing_with_water_1/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_red_panda_eating_leaves_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a red panda eating leaves",
+        "rng_sequence_index": 26,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-026",
+      "source_mask": "../native-full50/masks/videomark/videomark-026.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_red_panda_eating_leaves_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_squirrel_eating_nuts_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a squirrel eating nuts",
+        "rng_sequence_index": 27,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-027",
+      "source_mask": "../native-full50/masks/videomark/videomark-027.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_squirrel_eating_nuts_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_cute_pomeranian_dog_playing_with_a_soccer_ball_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a cute pomeranian dog playing with a soccer ball",
+        "rng_sequence_index": 28,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-028",
+      "source_mask": "../native-full50/masks/videomark/videomark-028.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_cute_pomeranian_dog_playing_with_a_soccer_ball_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/curious_cat_sitting_and_looking_around_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "curious cat sitting and looking around",
+        "rng_sequence_index": 29,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-029",
+      "source_mask": "../native-full50/masks/videomark/videomark-029.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/curious_cat_sitting_and_looking_around_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/wild_rabbit_in_a_green_meadow_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "wild rabbit in a green meadow",
+        "rng_sequence_index": 30,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-030",
+      "source_mask": "../native-full50/masks/videomark/videomark-030.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/wild_rabbit_in_a_green_meadow_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/underwater_footage_of_an_octopus_in_a_coral_reef_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "underwater footage of an octopus in a coral reef",
+        "rng_sequence_index": 31,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-031",
+      "source_mask": "../native-full50/masks/videomark/videomark-031.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/underwater_footage_of_an_octopus_in_a_coral_reef_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/hedgehog_crossing_road_in_forest_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "hedgehog crossing road in forest",
+        "rng_sequence_index": 32,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-032",
+      "source_mask": "../native-full50/masks/videomark/videomark-032.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/hedgehog_crossing_road_in_forest_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/shark_swimming_in_the_sea_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "shark swimming in the sea",
+        "rng_sequence_index": 33,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-033",
+      "source_mask": "../native-full50/masks/videomark/videomark-033.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/shark_swimming_in_the_sea_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/an_african_penguin_walking_on_a_beach_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "an african penguin walking on a beach",
+        "rng_sequence_index": 34,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-034",
+      "source_mask": "../native-full50/masks/videomark/videomark-034.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/an_african_penguin_walking_on_a_beach_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_tortoise_covered_with_algae_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a tortoise covered with algae",
+        "rng_sequence_index": 35,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-035",
+      "source_mask": "../native-full50/masks/videomark/videomark-035.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_tortoise_covered_with_algae_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_boy_covering_a_rose_flower_with_a_dome_glass_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a boy covering a rose flower with a dome glass",
+        "rng_sequence_index": 36,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-036",
+      "source_mask": "../native-full50/masks/videomark/videomark-036.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_boy_covering_a_rose_flower_with_a_dome_glass_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/boy_sitting_on_grass_petting_a_dog_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "boy sitting on grass petting a dog",
+        "rng_sequence_index": 37,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-037",
+      "source_mask": "../native-full50/masks/videomark/videomark-037.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/boy_sitting_on_grass_petting_a_dog_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_child_playing_with_water_2/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a child playing with water",
+        "rng_sequence_index": 38,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-038",
+      "source_mask": "../native-full50/masks/videomark/videomark-038.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_child_playing_with_water_2/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_red_panda_eating_leaves_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a red panda eating leaves",
+        "rng_sequence_index": 39,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-039",
+      "source_mask": "../native-full50/masks/videomark/videomark-039.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_red_panda_eating_leaves_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_squirrel_eating_nuts_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a squirrel eating nuts",
+        "rng_sequence_index": 40,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-040",
+      "source_mask": "../native-full50/masks/videomark/videomark-040.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_squirrel_eating_nuts_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_cute_pomeranian_dog_playing_with_a_soccer_ball_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a cute pomeranian dog playing with a soccer ball",
+        "rng_sequence_index": 41,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-041",
+      "source_mask": "../native-full50/masks/videomark/videomark-041.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_cute_pomeranian_dog_playing_with_a_soccer_ball_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/curious_cat_sitting_and_looking_around_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "curious cat sitting and looking around",
+        "rng_sequence_index": 42,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-042",
+      "source_mask": "../native-full50/masks/videomark/videomark-042.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/curious_cat_sitting_and_looking_around_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/wild_rabbit_in_a_green_meadow_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "wild rabbit in a green meadow",
+        "rng_sequence_index": 43,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-043",
+      "source_mask": "../native-full50/masks/videomark/videomark-043.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/wild_rabbit_in_a_green_meadow_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/underwater_footage_of_an_octopus_in_a_coral_reef_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "underwater footage of an octopus in a coral reef",
+        "rng_sequence_index": 44,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-044",
+      "source_mask": "../native-full50/masks/videomark/videomark-044.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/underwater_footage_of_an_octopus_in_a_coral_reef_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/hedgehog_crossing_road_in_forest_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "hedgehog crossing road in forest",
+        "rng_sequence_index": 45,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-045",
+      "source_mask": "../native-full50/masks/videomark/videomark-045.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/hedgehog_crossing_road_in_forest_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/shark_swimming_in_the_sea_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "shark swimming in the sea",
+        "rng_sequence_index": 46,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-046",
+      "source_mask": "../native-full50/masks/videomark/videomark-046.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/shark_swimming_in_the_sea_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/an_african_penguin_walking_on_a_beach_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "an african penguin walking on a beach",
+        "rng_sequence_index": 47,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-047",
+      "source_mask": "../native-full50/masks/videomark/videomark-047.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/an_african_penguin_walking_on_a_beach_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_tortoise_covered_with_algae_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a tortoise covered with algae",
+        "rng_sequence_index": 48,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-048",
+      "source_mask": "../native-full50/masks/videomark/videomark-048.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_tortoise_covered_with_algae_3/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "shift": "../native-full50/videomark/videomark/modelscope/512bit/a_boy_covering_a_rose_flower_with_a_dome_glass_3/shift_value.npy"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a boy covering a rose flower with a dome glass",
+        "rng_sequence_index": 49,
+        "seed": 11111,
+        "source_commit": "9f8d78b73ab9f9f055651b1b4f37d68bdb05e7be"
+      },
+      "sample_id": "videomark-049",
+      "source_mask": "../native-full50/masks/videomark/videomark-049.mp4",
+      "watermarked_video": "../native-full50/videomark/videomark/modelscope/512bit/a_boy_covering_a_rose_flower_with_a_dome_glass_3/wm.mp4"
+    }
+  ],
+  "schema_version": 1
+}

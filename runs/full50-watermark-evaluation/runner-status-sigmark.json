@@ -1,0 +1,13 @@
+{
+  "failures": [],
+  "methods": [
+    "sigmark"
+  ],
+  "stages": [
+    "attack",
+    "detect",
+    "embed"
+  ],
+  "status": "complete",
+  "timestamp": "2026-11-15T12:11:45+00:00"
+}

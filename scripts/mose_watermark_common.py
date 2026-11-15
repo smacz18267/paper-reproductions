@@ -17,6 +17,8 @@ import av
 import cv2
 import numpy as np
 
+from watermark_artifact_validation import is_lfs_pointer, require_materialized
+
 
 FPS = 25
 # Full MOSE review runs use 50 clips.  A smaller explicitly recorded value is
@@ -88,8 +90,7 @@ def copy_atomic(source: Path, destination: Path) -> None:
 
 
 def video_info(path: Path) -> dict[str, int | float]:
-    if not path.is_file() or path.stat().st_size == 0:
-        raise RuntimeError(f"Missing or empty video: {path}")
+    require_materialized(path, "video")
     with av.open(str(path)) as container:
         stream = container.streams.video[0]
         rate = stream.average_rate or stream.guessed_rate
@@ -121,6 +122,7 @@ def validate_video(
 
 
 def decode_rgb(path: Path) -> tuple[list[np.ndarray], Fraction]:
+    require_materialized(path, "video")
     frames: list[np.ndarray] = []
     with av.open(str(path)) as container:
         stream = container.streams.video[0]

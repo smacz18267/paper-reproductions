@@ -2,9 +2,11 @@
 """Use the official VINE-R image models on a video frame sequence.
 
 The upstream encoder center-crops non-square images before embedding.  This
-adapter performs that same crop on every frame and on the attack mask, records
-the geometry change, and uses one fixed 100-bit text payload for the sequence.
-VINE exposes a global message decoder but no native pixel tamper localizer.
+adapter performs that same crop on every frame and on the attack mask.  If the
+fixed center square would exclude the selected object in every frame, the
+square window moves only enough to preserve that object.  The geometry change
+is recorded, and one fixed 100-bit text payload is used for the sequence. VINE
+exposes a global message decoder but no native pixel tamper localizer.
 """
 
 from __future__ import annotations
@@ -34,18 +36,69 @@ def message_bits(text: str, device: torch.device) -> torch.Tensor:
     return torch.tensor(bits, dtype=torch.float32, device=device).unsqueeze(0)
 
 
-def center_crop(array: np.ndarray) -> tuple[np.ndarray, dict[str, int]]:
-    height, width = array.shape[:2]
+def crop_geometry(
+    height: int,
+    width: int,
+    *,
+    left: int,
+    top: int,
+    strategy: str,
+) -> dict[str, int | str]:
     side = min(height, width)
-    left = (width - side) // 2
-    top = (height - side) // 2
-    return array[top : top + side, left : left + side], {
+    return {
         "left": left,
         "top": top,
         "side": side,
         "source_width": width,
         "source_height": height,
+        "strategy": strategy,
     }
+
+
+def crop(array: np.ndarray, geometry: dict[str, int | str]) -> np.ndarray:
+    left = int(geometry["left"])
+    top = int(geometry["top"])
+    side = int(geometry["side"])
+    return array[top : top + side, left : left + side]
+
+
+def choose_crop(masks: list[np.ndarray], height: int, width: int) -> dict[str, int | str]:
+    side = min(height, width)
+    center_left = (width - side) // 2
+    center_top = (height - side) // 2
+    center = crop_geometry(
+        height,
+        width,
+        left=center_left,
+        top=center_top,
+        strategy="upstream_center_square",
+    )
+    if any(np.any(crop(mask, center) > 127) for mask in masks):
+        return center
+
+    foreground = np.zeros((height, width), dtype=bool)
+    for mask in masks:
+        foreground |= mask > 127
+    ys, xs = np.nonzero(foreground)
+    if not len(xs):
+        raise RuntimeError("The source attack mask is empty in every frame")
+    # Rare MOSE objects can sit entirely outside VINE's normal center square.
+    # Move only the square crop window enough to retain that object's union,
+    # keeping the released square-input encoder and the benchmark attack valid.
+    center_x = float(xs.mean())
+    center_y = float(ys.mean())
+    left = int(np.clip(round(center_x - side / 2), 0, width - side))
+    top = int(np.clip(round(center_y - side / 2), 0, height - side))
+    fallback = crop_geometry(
+        height,
+        width,
+        left=left,
+        top=top,
+        strategy="object_preserving_square_fallback",
+    )
+    if not any(np.any(crop(mask, fallback) > 127) for mask in masks):
+        raise RuntimeError("Object-preserving VINE crop still produced an empty attack mask")
+    return fallback
 
 
 def embed(args: argparse.Namespace) -> None:
@@ -61,28 +114,29 @@ def embed(args: argparse.Namespace) -> None:
     if len(frames) != len(mask_frames) or abs(float(rate) - float(mask_rate)) > 0.01:
         raise RuntimeError("Input video and mask must have identical frame count and FPS")
 
+    if not frames:
+        raise RuntimeError("Input video is empty")
+    height, width = frames[0].shape[:2]
+    if any(frame.shape[:2] != (height, width) for frame in frames + mask_frames):
+        raise RuntimeError("Video or mask dimensions change between frames")
+    grayscale_masks = [cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY) for frame in mask_frames]
+    crop_record = choose_crop(grayscale_masks, height, width)
+
     output_frames: list[np.ndarray] = []
     output_masks: list[np.ndarray] = []
-    crop_record = None
     resize_256 = transforms.Compose(
         [transforms.Resize(256, interpolation=transforms.InterpolationMode.BICUBIC), transforms.ToTensor()]
     )
     with torch.inference_mode():
-        for frame, mask_frame in zip(frames, mask_frames):
-            cropped, crop = center_crop(frame)
-            mask, mask_crop = center_crop(cv2.cvtColor(mask_frame, cv2.COLOR_RGB2GRAY))
-            if crop != mask_crop:
-                raise RuntimeError("Video and mask crop geometry differs")
-            if crop_record is None:
-                crop_record = crop
-            elif crop != crop_record:
-                raise RuntimeError("Frame geometry changed during VINE embedding")
+        for frame, mask in zip(frames, grayscale_masks):
+            cropped = crop(frame, crop_record)
+            mask = crop(mask, crop_record)
             pil = Image.fromarray(cropped)
             resized = 2.0 * resize_256(pil).unsqueeze(0).to(device) - 1.0
             original = 2.0 * transforms.ToTensor()(pil).unsqueeze(0).to(device) - 1.0
             encoded_256 = encoder(resized, payload)
             residual = transforms.Resize(
-                (crop["side"], crop["side"]),
+                (int(crop_record["side"]), int(crop_record["side"])),
                 interpolation=transforms.InterpolationMode.BICUBIC,
             )(encoded_256 - resized)
             encoded = torch.clamp((residual + original) * 0.5 + 0.5, 0, 1)

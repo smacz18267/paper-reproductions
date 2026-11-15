@@ -1,0 +1,83 @@
+{
+  "gpu": "0",
+  "runner_python": null,
+  "mose_selection": null,
+  "mose_dataset_root": null,
+  "mose_output_root": null,
+  "diffueraser_root": null,
+  "diffueraser_python": null,
+  "effecterase_root": null,
+  "effecterase_python": null,
+  "e2fgvi_root": null,
+  "e2fgvi_python": null,
+  "e2fgvi_checkpoint": null,
+  "methods": {
+    "editguard": {
+      "root": null,
+      "python": null,
+      "checkpoint": null
+    },
+    "omniguard": {
+      "root": null,
+      "python": null,
+      "checkpoint": null,
+      "detector_checkpoint": null
+    },
+    "videoseal": {
+      "root": null,
+      "python": null,
+      "chunk_size": 1
+    },
+    "safe-sora": {
+      "root": null,
+      "python": null,
+      "watermark": null
+    },
+    "watermark-anything": {
+      "root": null,
+      "python": null,
+      "checkpoint": null,
+      "params": null
+    },
+    "vine": {
+      "root": null,
+      "python": null,
+      "encoder_model": "Shilin-LU/VINE-R-Enc",
+      "decoder_model": "Shilin-LU/VINE-R-Dec",
+      "message": "Hello World!"
+    },
+    "genptw": {
+      "root": null,
+      "python": null,
+      "checkpoint": null,
+      "pretrained_vae": null,
+      "convnext_checkpoint": null
+    },
+    "videoshield": {
+      "root": null,
+      "python": null,
+      "model_path": null
+    },
+    "videomark": {
+      "root": null,
+      "python": null,
+      "model_path": null,
+      "keys": null
+    },
+    "sigmark": {
+      "root": null,
+      "python": null,
+      "torchrun": null,
+      "model_base": null,
+      "num_prompts_per_dimension": 3,
+      "num_videos_per_prompt": 1,
+      "num_prompts_diversity": 3,
+      "num_videos_per_prompt_diversity": 1
+    },
+    "vidsig": {
+      "root": null,
+      "python": null,
+      "decoder": null
+    }
+  }
+}

@@ -101,8 +101,8 @@ def main() -> None:
         choices=("videoseal", "safe-sora", "editguard", "omniguard"),
     )
     parser.add_argument("--remover", required=True, choices=("propainter", "diffueraser"))
-    parser.add_argument("--propainter", type=Path, default=Path("/home/smayan/research/ProPainter"))
-    parser.add_argument("--diffueraser", type=Path, default=Path("/home/smayan/research/DiffuEraser"))
+    parser.add_argument("--propainter", required=True, type=Path)
+    parser.add_argument("--diffueraser", required=True, type=Path)
     parser.add_argument("--propainter-subvideo-length", type=int, default=40)
     parser.add_argument(
         "--processing-max-side",

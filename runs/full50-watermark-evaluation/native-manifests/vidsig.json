@@ -1,0 +1,659 @@
+{
+  "created_at": "2026-11-13T13:28:24+00:00",
+  "mask_protocol": "Every native generation receives the same deterministic centered 35% x 35% region-inpainting mask. These are not author-provided object annotations.",
+  "method": "vidsig",
+  "sample_count": 50,
+  "samples": [
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a red panda eating leaves",
+        "rng_sequence_index": 0,
+        "seed": 2025,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-000",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-000.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-000/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a squirrel eating nuts",
+        "rng_sequence_index": 1,
+        "seed": 2026,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-001",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-001.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-001/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a cute pomeranian dog playing with a soccer ball",
+        "rng_sequence_index": 2,
+        "seed": 2027,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-002",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-002.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-002/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "curious cat sitting and looking around",
+        "rng_sequence_index": 3,
+        "seed": 2028,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-003",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-003.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-003/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "wild rabbit in a green meadow",
+        "rng_sequence_index": 4,
+        "seed": 2029,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-004",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-004.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-004/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "underwater footage of an octopus in a coral reef",
+        "rng_sequence_index": 5,
+        "seed": 2030,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-005",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-005.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-005/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "hedgehog crossing road in forest",
+        "rng_sequence_index": 6,
+        "seed": 2031,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-006",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-006.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-006/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "shark swimming in the sea",
+        "rng_sequence_index": 7,
+        "seed": 2032,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-007",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-007.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-007/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "an african penguin walking on a beach",
+        "rng_sequence_index": 8,
+        "seed": 2033,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-008",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-008.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-008/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a tortoise covered with algae",
+        "rng_sequence_index": 9,
+        "seed": 2034,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-009",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-009.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-009/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a boy covering a rose flower with a dome glass",
+        "rng_sequence_index": 10,
+        "seed": 2035,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-010",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-010.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-010/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "boy sitting on grass petting a dog",
+        "rng_sequence_index": 11,
+        "seed": 2036,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-011",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-011.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-011/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a child playing with water",
+        "rng_sequence_index": 12,
+        "seed": 2037,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-012",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-012.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-012/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "couple dancing slow dance with sun glare",
+        "rng_sequence_index": 13,
+        "seed": 2038,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-013",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-013.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-013/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "elderly man lifting kettlebell",
+        "rng_sequence_index": 14,
+        "seed": 2039,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-014",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-014.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-014/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "young dancer practicing at home",
+        "rng_sequence_index": 15,
+        "seed": 2040,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-015",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-015.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-015/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a man in a hoodie and woman with a red bandana talking to each other and smiling",
+        "rng_sequence_index": 16,
+        "seed": 2041,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-016",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-016.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-016/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a woman fighter in her cosplay costume",
+        "rng_sequence_index": 17,
+        "seed": 2042,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-017",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-017.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-017/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a happy kid playing the ukulele",
+        "rng_sequence_index": 18,
+        "seed": 2043,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-018",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-018.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-018/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a person walking on a wet wooden bridge",
+        "rng_sequence_index": 19,
+        "seed": 2044,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-019",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-019.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-019/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "plant with blooming flowers",
+        "rng_sequence_index": 20,
+        "seed": 2045,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-020",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-020.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-020/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "close up view of a white christmas tree",
+        "rng_sequence_index": 21,
+        "seed": 2046,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-021",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-021.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-021/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "dropping flower petals on a wooden bowl",
+        "rng_sequence_index": 22,
+        "seed": 2047,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-022",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-022.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-022/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a close up shot of gypsophila flower",
+        "rng_sequence_index": 23,
+        "seed": 2048,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-023",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-023.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-023/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a stack of dried leaves burning in a forest",
+        "rng_sequence_index": 24,
+        "seed": 2049,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-024",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-024.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-024/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "drone footage of a tree on farm field",
+        "rng_sequence_index": 25,
+        "seed": 2050,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-025",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-025.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-025/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "shot of a palm tree swaying with the wind",
+        "rng_sequence_index": 26,
+        "seed": 2051,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-026",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-026.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-026/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "candle wax dripping on flower petals",
+        "rng_sequence_index": 27,
+        "seed": 2052,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-027",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-027.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-027/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "forest trees and a medieval castle at sunset",
+        "rng_sequence_index": 28,
+        "seed": 2053,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-028",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-028.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-028/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a mossy fountain and green plants in a botanical garden",
+        "rng_sequence_index": 29,
+        "seed": 2054,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-029",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-029.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-029/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "scenery of a relaxing beach",
+        "rng_sequence_index": 30,
+        "seed": 2055,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-030",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-030.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-030/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "fireworks display in the sky at night",
+        "rng_sequence_index": 31,
+        "seed": 2056,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-031",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-031.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-031/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "waterfalls in between mountain",
+        "rng_sequence_index": 32,
+        "seed": 2057,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-032",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-032.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-032/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "exotic view of a riverfront city",
+        "rng_sequence_index": 33,
+        "seed": 2058,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-033",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-033.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-033/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "scenic video of sunset",
+        "rng_sequence_index": 34,
+        "seed": 2059,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-034",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-034.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-034/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "view of houses with bush fence under a blue and cloudy sky",
+        "rng_sequence_index": 35,
+        "seed": 2060,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-035",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-035.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-035/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "boat sailing in the ocean",
+        "rng_sequence_index": 36,
+        "seed": 2061,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-036",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-036.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-036/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "view of golden domed church",
+        "rng_sequence_index": 37,
+        "seed": 2062,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-037",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-037.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-037/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a blooming cherry blossom tree under a blue sky with white clouds",
+        "rng_sequence_index": 38,
+        "seed": 2063,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-038",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-038.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-038/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "aerial view of a palace",
+        "rng_sequence_index": 39,
+        "seed": 2064,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-039",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-039.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-039/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a helicopter flying under blue sky",
+        "rng_sequence_index": 40,
+        "seed": 2065,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-040",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-040.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-040/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "red vehicle driving on field",
+        "rng_sequence_index": 41,
+        "seed": 2066,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-041",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-041.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-041/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "aerial view of a train passing by a bridge",
+        "rng_sequence_index": 42,
+        "seed": 2067,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-042",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-042.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-042/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "red bus in a rainy city",
+        "rng_sequence_index": 43,
+        "seed": 2068,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-043",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-043.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-043/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "an airplane in the sky",
+        "rng_sequence_index": 44,
+        "seed": 2069,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-044",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-044.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-044/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "helicopter landing on the street",
+        "rng_sequence_index": 45,
+        "seed": 2070,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-045",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-045.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-045/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "boat sailing in the middle of the ocean",
+        "rng_sequence_index": 46,
+        "seed": 2071,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-046",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-046.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-046/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "video of a kayak boat in a river",
+        "rng_sequence_index": 47,
+        "seed": 2072,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-047",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-047.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-047/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "traffic on busy city street",
+        "rng_sequence_index": 48,
+        "seed": 2073,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-048",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-048.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-048/watermarked.mp4"
+    },
+    {
+      "method_inputs": {},
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "slow motion footage of a racing car",
+        "rng_sequence_index": 49,
+        "seed": 2074,
+        "source_commit": "9d219c47670c30fdaaccd17b24e7783c976a8c66"
+      },
+      "sample_id": "vidsig-049",
+      "source_mask": "../native-full50/masks/vidsig/vidsig-049.mp4",
+      "watermarked_video": "../native-full50/vidsig/vidsig-049/watermarked.mp4"
+    }
+  ],
+  "schema_version": 1
+}

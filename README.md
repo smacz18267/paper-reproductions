@@ -13,7 +13,9 @@ Paper implementations and execution results by Smayan Gupta.
 
 [MOSEv1 50-clip removal and watermark review](evidence/mose-task1/README.md): all 50 originals, GT masks, ProPainter, DiffuEraser, and EffectErase outputs, plus corrected watermark-first results for VideoSeal, Safe-Sora, EditGuard, OmniGuard, and VideoShield capability records.
 
-[Thirteen watermark-removal notebooks](notebooks/mose-watermark-samples/README.md): one notebook for every watermarking method in the study. Each notebook presents the same canonical four-inpainter comparison near the beginning. Eleven watermark methods have complete ProPainter, DiffuEraser, EffectErase, and E2FGVI-HQ one-clip outputs; RivaGAN is explicitly deferred and LVMark is explicitly blocked with the same status applied to all four inpainters.
+[Thirteen watermark-removal notebooks](notebooks/mose-watermark-samples/README.md): one notebook for every watermarking method in the study. Each notebook presents the same canonical four-inpainter comparison and a generated full-50 key-metrics section near the beginning. The full evaluation contract covers the 11 runnable methods, 50 authentic inputs per method, and four removers (2,200 method/sample/remover cells). RivaGAN remains explicitly deferred and LVMark remains explicitly blocked; neither is counted among the 11.
+
+The authoritative full-50 progress record is [full50-watermark-evaluation-summary.json](evidence/full50-watermark-evaluation-summary.json). It reports completion counts, per-sample metrics, and mean/population-SD/range aggregates. Pending GPU/native-generation work is labelled `pending`, not imputed.
 
 After a fresh clone, run `python3 scripts/prepare_mose_notebooks.py` once to download and verify the notebook videos through Git LFS. Add `--all` to fetch the complete 50-sample video review in one batch.
 

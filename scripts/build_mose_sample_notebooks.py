@@ -279,6 +279,11 @@ VideoSeal can watermark an existing video. The released checkpoint provides a gl
         prop_loc = localization["propainter"]
         diff_loc = localization["diffueraser"]
         effect_loc = localization["effecterase"]
+        diffueraser_display = (
+            f"media/{sample_id}/methods/videoseal/diffueraser-browser.mp4"
+            if (method_dir / "diffueraser-browser.mp4").is_file()
+            else method["diffueraser"]
+        )
 
         frame_ious = prop_loc.get("per_frame_iou", [])
         empty_match_frames = sum(value == 1.0 for value in frame_ious)
@@ -323,7 +328,7 @@ The localization record contains results for all three attacks. Its latest detec
                         ("ProPainter attacked video", method["propainter"], "ProPainter output from the VideoSeal-watermarked input."),
                         ("ProPainter effective GT", method["gt_mask_propainter"], "Mask after ProPainter preprocessing. This is its IoU reference."),
                         ("ProPainter predicted mask", method["pred_mask_propainter"], "Derived VideoSeal crop-grid prediction after ProPainter."),
-                        ("DiffuEraser attacked video", method["diffueraser"], "DiffuEraser output from the VideoSeal-watermarked input."),
+                        ("DiffuEraser attacked video", diffueraser_display, "DiffuEraser output from the VideoSeal-watermarked input. The browser-compatible preview preserves the evaluated source pixels when one is supplied."),
                         ("DiffuEraser effective GT", method["gt_mask_diffueraser"], "Mask after DiffuEraser preprocessing. This is its IoU reference."),
                         ("DiffuEraser predicted mask", method["pred_mask_diffueraser"], "Derived VideoSeal crop-grid prediction after DiffuEraser."),
                         ("EffectErase attacked video", method["effecterase"], "EffectErase output from the VideoSeal-watermarked input."),
@@ -651,6 +656,11 @@ The remainder of this notebook deliberately displays only three clips: `{DEFAULT
         diff_loc = localization["diffueraser"]
         effect_loc = localization["effecterase"]
         embedding = embed["embedding_fidelity"]
+        diffueraser_display = (
+            f"{relative_dir}/diffueraser-browser.mp4"
+            if (local_dir / "diffueraser-browser.mp4").is_file()
+            else f"{relative_dir}/diffueraser.mp4"
+        )
         frame_volume = (
             int(embed["watermarked"]["frames"])
             * int(embed["watermarked"]["width"])
@@ -721,7 +731,7 @@ The localization record contains all three attacked videos. Its latest detector 
                         ("ProPainter attacked video", f"{relative_dir}/propainter.mp4", f"ProPainter output from the {method_label}-watermarked input."),
                         ("ProPainter effective GT", f"{relative_dir}/effective-gt-mask-propainter.mp4", "Mask after ProPainter preprocessing; the IoU reference."),
                         ("ProPainter predicted mask", f"{relative_dir}/pred-mask-propainter.mp4", f"Native {method_label} localization after ProPainter."),
-                        ("DiffuEraser attacked video", f"{relative_dir}/diffueraser.mp4", f"DiffuEraser output from the {method_label}-watermarked input."),
+                        ("DiffuEraser attacked video", diffueraser_display, f"DiffuEraser output from the {method_label}-watermarked input. The browser-compatible preview preserves the evaluated source pixels when one is supplied."),
                         ("DiffuEraser effective GT", f"{relative_dir}/effective-gt-mask-diffueraser.mp4", "Mask after DiffuEraser preprocessing; the IoU reference."),
                         ("DiffuEraser predicted mask", f"{relative_dir}/pred-mask-diffueraser.mp4", f"Native {method_label} localization after DiffuEraser."),
                         ("EffectErase attacked video", f"{relative_dir}/effecterase.mp4", f"EffectErase output from the {method_label}-watermarked input."),

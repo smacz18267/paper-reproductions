@@ -1,0 +1,15 @@
+{
+  "failures": [],
+  "methods": [
+    "videoshield",
+    "videomark",
+    "vidsig"
+  ],
+  "stages": [
+    "attack",
+    "detect",
+    "embed"
+  ],
+  "status": "complete",
+  "timestamp": "2026-11-13T21:27:11+00:00"
+}

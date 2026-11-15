@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_ROOT="/home/smayan/research/mose50-corrected/scripts"
-DATASET_ROOT="/home/smayan/research/datasets/MOSEv1"
+SCRIPT_ROOT="${WATERMARK_SCRIPT_ROOT:-$(cd "$(dirname "$0")" && pwd)}"
+SOURCE_ROOT="${WATERMARK_SOURCE_ROOT:?Set WATERMARK_SOURCE_ROOT to the directory containing method checkouts}"
+DATASET_ROOT="${MOSE_DATASET_ROOT:?Set MOSE_DATASET_ROOT to the extracted MOSEv1 directory}"
 OUTPUT_ROOT="${DATASET_ROOT}/watermark-review50"
-SELECTION="${DATASET_ROOT}/selection50.json"
-PYTHON="/home/smayan/research/WatermarkMethods/.venv/bin/python"
-EDITGUARD="/home/smayan/research/EditGuard"
-OMNIGUARD="/home/smayan/research/OmniGuard"
+OUTPUT_ROOT="${MOSE_OUTPUT_ROOT:-$OUTPUT_ROOT}"
+SELECTION="${MOSE_SELECTION:-$DATASET_ROOT/selection50.json}"
+PYTHON="${WATERMARK_METHODS_PYTHON:-$SOURCE_ROOT/WatermarkMethods/.venv/bin/python}"
+EDITGUARD="$SOURCE_ROOT/EditGuard"
+OMNIGUARD="$SOURCE_ROOT/OmniGuard"
 LOCK_FILE="${OUTPUT_ROOT}/image-methods-full50.lock"
 STATUS_FILE="${OUTPUT_ROOT}/image-methods-full50.status"
-GPU=0
+GPU="${WATERMARK_GPU:-0}"
 
 exec 9>"${LOCK_FILE}"
 if ! flock -n 9; then
@@ -88,6 +90,8 @@ for method in editguard omniguard; do
             --dataset-root "${DATASET_ROOT}" \
             --output-root "${OUTPUT_ROOT}" \
             --watermark-method "${method}" \
+            --propainter "${SOURCE_ROOT}/ProPainter" \
+            --diffueraser "${SOURCE_ROOT}/DiffuEraser" \
             --remover "${remover}"
     done
 done

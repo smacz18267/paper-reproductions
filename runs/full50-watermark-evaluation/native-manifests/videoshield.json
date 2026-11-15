@@ -1,0 +1,759 @@
+{
+  "created_at": "2026-11-13T11:38:11+00:00",
+  "mask_protocol": "Every native generation receives the same deterministic centered 35% x 35% region-inpainting mask. These are not author-provided object annotations.",
+  "method": "videoshield",
+  "sample_count": 50,
+  "samples": [
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/a_red_panda_eating_leaves/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a red panda eating leaves",
+        "rng_sequence_index": 0,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-000",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-000.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/a_red_panda_eating_leaves/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/a_squirrel_eating_nuts/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a squirrel eating nuts",
+        "rng_sequence_index": 1,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-001",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-001.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/a_squirrel_eating_nuts/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/a_cute_pomeranian_dog_playing_with_a_soccer_ball/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a cute pomeranian dog playing with a soccer ball",
+        "rng_sequence_index": 2,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-002",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-002.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/a_cute_pomeranian_dog_playing_with_a_soccer_ball/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/curious_cat_sitting_and_looking_around/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "curious cat sitting and looking around",
+        "rng_sequence_index": 3,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-003",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-003.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/curious_cat_sitting_and_looking_around/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/wild_rabbit_in_a_green_meadow/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "wild rabbit in a green meadow",
+        "rng_sequence_index": 4,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-004",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-004.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/wild_rabbit_in_a_green_meadow/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/underwater_footage_of_an_octopus_in_a_coral_reef/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "underwater footage of an octopus in a coral reef",
+        "rng_sequence_index": 5,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-005",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-005.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/underwater_footage_of_an_octopus_in_a_coral_reef/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/hedgehog_crossing_road_in_forest/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "hedgehog crossing road in forest",
+        "rng_sequence_index": 6,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-006",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-006.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/hedgehog_crossing_road_in_forest/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/shark_swimming_in_the_sea/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "shark swimming in the sea",
+        "rng_sequence_index": 7,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-007",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-007.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/shark_swimming_in_the_sea/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/an_african_penguin_walking_on_a_beach/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "an african penguin walking on a beach",
+        "rng_sequence_index": 8,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-008",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-008.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/an_african_penguin_walking_on_a_beach/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/a_tortoise_covered_with_algae/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a tortoise covered with algae",
+        "rng_sequence_index": 9,
+        "seed": 2025,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-009",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-009.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-000-009/results/modelscope/a_tortoise_covered_with_algae/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_boy_covering_a_rose_flower_with_a_dome_glass/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a boy covering a rose flower with a dome glass",
+        "rng_sequence_index": 0,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-010",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-010.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_boy_covering_a_rose_flower_with_a_dome_glass/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/boy_sitting_on_grass_petting_a_dog/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "boy sitting on grass petting a dog",
+        "rng_sequence_index": 1,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-011",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-011.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/boy_sitting_on_grass_petting_a_dog/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_child_playing_with_water/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a child playing with water",
+        "rng_sequence_index": 2,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-012",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-012.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_child_playing_with_water/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/couple_dancing_slow_dance_with_sun_glare/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "couple dancing slow dance with sun glare",
+        "rng_sequence_index": 3,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-013",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-013.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/couple_dancing_slow_dance_with_sun_glare/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/elderly_man_lifting_kettlebell/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "elderly man lifting kettlebell",
+        "rng_sequence_index": 4,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-014",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-014.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/elderly_man_lifting_kettlebell/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/young_dancer_practicing_at_home/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "young dancer practicing at home",
+        "rng_sequence_index": 5,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-015",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-015.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/young_dancer_practicing_at_home/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_man_in_a_hoodie_and_woman_with_a_red_bandana_talking_to_each_other_and_smiling/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a man in a hoodie and woman with a red bandana talking to each other and smiling",
+        "rng_sequence_index": 6,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-016",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-016.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_man_in_a_hoodie_and_woman_with_a_red_bandana_talking_to_each_other_and_smiling/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_woman_fighter_in_her_cosplay_costume/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a woman fighter in her cosplay costume",
+        "rng_sequence_index": 7,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-017",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-017.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_woman_fighter_in_her_cosplay_costume/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_happy_kid_playing_the_ukulele/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a happy kid playing the ukulele",
+        "rng_sequence_index": 8,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-018",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-018.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_happy_kid_playing_the_ukulele/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_person_walking_on_a_wet_wooden_bridge/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a person walking on a wet wooden bridge",
+        "rng_sequence_index": 9,
+        "seed": 2035,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-019",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-019.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-010-019/results/modelscope/a_person_walking_on_a_wet_wooden_bridge/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/plant_with_blooming_flowers/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "plant with blooming flowers",
+        "rng_sequence_index": 0,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-020",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-020.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/plant_with_blooming_flowers/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/close_up_view_of_a_white_christmas_tree/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "close up view of a white christmas tree",
+        "rng_sequence_index": 1,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-021",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-021.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/close_up_view_of_a_white_christmas_tree/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/dropping_flower_petals_on_a_wooden_bowl/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "dropping flower petals on a wooden bowl",
+        "rng_sequence_index": 2,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-022",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-022.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/dropping_flower_petals_on_a_wooden_bowl/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/a_close_up_shot_of_gypsophila_flower/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a close up shot of gypsophila flower",
+        "rng_sequence_index": 3,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-023",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-023.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/a_close_up_shot_of_gypsophila_flower/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/a_stack_of_dried_leaves_burning_in_a_forest/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a stack of dried leaves burning in a forest",
+        "rng_sequence_index": 4,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-024",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-024.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/a_stack_of_dried_leaves_burning_in_a_forest/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/drone_footage_of_a_tree_on_farm_field/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "drone footage of a tree on farm field",
+        "rng_sequence_index": 5,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-025",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-025.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/drone_footage_of_a_tree_on_farm_field/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/shot_of_a_palm_tree_swaying_with_the_wind/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "shot of a palm tree swaying with the wind",
+        "rng_sequence_index": 6,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-026",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-026.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/shot_of_a_palm_tree_swaying_with_the_wind/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/candle_wax_dripping_on_flower_petals/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "candle wax dripping on flower petals",
+        "rng_sequence_index": 7,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-027",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-027.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/candle_wax_dripping_on_flower_petals/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/forest_trees_and_a_medieval_castle_at_sunset/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "forest trees and a medieval castle at sunset",
+        "rng_sequence_index": 8,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-028",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-028.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/forest_trees_and_a_medieval_castle_at_sunset/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/a_mossy_fountain_and_green_plants_in_a_botanical_garden/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a mossy fountain and green plants in a botanical garden",
+        "rng_sequence_index": 9,
+        "seed": 2045,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-029",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-029.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-020-029/results/modelscope/a_mossy_fountain_and_green_plants_in_a_botanical_garden/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/scenery_of_a_relaxing_beach/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "scenery of a relaxing beach",
+        "rng_sequence_index": 0,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-030",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-030.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/scenery_of_a_relaxing_beach/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/fireworks_display_in_the_sky_at_night/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "fireworks display in the sky at night",
+        "rng_sequence_index": 1,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-031",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-031.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/fireworks_display_in_the_sky_at_night/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/waterfalls_in_between_mountain/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "waterfalls in between mountain",
+        "rng_sequence_index": 2,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-032",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-032.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/waterfalls_in_between_mountain/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/exotic_view_of_a_riverfront_city/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "exotic view of a riverfront city",
+        "rng_sequence_index": 3,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-033",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-033.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/exotic_view_of_a_riverfront_city/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/scenic_video_of_sunset/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "scenic video of sunset",
+        "rng_sequence_index": 4,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-034",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-034.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/scenic_video_of_sunset/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/view_of_houses_with_bush_fence_under_a_blue_and_cloudy_sky/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "view of houses with bush fence under a blue and cloudy sky",
+        "rng_sequence_index": 5,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-035",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-035.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/view_of_houses_with_bush_fence_under_a_blue_and_cloudy_sky/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/boat_sailing_in_the_ocean/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "boat sailing in the ocean",
+        "rng_sequence_index": 6,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-036",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-036.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/boat_sailing_in_the_ocean/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/view_of_golden_domed_church/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "view of golden domed church",
+        "rng_sequence_index": 7,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-037",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-037.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/view_of_golden_domed_church/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/a_blooming_cherry_blossom_tree_under_a_blue_sky_with_white_clouds/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a blooming cherry blossom tree under a blue sky with white clouds",
+        "rng_sequence_index": 8,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-038",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-038.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/a_blooming_cherry_blossom_tree_under_a_blue_sky_with_white_clouds/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/aerial_view_of_a_palace/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "aerial view of a palace",
+        "rng_sequence_index": 9,
+        "seed": 2055,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-039",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-039.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-030-039/results/modelscope/aerial_view_of_a_palace/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/a_helicopter_flying_under_blue_sky/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "a helicopter flying under blue sky",
+        "rng_sequence_index": 0,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-040",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-040.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/a_helicopter_flying_under_blue_sky/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/red_vehicle_driving_on_field/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "red vehicle driving on field",
+        "rng_sequence_index": 1,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-041",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-041.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/red_vehicle_driving_on_field/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/aerial_view_of_a_train_passing_by_a_bridge/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "aerial view of a train passing by a bridge",
+        "rng_sequence_index": 2,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-042",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-042.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/aerial_view_of_a_train_passing_by_a_bridge/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/red_bus_in_a_rainy_city/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "red bus in a rainy city",
+        "rng_sequence_index": 3,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-043",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-043.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/red_bus_in_a_rainy_city/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/an_airplane_in_the_sky/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "an airplane in the sky",
+        "rng_sequence_index": 4,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-044",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-044.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/an_airplane_in_the_sky/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/helicopter_landing_on_the_street/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "helicopter landing on the street",
+        "rng_sequence_index": 5,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-045",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-045.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/helicopter_landing_on_the_street/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/boat_sailing_in_the_middle_of_the_ocean/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "boat sailing in the middle of the ocean",
+        "rng_sequence_index": 6,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-046",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-046.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/boat_sailing_in_the_middle_of_the_ocean/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/video_of_a_kayak_boat_in_a_river/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "video of a kayak boat in a river",
+        "rng_sequence_index": 7,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-047",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-047.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/video_of_a_kayak_boat_in_a_river/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/traffic_on_busy_city_street/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "traffic on busy city street",
+        "rng_sequence_index": 8,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-048",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-048.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/traffic_on_busy_city_street/wm.mp4"
+    },
+    {
+      "method_inputs": {
+        "watermark_info": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/slow_motion_footage_of_a_racing_car/wm_info.bin"
+      },
+      "provenance": {
+        "mask_protocol": "deterministic centered 35% x 35% region",
+        "prompt": "slow motion footage of a racing car",
+        "rng_sequence_index": 9,
+        "seed": 2065,
+        "source_commit": "a61efa73abb15d30f50ee535c3301cea7dec3075"
+      },
+      "sample_id": "videoshield-049",
+      "source_mask": "../native-full50/masks/videoshield/videoshield-049.mp4",
+      "watermarked_video": "../native-full50/videoshield/batches/batch-040-049/results/modelscope/slow_motion_footage_of_a_racing_car/wm.mp4"
+    }
+  ],
+  "schema_version": 1
+}

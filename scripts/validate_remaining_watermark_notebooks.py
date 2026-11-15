@@ -22,6 +22,9 @@ EXPECTED = {
 }
 
 REQUIRED_SCRIPTS = (
+    "watermark_notebook_runtime.py",
+    "watermark_artifact_validation.py",
+    "build_browser_video_previews.py",
     "prepare_watermark_removal_sample.py",
     "run_watermark_removal_pair.py",
     "run_prepared_effecterase.py",
@@ -36,6 +39,11 @@ REQUIRED_SCRIPTS = (
     "run_vidsig_detection.py",
     "genptw_video.py",
 )
+
+
+def cell_source(cell: dict) -> str:
+    value = cell.get("source", "")
+    return "".join(value) if isinstance(value, list) else str(value)
 
 
 def main() -> None:
@@ -61,7 +69,7 @@ def main() -> None:
         if payload.get("nbformat") != 4:
             failures.append(f"{path}: nbformat is not 4")
         cells = payload.get("cells", [])
-        combined = "\n".join(str(cell.get("source", "")) for cell in cells)
+        combined = "\n".join(cell_source(cell) for cell in cells)
         spec = registry[slug]
         for required in (
             spec.verified_commit,
@@ -75,13 +83,19 @@ def main() -> None:
         ):
             if required not in combined:
                 failures.append(f"{path}: missing protocol text {required!r}")
+        for required in ("configured_path", "watermark_notebook_runtime"):
+            if required not in combined:
+                failures.append(f"{path}: missing fail-fast runtime configuration {required!r}")
+        for forbidden in ("/path/to/", "/mnt/data_fast/"):
+            if forbidden in combined:
+                failures.append(f"{path}: contains machine-specific or placeholder path {forbidden!r}")
         if not spec.existing_video_compatible and "does not fake a MOSE embedding" not in combined:
             failures.append(f"{path}: missing in-generation authenticity warning")
         for index, cell in enumerate(cells):
             if cell.get("cell_type") != "code":
                 continue
             try:
-                ast.parse(str(cell.get("source", "")))
+                ast.parse(cell_source(cell))
             except SyntaxError as error:
                 failures.append(f"{path}: code cell {index} is invalid: {error}")
 

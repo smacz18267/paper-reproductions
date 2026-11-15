@@ -98,9 +98,20 @@ def main() -> None:
                 "on macOS or `sudo apt-get install git-lfs` on Ubuntu), then rerun this command."
             ) from error
         run_git("lfs", "install", "--local")
-        run_git("lfs", "pull", f"--include={include}", "--exclude=")
+        try:
+            run_git("lfs", "pull", f"--include={include}", "--exclude=")
+        except subprocess.CalledProcessError as error:
+            raise SystemExit(
+                "Git LFS could not download the requested notebook media. Authenticate this checkout "
+                "for the origin remote (for example with `gh auth login`, followed by "
+                "`gh auth setup-git`) and rerun this command. No metric rows are fabricated when "
+                "media is unavailable."
+            ) from error
 
-    total_bytes = verify(videos)
+    try:
+        total_bytes = verify(videos)
+    except RuntimeError as error:
+        raise SystemExit(str(error)) from None
     print(
         f"Ready: {len(videos)} playable MP4 containers for the {label} "
         f"({total_bytes / (1024 * 1024):.1f} MiB)."

@@ -5,8 +5,9 @@ GenPTW's released training/evaluation path embeds into existing COCO images by
 VAE-encoding them and decoding the same latents through ``decode_wm``.  This
 adapter applies that released post-generation path independently to video
 frames.  It uses the paper's 512 x 512 image protocol, so both video and mask
-are center-cropped to a square and resized to 512 before the two video
-inpainting methods are run.
+are center-cropped to a square and resized to 512. If the normal center square
+would exclude the selected object in every frame, the square window moves only
+enough to retain that object and records the fallback geometry.
 """
 
 from __future__ import annotations
@@ -35,15 +36,16 @@ def message_tensor(value: str, device: torch.device, dtype: torch.dtype) -> torc
     return torch.tensor([[int(bit) for bit in value]], device=device, dtype=dtype)
 
 
-def align_frame(frame: np.ndarray, *, mask: bool = False) -> tuple[np.ndarray, dict[str, int]]:
-    height, width = frame.shape[:2]
+def crop_geometry(
+    height: int,
+    width: int,
+    *,
+    left: int,
+    top: int,
+    strategy: str,
+) -> dict[str, int | str]:
     side = min(height, width)
-    left = (width - side) // 2
-    top = (height - side) // 2
-    cropped = frame[top : top + side, left : left + side]
-    interpolation = cv2.INTER_NEAREST if mask else cv2.INTER_LANCZOS4
-    resized = cv2.resize(cropped, (RESOLUTION, RESOLUTION), interpolation=interpolation)
-    return resized, {
+    return {
         "left": left,
         "top": top,
         "side": side,
@@ -51,7 +53,57 @@ def align_frame(frame: np.ndarray, *, mask: bool = False) -> tuple[np.ndarray, d
         "source_height": height,
         "output_width": RESOLUTION,
         "output_height": RESOLUTION,
+        "strategy": strategy,
     }
+
+
+def crop(frame: np.ndarray, geometry: dict[str, int | str]) -> np.ndarray:
+    left = int(geometry["left"])
+    top = int(geometry["top"])
+    side = int(geometry["side"])
+    return frame[top : top + side, left : left + side]
+
+
+def choose_crop(masks: list[np.ndarray], height: int, width: int) -> dict[str, int | str]:
+    side = min(height, width)
+    center = crop_geometry(
+        height,
+        width,
+        left=(width - side) // 2,
+        top=(height - side) // 2,
+        strategy="paper_center_square",
+    )
+    if any(np.any(crop(mask, center) > 127) for mask in masks):
+        return center
+    foreground = np.zeros((height, width), dtype=bool)
+    for mask in masks:
+        foreground |= mask > 127
+    ys, xs = np.nonzero(foreground)
+    if not len(xs):
+        raise RuntimeError("The source attack mask is empty in every frame")
+    left = int(np.clip(round(float(xs.mean()) - side / 2), 0, width - side))
+    top = int(np.clip(round(float(ys.mean()) - side / 2), 0, height - side))
+    fallback = crop_geometry(
+        height,
+        width,
+        left=left,
+        top=top,
+        strategy="object_preserving_square_fallback",
+    )
+    if not any(np.any(crop(mask, fallback) > 127) for mask in masks):
+        raise RuntimeError("Object-preserving GenPTW crop still produced an empty attack mask")
+    return fallback
+
+
+def align_frame(
+    frame: np.ndarray,
+    geometry: dict[str, int | str],
+    *,
+    mask: bool = False,
+) -> np.ndarray:
+    cropped = crop(frame, geometry)
+    interpolation = cv2.INTER_NEAREST if mask else cv2.INTER_LANCZOS4
+    return cv2.resize(cropped, (RESOLUTION, RESOLUTION), interpolation=interpolation)
 
 
 def dtype_from_name(name: str) -> torch.dtype:
@@ -125,18 +177,19 @@ def embed(args: argparse.Namespace) -> None:
         raise RuntimeError("Input video and mask must have identical frame count and FPS")
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed_all(args.seed)
+    if not frames:
+        raise RuntimeError("Input video is empty")
+    height, width = frames[0].shape[:2]
+    if any(frame.shape[:2] != (height, width) for frame in frames + mask_frames):
+        raise RuntimeError("Video or mask dimensions change between frames")
+    grayscale_masks = [cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY) for frame in mask_frames]
+    geometry = choose_crop(grayscale_masks, height, width)
     output_frames = []
     output_masks = []
-    geometry = None
     with torch.inference_mode():
-        for frame, mask_frame in zip(frames, mask_frames):
-            aligned, current_geometry = align_frame(frame)
-            gray = cv2.cvtColor(mask_frame, cv2.COLOR_RGB2GRAY)
-            aligned_mask, mask_geometry = align_frame(gray, mask=True)
-            if current_geometry != mask_geometry:
-                raise RuntimeError("Video and mask geometry differs")
-            if geometry is None:
-                geometry = current_geometry
+        for frame, gray in zip(frames, grayscale_masks):
+            aligned = align_frame(frame, geometry)
+            aligned_mask = align_frame(gray, geometry, mask=True)
             image = image_tensor(aligned, device, dtype)
             latent = vae.encode(image).latent_dist.sample() * LATENT_SCALE
             watermarked = vae.decode_wm(latent / LATENT_SCALE, target, return_dict=False)[0]

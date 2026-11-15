@@ -1,0 +1,84 @@
+{
+  "gpu": "0",
+  "runner_python": "/mnt/data_fast/smayan/research/DiffuEraser/.venv/bin/python",
+  "mose_selection": "/mnt/data_fast/smayan/research/full50-watermark-20261112/selection50.json",
+  "mose_dataset_root": "/mnt/data_fast/smayan/research/full50-watermark-20261112/mose-dataset",
+  "mose_output_root": "/mnt/data_fast/smayan/research/full50-watermark-20261112/fixed-output",
+  "diffueraser_root": "/mnt/data_fast/smayan/research/DiffuEraser",
+  "diffueraser_python": "/mnt/data_fast/smayan/research/DiffuEraser/.venv/bin/python",
+  "effecterase_root": "/mnt/data_fast/smayan/research/EffectErase",
+  "effecterase_python": "/mnt/data_fast/smayan/research/EffectErase/.venv/bin/python",
+  "e2fgvi_root": "/mnt/data_fast/smayan/research/E2FGVI",
+  "e2fgvi_python": "/mnt/data_fast/smayan/research/DiffuEraser/.venv/bin/python",
+  "e2fgvi_checkpoint": "/mnt/data_fast/smayan/research/E2FGVI/release_model/E2FGVI-HQ-CVPR22.pth",
+  "methods": {
+    "editguard": {
+      "root": "/mnt/data_fast/smayan/research/EditGuard",
+      "python": "/mnt/data_fast/smayan/research/watermark-anything/.venv/bin/python",
+      "checkpoint": "/mnt/data_fast/smayan/research/EditGuard/checkpoints/clean.pth"
+    },
+    "omniguard": {
+      "root": "/mnt/data_fast/smayan/research/OmniGuard",
+      "python": "/mnt/data_fast/smayan/research/watermark-anything/.venv/bin/python",
+      "checkpoint": "/mnt/data_fast/smayan/research/OmniGuard/checkpoint/model_checkpoint_01500.pt",
+      "detector_checkpoint": "/mnt/data_fast/smayan/research/OmniGuard/checkpoint/checkpoint-175.pth"
+    },
+    "videoseal": {
+      "root": "/mnt/data_fast/smayan/research/VideoSeal",
+      "python": "/mnt/data_fast/smayan/research/watermark-anything/.venv/bin/python",
+      "chunk_size": 1
+    },
+    "safe-sora": {
+      "root": "/mnt/data_fast/smayan/research/Safe-Sora",
+      "python": "/mnt/data_fast/smayan/research/Safe-Sora/.venv/bin/python",
+      "watermark": "/mnt/data_fast/smayan/research/Safe-Sora/demo_watermark.png"
+    },
+    "watermark-anything": {
+      "root": "/mnt/data_fast/smayan/research/watermark-anything",
+      "python": "/mnt/data_fast/smayan/research/watermark-anything/.venv/bin/python",
+      "checkpoint": "/mnt/data_fast/smayan/research/watermark-anything/checkpoints/wam_mit.pth",
+      "params": "/mnt/data_fast/smayan/research/watermark-anything/checkpoints/params.json"
+    },
+    "vine": {
+      "root": "/mnt/data_fast/smayan/research/VINE",
+      "python": "/mnt/data_fast/smayan/research/VINE/.venv/bin/python",
+      "encoder_model": "Shilin-LU/VINE-R-Enc",
+      "decoder_model": "Shilin-LU/VINE-R-Dec",
+      "message": "Hello World!"
+    },
+    "genptw": {
+      "root": "/mnt/data_fast/smayan/research/GenPTW",
+      "python": "/mnt/data_fast/smayan/research/GenPTW/.venv/bin/python",
+      "checkpoint": "/mnt/data_fast/smayan/research/GenPTW/Checkpoint",
+      "pretrained_vae": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/models/stable-diffusion-2-base/vae",
+      "convnext_checkpoint": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/models/convnext_tiny-983f1562.pth",
+      "seed": 2026
+    },
+    "videoshield": {
+      "root": "/mnt/data_fast/smayan/research/VideoShield",
+      "python": "/mnt/data_fast/smayan/research/VideoMark/.venv/bin/python",
+      "model_path": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/models/modelscope-text-to-video-ms-1.7b"
+    },
+    "videomark": {
+      "root": "/mnt/data_fast/smayan/research/VideoMark",
+      "python": "/mnt/data_fast/smayan/research/VideoMark/.venv/bin/python",
+      "model_path": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/models/modelscope-text-to-video-ms-1.7b",
+      "keys": "/mnt/data_fast/smayan/research/VideoMark/keys/64_64_512bit.pkl"
+    },
+    "sigmark": {
+      "root": "/mnt/data_fast/smayan/research/SIGMark-release",
+      "python": "/mnt/data_fast/smayan/research/SIGMark-release/.venv/bin/python",
+      "torchrun": "/mnt/data_fast/smayan/research/SIGMark-release/.venv/bin/torchrun",
+      "model_base": "/mnt/data_fast/smayan/research/remaining-watermark-experiments/models",
+      "num_prompts_per_dimension": 3,
+      "num_videos_per_prompt": 1,
+      "num_prompts_diversity": 3,
+      "num_videos_per_prompt_diversity": 1
+    },
+    "vidsig": {
+      "root": "/mnt/data_fast/smayan/research/Video-Signature",
+      "python": "/mnt/data_fast/smayan/research/Video-Signature/.venv/bin/python",
+      "decoder": "/mnt/data_fast/smayan/research/Video-Signature/ckpts/msg_decoder/dec_48b_whit.torchscript.pt"
+    }
+  }
+}
