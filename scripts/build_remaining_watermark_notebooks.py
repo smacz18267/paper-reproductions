@@ -54,22 +54,15 @@ def find_repo_root():
 
 ROOT = find_repo_root()
 SCRIPTS = ROOT / "scripts"
+sys.path.insert(0, str(SCRIPTS))
+from watermark_notebook_runtime import configured_path, require_commit, require_path
 
 def run(command, *, cwd=None, env=None):
     command = [str(value) for value in command]
     print("+", shlex.join(command))
     subprocess.run(command, cwd=cwd, env=env, check=True)
 
-def require(path, description):
-    path = Path(path)
-    if not path.exists():
-        raise FileNotFoundError(f"Missing {description}: {path}")
-    return path
-
-def require_commit(repository, expected):
-    actual = subprocess.check_output(["git", "-C", str(repository), "rev-parse", "HEAD"], text=True).strip()
-    if actual != expected:
-        raise RuntimeError(f"Expected {expected} in {repository}, found {actual}")
+require = require_path
 
 def show_results(run_root):
     run_root = Path(run_root)
@@ -179,13 +172,22 @@ else:
     print("Both removal outputs already exist:", ATTACK_RUN / "removal-pair.json")'''
         ),
         code(
-            '''EFFECTERASE = Path(os.environ.get("EFFECTERASE", "/mnt/data_fast/smayan/research/EffectErase"))
-EFFECTERASE_PYTHON = Path(os.environ.get("EFFECTERASE_PYTHON", str(EFFECTERASE / ".venv/bin/python")))
-E2FGVI = Path(os.environ.get("E2FGVI", "/mnt/data_fast/smayan/research/E2FGVI"))
-E2FGVI_CHECKPOINT = Path(os.environ.get(
-    "E2FGVI_CHECKPOINT", str(E2FGVI / "release_model/E2FGVI-HQ-CVPR22.pth")
-))
-E2FGVI_PYTHON = Path(os.environ.get("E2FGVI_PYTHON", str(DIFFUERASER_PYTHON)))
+            '''EFFECTERASE = configured_path("EFFECTERASE_ROOT", description="EffectErase checkout")
+EFFECTERASE_PYTHON = configured_path(
+    "EFFECTERASE_PYTHON", default=EFFECTERASE / ".venv/bin/python"
+)
+E2FGVI = configured_path("E2FGVI_ROOT", description="E2FGVI checkout")
+E2FGVI_CHECKPOINT = configured_path(
+    "E2FGVI_CHECKPOINT", default=E2FGVI / "release_model/E2FGVI-HQ-CVPR22.pth"
+)
+E2FGVI_PYTHON = configured_path("E2FGVI_PYTHON", default=DIFFUERASER_PYTHON)
+
+for path, label in (
+    (EFFECTERASE_PYTHON, "EffectErase Python"),
+    (E2FGVI_CHECKPOINT, "E2FGVI-HQ checkpoint"),
+    (E2FGVI_PYTHON, "E2FGVI Python"),
+):
+    require(path, label)
 
 if not (ATTACK_RUN / "effecterase.json").is_file():
     effect_env = os.environ.copy(); effect_env["CUDA_VISIBLE_DEVICES"] = GPU
@@ -219,12 +221,12 @@ def rivagan() -> dict[str, Any]:
     )
     cells += [
         code(
-            '''RIVAGAN = Path("/path/to/RivaGAN")
-RIVAGAN_PYTHON = RIVAGAN / ".venv/bin/python"
-RIVAGAN_MODEL = Path("/path/to/rivagan/model.pt")  # required; not published upstream
-DIFFUERASER = Path("/path/to/DiffuEraser")
-DIFFUERASER_PYTHON = DIFFUERASER / ".venv/bin/python"
-GPU = "0"
+            '''RIVAGAN = configured_path("RIVAGAN_ROOT", description="RivaGAN checkout")
+RIVAGAN_PYTHON = configured_path("RIVAGAN_PYTHON", default=RIVAGAN / ".venv/bin/python")
+RIVAGAN_MODEL = configured_path("RIVAGAN_MODEL", description="trained RivaGAN model.pt")
+DIFFUERASER = configured_path("DIFFUERASER_ROOT", description="DiffuEraser checkout")
+DIFFUERASER_PYTHON = configured_path("DIFFUERASER_PYTHON", default=DIFFUERASER / ".venv/bin/python")
+GPU = os.environ.get("WATERMARK_GPU", "0")
 MOSE_VIDEO = ROOT / "evidence/mose-task1/review50/media/02b72b8d/original.mp4"
 MOSE_MASK = ROOT / "evidence/mose-task1/review50/media/02b72b8d/gt_mask.mp4"
 RUN_ROOT = ROOT / "runs/remaining-watermarks/rivagan/02b72b8d"
@@ -277,13 +279,13 @@ def wam() -> dict[str, Any]:
     )
     cells += [
         code(
-            '''WAM = Path("/path/to/watermark-anything")
-WAM_PYTHON = WAM / ".venv/bin/python"
+            '''WAM = configured_path("WAM_ROOT", description="Watermark Anything checkout")
+WAM_PYTHON = configured_path("WAM_PYTHON", default=WAM / ".venv/bin/python")
 WAM_CHECKPOINT = WAM / "checkpoints/wam_mit.pth"
 WAM_PARAMS = WAM / "checkpoints/params.json"
-DIFFUERASER = Path("/path/to/DiffuEraser")
-DIFFUERASER_PYTHON = DIFFUERASER / ".venv/bin/python"
-GPU = "0"
+DIFFUERASER = configured_path("DIFFUERASER_ROOT", description="DiffuEraser checkout")
+DIFFUERASER_PYTHON = configured_path("DIFFUERASER_PYTHON", default=DIFFUERASER / ".venv/bin/python")
+GPU = os.environ.get("WATERMARK_GPU", "0")
 MOSE_VIDEO = ROOT / "evidence/mose-task1/review50/media/02b72b8d/original.mp4"
 MOSE_MASK = ROOT / "evidence/mose-task1/review50/media/02b72b8d/gt_mask.mp4"
 RUN_ROOT = ROOT / "runs/remaining-watermarks/watermark-anything/02b72b8d"
@@ -334,11 +336,11 @@ def vine() -> dict[str, Any]:
     )
     cells += [
         code(
-            '''VINE = Path("/path/to/VINE")
-VINE_PYTHON = VINE / ".venv/bin/python"
-DIFFUERASER = Path("/path/to/DiffuEraser")
-DIFFUERASER_PYTHON = DIFFUERASER / ".venv/bin/python"
-GPU = "0"
+            '''VINE = configured_path("VINE_ROOT", description="VINE checkout")
+VINE_PYTHON = configured_path("VINE_PYTHON", default=VINE / ".venv/bin/python")
+DIFFUERASER = configured_path("DIFFUERASER_ROOT", description="DiffuEraser checkout")
+DIFFUERASER_PYTHON = configured_path("DIFFUERASER_PYTHON", default=DIFFUERASER / ".venv/bin/python")
+GPU = os.environ.get("WATERMARK_GPU", "0")
 MOSE_VIDEO = ROOT / "evidence/mose-task1/review50/media/02b72b8d/original.mp4"
 MOSE_MASK = ROOT / "evidence/mose-task1/review50/media/02b72b8d/gt_mask.mp4"
 RUN_ROOT = ROOT / "runs/remaining-watermarks/vine/02b72b8d"
@@ -388,12 +390,12 @@ def videomark() -> dict[str, Any]:
     )
     cells += [
         code(
-            '''VIDEOMARK = Path("/path/to/VideoMark")
-VIDEOMARK_PYTHON = VIDEOMARK / ".venv/bin/python"
-MODELSCOPE_MODEL = Path("/path/to/damo-vilab/text-to-video-ms-1.7b")
-DIFFUERASER = Path("/path/to/DiffuEraser")
-DIFFUERASER_PYTHON = DIFFUERASER / ".venv/bin/python"
-GPU = "0"
+            '''VIDEOMARK = configured_path("VIDEOMARK_ROOT", description="VideoMark checkout")
+VIDEOMARK_PYTHON = configured_path("VIDEOMARK_PYTHON", default=VIDEOMARK / ".venv/bin/python")
+MODELSCOPE_MODEL = configured_path("MODELSCOPE_MODEL", description="ModelScope text-to-video model")
+DIFFUERASER = configured_path("DIFFUERASER_ROOT", description="DiffuEraser checkout")
+DIFFUERASER_PYTHON = configured_path("DIFFUERASER_PYTHON", default=DIFFUERASER / ".venv/bin/python")
+GPU = os.environ.get("WATERMARK_GPU", "0")
 SAMPLE = VIDEOMARK / "result/videomark/modelscope/512bit/a_red_panda_eating_leaves/wm.mp4"
 SHIFT = VIDEOMARK / "result/videomark/modelscope/512bit/a_red_panda_eating_leaves/shift_value.npy"
 KEYS = VIDEOMARK / "keys/64_64_512bit.pkl"
@@ -446,13 +448,13 @@ def sigmark() -> dict[str, Any]:
     )
     cells += [
         code(
-            '''SIGMARK = Path("/path/to/SIGMark-release")
-SIGMARK_PYTHON = SIGMARK / ".venv/bin/python"
-TORCHRUN = SIGMARK / ".venv/bin/torchrun"
-MODEL_BASE = Path("/path/to/pretrained_models")
-DIFFUERASER = Path("/path/to/DiffuEraser")
-DIFFUERASER_PYTHON = DIFFUERASER / ".venv/bin/python"
-GPU = "0"
+            '''SIGMARK = configured_path("SIGMARK_ROOT", description="SIGMark checkout")
+SIGMARK_PYTHON = configured_path("SIGMARK_PYTHON", default=SIGMARK / ".venv/bin/python")
+TORCHRUN = configured_path("SIGMARK_TORCHRUN", default=SIGMARK / ".venv/bin/torchrun")
+MODEL_BASE = configured_path("SIGMARK_MODEL_BASE", description="SIGMark pretrained-model directory")
+DIFFUERASER = configured_path("DIFFUERASER_ROOT", description="DiffuEraser checkout")
+DIFFUERASER_PYTHON = configured_path("DIFFUERASER_PYTHON", default=DIFFUERASER / ".venv/bin/python")
+GPU = os.environ.get("WATERMARK_GPU", "0")
 RUN_ROOT = ROOT / "runs/remaining-watermarks/sigmark/native-vbench2"
 NATIVE = RUN_ROOT / "native-generation"
 RUN_ROOT.mkdir(parents=True, exist_ok=True)'''
@@ -532,13 +534,13 @@ def vidsig() -> dict[str, Any]:
     )
     cells += [
         code(
-            '''VIDSIG = Path("/path/to/Video-Signature")
-VIDSIG_PYTHON = VIDSIG / ".venv/bin/python"
+            '''VIDSIG = configured_path("VIDSIG_ROOT", description="Video Signature checkout")
+VIDSIG_PYTHON = configured_path("VIDSIG_PYTHON", default=VIDSIG / ".venv/bin/python")
 VAE_CHECKPOINT = VIDSIG / "ckpts/vae/modelscope/checkpoint.pth"
 MESSAGE_DECODER = VIDSIG / "ckpts/msg_decoder/dec_48b_whit.torchscript.pt"
-DIFFUERASER = Path("/path/to/DiffuEraser")
-DIFFUERASER_PYTHON = DIFFUERASER / ".venv/bin/python"
-GPU = "0"
+DIFFUERASER = configured_path("DIFFUERASER_ROOT", description="DiffuEraser checkout")
+DIFFUERASER_PYTHON = configured_path("DIFFUERASER_PYTHON", default=DIFFUERASER / ".venv/bin/python")
+GPU = os.environ.get("WATERMARK_GPU", "0")
 RUN_ROOT = ROOT / "runs/remaining-watermarks/vidsig/red-panda-seed42"
 NATIVE = RUN_ROOT / "native-generation"
 RUN_ROOT.mkdir(parents=True, exist_ok=True)
@@ -595,15 +597,15 @@ def lvmark() -> dict[str, Any]:
     )
     cells += [
         code(
-            '''LVMARK = Path("/path/to/TIFS26_lvmark")
-LVMARK_PYTHON = LVMARK / ".venv/bin/python"
-WEIGHTS = Path("/path/to/lvmark_weights")
-DYNAMICRAFTER_CKPT = Path("/path/to/dynamicrafter_512_v1/model.ckpt")
-PROMPT_DIR = Path("/path/to/authors/prompts/512_ours")
-PROMPT_JSON = Path("/path/to/authors/prompts_with_keys120_32bit.json")
-DIFFUERASER = Path("/path/to/DiffuEraser")
-DIFFUERASER_PYTHON = DIFFUERASER / ".venv/bin/python"
-GPU = "0"
+            '''LVMARK = configured_path("LVMARK_ROOT", description="LVMark checkout")
+LVMARK_PYTHON = configured_path("LVMARK_PYTHON", default=LVMARK / ".venv/bin/python")
+WEIGHTS = configured_path("LVMARK_WEIGHTS", description="LVMark weight directory")
+DYNAMICRAFTER_CKPT = configured_path("DYNAMICRAFTER_CHECKPOINT", description="DynamiCrafter checkpoint")
+PROMPT_DIR = configured_path("LVMARK_PROMPT_DIR", description="LVMark prompt-image directory")
+PROMPT_JSON = configured_path("LVMARK_PROMPT_JSON", description="LVMark prompt/key JSON")
+DIFFUERASER = configured_path("DIFFUERASER_ROOT", description="DiffuEraser checkout")
+DIFFUERASER_PYTHON = configured_path("DIFFUERASER_PYTHON", default=DIFFUERASER / ".venv/bin/python")
+GPU = os.environ.get("WATERMARK_GPU", "0")
 RUN_ROOT = ROOT / "runs/remaining-watermarks/lvmark/native-32bit"
 NATIVE = RUN_ROOT / "native-generation"
 RUN_ROOT.mkdir(parents=True, exist_ok=True)'''
@@ -681,14 +683,14 @@ def genptw() -> dict[str, Any]:
     )
     cells += [
         code(
-            '''GENPTW = Path("/path/to/GenPTW")
-GENPTW_PYTHON = GENPTW / ".venv/bin/python"
+            '''GENPTW = configured_path("GENPTW_ROOT", description="GenPTW checkout")
+GENPTW_PYTHON = configured_path("GENPTW_PYTHON", default=GENPTW / ".venv/bin/python")
 CHECKPOINT = GENPTW / "Checkpoint"
-PRETRAINED_VAE = Path("/path/to/stable-diffusion-2-base/vae")
-CONVNEXT = Path("/path/to/convnext_tiny-983f1562.pth")
-DIFFUERASER = Path("/path/to/DiffuEraser")
-DIFFUERASER_PYTHON = DIFFUERASER / ".venv/bin/python"
-GPU = "0"
+PRETRAINED_VAE = configured_path("GENPTW_PRETRAINED_VAE", description="Stable Diffusion 2 VAE")
+CONVNEXT = configured_path("GENPTW_CONVNEXT", description="ConvNeXt checkpoint")
+DIFFUERASER = configured_path("DIFFUERASER_ROOT", description="DiffuEraser checkout")
+DIFFUERASER_PYTHON = configured_path("DIFFUERASER_PYTHON", default=DIFFUERASER / ".venv/bin/python")
+GPU = os.environ.get("WATERMARK_GPU", "0")
 MOSE_VIDEO = ROOT / "evidence/mose-task1/review50/media/02b72b8d/original.mp4"
 MOSE_MASK = ROOT / "evidence/mose-task1/review50/media/02b72b8d/gt_mask.mp4"
 RUN_ROOT = ROOT / "runs/remaining-watermarks/genptw/02b72b8d"

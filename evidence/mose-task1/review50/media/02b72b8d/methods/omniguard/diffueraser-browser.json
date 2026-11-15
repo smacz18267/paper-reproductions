@@ -1,0 +1,27 @@
+{
+  "completed_at": "2026-11-12T05:55:53+00:00",
+  "preview": {
+    "path": "diffueraser-browser.mp4",
+    "sha256": "6a512be99e3bca45f8ce4710ef06cf6a60cb7185e3440a4ed48545faedc56c28",
+    "video": {
+      "codec": "h264",
+      "fps": 25.0,
+      "frames": 67,
+      "height": 480,
+      "width": 960
+    }
+  },
+  "semantics": "browser-playback derivative only; evaluation uses the source video",
+  "source": {
+    "path": "diffueraser.mp4",
+    "sha256": "099d307fb2e90830151e76604d57741fba75b7c5de2f758a8bb6c43d42fd73a4",
+    "video": {
+      "codec": "FMP4",
+      "fps": 25.0,
+      "frames": 67,
+      "height": 480,
+      "width": 960
+    }
+  },
+  "status": "complete"
+}

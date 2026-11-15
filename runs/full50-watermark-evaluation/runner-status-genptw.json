@@ -1,0 +1,13 @@
+{
+  "failures": [],
+  "methods": [
+    "genptw"
+  ],
+  "stages": [
+    "attack",
+    "detect",
+    "embed"
+  ],
+  "status": "complete",
+  "timestamp": "2026-11-13T11:33:32+00:00"
+}

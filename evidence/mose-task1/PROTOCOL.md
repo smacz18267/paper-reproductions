@@ -12,10 +12,11 @@ clip, the review view must show:
 2. the selected MOSE object mask, with white meaning remove;
 3. the ProPainter result;
 4. the DiffuEraser result; and
-5. the EffectErase result.
+5. the EffectErase result; and
+6. the E2FGVI-HQ result where the full-50 expansion has completed.
 
-All three removal methods must receive the same selected MOSE object. The reviewer
-records separately whether ProPainter, DiffuEraser, and EffectErase removed that object
+All four removal methods must receive the same selected MOSE object. The reviewer
+records separately whether ProPainter, DiffuEraser, EffectErase, and E2FGVI-HQ removed that object
 satisfactorily. The watermark-first outputs are generated for all 50 fixed
 clips so the review does not change or cherry-pick the evaluated sample set.
 
@@ -43,7 +44,7 @@ For every watermark method and every selected clip, the order is:
 original MOSE video
   -> watermark embedding
   -> watermarked video
-  -> ProPainter, DiffuEraser, or EffectErase using the selected object mask
+  -> ProPainter, DiffuEraser, EffectErase, or E2FGVI-HQ using the selected object mask
   -> attacked/tampered video
   -> the watermark method's detector
   -> predicted tamper mask, when that method has a native localization output
@@ -71,8 +72,10 @@ method*, because the saved Task 1 runs expanded the mask at inference:
   binary mask bilinearly; the effective binary IoU mask is thresholded at the
   model zero point and restored to the reported output size with nearest-neighbour
   interpolation.
+- E2FGVI-HQ follows its released `read_mask` path: nearest-neighbour resize,
+  binary threshold, and four iterations of 3 x 3 cross-kernel dilation.
 
-Therefore all three removers need separate effective GT masks for IoU, even
+Therefore all four removers need separate effective GT masks for IoU, even
 though they start from the same MOSE object annotation. Report global
 pixel IoU over all frames, matching the VideoShield paper implementation:
 
@@ -104,9 +107,16 @@ Two adapters are allowed only where their per-clip metadata records them:
   order. Each `recovery.json` records this deterministic completion. It affects
   only graphical watermark reconstruction, not a spatial mask or IoU.
 
-## Method capability constraint
+## Eleven-method full-50 capability constraint
 
-The five evaluated methods are not interchangeable:
+The 11 runnable methods are not interchangeable. Seven methods use the fixed
+50 MOSE inputs: EditGuard, OmniGuard, Watermark Anything, VINE-R, GenPTW,
+VideoSeal, and Safe-Sora. Four methods are coupled to generation and therefore
+use 50 authentic native generations each: VideoShield, VideoMark, SIGMark, and
+VidSig. Substituting post-hoc MOSE inputs for those four would change the method
+being evaluated and is prohibited.
+
+Important method-specific constraints:
 
 - VideoSeal can post-process an existing MOSE video. The available released
   checkpoint exposes a global watermark-presence detector, not a native

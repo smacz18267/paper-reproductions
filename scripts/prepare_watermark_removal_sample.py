@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare any authentic watermarked video for the two removal methods.
+"""Prepare any authentic watermarked video for the four removal methods.
 
 The preparation is deliberately watermark-agnostic.  It preserves the source
 video, converts the supplied attack mask to strict binary frames, and applies
@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 from fractions import Fraction
 from pathlib import Path
 
@@ -87,6 +88,24 @@ def prepare(args: argparse.Namespace) -> None:
     sample_json = output / "sample.json"
     if sample_json.exists() and not args.force:
         raise FileExistsError(f"{sample_json} already exists; pass --force to replace this run")
+    if args.force:
+        # Clear only artifacts owned by this preparation stage. This prevents
+        # stale frames from a longer previous sample contaminating a rerun,
+        # while leaving completed remover outputs and logs untouched.
+        for directory in ("input-frames", "gt-mask-frames"):
+            owned = output / directory
+            if owned.exists():
+                shutil.rmtree(owned)
+        for filename in (
+            "input-watermarked.mp4",
+            "gt-mask.mp4",
+            "attack-input.mp4",
+            "attack-mask.mp4",
+            "sample.json",
+        ):
+            owned = output / filename
+            if owned.exists():
+                owned.unlink()
 
     copy_atomic(args.source_video.resolve(), output / "input-watermarked.mp4")
     write_rgb_frames(output / "input-frames", frames)
@@ -118,7 +137,10 @@ def prepare(args: argparse.Namespace) -> None:
         "sample_id": args.sample_id,
         "sample_source": args.sample_source,
         "source_kind": args.source_kind,
-        "protocol": "authentic watermarked sample -> one aligned mask -> ProPainter and DiffuEraser",
+        "protocol": (
+            "authentic watermarked sample -> one aligned mask -> ProPainter, DiffuEraser, "
+            "EffectErase, and E2FGVI-HQ"
+        ),
         "frames": len(frames),
         "attack_frames": len(attack_frames),
         "size": list(size),
@@ -155,13 +177,22 @@ def finalize(args: argparse.Namespace) -> None:
         raise RuntimeError("Removal output dimensions change between frames")
     source_size = next(iter(source_sizes))
     resized = source_size != size
+    aspect_ratio_relative_error = 0.0
     if resized:
         source_ratio = source_size[0] / source_size[1]
         expected_ratio = size[0] / size[1]
-        if abs(source_ratio - expected_ratio) > 1e-6:
+        aspect_ratio_relative_error = abs(source_ratio / expected_ratio - 1.0)
+        # DiffuEraser's released ProPainter stage applies resize_ratio=0.6
+        # and rounds each dimension independently to an integer.  That can
+        # move one axis by a pixel, so an exact floating-point ratio check
+        # rejects valid official outputs (for example 960x544 -> 576x326).
+        # Keep rejecting material geometry changes while accepting only this
+        # sub-percent integer-rounding drift.
+        if aspect_ratio_relative_error > 0.01:
             raise RuntimeError(
                 f"Removal output aspect ratio {source_size[0]}x{source_size[1]} "
-                f"does not match {size[0]}x{size[1]}"
+                f"does not match {size[0]}x{size[1]} "
+                f"(relative error {aspect_ratio_relative_error:.6f})"
             )
         # DiffuEraser's official pipeline runs its ProPainter prior with the
         # upstream default resize_ratio=0.6. Restore that prior to the source
@@ -186,10 +217,12 @@ def finalize(args: argparse.Namespace) -> None:
                 "source_size": list(source_size),
                 "expected_size": list(size),
                 "resized": resized,
+                "aspect_ratio_relative_error": aspect_ratio_relative_error,
                 "interpolation": "cv2.INTER_LINEAR" if resized else None,
                 "reason": (
                     "restore the official ProPainter prior from its default "
-                    "resize_ratio=0.6 to the source dimensions"
+                    "resize_ratio=0.6 (including integer dimension rounding) "
+                    "to the source dimensions"
                     if resized
                     else None
                 ),
@@ -216,7 +249,7 @@ def main() -> None:
     prepare_parser.add_argument(
         "--source-kind",
         required=True,
-        choices=("authors_provided", "authors_generated", "mose_post_hoc"),
+        choices=("authors_provided", "authors_generated", "mose_post_hoc", "mose_framewise"),
     )
     prepare_parser.add_argument("--provenance-json", type=Path)
     prepare_parser.add_argument("--force", action="store_true")

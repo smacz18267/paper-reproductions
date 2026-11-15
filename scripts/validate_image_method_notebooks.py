@@ -10,12 +10,15 @@ from pathlib import Path
 
 import cv2
 
+from watermark_artifact_validation import require_materialized
+
 
 SAMPLES = ("02b72b8d", "0ab75563", "0b02886a")
 METHODS = ("editguard", "omniguard")
 
 
 def inspect(path: Path, *, mask: bool = False) -> dict[str, float | int]:
+    require_materialized(path, "video")
     capture = cv2.VideoCapture(str(path))
     if not capture.isOpened():
         raise RuntimeError(f"Could not open {path}")
@@ -46,8 +49,7 @@ def validate_video(
     mask: bool = False,
     foreground: bool = False,
 ) -> dict[str, float | int]:
-    if not path.is_file() or path.stat().st_size == 0:
-        raise RuntimeError(f"Missing or empty video: {path}")
+    require_materialized(path, "video")
     info = inspect(path, mask=mask)
     if info["frames"] != frames:
         raise RuntimeError(f"{path}: expected {frames} frames, got {info['frames']}")

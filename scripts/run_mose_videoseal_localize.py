@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import gc
 import os
+import sys
 import time
 from fractions import Fraction
 from pathlib import Path
@@ -15,7 +16,6 @@ import numpy as np
 import scipy.ndimage
 import torch
 import torch.nn.functional as F
-import videoseal
 
 from mose_watermark_common import (
     FPS,
@@ -166,8 +166,15 @@ def main() -> None:
         clips = [clip for clip in clips if clip.clip_id in requested]
         if {clip.clip_id for clip in clips} != requested:
             raise RuntimeError(f"Unknown --only clip(s): {sorted(requested - {clip.clip_id for clip in clips})}")
+    source = args.source.resolve()
+    if str(source) not in sys.path:
+        sys.path.insert(0, str(source))
+    # VideoSeal is commonly used directly from its checkout rather than as an
+    # installed wheel.  Import only after exposing the configured source root.
+    import videoseal
+
     previous = Path.cwd()
-    os.chdir(args.source.resolve())
+    os.chdir(source)
     try:
         model = videoseal.load("videoseal")
     finally:

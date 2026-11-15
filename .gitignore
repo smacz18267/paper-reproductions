@@ -13,6 +13,8 @@ __pycache__/
 papers/**/source/results/
 papers/**/source/results_eval/
 **/frames/
+**/.e2fgvi-full50/
+runs/full50-watermark-evaluation/methods/
 
 # Selected demonstration MP4s, PNG comparisons and genuine logs are tracked.
 # Put full datasets in data/ or outside this repository.

@@ -225,14 +225,20 @@ def completion_markdown(method: str, attack: Path) -> str:
             fps = format_number(output.get("fps"))
             size = output.get("bytes")
             size_text = f"{int(size):,}" if size is not None else "not recorded"
-            if stem == "e2fgvi":
-                browser_video = attack / "e2fgvi-browser.mp4"
-                if not browser_video.is_file():
-                    raise FileNotFoundError(f"Missing browser-safe E2FGVI-HQ preview: {browser_video}")
+            browser_video = attack / f"{stem}-browser.mp4"
+            if browser_video.is_file():
+                preview_metadata = browser_video.with_suffix(".json")
+                preview_link = (
+                    f" · [preview JSON]({relative(preview_metadata)})"
+                    if preview_metadata.is_file()
+                    else ""
+                )
                 evidence = (
                     f"[playable video]({relative(browser_video)}) · "
-                    f"[evaluated MP4]({relative(video)}) · [JSON]({relative(metadata)})"
+                    f"[evaluated MP4]({relative(video)}) · [JSON]({relative(metadata)}){preview_link}"
                 )
+            elif stem == "e2fgvi":
+                raise FileNotFoundError(f"Missing browser-safe E2FGVI-HQ preview: {browser_video}")
             else:
                 evidence = f"[video]({relative(video)}) · [JSON]({relative(metadata)})"
         else:
@@ -250,7 +256,7 @@ This is the canonical comparison for the minimum one-clip requirement. All four 
 |---|---:|---:|---:|---:|---:|---:|---|
 {chr(10).join(rows)}
 
-Watermark method: **{method}**. Runtime is shown only when the original run record captured it; `not recorded` is not replaced with an estimate. Watermark-specific localization or recovery metrics are downstream evaluations and are kept separate from this equal inpainting comparison. E2FGVI-HQ's playable video is an H.264 viewing copy; its evaluated FMP4 output and exact JSON record remain unchanged.
+Watermark method: **{method}**. Runtime is shown only when the original run record captured it; `not recorded` is not replaced with an estimate. Watermark-specific localization or recovery metrics are downstream evaluations and are kept separate from this equal inpainting comparison. Where an evaluated codec is not browser-safe, the playable video is an H.264 viewing copy; the evaluated MP4 and exact JSON record remain unchanged.
 """
 
 
@@ -283,7 +289,8 @@ REMOVERS = (
 for label, stem in REMOVERS:
     display(Markdown(f"### {{label}}"))
     evaluated_video = ATTACK / f"{{stem}}.mp4"
-    video = ATTACK / ("e2fgvi-browser.mp4" if stem == "e2fgvi" else f"{{stem}}.mp4")
+    browser_video = ATTACK / f"{{stem}}-browser.mp4"
+    video = browser_video if browser_video.is_file() else evaluated_video
     metadata = ATTACK / f"{{stem}}.json"
     if not evaluated_video.is_file() or not video.is_file() or not metadata.is_file():
         raise FileNotFoundError(f"Missing {{label}} evidence in {{ATTACK}}")

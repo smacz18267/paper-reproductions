@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/home/smayan/research"
-SCRIPT_ROOT="${ROOT}/mose50-corrected/scripts"
-DATASET_ROOT="${ROOT}/datasets/MOSEv1"
+SOURCE_ROOT="${WATERMARK_SOURCE_ROOT:?Set WATERMARK_SOURCE_ROOT to the directory containing method checkouts}"
+SCRIPT_ROOT="${WATERMARK_SCRIPT_ROOT:-$(cd "$(dirname "$0")" && pwd)}"
+DATASET_ROOT="${MOSE_DATASET_ROOT:?Set MOSE_DATASET_ROOT to the extracted MOSEv1 directory}"
 OUTPUT_ROOT="${DATASET_ROOT}/watermark-review50"
-SELECTION="${DATASET_ROOT}/selection50.json"
-EFFECTERASE="${ROOT}/EffectErase"
+OUTPUT_ROOT="${MOSE_OUTPUT_ROOT:-$OUTPUT_ROOT}"
+SELECTION="${MOSE_SELECTION:-$DATASET_ROOT/selection50.json}"
+EFFECTERASE="${SOURCE_ROOT}/EffectErase"
 PYTHON="${EFFECTERASE}/.venv/bin/python"
-GPU=0
+GPU="${WATERMARK_GPU:-0}"
 LOCK_FILE="${OUTPUT_ROOT}/effecterase-full50.lock"
 STATUS_FILE="${OUTPUT_ROOT}/effecterase-full50.status"
 PREVIOUS_STATUS="${OUTPUT_ROOT}/image-methods-full50.status"
@@ -119,8 +120,8 @@ done
 
 wait_for_gpu_memory 10000
 run_stage "videoseal-effecterase-localization" \
-    "${ROOT}/VideoSeal/.venv/bin/python" -u run_mose_videoseal_localize.py \
-    --source "${ROOT}/VideoSeal" \
+    "${SOURCE_ROOT}/VideoSeal/.venv/bin/python" -u run_mose_videoseal_localize.py \
+    --source "${SOURCE_ROOT}/VideoSeal" \
     --selection "${SELECTION}" \
     --dataset-root "${DATASET_ROOT}" \
     --output-root "${OUTPUT_ROOT}" \
@@ -130,18 +131,18 @@ run_stage "videoseal-effecterase-localization" \
 
 wait_for_gpu_memory 10000
 run_stage "safe-sora-effecterase-recovery" \
-    "${ROOT}/Safe-Sora/.venv/bin/python" -u run_mose_safe_sora_recover.py \
-    --source "${ROOT}/Safe-Sora" \
+    "${SOURCE_ROOT}/Safe-Sora/.venv/bin/python" -u run_mose_safe_sora_recover.py \
+    --source "${SOURCE_ROOT}/Safe-Sora" \
     --selection "${SELECTION}" \
     --output-root "${OUTPUT_ROOT}" \
-    --watermark "${ROOT}/Safe-Sora/demo_watermark.png" \
+    --watermark "${SOURCE_ROOT}/Safe-Sora/demo_watermark.png" \
     --remover effecterase
 
 wait_for_gpu_memory 10000
 run_stage "editguard-effecterase-localization" \
-    "${ROOT}/WatermarkMethods/.venv/bin/python" -u run_mose_editguard.py localize \
-    --source "${ROOT}/EditGuard" \
-    --checkpoint "${ROOT}/EditGuard/checkpoints/clean.pth" \
+    "${SOURCE_ROOT}/WatermarkMethods/.venv/bin/python" -u run_mose_editguard.py localize \
+    --source "${SOURCE_ROOT}/EditGuard" \
+    --checkpoint "${SOURCE_ROOT}/EditGuard/checkpoints/clean.pth" \
     --selection "${SELECTION}" \
     --dataset-root "${DATASET_ROOT}" \
     --output-root "${OUTPUT_ROOT}" \
@@ -149,10 +150,10 @@ run_stage "editguard-effecterase-localization" \
 
 wait_for_gpu_memory 10000
 run_stage "omniguard-effecterase-localization" \
-    "${ROOT}/WatermarkMethods/.venv/bin/python" -u run_mose_omniguard.py localize \
-    --source "${ROOT}/OmniGuard" \
-    --checkpoint "${ROOT}/OmniGuard/checkpoint/model_checkpoint_01500.pt" \
-    --detector-checkpoint "${ROOT}/OmniGuard/checkpoint/checkpoint-175.pth" \
+    "${SOURCE_ROOT}/WatermarkMethods/.venv/bin/python" -u run_mose_omniguard.py localize \
+    --source "${SOURCE_ROOT}/OmniGuard" \
+    --checkpoint "${SOURCE_ROOT}/OmniGuard/checkpoint/model_checkpoint_01500.pt" \
+    --detector-checkpoint "${SOURCE_ROOT}/OmniGuard/checkpoint/checkpoint-175.pth" \
     --selection "${SELECTION}" \
     --dataset-root "${DATASET_ROOT}" \
     --output-root "${OUTPUT_ROOT}" \

@@ -43,7 +43,7 @@ METHODS: tuple[MethodSpec, ...] = (
         verified_commit="efffa72a4ca46d4d5051f6970c96424c2cdab441",
         native_entrypoint=(
             "from rivagan import RivaGAN; "
-            "RivaGAN.load('/path/to/model.pt').encode(INPUT_VIDEO, MESSAGE, WATERMARKED_VIDEO)"
+            "RivaGAN.load(os.environ['RIVAGAN_MODEL']).encode(INPUT_VIDEO, MESSAGE, WATERMARKED_VIDEO)"
         ),
         preparation_summary=(
             "Load a trained 32-bit RivaGAN model and call its official encode method on the source video."

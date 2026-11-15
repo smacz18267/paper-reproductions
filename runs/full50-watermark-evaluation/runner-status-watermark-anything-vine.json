@@ -1,0 +1,14 @@
+{
+  "failures": [],
+  "methods": [
+    "watermark-anything",
+    "vine"
+  ],
+  "stages": [
+    "attack",
+    "detect",
+    "embed"
+  ],
+  "status": "complete",
+  "timestamp": "2026-11-13T11:25:49+00:00"
+}
